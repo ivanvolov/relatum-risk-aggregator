@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Methodology — Relatum</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <span class="brand"><span class="mark"><span></span></span>Relatum</span>
+  <a class="tab" href="index.html">Summary</a>
+  <a class="tab" href="protocol-aave.html">Protocols</a>
+  <a class="tab active" href="methodology.html">Methodology</a>
+  <span class="spacer"></span>
+  <span class="meta">v0.1 · data layer: RDF (Turtle) · 17 feeds · 20 protocols</span>
+</nav>
+
+<main class="page">
+  <h1>Methodology</h1>
+  <p class="lede">
+    Relatum aggregates what every major DeFi risk feed says about a protocol, side by side,
+    without synthesis. The data substrate is an RDF knowledge graph; every UI cell traces back
+    to a single feed and a single source URL, with provenance preserved at the triple level.
+  </p>
+
+  <!-- ============ Oracle Analogy callout ============ -->
+  <div class="mblock oracle-analogy">
+    <h2>The Oracle Analogy</h2>
+    <p>No single price feed is canonical. A well-designed oracle aggregates many feeds to produce one trusted value, with no individual source treated as authoritative. <strong>The aggregation is the value.</strong></p>
+    <p>The same principle applies to DeFi risk. <strong>Relatum is the aggregation layer that doesn't exist yet</strong> — a neutral place to see what every risk feed says about a protocol, side by side, with sources intact.</p>
+  </div>
+
+  <!-- ============ Does / Does Not — side-by-side ============ -->
+  <div class="does-grid">
+    <div class="does-card does-not">
+      <div class="hd"><span class="mark-x">✕</span><h2>What Relatum does <em>not</em> do</h2></div>
+      <ul>
+        <li>Relatum does not assign its own risk scores.</li>
+        <li>Relatum does not weight or rank risk feeds against each other.</li>
+        <li>Relatum does not tell you whether a protocol is safe or unsafe.</li>
+        <li>Relatum does not endorse any protocol listed.</li>
+      </ul>
+      <div class="charter">
+        Committed as a project charter at v0.1. Amendment requires written EF agreement, encoded in <code>CHARTER.md</code>.
+      </div>
+    </div>
+
+    <div class="does-card does-do">
+      <div class="hd"><span class="mark-check">✓</span><h2>What Relatum does do</h2></div>
+      <ul>
+        <li>Aggregates risk feed coverage for the top 20 Ethereum DeFi protocols in one place.</li>
+        <li>Surfaces governance data from onchain sources (Safe API) and verifiable registries.</li>
+        <li>Tracks which feeds have — and have not — assessed each protocol.</li>
+        <li>Links directly to source assessments. Ratings are shown verbatim, never normalized.</li>
+        <li>Maintains an open, community-correctable data registry on GitHub.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ Coverage Gaps as Data ============ -->
+  <div class="mblock gaps-as-data">
+    <h2>Coverage gaps as data</h2>
+    <p>A protocol that has not been assessed by any risk feed is itself a signal. The absence of coverage is information. A newer protocol with 2 feeds covering it is a meaningfully different risk profile from an established one with 15. Relatum makes these gaps visible rather than hiding them behind a composite number.</p>
+    <p>In our data model, absence is a typed observation, not a missing row. Every (protocol × feed) cell carries one of three states:</p>
+    <div class="cov-state-list">
+      <div class="cov-state"><span class="badge cov">covered</span> <span>the feed publishes an assessment of this exact subject; data is in the graph</span></div>
+      <div class="cov-state"><span class="badge part">partial</span> <span>the feed covers a related entity (e.g. Pharos on Aave via GHO); the relationship is modeled as an explicit graph edge</span></div>
+      <div class="cov-state"><span class="badge none">not yet</span> <span>explicit statement of absence, with reason. Not a TODO — a typed <code>rfp:CoverageStatement</code> triple.</span></div>
+    </div>
+  </div>
+
+  <!-- ============ RDF Substrate — our differentiator ============ -->
+  <div class="mblock rdf-substrate">
+    <div class="rdf-head">
+      <h2>The data substrate — RDF knowledge graph</h2>
+      <span class="differentiator">our extension beyond the RFP brief</span>
+    </div>
+    <p>Every feed assessment is stored as RDF triples. Each provider's methodology, units, and scale are preserved as native graph properties. <strong>Nothing is normalized</strong> or coerced onto a common scale. The aggregator's read API is "give every claim about subject X" — the JOIN happens at query time, never at write time.</p>
+
+    <div class="rdf-schema-grid">
+      <div class="rdf-card">
+        <div class="rdf-card-h">Subjects</div>
+        <code>rfp:Protocol</code>
+        <code>rfp:Market</code>
+        <code>rfp:Vault</code>
+        <code>rfp:Stablecoin</code>
+        <code>rfp:Curator</code>
+      </div>
+      <div class="rdf-card">
+        <div class="rdf-card-h">Claim types</div>
+        <code>rfp:Rating</code>
+        <code>rfp:Score</code>
+        <code>rfp:Finding</code>
+        <code>rfp:CoverageStatement</code>
+      </div>
+      <div class="rdf-card">
+        <div class="rdf-card-h">Provenance</div>
+        <code>rfp:statedBy</code>
+        <code>rfp:sourceURL</code>
+        <code>rfp:observedAt</code>
+        <code>rfp:methodologyURL</code>
+      </div>
+      <div class="rdf-card">
+        <div class="rdf-card-h">Verbatim framing</div>
+        <code>rfp:dimension</code>
+        <code>rfp:ratingScale</code>
+        <code>rfp:ratingValue</code>
+        <code>rfp:scoreValue</code>
+      </div>
+    </div>
+
+    <h3>Example: one triple set, one claim</h3>
+    <pre># "DeFiScan says Aave v3 Ethereum has High upgradeability risk."
+aave:v3-eth-defiscan-risk-upgradeability a rfp:Rating ;
+    rfp:statedBy    feed:defiscan ;
+    rfp:about       aave:v3-ethereum ;
+    rfp:dimension   "upgradeability" ;
+    rfp:ratingScale "L/M/H" ;
+    rfp:ratingValue "H" ;
+    rfp:observedAt  "2025-05-07T00:00:00Z"^^xsd:dateTime ;
+    rfp:sourceURL   &lt;https://defiscan.info/projects/aave/ethereum&gt; .</pre>
+
+    <h3>The disagreement detector — a single SPARQL query is the product</h3>
+    <pre>PREFIX rfp: &lt;https://relatum.xyz/ns/rfp#&gt;
+
+SELECT ?dim
+       (GROUP_CONCAT(CONCAT(STR(?feed),"=",?val); separator=" | ") AS ?conflicts)
+WHERE {
+  ?c rfp:about       ?subject ;
+     rfp:statedBy    ?feed ;
+     rfp:dimension   ?dim ;
+     rfp:ratingValue ?val .
+}
+GROUP BY ?dim
+HAVING (COUNT(DISTINCT ?val) &gt; 1)
+</pre>
+
+    <div class="rdf-stats">
+      <div class="rdf-stat"><div class="k">v0.1 graph (Aave v3 only)</div><div class="v">667 <small>triples</small></div></div>
+      <div class="rdf-stat"><div class="k">distinct subjects</div><div class="v">103</div></div>
+      <div class="rdf-stat"><div class="k">predicates</div><div class="v">15</div></div>
+      <div class="rdf-stat"><div class="k">feed Turtle files</div><div class="v">8</div></div>
+      <div class="rdf-stat"><div class="k">projected v1 graph (20 protocols)</div><div class="v">~11k <small>triples</small></div></div>
+      <div class="rdf-stat"><div class="k">storage footprint</div><div class="v">&lt; 1 MB</div></div>
+    </div>
+
+    <p class="rdf-footnote">Why an RDF substrate is the structural enforcement of <em>no composite scoring</em>: the data model has no predicate for "Relatum's score." A composite would require introducing one, which requires charter amendment, which requires written EF agreement. Neutrality is enforced at the schema layer, not at the UI layer.</p>
+  </div>
+
+  <!-- ============ Data Provenance ============ -->
+  <div class="mblock">
+    <h2>Data provenance</h2>
+    <p>Every data point on Relatum carries a source tag. Provenance is rendered next to the value on every page; auditable to its origin URL at query time.</p>
+    <div class="prov-list">
+      <div class="prov-row">
+        <span class="prov onchain">[onchain]</span>
+        <span>fetched directly from chain or a verified onchain source (Safe API, etc.). Highest assurance.</span>
+      </div>
+      <div class="prov-row">
+        <span class="prov feed">[feed]</span>
+        <span>sourced from a feed provider's published assessment via API or open repo. Re-verifiable at the source URL.</span>
+      </div>
+      <div class="prov-row">
+        <span class="prov curated">[curated]</span>
+        <span>manually researched and added by a human curator via PR. Logged with editor and timestamp.</span>
+      </div>
+      <div class="prov-row">
+        <span class="prov self">[self-reported]</span>
+        <span>provided by the protocol team directly. Treated as a claim, not a fact.</span>
+      </div>
+    </div>
+    <p class="prov-footnote">Governance data is fetched live from the Safe API where possible, so multisig thresholds and signer counts reflect current on-chain state rather than stale YAML entries. Where the Safe API fetch fails, the static fallback is shown with an explicit degrade notice.</p>
+  </div>
+
+  <!-- ============ Feed Registry ============ -->
+  <div class="mblock">
+    <h2>The feed registry</h2>
+    <p>Full list of all 17 providers Relatum aggregates from. Each feed has its own methodology and focus. <strong>We do not rank them.</strong> v1 covers the 14 providers named in the RFP feed registry plus 3 proposed additions (Chronicle, Accountable for verifiability; Stablewatch for the yield-bearing stablecoin axis) widening methodology diversity to <strong>6 types</strong>: Rating, Dashboard, Monitoring, Research, Verification, Analysis.</p>
+    <div id="feedRegistry"></div>
+  </div>
+
+  <!-- ============ How to Contribute ============ -->
+  <div class="mblock contribute">
+    <h2>How to contribute</h2>
+    <p>All Relatum data is open source under AGPL-3.0. Anyone can propose:</p>
+    <div class="contrib-grid">
+      <div class="contrib-card">
+        <div class="contrib-h">Corrections</div>
+        <p>Open a GitHub issue describing the inaccuracy, or drop a JSON patch in <code>data/overlays/</code> and open a PR. Triple-level supersedence via <code>rfp:supersededBy</code> preserves history.</p>
+      </div>
+      <div class="contrib-card">
+        <div class="contrib-h">New protocols</div>
+        <p>Add a YAML entry under <code>data/protocols/</code>. The build pipeline mechanically generates the per-protocol Turtle stubs; reviewers fill in feed coverage incrementally.</p>
+      </div>
+      <div class="contrib-card">
+        <div class="contrib-h">New feeds</div>
+        <p>Add a <code>.ttl</code> file under <code>data/feeds/&lt;feed&gt;/</code> and register the feed URI in <code>vocab.ttl</code>. No schema change; the matrix extends automatically.</p>
+      </div>
+    </div>
+    <p class="m2-note">M2 deliverable: at least one round of external corrections accepted and merged, with the workflow proven end-to-end. Charter governs the no-composite-scoring constraint.</p>
+  </div>
+
+  <div class="repo-link">
+    <a href="#" target="_blank">github.com/relatum-xyz/relatum →</a>
+  </div>
+</main>
+
+<footer class="page-footer">
+  AGPL-3.0 · Charter: no composite scoring · Schema vocabulary: rfp: · Open data layer: 17 feeds, 20 protocols
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>renderFeedRegistry("feedRegistry");</script>
+</body>
+</html>
