@@ -48,6 +48,17 @@ python3 -m http.server 8000
 | `data/rdf/vocab.ttl`    | The `rfp:` ontology + feed registry |
 | `data/rdf/aave-v3.*.ttl`| Per-feed claims about Aave v3 (8 feeds) + the merged 667-triple combined graph |
 
+### What a feed schema doc contains
+
+Each `data/feeds/<feed>.yaml` captures the feed's ontology before any of its data is mapped into the graph:
+
+- **Identity** — name, homepage, maintainer, license, access mode, update cadence.
+- **Data model** — the primary entity each assessment yields (e.g. `ProtocolAssessment`, `VaultAssessment`, `AttestedRiskScore`), its properties, scoring dimensions, and native scales.
+- **Anchor example** — what one extract looks like for a named protocol (Aave v3 in most cases) — concrete, not handwavy.
+- **Known gaps** — what the feed's public surface doesn't yet expose, with provenance timestamps so the doc ages honestly.
+
+The goal: make every provider's ontology legible and PR-able as a small YAML, separate from the Turtle claims it eventually generates.
+
 ## Design references
 
 The RFP's appendix names L2Beat, Walletbeat, and DeFiScan as reference points.

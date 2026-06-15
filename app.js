@@ -202,7 +202,7 @@ function renderProtocolDetail(targetId, slug) {
     }
     /* graceful-degrade notice on the Governance card */
     if (sc.title === "Governance" && D.governance_degrade_note) {
-      html += `<div class="degrade-notice"><span class="lbl">Source →</span> ${D.governance_degrade_note}. <a href="#" class="cta-link">Flag inaccuracies via GitHub</a></div>`;
+      html += `<div class="degrade-notice"><span class="lbl">Source →</span> ${D.governance_degrade_note}. <a href="https://github.com/ivanvolov/relatum-risk-aggregator/issues/new" target="_blank" class="cta-link">Flag inaccuracies via GitHub</a></div>`;
     }
     html += `</div>`;
   }
@@ -309,7 +309,7 @@ function renderProtocolDetail(targetId, slug) {
   html += `</section>`;
 
   /* Submit-correction CTA footer */
-  html += `<div class="correct-cta">See something wrong? This data is open source. <a href="#" target="_blank">Submit a correction on GitHub →</a></div>`;
+  html += `<div class="correct-cta">See something wrong? This data is open source. <a href="https://github.com/ivanvolov/relatum-risk-aggregator/issues/new" target="_blank">Submit a correction on GitHub →</a></div>`;
 
   wrap.innerHTML = html;
 }
