@@ -132,4 +132,4 @@ If post-M2 review concludes Relatum belongs with an established institutional pu
 
 ## Mockup
 
-Static visual mock at `https://relatum.app` (GitHub Pages, custom domain). Reproduces the EF POC's layout primitives — provenance tags, coverage pills, verbatim ratings — and shows the visual direction. Connecting it to live data is the M1 deliverable.
+Static visual mock at `https://ivanvolov.github.io/relatum-risk-aggregator/` (GitHub Pages). Reproduces the EF POC's layout primitives — provenance tags, coverage pills, verbatim ratings — and shows the visual direction. Connecting it to live data is the M1 deliverable.

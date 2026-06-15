@@ -1,6 +1,6 @@
 # Relatum mockup
 
-Static UI mockup submitted with Ivan Volovyk's application to the EF App Relations RFP *Neutral DeFi Risk Intelligence Aggregator* (deadline 2026-06-15 AoE). Three pages, no build step — open `index.html` in any browser, or visit the deployed copy at [relatum.app](https://relatum.app/).
+Static UI mockup submitted with Ivan Volovyk's application to the EF App Relations RFP *Neutral DeFi Risk Intelligence Aggregator* (deadline 2026-06-15 AoE). Three pages, no build step — open `index.html` in any browser, or visit the deployed copy at [ivanvolov.github.io/relatum-risk-aggregator](https://ivanvolov.github.io/relatum-risk-aggregator/).
 
 The full grant proposal is at [`PROPOSAL.md`](PROPOSAL.md).
 
