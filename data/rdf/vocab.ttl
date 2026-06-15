@@ -1,0 +1,140 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@prefix rfp:    <https://relatum.xyz/ns/rfp#> .
+
+# =====================================================================
+# rfp: — Neutral DeFi Risk Intelligence Aggregator vocabulary
+# Designed for the EF RFP "no composite scoring" rule:
+# every claim is attached to the Feed that stated it, with provenance.
+# =====================================================================
+
+rfp: a owl:Ontology ;
+    rdfs:label "Neutral DeFi Risk Intelligence vocabulary" ;
+    dcterms:description "Schema for aggregating risk claims from multiple DeFi risk feeds about the same subject, preserving attribution and avoiding synthesis." ;
+    dcterms:created "2026-06-14"^^xsd:date .
+
+# --- Core classes ---------------------------------------------------
+
+rfp:Subject a owl:Class ;
+    rdfs:label "Risk Subject" ;
+    rdfs:comment "Anything a feed can make a risk claim about: a Protocol, a Market, a Vault, a Stablecoin, a Curator." .
+
+rfp:Protocol     a owl:Class ; rdfs:subClassOf rfp:Subject .
+rfp:Market       a owl:Class ; rdfs:subClassOf rfp:Subject ;
+    rdfs:comment "A lending market = (Protocol, collateral, debt asset, chain)." .
+rfp:Vault        a owl:Class ; rdfs:subClassOf rfp:Subject .
+rfp:Stablecoin   a owl:Class ; rdfs:subClassOf rfp:Subject .
+rfp:Curator      a owl:Class ; rdfs:subClassOf rfp:Subject .
+rfp:Contract     a owl:Class ;
+    rdfs:comment "Specific deployed smart contract; usually a component of a Protocol." .
+
+rfp:Feed a owl:Class ;
+    rdfs:label "Risk Feed" ;
+    rdfs:comment "A risk-intelligence source (DeFiScan, Pharos, Credora, …). Identified by stable URI." .
+
+rfp:Claim a owl:Class ;
+    rdfs:label "Risk Claim" ;
+    rdfs:comment "A reified statement: this feed says this thing about this subject at this time. All ratings are claims." .
+
+rfp:Rating a owl:Class ; rdfs:subClassOf rfp:Claim .
+rfp:Score  a owl:Class ; rdfs:subClassOf rfp:Claim .
+rfp:Finding a owl:Class ; rdfs:subClassOf rfp:Claim ;
+    rdfs:comment "Structural finding: a permission, dependency, or exit-window observation." .
+rfp:CoverageStatement a owl:Class ; rdfs:subClassOf rfp:Claim ;
+    rdfs:comment "Explicit positive or negative coverage. NotCovered is data, not absence." .
+
+rfp:Permission a owl:Class ; rdfs:subClassOf rfp:Finding .
+rfp:Dependency a owl:Class ; rdfs:subClassOf rfp:Finding .
+rfp:ExitWindow a owl:Class ; rdfs:subClassOf rfp:Finding .
+
+# --- Predicates -----------------------------------------------------
+
+rfp:hasClaim a owl:ObjectProperty ;
+    rdfs:domain rfp:Subject ; rdfs:range rfp:Claim .
+
+rfp:statedBy a owl:ObjectProperty ;
+    rdfs:domain rfp:Claim ; rdfs:range rfp:Feed ;
+    rdfs:comment "Provenance: which feed authored this claim. Non-optional." .
+
+rfp:about a owl:ObjectProperty ;
+    rdfs:domain rfp:Claim ; rdfs:range rfp:Subject .
+
+rfp:observedAt a owl:DatatypeProperty ;
+    rdfs:domain rfp:Claim ; rdfs:range xsd:dateTime .
+
+rfp:methodologyURL a owl:DatatypeProperty ;
+    rdfs:range xsd:anyURI .
+
+rfp:sourceURL a owl:DatatypeProperty ;
+    rdfs:domain rfp:Claim ; rdfs:range xsd:anyURI ;
+    rdfs:comment "Where on the feed this claim can be re-verified by a human." .
+
+# --- Rating / Score literals ---------------------------------------
+
+rfp:ratingValue a owl:DatatypeProperty ;
+    rdfs:domain rfp:Rating ; rdfs:range xsd:string ;
+    rdfs:comment "Letter or label as published by the feed. NEVER mapped across feeds." .
+
+rfp:ratingScale a owl:DatatypeProperty ;
+    rdfs:domain rfp:Rating ; rdfs:range xsd:string ;
+    rdfs:comment "Free-text label of the feed's own scale, e.g. 'A+..D' or 'Stage 0..2' or 'L/M/H'." .
+
+rfp:dimension a owl:DatatypeProperty ;
+    rdfs:domain rfp:Claim ; rdfs:range xsd:string ;
+    rdfs:comment "Which risk dimension this claim concerns: e.g. 'upgradeability', 'oracle', 'liquidity'." .
+
+rfp:scoreValue a owl:DatatypeProperty ;
+    rdfs:domain rfp:Score ; rdfs:range xsd:decimal .
+
+rfp:scoreUnit a owl:DatatypeProperty ;
+    rdfs:domain rfp:Score ; rdfs:range xsd:string .
+
+# --- Coverage --------------------------------------------------------
+
+rfp:coverageStatus a owl:DatatypeProperty ;
+    rdfs:domain rfp:CoverageStatement ; rdfs:range xsd:string ;
+    rdfs:comment "covered | notCovered | partiallyCovered" .
+
+rfp:coverageReason a owl:DatatypeProperty ;
+    rdfs:domain rfp:CoverageStatement ; rdfs:range xsd:string .
+
+# --- Structural shortcuts -------------------------------------------
+
+rfp:hasContract a owl:ObjectProperty ;
+    rdfs:domain rfp:Protocol ; rdfs:range rfp:Contract .
+
+rfp:dependsOn a owl:ObjectProperty ;
+    rdfs:domain rfp:Subject ; rdfs:range rfp:Subject .
+
+rfp:issues a owl:ObjectProperty ;
+    rdfs:domain rfp:Protocol ; rdfs:range rfp:Stablecoin .
+
+rfp:curates a owl:ObjectProperty ;
+    rdfs:domain rfp:Curator ; rdfs:range rfp:Vault .
+
+# --- Feed registry --------------------------------------------------
+
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+
+feed:defiscan       a rfp:Feed ; rdfs:label "DeFiScan" ;
+    rfp:methodologyURL "https://defiscan.info/framework"^^xsd:anyURI .
+feed:blockanalitica a rfp:Feed ; rdfs:label "Block Analitica" ;
+    rfp:methodologyURL "https://blockanalitica.com"^^xsd:anyURI .
+feed:curatorwatch   a rfp:Feed ; rdfs:label "CuratorWatch" ;
+    rfp:methodologyURL "https://curatorwatch.com"^^xsd:anyURI .
+feed:pharos         a rfp:Feed ; rdfs:label "Pharos" ;
+    rfp:methodologyURL "https://pharos.watch/methodology/"^^xsd:anyURI .
+feed:defisphere     a rfp:Feed ; rdfs:label "DeFi Sphere" ;
+    rfp:methodologyURL "https://blockanalitica.substack.com/p/introducing-sphere-risk-scores"^^xsd:anyURI .
+feed:defisaver      a rfp:Feed ; rdfs:label "DeFi Saver" ;
+    rfp:methodologyURL "https://help.defisaver.com"^^xsd:anyURI .
+feed:credora        a rfp:Feed ; rdfs:label "Credora" ;
+    rfp:methodologyURL "https://credora.network"^^xsd:anyURI .
+feed:stablewatch    a rfp:Feed ; rdfs:label "Stablewatch" ;
+    rfp:methodologyURL "https://www.stablewatch.io"^^xsd:anyURI .

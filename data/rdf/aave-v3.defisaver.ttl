@@ -1,0 +1,59 @@
+@prefix rfp:  <https://relatum.xyz/ns/rfp#> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix aave: <https://relatum.xyz/ns/protocol/aave/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Source: app.defisaver.com (Aave tab) + help.defisaver.com
+# DeFi Saver is execution-first: it does not publish a protocol-level risk score.
+# What it surfaces about Aave is parameter mirror + per-user position management.
+# A neutral aggregator records the parameter mirror but flags absence of rating.
+
+aave:dsv-coverage a rfp:CoverageStatement ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "partiallyCovered" ;
+    rfp:coverageReason "DeFi Saver supports Aave v2/v3 position management and automation but does not publish protocol-level or market-level risk scores. Surfaced data is a parameter mirror plus per-position health metrics." .
+
+# Protocol-level mirror (rates surfaced to users)
+aave:dsv-protocol-supported a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "support-status" ; rdfs:label "Supported on Mainnet, Arbitrum, Optimism, Base, Polygon, Avalanche" .
+
+# Available automation strategies (templates exposed to users, applied to Aave positions)
+aave:dsv-strategy-repay a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "automation-strategy" ; rdfs:label "Repay: trigger 'ratio < threshold' → repay debt from collateral" .
+aave:dsv-strategy-boost a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "automation-strategy" ; rdfs:label "Boost: trigger 'ratio > threshold' → leverage up" .
+aave:dsv-strategy-close a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "automation-strategy" ; rdfs:label "Close-to-collateral / Close-to-debt" .
+aave:dsv-strategy-limit-order a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "automation-strategy" ; rdfs:label "Limit order on position closure" .
+
+# Trigger metrics that the position view exposes
+aave:dsv-metric-health-factor a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "exposed-metric" ; rdfs:label "Health Factor (per-position)" .
+aave:dsv-metric-safety-ratio a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "exposed-metric" ; rdfs:label "Safety Ratio (per-position)" .
+aave:dsv-metric-liquidation-price a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "exposed-metric" ; rdfs:label "Liquidation Price (per-position, per-asset)" .
+
+# 1-tx actions ("zaps") — observed capabilities
+aave:dsv-action-looping a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "action" ; rdfs:label "1-tx looping / leverage" .
+aave:dsv-action-collateral-swap a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "action" ; rdfs:label "Collateral swap (1 tx)" .
+aave:dsv-action-debt-swap a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "action" ; rdfs:label "Debt swap (1 tx)" .
+aave:dsv-action-migrate a rfp:Finding ;
+    rfp:statedBy feed:defisaver ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "action" ; rdfs:label "Protocol migration (Aave→Spark / v2→v3)" .

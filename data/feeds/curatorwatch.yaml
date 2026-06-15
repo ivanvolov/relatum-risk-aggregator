@@ -1,0 +1,84 @@
+# CuratorWatch — ontology of what one aggregator entry yields per curator/vault
+# anchor curator: Sky (#1 by TVL on the platform) — wraps the Sky/USDS ecosystem we anchor across files
+# fetched: 2026-06-14
+# provenance: curatorwatch.com homepage tables
+
+id: curatorwatch
+name: "CuratorWatch"
+homepage: "https://curatorwatch.com"
+twitter: "curator_watch"
+maintainer: "CuratorWatch team (anonymous)"
+license: closed
+access: free dashboard
+update_cadence: hourly
+
+about: >
+  Tracks the curator layer of DeFi yield (Morpho, Aave, Euler, Compound, Spark, etc).
+  Primary entity is the curator, secondary is the vault.
+
+risks_covered:
+  - curator concentration / conflicts of interest
+  - curator jurisdiction (unregistered / registered)
+  - vault grading vs benchmark (A+ / B+ / C / NR)
+  - opaque allocations
+  - recent liquidations exposure in curated vaults
+
+data_model:
+  primary_entity: Curator
+  identifier: name  # e.g. "Sky", "Spark Protocol", "Steakhouse", "Gauntlet"
+
+  entities:
+    - name: Curator
+      properties:
+        - { name: name,             range: string,  example: "Sky" }
+        - { name: rank,             range: number,  example: 1 }
+        - { name: vault_grade,      range: enum,    values: ["A+", "A", "B+", "B", "C", "NR"], example: "A+" }
+        - { name: jurisdiction,     range: string,  example: "Cayman Islands",
+            description: "Legal registration location, or empty if undisclosed" }
+        - { name: tvl_usd,          range: number,  unit: usd, example: 7_060_000_000 }
+        - { name: vaults_managed,   range: number,  example: 9 }
+        - { name: time_alerts,      range: string,  example: "5H · 16M",
+            description: "Recent activity flags. H=hours since change, M=months since onboarding, L=liquidations" }
+
+    - name: Vault
+      properties:
+        - { name: name,             range: string }
+        - { name: curator,          range: string,  example: "Sky" }
+        - { name: underlying_protocol, range: enum, values: [Morpho, Aave, Euler, Compound, Spark, Other] }
+        - { name: chain,            range: enum }
+        - { name: tvl_usd,          range: number }
+        - { name: net_apy,          range: percent, example: 4.4 }
+        - { name: grade_category,   range: enum,    values: [High, Medium, Low] }
+        - { name: requirements_met, range: string,  example: "10/10",
+            description: "Pass count against CuratorWatch's compliance checklist" }
+        - { name: stablecoin_share, range: percent }
+        - { name: asset_breakdown,  range: map<token, percent>, example: { USDS: 47, wstETH: 13 } }
+
+  filter_dimensions:
+    - "Has jurisdiction (toggle)"
+    - "TVL descending"
+    - "All Curators / search"
+
+anchor_example:
+  subject: "Sky as curator"
+  expected_extract:
+    rank: 1
+    vault_grade: "A+"
+    jurisdiction: "Cayman Islands"
+    tvl_usd: 7_060_000_000
+    vaults_managed: 9
+    time_alerts: "5H · 16M"
+  rationale: >
+    Anchors to the same Sky/USDS economy that DeFiScan, BlockAnalitica, Pharos
+    and Stablewatch surface — but from the curator allocation angle.
+
+aggregate_universe:
+  total_curators: 70
+  total_vaults: 334
+  total_tvl_usd: 16_720_000_000
+  stablecoin_share_overall: 0.77
+
+known_gaps:
+  - Methodology behind A+/B+/C grade not published
+  - Curator-to-LLC mappings rely on self-disclosure
+  - No historical TVL series visible from the homepage

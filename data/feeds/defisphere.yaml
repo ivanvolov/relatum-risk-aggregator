@@ -1,0 +1,77 @@
+# DeFi Sphere — ontology of what one aggregator entry yields per lending market
+# anchor protocol: Aave-v3 (covered first-class)
+# fetched: 2026-06-14
+# provenance: defi-sphere.com homepage + blockanalitica.substack.com "Introducing Sphere Risk Scores"
+
+id: defisphere
+name: "DeFi Sphere"
+homepage: "https://defi-sphere.com"
+twitter: "TheDefiSphere"
+maintainer: "Block Analitica"
+license: closed (built on Block Analitica's open dashboards)
+access: free
+update_cadence: real-time
+related_to: blockanalitica
+
+about: >
+  Cross-protocol lending market intelligence. Sits one layer above Block Analitica's
+  per-protocol dashboards — same data shape, comparative view.
+
+covered_protocols: [Aave, Compound-v3, Morpho, SparkLend, Liquity-v2]
+
+risks_covered:
+  - market risk (undercollateralization under price shock)
+  - liquidity risk (supplier/borrower concentration, utilization, pool size)
+  - planned: oracle risk
+  - planned: settlement process risk
+
+data_model:
+  primary_entity: LendingMarket  # (protocol, market_pair)
+
+  entities:
+    - name: LendingMarket
+      properties:
+        - { name: protocol,         range: enum,    example: "Aave-v3" }
+        - { name: chain,            range: enum,    example: "Ethereum" }
+        - { name: market_pair,      range: string,  example: "wstETH/USDC" }
+        - { name: tvl_usd,          range: number }
+        - { name: total_supply,     range: number }
+        - { name: total_borrow,     range: number }
+        - { name: utilization,      range: percent }
+        - { name: current_supply_rate, range: percent }
+        - { name: current_borrow_rate, range: percent }
+        - { name: average_supply_rate, range: percent, description: "30-day avg" }
+        - { name: funding_rate,     range: percent,  description: "implied funding from rate basis" }
+        - { name: market_risk_score, range: number_0_100,
+            description: "v1: risk of undercollateralization from price shock. Inputs: onchain liquidity, liquidation bonuses, borrower LTV distribution. Higher = riskier." }
+        - { name: liquidity_risk_score, range: number_0_100,
+            description: "v1: supplier+borrower concentration, average utilization, relative pool size. Higher = riskier." }
+        # planned in future versions:
+        - { name: oracle_risk_score,     range: number_0_100, status: planned }
+        - { name: settlement_risk_score, range: number_0_100, status: planned }
+
+    - name: SupplyAPYvsRiskScatter  # signature visualization
+      axes:
+        x: market_risk_score
+        y: supply_apy
+        ideal_quadrant: top-left
+      description: "Scatter helps pick yield/risk efficient frontier"
+
+platform_stats:
+  markets_tracked: ">1000"
+  data_series: ">4000"
+  stablecoin_supply_tracked: "real-time USD"
+
+anchor_example:
+  subject: "Aave v3 — wstETH / USDC market"
+  expected_extract:
+    market_risk_score: 22    # speculative
+    liquidity_risk_score: 18
+    current_supply_rate: 4.7
+    average_supply_rate: 4.4
+    utilization: 78
+
+known_gaps:
+  - Formula and numerical scale not publicly disclosed
+  - Categorical mapping (low/med/high cutoffs) not shown
+  - Oracle and settlement scores are roadmap items

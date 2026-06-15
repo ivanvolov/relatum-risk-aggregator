@@ -1,0 +1,22 @@
+@prefix rfp:  <https://relatum.xyz/ns/rfp#> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix aave: <https://relatum.xyz/ns/protocol/aave/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Source: stablewatch.io
+# Stablewatch covers yield-bearing stablecoins. Aave is a lending protocol.
+# Coverage gap is the headline triple here.
+# Indirect signal: Aave aTokens (aUSDC, aDAI) ARE yield-bearing dollar instruments
+# that *could* be added to Stablewatch's universe — currently absent.
+
+aave:sw-coverage a rfp:CoverageStatement ;
+    rfp:statedBy feed:stablewatch ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "notCovered" ;
+    rfp:coverageReason "Stablewatch tracks yield-bearing stablecoins as the entity. Aave is a lending protocol; aTokens (aUSDC, aDAI, aGHO) are not currently in the tracked universe of 60+ assets." .
+
+# Possible-future-coverage finding (operator note)
+aave:sw-future-atoken a rfp:Finding ;
+    rfp:statedBy feed:stablewatch ; rfp:about aave:GHO ;
+    rfp:dimension "coverage-candidate" ;
+    rdfs:label "GHO and yield-bearing aTokens (aUSDC, aUSDT) are candidate Stablewatch entries; not currently indexed" .

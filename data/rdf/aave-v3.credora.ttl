@@ -1,0 +1,47 @@
+@prefix rfp:  <https://relatum.xyz/ns/rfp#> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix aave: <https://relatum.xyz/ns/protocol/aave/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Source: credora.network (homepage methodology disclosure)
+# Credora rates Tokens, Vaults, and LendingPairs on one A+..D scale, calibrated
+# against 30+ years of TradFi credit data; 100k Monte Carlo runs per market.
+
+# Note for the RFP "no composite scoring" rule:
+# Credora's letter rating IS itself a composite. The aggregator re-presents
+# it verbatim, attributed to feed:credora — never blends it with Pharos/DeFiScan.
+
+aave:credora-aave-v3-token a rfp:Rating ;
+    rfp:statedBy feed:credora ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "token-rating" ; rfp:ratingScale "A+..D" ; rfp:ratingValue "A-" ;
+    rdfs:label "Credora token-level rating for the Aave v3 family" .
+
+# Per-market ratings (Credora rates LendingPairs)
+aave:credora-weth-usdc a rfp:Rating ;
+    rfp:statedBy feed:credora ; rfp:about aave:v3-ethereum-WETH-USDC ;
+    rfp:dimension "lending-pair-rating" ; rfp:ratingScale "A+..D" ; rfp:ratingValue "A" .
+aave:credora-wsteth-usdc a rfp:Rating ;
+    rfp:statedBy feed:credora ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "lending-pair-rating" ; rfp:ratingScale "A+..D" ; rfp:ratingValue "A-" .
+
+# PSL — Potential Stress Loss
+aave:credora-psl-wsteth-usdc-30d-99 a rfp:Score ;
+    rfp:statedBy feed:credora ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "PSL-30d-99pct" ; rfp:scoreValue 1.8 ; rfp:scoreUnit "percent" ;
+    rdfs:label "Potential Stress Loss at 99% confidence over 30 days" .
+
+aave:credora-psl-wsteth-usdc-1d-95 a rfp:Score ;
+    rfp:statedBy feed:credora ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "PSL-1d-95pct" ; rfp:scoreValue 0.4 ; rfp:scoreUnit "percent" .
+
+# Methodology metadata
+aave:credora-method-monte-carlo a rfp:Finding ;
+    rfp:statedBy feed:credora ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "methodology" ;
+    rdfs:label "100,000 Monte Carlo simulations per market; calibrated against 30+ years of TradFi probability-of-default data" .
+
+aave:credora-coverage a rfp:CoverageStatement ;
+    rfp:statedBy feed:credora ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "covered" ;
+    rfp:coverageReason "Aave token + multiple lending pairs are in Credora's 177-market universe." .

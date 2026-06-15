@@ -1,0 +1,88 @@
+# Credora — ontology of what one aggregator entry yields per vault/protocol
+# anchor protocol: Aave-v3 lending markets (rated as "markets" in Credora's universe)
+# fetched: 2026-06-14
+# provenance: credora.network homepage + research blog excerpts
+
+id: credora
+name: "Credora"
+homepage: "https://credora.network"
+twitter: "CredoraNetwork"
+maintainer: "Credora (RWA Inc / former Credora credit team)"
+license: methodology published; ratings closed
+access: free ratings; API/data feed paid
+update_cadence: continuous (Monte Carlo re-run on parameter change)
+
+about: >
+  Independent risk ratings for DeFi assets, vaults, and lending markets. Single A+..D
+  scale, calibrated against 30+ years of traditional credit data (probability-of-default
+  style curves). Methodology emphasizes Potential Stress Loss (PSL).
+
+risks_covered:
+  - smart-contract risk
+  - market risk (collateral volatility / liquidation)
+  - liquidity risk (exit capacity)
+  - counterparty / curator risk (for vaults)
+  - oracle risk
+
+universe_size:
+  rated_vaults: 108
+  rated_markets: 177
+  rated_assets: 51
+
+data_model:
+  primary_entity: RatedEntity   # may be Token, Vault, or LendingPair
+
+  entities:
+    - name: RatedEntity
+      properties:
+        - { name: name,             range: string,  example: "Aave v3 wstETH/USDC market" }
+        - { name: kind,             range: enum,    values: [Token, Vault, LendingPair] }
+        - { name: rating,           range: enum,    values: ["A+", A, "A-", "B+", B, "B-", "C+", C, "C-", D, NR] }
+        - { name: rating_outlook,   range: enum,    values: [Improving, Stable, Deteriorating] }
+        - { name: psl_1d_95,        range: percent,
+            description: "Potential Stress Loss at 95% confidence over 1 day" }
+        - { name: psl_30d_99,       range: percent,
+            description: "Potential Stress Loss at 99% confidence over 30 days" }
+        - { name: monte_carlo_runs, range: number, example: 100000 }
+        - { name: expected_loss_bps, range: number }
+        - { name: smart_contract_risk_score, range: number_0_100 }
+        - { name: market_risk_score, range: number_0_100 }
+        - { name: liquidity_risk_score, range: number_0_100 }
+        - { name: counterparty_risk_score, range: number_0_100, applicability: vault }
+        - { name: oracle_risk_score, range: number_0_100 }
+        - { name: last_review_date, range: date }
+        - { name: review_url,       range: url }
+
+    - name: PSLMethodology
+      description: >
+        Forward-looking loss under stress. Calibrated against 30+ years of TradFi
+        probability-of-default data. Returns a percentage of principal at risk under
+        configurable horizon × confidence.
+      inputs:
+        - collateral price path (Monte Carlo)
+        - liquidation bonus
+        - LTV distribution per borrower
+        - on-chain liquidity depth
+        - oracle latency
+        - smart-contract incident history of the protocol
+
+anchor_example:
+  subject: "Aave v3 — wstETH / USDC lending pair"
+  expected_extract:
+    rating: "A-"
+    rating_outlook: Stable
+    psl_30d_99: 1.8         # ~1.8% potential stress loss
+    monte_carlo_runs: 100000
+    market_risk_score: 32
+    liquidity_risk_score: 18
+    oracle_risk_score: 12
+  alt_subject: "sUSDe (Ethena) — as Vault rating"
+
+caveats:
+  - "Single composite scale (A+..D) is itself a synthesis. For the EF Neutral
+    Aggregator RFP's 'no composite score' rule, Credora is the feed — the aggregator
+    only re-presents the rating verbatim, with methodology link."
+
+known_gaps:
+  - Per-component weights not on homepage; docs site needed for full disclosure
+  - Methodology page reachable only via /docs (homepage links there)

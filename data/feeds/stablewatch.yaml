@@ -1,0 +1,84 @@
+# Stablewatch — ontology of what one aggregator entry yields per stablecoin
+# anchor stablecoin: sUSDS (Sky's yield-bearing wrapper of USDS)
+# fetched: 2026-06-14
+# provenance: stablewatch.io blog + asset-page search results (SPA blocked direct fetch)
+
+id: stablewatch
+name: "Stablewatch"
+homepage: "https://www.stablewatch.io"
+twitter: "stablewatch"
+maintainer: "Stablewatch team"
+license: closed
+access: free dashboard; deeper analytics behind app.stablewatch.io
+update_cadence: real-time (APY/TVL)
+
+about: >
+  Yield-bearing stablecoin landscape tracker. Covers 60+ yield-bearing stablecoins;
+  emphasis on real APY, TVL, yield paid out, and category (blue-chip vs. high-yield).
+
+risks_covered:
+  - yield sustainability (rate vs. paid-out delta)
+  - backing transparency (RWA share, vault composition)
+  - liquidity depth
+  - peg / NAV stress (for wrappers)
+  - category-level structural risk (per stablecoin family)
+
+data_model:
+  primary_entity: YieldBearingStablecoin
+  identifier: slug  # e.g. "sUSDS-Sky", "sUSDe-Ethena"
+
+  entities:
+    - name: YieldBearingStablecoin
+      properties:
+        - { name: symbol,           range: string,  example: "sUSDS" }
+        - { name: name,             range: string,  example: "sUSDS" }
+        - { name: issuer,           range: string,  example: "Sky" }
+        - { name: underlying,       range: string,  example: "USDS" }
+        - { name: apy_current,      range: percent, example: 6.5 }
+        - { name: apy_30d,          range: percent, example: 6.4 }
+        - { name: apy_90d,          range: percent }
+        - { name: tvl_usd,          range: number,  unit: usd, example: 2_400_000_000 }
+        - { name: yield_paid_usd_lifetime, range: number, unit: usd }
+        - { name: yield_paid_usd_30d,      range: number, unit: usd }
+        - { name: category,         range: enum,
+            values: [BlueChip, HighYield, RWA-Backed, CryptoNative-Yield, T-Bill, Restaking-Backed, Delta-Neutral, HiddenGem] }
+        - { name: backing_model,    range: enum,
+            values: [RWA, OnchainCollateral, DeltaNeutral, RestakingYield, Mixed] }
+        - { name: rwa_share,        range: percent, example: 100 }
+        - { name: chain_supply,     range: map<chain, usd> }
+        - { name: chains,           range: list<string>, example: [Ethereum, Base, Arbitrum] }
+        - { name: launched_at,      range: date }
+        - { name: peg_target,       range: string,  example: "USD" }
+        - { name: nav_or_price,     range: number,  example: 1.0237,
+            description: "Wrapper NAV — accrues over time, not a peg" }
+
+    - name: APYvsTVLScatter
+      description: "Signature view — 30d APY (y) vs TVL (x). Segments market into blue-chip cluster (low-yield, high-TVL) and hidden-gems (high-yield, low-TVL)."
+
+    - name: CategoryReport
+      description: "Stablewatch's qualitative framework: per category, defines the core yield model and primary risk vectors. Examples: Restaking-Backed → slashing + LRT depeg; Delta-Neutral → funding inversion + venue counterparty; RWA → T-bill rate path + custodian; Crypto-Native → collateral correlation."
+
+aggregate_universe:
+  assets_tracked: ">60"
+  total_market_cap_usd: "tracked top-level"
+  total_yield_paid_usd: "tracked top-level"
+  launches_recent_months: "tracked"
+
+anchor_example:
+  subject: "sUSDS (Sky)"
+  expected_extract:
+    issuer: Sky
+    underlying: USDS
+    apy_current: 6.5
+    apy_30d: 6.4
+    tvl_usd: 2_400_000_000   # speculative — value at lookup time
+    category: BlueChip
+    backing_model: OnchainCollateral
+    chains: [Ethereum, Base, Arbitrum]
+    peg_target: USD
+    nav_or_price: 1.0237
+
+known_gaps:
+  - Homepage blocks WebFetch / Cloudflare — schema inferred from search-indexed asset pages
+  - Per-asset risk score not published; risk framing is qualitative per category
+  - Custodian / attestation links not surfaced at the asset level (would need V2 app)

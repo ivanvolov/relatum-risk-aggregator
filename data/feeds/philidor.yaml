@@ -1,0 +1,103 @@
+# Philidor — ontology of what one aggregator entry yields per vault
+# anchor: vault-level (no single canonical anchor on the homepage)
+# fetched: 2026-06-15
+# provenance: philidor.io homepage + docs.philidor.io intro
+# note: tier thresholds differ between the two sources (see known_gaps)
+
+id: philidor
+name: "Philidor Analytics"
+homepage: "https://philidor.io"
+dashboard: "https://analytics.philidor.io"
+vaults_portal: "https://vaults.philidor.io"
+api_endpoint: "https://api.philidor.io"
+mcp_endpoint: "https://mcp.philidor.io/api/mcp"
+docs: "https://docs.philidor.io"
+contact: "contact@philidor.io"
+maintainer: "Philidor Labs"
+license: methodology open (no repo / license declaration on homepage)
+access: free dashboard + REST API + MCP server
+update_cadence: continuous
+
+about: >
+  Deterministic vault risk scoring via a Vector Risk Framework. "Deterministic"
+  is the differentiator: scores are reproducible from inputs alone, not adjusted
+  by hand. Three independent vectors — Asset, Platform, Governance — compose a
+  single 0–10 score with three quality tiers. Companion products include RWA &
+  Baskets API and Vault Curation.
+
+risks_covered:
+  # Asset vector (40% weight)
+  - collateral quality
+  - liquidity depth
+  - peg stability
+  # Platform vector (40% weight)
+  - audit posture and time-in-market
+  - strategy shape
+  - platform dependency exposure
+  # Governance vector (20% weight)
+  - timelocks
+  - upgrade paths
+  - incident response posture
+
+data_model:
+  primary_entity: VaultAssessment
+  identifier: vault_id
+
+  scale:
+    composite: "0-10 numeric"
+    tiers:
+      - { name: Prime, threshold: "8.7+ (homepage) / 8+ (docs)" }
+      - { name: Core,  threshold: "6.5 (homepage) / 5.0-7.9 (docs)" }
+      - { name: Edge,  threshold: "3.2 (homepage) / <5 (docs)" }
+    note: "Tier thresholds presented inconsistently between homepage and docs intro — see known_gaps."
+
+  vectors:
+    - { name: Asset,      weight_percent: 40, components: [collateral_quality, liquidity_depth, peg_stability] }
+    - { name: Platform,   weight_percent: 40, components: [audits, time_in_market, strategy_shape, dependency_risk] }
+    - { name: Governance, weight_percent: 20, components: [timelocks, upgrade_paths, incident_response] }
+
+  entities:
+    - name: VaultAssessment
+      properties:
+        # identity
+        - { name: vault_id,         range: string }
+        - { name: name,             range: string }
+        - { name: platform,         range: enum,    values: [Morpho, Aave, Spark, Compound, MakerDAO, Uniswap, Blend, Yearn, Beefy, Nest] }
+        - { name: chain,            range: string }
+        # composite + tier
+        - { name: composite_score,  range: number,  example: 8.4,  unit: "0-10 scale" }
+        - { name: tier,             range: enum,    values: [Prime, Core, Edge] }
+        # vector subscores
+        - { name: asset_score,      range: number,  unit: "0-10 scale" }
+        - { name: platform_score,   range: number,  unit: "0-10 scale" }
+        - { name: governance_score, range: number,  unit: "0-10 scale" }
+        # methodology guarantee
+        - { name: deterministic,    range: boolean, example: true,
+            description: "Score is reproducible from inputs; no manual adjustment." }
+
+    - name: Platform
+      description: "A protocol that hosts vaults — Philidor scores per-vault within each."
+      properties:
+        - { name: name, range: string }
+        - { name: vault_count_in_scope, range: number }
+
+aggregate_universe:
+  total_vaults: 700+
+  protocols_covered_count_per_homepage: 10
+  protocols_covered_count_per_docs: 9   # docs says 9; homepage lists 10 names
+  chains_covered: 6
+  platforms_named: [Morpho, Aave, Spark, Compound, MakerDAO, Uniswap, Blend, Yearn, Beefy, Nest]
+
+access_modes:
+  - dashboard: "analytics.philidor.io — human-facing analytics surface"
+  - rest_api: "api.philidor.io — programmatic per-vault score reads"
+  - mcp_server: "mcp.philidor.io/api/mcp — model-context-protocol endpoint, agent-friendly"
+  - vaults_portal: "vaults.philidor.io — vault-by-vault drilldown"
+
+known_gaps:
+  - Tier thresholds inconsistent between homepage (Prime 8.7+ / Core 6.5 / Edge 3.2) and docs intro (Prime 8+ / Core 5-7.9 / Edge <5) — needs reconciliation against the published methodology
+  - Protocol count mismatch — homepage names 10 platforms, docs says "9 protocols". One is likely Nest (RWA) treated separately
+  - Repo URL / license not declared on homepage
+  - Twitter handle not listed on homepage
+  - No anchor-vault example with full score breakdown surfaced publicly
+  - Update cadence (real-time vs daily snapshot) not explicit on homepage

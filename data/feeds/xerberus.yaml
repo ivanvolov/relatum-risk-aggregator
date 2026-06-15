@@ -1,0 +1,104 @@
+# Xerberus — ontology of what one aggregator entry yields per protocol/asset/org
+# anchor protocol: Aave v3 — named on xerberus.io homepage as an example protocol
+# fetched: 2026-06-15
+# provenance: xerberus.io homepage + xerberus.gitbook.io references
+# status caveat: site banner reads "OPEN BETA // VERSION 3.1.0"
+
+id: xerberus
+name: "Xerberus"
+homepage: "https://www.xerberus.io"
+app: "https://app.xerberus.io"
+api_docs: "https://xerberus.gitbook.io"
+twitter: "Xerberus"
+github: "XerberusTeam"
+discord: "https://discord.gg/EUUQRgNgv5"
+maintainer: "Xerberus (non-profit; consensus-weighted, investor-funded)"
+license: methodology published openly (no repo license declared on homepage)
+access: free dashboard + Risk API
+update_cadence: continuous (mechanism status tracked Active / Pruned)
+
+about: >
+  Intrinsic Risk dendrograms — 300+ subscores hung off 85+ DeFi mechanisms. Every
+  subscore must reference a real historical incident, so the catalog is evidence-
+  anchored rather than score-from-prior. Spans three object classes — Assets,
+  Protocols, Organisations — under a single rating system.
+
+risks_covered:
+  - smart contract security
+  - oracle dependency
+  - custody architecture
+  - infrastructure resilience
+  - upgradeable proxy contract exposure
+  - modular contract system exposure
+  - external oracle feed quality
+  - access-controlled keeper risk
+  - multisig vault custody concentration
+  # the above are the visible subscores in the Security domain on the homepage —
+  # the full 300+ catalog is documented behind the methodology link
+
+data_model:
+  primary_entity: ObjectAssessment
+  identifier: object_id  # token symbol, protocol slug, or org name
+
+  object_classes:
+    - Asset       # e.g. WETH, stETH, USDC
+    - Protocol    # e.g. Aave v3, Morpho, Lido
+    - Organisation
+
+  entities:
+    - name: ObjectAssessment
+      properties:
+        - { name: id,                 range: string,  example: "aave-v3" }
+        - { name: class,              range: enum,    values: [Asset, Protocol, Organisation] }
+        - { name: name,               range: string,  example: "Aave v3" }
+        # top-level dimensions — observed as percentage segments on Aave v3 example
+        - { name: security_score,     range: percent, example: 84 }
+        - { name: economics_score,    range: percent, example: 75 }
+        - { name: governance_score,   range: percent, example: 91 }
+        # rating scale specifics (exact bucketing not published on homepage)
+        - { name: scale_unit,         range: string,  example: "0-100 percent" }
+
+    - name: Subscore
+      description: "One leaf in the dendrogram. Each must reference a documented historical incident."
+      properties:
+        - { name: subscore_id,        range: string }
+        - { name: mechanism,          range: string,  example: "external-oracle-feed" }
+        - { name: domain,             range: enum,    values: [Security, Economics, Governance] }
+        - { name: weight,             range: number,  description: "Staked-consensus weighting for importance" }
+        - { name: historical_anchor,  range: string,  example: "Terra/Luna depeg, Euler hack, Mango Markets, FTX contagion",
+            description: "Required reference — no subscore exists without a real-world precedent." }
+        - { name: status,             range: enum,    values: [Active, Pruned] }
+
+    - name: Mechanism
+      description: "A reusable DeFi primitive (85+ catalogued). Subscores attach to mechanisms, not to individual protocols."
+      properties:
+        - { name: mechanism_id,       range: string }
+        - { name: description,        range: string }
+        - { name: protocols_using,    range: list<string> }
+
+  consensus:
+    weighting: "Staked-consensus mechanism for subscore importance"
+    transparency: "All calculations public and documented; no black-box aggregation"
+
+anchor_example:
+  subject: "Aave v3 (named on homepage)"
+  expected_extract:
+    class: Protocol
+    security_score: 84
+    economics_score: 75
+    governance_score: 91
+  rationale: >
+    Homepage shows these segment values explicitly for the Aave v3 panel. They
+    are illustrative — actual values at lookup time will differ.
+
+aggregate_universe:
+  total_subscores: 300+
+  total_mechanisms: 85+
+  total_protocols: "not on page (named examples: Aave v3, Morpho, Lido)"
+
+known_gaps:
+  - Exact rating-scale bucketing (e.g. AAA→D bands) not on homepage; documented behind methodology link
+  - Repo license not declared on github.com/XerberusTeam landing
+  - Total covered-object count per class (assets / protocols / orgs) not surfaced on homepage
+  - Validator / staking economics for subscore weighting consensus not detailed publicly
+  - Protocol-by-protocol "is X covered" query path — vault submission goes via a Typeform, suggesting coverage is gated by request

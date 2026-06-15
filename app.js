@@ -319,13 +319,14 @@ function renderFeedRegistry(targetId) {
   const wrap = document.getElementById(targetId);
   if (!wrap) return;
   const R = window.RELATUM;
-  let html = '<table class="feeds-table"><thead><tr><th>Feed</th><th>Type</th><th>Focus</th><th>Methodology one-liner</th></tr></thead><tbody>';
+  let html = '<table class="feeds-table"><thead><tr><th>Feed</th><th>Type</th><th>Focus</th><th>Methodology one-liner</th><th>Schema</th></tr></thead><tbody>';
   for (const f of R.FEEDS) {
     html += `<tr>`;
     html += `<td class="feed-name">${f.name}</td>`;
     html += `<td class="type-cell"><span class="type-chip" data-type="${f.type}">${f.type}</span></td>`;
     html += `<td class="focus">${f.focus}</td>`;
     html += `<td class="focus">${f.methodology}</td>`;
+    html += `<td class="schema-cell">${f.schemaDoc ? `<a href="${f.schemaDoc}" target="_blank" class="schema-link">${f.id}.yaml</a>` : '<span class="dim">—</span>'}</td>`;
     html += `</tr>`;
   }
   html += "</tbody></table>";

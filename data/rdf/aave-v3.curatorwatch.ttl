@@ -1,0 +1,31 @@
+@prefix rfp:  <https://relatum.xyz/ns/rfp#> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix aave: <https://relatum.xyz/ns/protocol/aave/> .
+@prefix cur:  <https://relatum.xyz/ns/curator/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Source: curatorwatch.com — homepage curator list.
+# Aave is a protocol, not a curator → CuratorWatch does not rate Aave directly.
+# What it DOES surface: curators who allocate AUM into Aave markets.
+# Coverage gap is itself a triple — "absence as data" per the RFP brief.
+
+aave:cw-coverage a rfp:CoverageStatement ;
+    rfp:statedBy feed:curatorwatch ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "notCovered" ;
+    rfp:coverageReason "CuratorWatch tracks curator-managed vaults, not lending protocols. Aave-the-protocol has no entry on the platform." .
+
+# Indirect signal: curators with material Aave exposure
+cur:gauntlet a rfp:Curator ; rdfs:label "Gauntlet" .
+cur:steakhouse a rfp:Curator ; rdfs:label "Steakhouse Financial" .
+cur:spark a rfp:Curator ; rdfs:label "Spark Protocol" .
+
+aave:cw-gauntlet-exposure a rfp:CoverageStatement ;
+    rfp:statedBy feed:curatorwatch ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "partiallyCovered" ;
+    rfp:coverageReason "Gauntlet, a CuratorWatch-tracked curator with A-grade rating, allocates to Aave through its risk-management contracts. Aave market parameters are governed by Gauntlet recommendations." .
+
+aave:cw-spark-exposure a rfp:CoverageStatement ;
+    rfp:statedBy feed:curatorwatch ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "partiallyCovered" ;
+    rfp:coverageReason "Spark Protocol (curator rank #2 on CuratorWatch) borrows from Sky reserves and deposits into Aave; an Aave depeg/exploit propagates to Spark vault TVL." .

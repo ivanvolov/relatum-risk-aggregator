@@ -1,18 +1,52 @@
 # Relatum mockup
 
-Static UI mockup for the EF RFP *Neutral DeFi Risk Intelligence Aggregator*.
-Three pages, no build step — open `index.html` in any browser.
+Static UI mockup submitted with Ivan Volovyk's application to the EF App Relations RFP *Neutral DeFi Risk Intelligence Aggregator* (deadline 2026-06-15 AoE). Three pages, no build step — open `index.html` in any browser, or visit the deployed copy at [relatum.app](https://relatum.app/).
+
+The full grant proposal is at [`PROPOSAL.md`](PROPOSAL.md).
+
+Self-contained: the RDF graph that backs the mockup, the per-feed schema docs, and the seed-20 protocol list all live under `data/` in this repo. No external paths.
+
+## About this submission
+
+Relatum is a methodology for working with cross-domain data — on-chain state, protocol docs, governance forums, cap tables, off-chain entities — as a single knowledge graph against a shared ontology, with provenance and a time range on every fact. The broader research line lives at the [Relatum research note](https://forested-bottom-168.notion.site/Relatum-34d8a6cbc71a80cf9263ff6cf31702cc) — this repo is one specialised application of it.
+
+For this grant the substrate is narrowed to one specific application: a knowledge graph of the major DeFi protocols, compacted from everything every major risk feed publishes about them, queryable for many different risk questions **without Relatum ever producing a number of its own.**
+
+Neutrality is enforced at the schema layer, not by editorial restraint. The ontology has no predicate for a composite score and no query path that produces one — so a "Relatum risk score" cannot be introduced without a charter amendment and written EF agreement.
+
+The aggregation the RFP asks for is a single SPARQL query — every dimension where any two feeds disagree, returned with the conflicting values intact, sources preserved. That query *is* the product. See the methodology page or [`PROPOSAL.md`](PROPOSAL.md) for the full framing.
+
+## Run locally
+
+No build step, no server, no dependencies.
+
+```bash
+git clone https://github.com/ivanvolov/relatum-risk-aggregator
+cd relatum-risk-aggregator
+open index.html        # macOS — or just double-click the file
+```
+
+For path-relative resource loading (the `data/feeds/*.yaml` schema links) to work in some browsers, you can also serve it:
+
+```bash
+python3 -m http.server 8000
+# then visit http://localhost:8000/
+```
 
 ## What's here
 
-| File | What it is |
+| Path | What it is |
 |---|---|
 | `index.html`            | Summary matrix — 20 protocols × 17 feeds, sortable, with coverage badges |
 | `protocol-aave.html`    | Aave v3 detail page — fully populated worked example |
 | `methodology.html`      | Methodology + provenance taxonomy + feed registry |
 | `styles.css`            | One stylesheet (L2Beat / DeFiScan visual family) |
-| `data.js`               | Pre-baked from the RDF graph in `proposals/EF/data/protocols/rdf/` |
+| `data.js`               | Pre-baked from the RDF graph in `data/rdf/` |
 | `app.js`                | Matrix sort/filter + detail rendering |
+| `data/_protocols.yaml`  | Seed-20 protocol list with DefiLlama TVL (2026-06-14 snapshot) |
+| `data/feeds/<feed>.yaml`| Per-feed schema docs — entity model, scales, anchor examples, known gaps. 12 of 17 committed at v0.1 |
+| `data/rdf/vocab.ttl`    | The `rfp:` ontology + feed registry |
+| `data/rdf/aave-v3.*.ttl`| Per-feed claims about Aave v3 (8 feeds) + the merged 667-triple combined graph |
 
 ## Design references
 
@@ -27,7 +61,7 @@ This mockup follows that family:
 ## How the data flows
 
 ```
-proposals/EF/data/protocols/rdf/             ← RDF (Turtle) graph — the data layer
+data/rdf/             ← RDF (Turtle) graph — the data layer
    ├── vocab.ttl                              rfp: ontology + feed registry
    ├── aave-v3.<feed>.ttl  × 8                per-feed claims about Aave
    └── aave-v3.combined.ttl                   merged, 667 triples
@@ -72,6 +106,14 @@ The triple counts on the methodology page are real, measured with rdflib:
 
 ```bash
 python3 -c "from rdflib import Graph; g=Graph(); \
-  g.parse('../data/protocols/rdf/aave-v3.combined.ttl'); print(len(g))"
+  g.parse('data/rdf/aave-v3.combined.ttl'); print(len(g))"
 # → 667
 ```
+
+## License
+
+Planned: AGPL-3.0 at W0 of the grant timeline (per [`PROPOSAL.md`](PROPOSAL.md) §Timeline). The mockup ships in this repo for review; the license file lands when the substrate codebase is migrated in.
+
+## Contact
+
+Ivan Volovyk · vivan.volovik@gmail.com · [@LisVikkk](https://x.com/LisVikkk) · [t.me/IVIkkk](https://t.me/IVIkkk)

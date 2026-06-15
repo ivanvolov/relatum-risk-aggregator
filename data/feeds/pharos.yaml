@@ -1,0 +1,121 @@
+# Pharos — ontology of what one aggregator entry yields per stablecoin
+# anchor stablecoin: USDS (Sky) — keeps the cross-aggregator anchor consistent
+# fetched: 2026-06-14
+# provenance: pharos.watch homepage + /methodology + /stablecoin/gho-aave + api.pharos.watch + github.com/TokenBrice/pharos-watch
+
+id: pharos
+name: "Pharos (Stablecoin Lighthouse)"
+homepage: "https://pharos.watch"
+twitter: "PharosWatch"
+github: "TokenBrice/pharos-watch"
+maintainer: "TokenBrice"
+license: open-source (repo public)
+access: free dashboard + public API
+update_cadence: continuous (depeg early-warning is forward-looking)
+api_endpoint: "https://api.pharos.watch/api/stablecoin/<slug>"
+
+about: >
+  Stablecoin classification + safety grading + depeg early warning. Covers 401+ coins
+  across 27 pegs and 107 chains.
+
+risks_covered:
+  - depeg severity, duration, recovery
+  - peg-stability mechanism failure
+  - blacklist / freeze capability
+  - mint authority concentration
+  - collateral / wrapper dependency contagion
+  - DEX liquidity / exit capacity stress
+  - mint/burn pressure anomalies
+
+data_model:
+  primary_entity: Stablecoin
+  identifier: slug  # e.g. "usds-sky", "gho-aave"
+
+  entities:
+    - name: Stablecoin
+      properties:
+        # identity
+        - { name: id,               range: string,  example: "usds-sky" }
+        - { name: symbol,           range: string,  example: "USDS" }
+        - { name: name,             range: string,  example: "USDS" }
+        - { name: issuer,           range: string,  example: "Sky" }
+        # classification (badges)
+        - { name: peg,              range: enum,    example: "USD",
+            values: [USD, EUR, GBP, CHF, JPY, BRL, RUB, KRW, IDR, SGD, TRY, AUD, ZAR, CAD, CNH, PHP, MXN, MYR, UAH, ARS, KGS, NGN, XOF, Gold, Silver, CPI] }
+        - { name: backing,          range: enum,    example: "Crypto-Collateralized",
+            values: [RWA-Backed, Crypto-Collateralized, Fiat-Collateralized, Algorithmic-Legacy] }
+        - { name: governance,       range: enum,    example: "DeFi",
+            values: [CeFi, CeFi-Dependent, DeFi] }
+        - { name: status,           range: enum,    values: [active, pre-launch, frozen, archived, Announced, Testnet, Auditing, Beta] }
+        # supply & market
+        - { name: market_cap_usd,   range: number,  unit: usd }
+        - { name: supply,           range: number }
+        - { name: price,            range: number,  example: 1.0002 }
+        - { name: change_24h,       range: percent }
+        - { name: change_7d,        range: percent }
+        # safety grades — five dimensions on A+..F scale
+        - { name: safety_grade,     range: enum,    values: ["A+", A, "B+", B, "C+", C, D, F, NR] }
+        - { name: grade_peg_stability,    range: letter_grade }
+        - { name: grade_liquidity_exit,   range: letter_grade,
+            description: "DEX depth + redemption backstop capacity" }
+        - { name: grade_resilience,       range: letter_grade,
+            description: "Collateral quality + custody model" }
+        - { name: grade_decentralization, range: letter_grade,
+            description: "Chain tier, deployment, oracle, bridge route, mint-authority blend" }
+        - { name: grade_dependency_risk,  range: letter_grade,
+            description: "Wrapper / collateral / mechanism dependency exposure" }
+        # scores 0-100
+        - { name: peg_score,        range: number_0_100,
+            description: "Historical time-at-peg quality. Multiplies base grade via (peg_score/100)^0.4" }
+        - { name: liquidity_score,  range: number_0_100,
+            description: "TVL depth + volume + pool quality + durability + pair diversity" }
+        - { name: mint_authority_score, range: number_0_100,
+            description: "Standalone authority assessment; NR if not reviewed" }
+        - { name: dews_score,       range: number_0_100,
+            description: "Depeg Early Warning Score — forward-looking, combines price deviation, source divergence, liquidity erosion, pool imbalance, supply velocity, blacklist activity, mint/burn pressure, yield anomalies" }
+        - { name: psi_score,        range: number_0_100,
+            description: "Stability Index. Starts at 100, subtracts penalties for severity / breadth / stress breadth, adds clamped trend. Bands: BEDROCK → MELTDOWN" }
+        # protocol mechanics
+        - { name: collateral_types, range: list<string>, example: [ETH, sUSDe, USDC, USDT, wBTC] }
+        - { name: peg_mechanism,    range: string,  example: "Overcollateralized minting via Aave V3 facilitator model" }
+        - { name: redemption_backstop, range: string, example: "PSM swap + stability modules" }
+        - { name: blacklist_capability, range: enum, values: [Yes, Upstream, Possible, No] }
+
+    - name: ChainDeployment
+      properties:
+        - { name: chain,            range: string,  example: "ethereum" }
+        - { name: contract_address, range: address, example: "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f" }
+        - { name: decimals,         range: number,  example: 18 }
+        - { name: chain_supply,     range: number }
+
+    - name: DepegEvent
+      properties:
+        - { name: timestamp,        range: datetime }
+        - { name: direction,        range: enum,    values: [above, below] }
+        - { name: severity,         range: number,  description: "max % deviation in event" }
+        - { name: duration_minutes, range: number }
+        - { name: resolution,       range: enum,    values: [Recovered, OngoingAtRisk, RecoveryUnlikely, InsufficientSignal] }
+
+    - name: DepegDurationResolver  # DDR forecast at active stress
+      properties:
+        - { name: stage1_outlook,   range: enum,    values: [RecoveryLikely, AtRisk, RecoveryUnlikely, InsufficientSignal] }
+        - { name: stage2_median_minutes, range: number }
+        - { name: stage2_iqr_minutes,    range: tuple<number,number> }
+        - { name: lock_trigger,     range: enum,    values: [ReadinessOver75pct, Backstop72h, NotLocked] }
+
+anchor_example:
+  subject: "USDS (Sky)"
+  expected_extract:
+    peg: USD
+    backing: Crypto-Collateralized
+    governance: DeFi
+    status: active
+    safety_grade: "B"   # speculative — real value at lookup time
+    blacklist_capability: "Upstream"
+    collateral_types: [ETH, wstETH, USDC, USDT, sUSDe, T-Bills via RWA]
+    peg_mechanism: "PSM-backed USDS minted against DAI; PSM converts USDC 1:1"
+    chains: [Ethereum, Base, Arbitrum, Solana]
+
+known_gaps:
+  - Numeric base-dimension weights not published on methodology page
+  - Dependency contagion graph is computed but not always exposed per-coin

@@ -1,0 +1,98 @@
+# DeFiScan — ontology of what one aggregator entry yields per protocol
+# anchor protocol: Aave-v3 (defiscan.info/projects/aave + defiscan-data/aave-v3-ethereum)
+# fetched: 2026-06-14
+# provenance: defiscan.info, github.com/deficollective/defiscan, github.com/deficollective/defiscan-data, github.com/deficollective/permission-scanner
+
+id: defiscan
+name: "DeFiScan"
+homepage: "https://defiscan.info"
+twitter: "defiscan_info"
+github: "deficollective"
+maintainer: "DeFi Collective (Switzerland, non-profit)"
+license: open-source
+access: free
+update_cadence: "manual review + permission-scanner re-runs"
+
+about: >
+  Structural review of DeFi protocol centralization. Output is a stage classification
+  (Stage 0 / 1 / 2) plus a permission and dependency map per protocol.
+
+risks_covered:
+  - centralization / single-points-of-control
+  - admin-key / multisig blast radius
+  - upgradeability without exit windows
+  - oracle dependency risk
+  - cross-protocol dependency risk
+  - bridge / messaging-layer dependency risk
+
+data_model:
+  primary_entity: Protocol
+  identifier: slug  # e.g. "aave-v3"
+
+  entities:
+    - name: Protocol
+      properties:
+        - { name: name,            range: string,  example: "Aave v3" }
+        - { name: slug,            range: string,  example: "aave-v3" }
+        - { name: category,        range: enum,    example: "Lending", values: [Lending, DEX, Liquid Staking, CDP, Restaking, Yield, Stablecoin, Bridge] }
+        - { name: stage,           range: enum,    example: 1, values: [0, 1, 2],
+            description: "Maturity stage. 0 = full admin control, 1 = limited control + exit window, 2 = fully decentralized." }
+        - { name: chains,          range: list<string>, example: ["Ethereum", "Arbitrum", "Base"] }
+        - { name: tvl_usd,         range: number, unit: usd }
+        - { name: age_days,        range: number }
+        - { name: review_date,     range: date }
+        - { name: reviewers,       range: list<string> }
+
+    - name: PermissionFinding
+      description: "Output of permission-scanner per contract."
+      properties:
+        - { name: contract_address, range: address }
+        - { name: contract_name,    range: string,  example: "PoolAddressesProvider" }
+        - { name: function,         range: string,  example: "setACLAdmin(address)" }
+        - { name: role,             range: string,  example: "OWNER" }
+        - { name: controller,       range: address, example: "0xEC568fffba86c094cf06b22134B23074DFE2252c" }
+        - { name: controller_type,  range: enum,    values: [EOA, MultiSig, Timelock, Governance, Other] }
+        - { name: severity,         range: enum,    values: [High, Medium, Low] }
+        - { name: impact,           range: string,  example: "Can pause markets / change interest rate model" }
+
+    - name: Dependency
+      properties:
+        - { name: kind,             range: enum,    values: [Oracle, Bridge, MessagingLayer, Stablecoin, ExternalProtocol, LiquidStakingToken] }
+        - { name: provider,         range: string,  example: "Chainlink ETH/USD" }
+        - { name: contract_address, range: address }
+        - { name: criticality,      range: enum,    values: [Critical, Important, Optional] }
+
+    - name: ExitWindow
+      description: "Time users have to withdraw before an upgrade lands."
+      properties:
+        - { name: action,           range: string,  example: "Pool implementation upgrade" }
+        - { name: delay_seconds,    range: number,  example: 0,
+            description: "0 = no exit window. Material for Stage 1 vs 2." }
+        - { name: timelock_contract, range: address }
+
+    - name: Audit
+      properties:
+        - { name: firm,             range: string }
+        - { name: report_url,       range: url }
+        - { name: date,             range: date }
+
+  source_files:
+    - "github.com/deficollective/defiscan-data/<slug>/list_contracts.json (analysis scope)"
+    - "github.com/deficollective/defiscan-data/<slug>/result.json (permission-scanner output)"
+    - "github.com/deficollective/defiscan-data/<slug>/etherscan_contracts/* (verified source)"
+    - "github.com/deficollective/defiscan/src/content/protocols/<slug>.md (human review prose)"
+
+anchor_example:
+  subject: "Aave v3 — Ethereum"
+  expected_extract:
+    stage: 1
+    chains: ["Ethereum", "Arbitrum", "Optimism", "Polygon", "Base", "Avalanche", "Metis", "Scroll", "Gnosis"]
+    governance_controller: "snapshot:aave.eth + ACL admin multisig"
+    oracle_dependency: "Chainlink (critical) + Pyth (markets)"
+    notable_permissions: ["setACLAdmin", "setReserveInterestRateStrategyAddress", "pauseReserve"]
+    exit_window: "Aave Governance executor timelock"
+
+known_gaps:
+  - Stage 2 reviews are rare; most protocols sit at Stage 0 or 1
+  - Permission-scanner does not yet cover non-EVM chains
+  - Cross-chain message paths (LayerZero/CCIP/Wormhole) only flagged when surfaced as Dependency

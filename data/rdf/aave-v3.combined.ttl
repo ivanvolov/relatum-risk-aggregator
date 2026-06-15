@@ -1,0 +1,819 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rfp: <https://relatum.xyz/ns/rfp#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://relatum.xyz/ns/curator/gauntlet> a rfp:Curator ;
+    rdfs:label "Gauntlet" .
+
+<https://relatum.xyz/ns/curator/spark> a rfp:Curator ;
+    rdfs:label "Spark Protocol" .
+
+<https://relatum.xyz/ns/curator/steakhouse> a rfp:Curator ;
+    rdfs:label "Steakhouse Financial" .
+
+<https://relatum.xyz/ns/protocol/aave/ba-bad-debt> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "bad-debt" ;
+    rfp:scoreUnit "usd" ;
+    rfp:scoreValue 0 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-coverage> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "Live per-market dashboard. No composite score published; observed metrics only." ;
+    rfp:coverageStatus "covered" ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-borrow-apy> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "borrow-apy" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 6.9 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-debt-ceiling> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "debt-ceiling" ;
+    rfp:scoreUnit "usd" ;
+    rfp:scoreValue 1000000000 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-liquidation-bonus> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "liquidation-bonus" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 5 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-liquidation-threshold> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "liquidation-threshold" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 78 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-ltv> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "max-ltv" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 75 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-reserve-factor> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "reserve-factor" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 15 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-supply-apy> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "supply-apy" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 4.7 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-top-borrower-share> a rfp:Score ;
+    rdfs:label "Share of debt held by single largest borrower" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "top-1-borrower-share" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 18 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-tvl> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "tvl" ;
+    rfp:scoreUnit "usd" ;
+    rfp:scoreValue 1240000000 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-m1-utilization> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "utilization" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 78.4 ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/ba-oracle-source> a rfp:Finding ;
+    rdfs:label "Chainlink ETH/USD + wstETH/ETH composite (no functional fallback)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "oracle" ;
+    rfp:statedBy feed:blockanalitica .
+
+<https://relatum.xyz/ns/protocol/aave/credora-aave-v3-token> a rfp:Rating ;
+    rdfs:label "Credora token-level rating for the Aave v3 family" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "token-rating" ;
+    rfp:ratingScale "A+..D" ;
+    rfp:ratingValue "A-" ;
+    rfp:statedBy feed:credora .
+
+<https://relatum.xyz/ns/protocol/aave/credora-coverage> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "Aave token + multiple lending pairs are in Credora's 177-market universe." ;
+    rfp:coverageStatus "covered" ;
+    rfp:statedBy feed:credora .
+
+<https://relatum.xyz/ns/protocol/aave/credora-method-monte-carlo> a rfp:Finding ;
+    rdfs:label "100,000 Monte Carlo simulations per market; calibrated against 30+ years of TradFi probability-of-default data" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "methodology" ;
+    rfp:statedBy feed:credora .
+
+<https://relatum.xyz/ns/protocol/aave/credora-psl-wsteth-usdc-1d-95> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "PSL-1d-95pct" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 0.4 ;
+    rfp:statedBy feed:credora .
+
+<https://relatum.xyz/ns/protocol/aave/credora-psl-wsteth-usdc-30d-99> a rfp:Score ;
+    rdfs:label "Potential Stress Loss at 99% confidence over 30 days" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "PSL-30d-99pct" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 1.8 ;
+    rfp:statedBy feed:credora .
+
+<https://relatum.xyz/ns/protocol/aave/credora-weth-usdc> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-WETH-USDC> ;
+    rfp:dimension "lending-pair-rating" ;
+    rfp:ratingScale "A+..D" ;
+    rfp:ratingValue "A" ;
+    rfp:statedBy feed:credora .
+
+<https://relatum.xyz/ns/protocol/aave/credora-wsteth-usdc> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "lending-pair-rating" ;
+    rfp:ratingScale "A+..D" ;
+    rfp:ratingValue "A-" ;
+    rfp:statedBy feed:credora .
+
+<https://relatum.xyz/ns/protocol/aave/cw-coverage> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "CuratorWatch tracks curator-managed vaults, not lending protocols. Aave-the-protocol has no entry on the platform." ;
+    rfp:coverageStatus "notCovered" ;
+    rfp:statedBy feed:curatorwatch .
+
+<https://relatum.xyz/ns/protocol/aave/cw-gauntlet-exposure> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "Gauntlet, a CuratorWatch-tracked curator with A-grade rating, allocates to Aave through its risk-management contracts. Aave market parameters are governed by Gauntlet recommendations." ;
+    rfp:coverageStatus "partiallyCovered" ;
+    rfp:statedBy feed:curatorwatch .
+
+<https://relatum.xyz/ns/protocol/aave/cw-spark-exposure> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "Spark Protocol (curator rank #2 on CuratorWatch) borrows from Sky reserves and deposits into Aave; an Aave depeg/exploit propagates to Spark vault TVL." ;
+    rfp:coverageStatus "partiallyCovered" ;
+    rfp:statedBy feed:curatorwatch .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-action-collateral-swap> a rfp:Finding ;
+    rdfs:label "Collateral swap (1 tx)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "action" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-action-debt-swap> a rfp:Finding ;
+    rdfs:label "Debt swap (1 tx)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "action" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-action-looping> a rfp:Finding ;
+    rdfs:label "1-tx looping / leverage" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "action" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-action-migrate> a rfp:Finding ;
+    rdfs:label "Protocol migration (Aave→Spark / v2→v3)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "action" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-coverage> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "DeFi Saver supports Aave v2/v3 position management and automation but does not publish protocol-level or market-level risk scores. Surfaced data is a parameter mirror plus per-position health metrics." ;
+    rfp:coverageStatus "partiallyCovered" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-metric-health-factor> a rfp:Finding ;
+    rdfs:label "Health Factor (per-position)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "exposed-metric" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-metric-liquidation-price> a rfp:Finding ;
+    rdfs:label "Liquidation Price (per-position, per-asset)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "exposed-metric" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-metric-safety-ratio> a rfp:Finding ;
+    rdfs:label "Safety Ratio (per-position)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "exposed-metric" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-protocol-supported> a rfp:Finding ;
+    rdfs:label "Supported on Mainnet, Arbitrum, Optimism, Base, Polygon, Avalanche" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "support-status" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-strategy-boost> a rfp:Finding ;
+    rdfs:label "Boost: trigger 'ratio > threshold' → leverage up" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "automation-strategy" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-strategy-close> a rfp:Finding ;
+    rdfs:label "Close-to-collateral / Close-to-debt" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "automation-strategy" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-strategy-limit-order> a rfp:Finding ;
+    rdfs:label "Limit order on position closure" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "automation-strategy" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/dsv-strategy-repay> a rfp:Finding ;
+    rdfs:label "Repay: trigger 'ratio < threshold' → repay debt from collateral" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "automation-strategy" ;
+    rfp:statedBy feed:defisaver .
+
+<https://relatum.xyz/ns/protocol/aave/gho-blacklist> a rfp:Finding ;
+    rdfs:label "Upstream (via USDC)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "blacklist-capability" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-chain-coverage> a rfp:Score ;
+    rdfs:label "Ethereum, Arbitrum, Base, Gnosis, Ink, Avalanche, Mantle, Plasma" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "chain-deployments" ;
+    rfp:scoreUnit "count" ;
+    rfp:scoreValue 8 ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-class-backing> a rfp:Finding ;
+    rdfs:label "Crypto-Collateralized" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "backing" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-class-governance> a rfp:Finding ;
+    rdfs:label "CeFi-Dependent" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "governance" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-class-peg> a rfp:Finding ;
+    rdfs:label "USD" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "peg" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-class-status> a rfp:Finding ;
+    rdfs:label "active" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "status" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-collateral> a rfp:Finding ;
+    rdfs:label "ETH, wBTC, USDC, USDT, others" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "collateral-types" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-dews> a rfp:Score ;
+    rdfs:label "Depeg Early Warning Score — forward-looking; low = calm" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "DEWS" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 7 ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-grade-decentralization> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "decentralization" ;
+    rfp:ratingScale "A+..F" ;
+    rfp:ratingValue "B" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-grade-dependency-risk> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "dependency-risk" ;
+    rfp:ratingScale "A+..F" ;
+    rfp:ratingValue "B" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-grade-liquidity-exit> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "liquidity-exit" ;
+    rfp:ratingScale "A+..F" ;
+    rfp:ratingValue "A" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-grade-overall> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "overall-safety" ;
+    rfp:ratingScale "A+..F" ;
+    rfp:ratingValue "B" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-grade-peg-stability> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "peg-stability" ;
+    rfp:ratingScale "A+..F" ;
+    rfp:ratingValue "A-" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-liquidity-score> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "liquidity-score" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 82 ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-mint-authority-score> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "mint-authority-score" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 60 ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-peg-mechanism> a rfp:Finding ;
+    rdfs:label "Overcollateralized minting via Aave V3 facilitator model" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "peg-mechanism" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-peg-score> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "peg-score" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 88 ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-pharos-coverage> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "Pharos rates GHO (Aave's stablecoin), not the Aave protocol itself. GHO claims project onto Aave's surface via the issues/dependsOn link." ;
+    rfp:coverageStatus "partiallyCovered" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-psi> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "PSI" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 94 ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/gho-redemption-backstop> a rfp:Finding ;
+    rdfs:label "PSM swap + stability modules" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "redemption-backstop" ;
+    rfp:statedBy feed:pharos .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-cbbtc-usdc-liquidity-risk> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-cbBTC-USDC> ;
+    rfp:dimension "liquidity-risk" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 22 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-cbbtc-usdc-market-risk> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-cbBTC-USDC> ;
+    rfp:dimension "market-risk" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 31 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-coverage> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "v1 covers Aave + Compound v3 + Morpho + SparkLend + Liquity v2. Oracle and settlement risk scores are planned, not v1." ;
+    rfp:coverageStatus "covered" ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-method-liquidity-risk> a rfp:Finding ;
+    rdfs:label "Supplier+borrower concentration, average utilization, relative pool size." ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "methodology-liquidity-risk" ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-method-market-risk> a rfp:Finding ;
+    rdfs:label "Measures relative risk of undercollateralization under sudden price shock, factoring onchain liquidity, liquidation bonuses, borrower LTV distribution." ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "methodology-market-risk" ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-weth-usdc-liquidity-risk> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-WETH-USDC> ;
+    rfp:dimension "liquidity-risk" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 12 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-weth-usdc-market-risk> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-WETH-USDC> ;
+    rfp:dimension "market-risk" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 18 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-weth-usdc-supply-30d> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-WETH-USDC> ;
+    rfp:dimension "supply-apy-30d-avg" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 4.1 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-weth-usdc-supply-rate> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-WETH-USDC> ;
+    rfp:dimension "supply-apy-current" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 3.8 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-wsteth-usdc-liquidity-risk> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "liquidity-risk" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 18 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-wsteth-usdc-market-risk> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "market-risk" ;
+    rfp:scoreUnit "0-100" ;
+    rfp:scoreValue 24 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sphere-wsteth-usdc-supply-rate> a rfp:Score ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> ;
+    rfp:dimension "supply-apy-current" ;
+    rfp:scoreUnit "percent" ;
+    rfp:scoreValue 4.7 ;
+    rfp:statedBy feed:defisphere .
+
+<https://relatum.xyz/ns/protocol/aave/sw-coverage> a rfp:CoverageStatement ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:coverageReason "Stablewatch tracks yield-bearing stablecoins as the entity. Aave is a lending protocol; aTokens (aUSDC, aDAI, aGHO) are not currently in the tracked universe of 60+ assets." ;
+    rfp:coverageStatus "notCovered" ;
+    rfp:statedBy feed:stablewatch .
+
+<https://relatum.xyz/ns/protocol/aave/sw-future-atoken> a rfp:Finding ;
+    rdfs:label "GHO and yield-bearing aTokens (aUSDC, aUSDT) are candidate Stablewatch entries; not currently indexed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/GHO> ;
+    rfp:dimension "coverage-candidate" ;
+    rfp:statedBy feed:stablewatch .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-defiscan-risk-accessibility> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "accessibility" ;
+    rfp:ratingScale "L/M/H" ;
+    rfp:ratingValue "L" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-defiscan-risk-autonomy> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "autonomy" ;
+    rfp:ratingScale "L/M/H" ;
+    rfp:ratingValue "H" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-defiscan-risk-chain> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "chain" ;
+    rfp:ratingScale "L/M/H" ;
+    rfp:ratingValue "L" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-defiscan-risk-exit> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "exit-window" ;
+    rfp:ratingScale "L/M/H" ;
+    rfp:ratingValue "H" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-defiscan-risk-upgradeability> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "upgradeability" ;
+    rfp:ratingScale "L/M/H" ;
+    rfp:ratingValue "H" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-defiscan-stage> a rfp:Rating ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage" ;
+    rfp:observedAt "2025-05-07T00:00:00+00:00"^^xsd:dateTime ;
+    rfp:ratingScale "Stage 0..2 (incl R, O, I0, I1, I2)" ;
+    rfp:ratingValue "0" ;
+    rfp:sourceURL "https://defiscan.info/projects/aave/ethereum"^^xsd:anyURI ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-dep-adi> a rfp:Dependency ;
+    rdfs:label "a.DI cross-chain messaging (2/3 bridge threshold) for governance votes held on Polygon" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "cross-chain-dependency" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-dep-chainlink> a rfp:Dependency ;
+    rdfs:label "Chainlink oracle feeds — High centralization, unmitigated (no functional fallback)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "oracle-dependency" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-dep-usdc> a rfp:Dependency ;
+    rdfs:label "GHO mintable 1:1 against centralized USDC and USDT via GhoStabilityModule" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stablecoin-dependency" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-exitwindow> a rfp:ExitWindow ;
+    rdfs:label "7 days exit window applies only to GovernanceV3 and AAVE token upgrades (Level 2). Level 1 upgrades have no exit window." ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:scoreUnit "seconds" ;
+    rfp:scoreValue 604800 ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-perm-aave-governance> a rfp:Permission ;
+    rdfs:label "Aave Governance: full upgradeability over Pool, aTokens, debt tokens, GhoStabilityModule, GhoDirectMinter" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "permission" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-perm-emergency-admin> a rfp:Permission ;
+    rdfs:label "EMERGENCY_ADMIN role: can pause reserves or entire Pool; can disable grace period for liquidations" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "permission" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-perm-governance-guardian> a rfp:Permission ;
+    rdfs:label "Aave Governance v3 Guardian multisig: can cancel proposals (Security Council compliant)" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "permission" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-perm-risk-council> a rfp:Permission ;
+    rdfs:label "Risk Council multisig: GhoDirectMinter caps; reserve-parameter stewards" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "permission" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s0-1> a rfp:Finding ;
+    rdfs:label "Assets are not in custody by a centralized entity — fixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-0-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s0-2> a rfp:Finding ;
+    rdfs:label "All contracts are verified — fixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-0-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s0-3> a rfp:Finding ;
+    rdfs:label "Source-available codebase — fixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-0-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s0-4> a rfp:Finding ;
+    rdfs:label "Public documentation exists — fixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-0-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s1-1> a rfp:Finding ;
+    rdfs:label "Upgrades with potential loss-of-funds not protected with Exit Window >= 7 days OR sufficient Security Council — unfixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-1-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s1-2> a rfp:Finding ;
+    rdfs:label "Dependency with a High centralization score without mitigation — unfixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-1-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s1-3> a rfp:Finding ;
+    rdfs:label "Frontend backups or self-hosting option exists — fixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-1-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s2-1> a rfp:Finding ;
+    rdfs:label "Loss-of-funds upgrades not protected with onchain governance AND Exit Window >= 30 days — unfixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-2-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s2-2> a rfp:Finding ;
+    rdfs:label "Dependencies with High/Medium centralization score without mitigation — unfixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-2-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-req-s2-3> a rfp:Finding ;
+    rdfs:label "Alternative third-party frontends exist — fixed" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "stage-2-req" ;
+    rfp:statedBy feed:defiscan .
+
+<https://relatum.xyz/ns/protocol/aave/v3-eth-scan-summary> a rfp:Finding ;
+    rdfs:label "51 contracts, 746 functions, 412 msg.sender-gated" ;
+    rfp:about <https://relatum.xyz/ns/protocol/aave/v3-ethereum> ;
+    rfp:dimension "permission-scanner-summary" ;
+    rfp:sourceURL "https://github.com/deficollective/defiscan-data/tree/main/Aave-v3-ethereum"^^xsd:anyURI ;
+    rfp:statedBy feed:defiscan .
+
+rfp: a owl:Ontology ;
+    rdfs:label "Neutral DeFi Risk Intelligence vocabulary" ;
+    dcterms:created "2026-06-14"^^xsd:date ;
+    dcterms:description "Schema for aggregating risk claims from multiple DeFi risk feeds about the same subject, preserving attribution and avoiding synthesis." .
+
+rfp:about a owl:ObjectProperty ;
+    rdfs:domain rfp:Claim ;
+    rdfs:range rfp:Subject .
+
+rfp:coverageReason a owl:DatatypeProperty ;
+    rdfs:domain rfp:CoverageStatement ;
+    rdfs:range xsd:string .
+
+rfp:coverageStatus a owl:DatatypeProperty ;
+    rdfs:comment "covered | notCovered | partiallyCovered" ;
+    rdfs:domain rfp:CoverageStatement ;
+    rdfs:range xsd:string .
+
+rfp:curates a owl:ObjectProperty ;
+    rdfs:domain rfp:Curator ;
+    rdfs:range rfp:Vault .
+
+rfp:dependsOn a owl:ObjectProperty ;
+    rdfs:domain rfp:Subject ;
+    rdfs:range rfp:Subject .
+
+rfp:dimension a owl:DatatypeProperty ;
+    rdfs:comment "Which risk dimension this claim concerns: e.g. 'upgradeability', 'oracle', 'liquidity'." ;
+    rdfs:domain rfp:Claim ;
+    rdfs:range xsd:string .
+
+rfp:hasClaim a owl:ObjectProperty ;
+    rdfs:domain rfp:Subject ;
+    rdfs:range rfp:Claim .
+
+rfp:hasContract a owl:ObjectProperty ;
+    rdfs:domain rfp:Protocol ;
+    rdfs:range rfp:Contract .
+
+rfp:issues a owl:ObjectProperty ;
+    rdfs:domain rfp:Protocol ;
+    rdfs:range rfp:Stablecoin .
+
+rfp:methodologyURL a owl:DatatypeProperty ;
+    rdfs:range xsd:anyURI .
+
+rfp:observedAt a owl:DatatypeProperty ;
+    rdfs:domain rfp:Claim ;
+    rdfs:range xsd:dateTime .
+
+rfp:ratingScale a owl:DatatypeProperty ;
+    rdfs:comment "Free-text label of the feed's own scale, e.g. 'A+..D' or 'Stage 0..2' or 'L/M/H'." ;
+    rdfs:domain rfp:Rating ;
+    rdfs:range xsd:string .
+
+rfp:ratingValue a owl:DatatypeProperty ;
+    rdfs:comment "Letter or label as published by the feed. NEVER mapped across feeds." ;
+    rdfs:domain rfp:Rating ;
+    rdfs:range xsd:string .
+
+rfp:scoreUnit a owl:DatatypeProperty ;
+    rdfs:domain rfp:Score ;
+    rdfs:range xsd:string .
+
+rfp:scoreValue a owl:DatatypeProperty ;
+    rdfs:domain rfp:Score ;
+    rdfs:range xsd:decimal .
+
+rfp:sourceURL a owl:DatatypeProperty ;
+    rdfs:comment "Where on the feed this claim can be re-verified by a human." ;
+    rdfs:domain rfp:Claim ;
+    rdfs:range xsd:anyURI .
+
+rfp:statedBy a owl:ObjectProperty ;
+    rdfs:comment "Provenance: which feed authored this claim. Non-optional." ;
+    rdfs:domain rfp:Claim ;
+    rdfs:range rfp:Feed .
+
+rfp:Contract a owl:Class ;
+    rdfs:comment "Specific deployed smart contract; usually a component of a Protocol." .
+
+rfp:ExitWindow a owl:Class ;
+    rdfs:subClassOf rfp:Finding .
+
+rfp:Vault a owl:Class ;
+    rdfs:subClassOf rfp:Subject .
+
+feed:stablewatch a rfp:Feed ;
+    rdfs:label "Stablewatch" ;
+    rfp:methodologyURL "https://www.stablewatch.io"^^xsd:anyURI .
+
+<https://relatum.xyz/ns/protocol/aave/v3-ethereum-cbBTC-USDC> a rfp:Market ;
+    rdfs:label "Aave v3 Ethereum cbBTC/USDC" .
+
+rfp:Stablecoin a owl:Class ;
+    rdfs:subClassOf rfp:Subject .
+
+feed:curatorwatch a rfp:Feed ;
+    rdfs:label "CuratorWatch" ;
+    rfp:methodologyURL "https://curatorwatch.com"^^xsd:anyURI .
+
+rfp:Dependency a owl:Class ;
+    rdfs:subClassOf rfp:Finding .
+
+rfp:Market a owl:Class ;
+    rdfs:comment "A lending market = (Protocol, collateral, debt asset, chain)." ;
+    rdfs:subClassOf rfp:Subject .
+
+rfp:Protocol a owl:Class ;
+    rdfs:subClassOf rfp:Subject .
+
+rfp:Curator a owl:Class ;
+    rdfs:subClassOf rfp:Subject .
+
+rfp:Permission a owl:Class ;
+    rdfs:subClassOf rfp:Finding .
+
+<https://relatum.xyz/ns/protocol/aave/v3-ethereum-WETH-USDC> a rfp:Market ;
+    rdfs:label "Aave v3 Ethereum WETH/USDC" .
+
+feed:credora a rfp:Feed ;
+    rdfs:label "Credora" ;
+    rfp:methodologyURL "https://credora.network"^^xsd:anyURI .
+
+rfp:Feed a owl:Class ;
+    rdfs:label "Risk Feed" ;
+    rdfs:comment "A risk-intelligence source (DeFiScan, Pharos, Credora, …). Identified by stable URI." .
+
+rfp:Subject a owl:Class ;
+    rdfs:label "Risk Subject" ;
+    rdfs:comment "Anything a feed can make a risk claim about: a Protocol, a Market, a Vault, a Stablecoin, a Curator." .
+
+rfp:Claim a owl:Class ;
+    rdfs:label "Risk Claim" ;
+    rdfs:comment "A reified statement: this feed says this thing about this subject at this time. All ratings are claims." .
+
+rfp:CoverageStatement a owl:Class ;
+    rdfs:comment "Explicit positive or negative coverage. NotCovered is data, not absence." ;
+    rdfs:subClassOf rfp:Claim .
+
+feed:defisphere a rfp:Feed ;
+    rdfs:label "DeFi Sphere" ;
+    rfp:methodologyURL "https://blockanalitica.substack.com/p/introducing-sphere-risk-scores"^^xsd:anyURI .
+
+feed:blockanalitica a rfp:Feed ;
+    rdfs:label "Block Analitica" ;
+    rfp:methodologyURL "https://blockanalitica.com"^^xsd:anyURI .
+
+feed:defisaver a rfp:Feed ;
+    rdfs:label "DeFi Saver" ;
+    rfp:methodologyURL "https://help.defisaver.com"^^xsd:anyURI .
+
+rfp:Rating a owl:Class ;
+    rdfs:subClassOf rfp:Claim .
+
+<https://relatum.xyz/ns/protocol/aave/v3-ethereum-wstETH-USDC> a rfp:Market ;
+    rdfs:label "Aave v3 Ethereum wstETH (collateral) / USDC (debt)",
+        "Aave v3 Ethereum wstETH/USDC" .
+
+feed:pharos a rfp:Feed ;
+    rdfs:label "Pharos" ;
+    rfp:methodologyURL "https://pharos.watch/methodology/"^^xsd:anyURI .
+
+<https://relatum.xyz/ns/protocol/aave/GHO> a rfp:Stablecoin ;
+    rdfs:label "GHO" ;
+    rfp:dependsOn <https://relatum.xyz/ns/protocol/aave/v3-ethereum> .
+
+feed:defiscan a rfp:Feed ;
+    rdfs:label "DeFiScan" ;
+    rfp:methodologyURL "https://defiscan.info/framework"^^xsd:anyURI .
+
+rfp:Score a owl:Class ;
+    rdfs:subClassOf rfp:Claim .
+
+rfp:Finding a owl:Class ;
+    rdfs:comment "Structural finding: a permission, dependency, or exit-window observation." ;
+    rdfs:subClassOf rfp:Claim .
+
+<https://relatum.xyz/ns/protocol/aave/v3-ethereum> a rfp:Protocol ;
+    rdfs:label "Aave v3 — Ethereum Core" ;
+    rfp:issues <https://relatum.xyz/ns/protocol/aave/GHO> .
+

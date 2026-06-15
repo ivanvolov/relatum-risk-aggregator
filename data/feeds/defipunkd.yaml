@@ -1,0 +1,95 @@
+# DeFiPunk'd — ontology of what one aggregator entry yields per protocol
+# anchor protocol: Aave v3 — lender that the cross-feed anchor visits across files
+# fetched: 2026-06-15
+# provenance: defipunkd.com/methodology + github.com/guil-lambert/defipunkd
+# note: homepage exceeded fetch size cap on 2026-06-15; full per-protocol catalog
+#       and total coverage count taken from RFP listing + user-provided summary,
+#       not directly verified from the dashboard
+
+id: defipunkd
+name: "DeFiPunk'd"
+homepage: "https://defipunkd.com"
+github: "guil-lambert/defipunkd"
+maintainer: "Guil Lambert (per repo)"
+license: open-source (repo public)
+access: free dashboard
+update_cadence: continuous (contributor-driven + DeFiLlama snapshots)
+
+about: >
+  Open-source registry that grades DeFi protocols against the Ethereum Foundation's
+  five Defipunk principles. Combines LLM-consensus assessment on qualitative slices
+  with deterministic on-chain heuristics. Per the project summary, coverage spans
+  4,000+ protocols seeded from DeFiLlama; the methodology page does not publish that
+  count directly.
+
+risks_covered:
+  - admin-key / upgrade-power concentration (Control)
+  - users' ability to withdraw without operator cooperation (Ability to Exit)
+  - external dependency exposure — oracles, bridges, keepers, collateral counterparty (Autonomy)
+  - permissionless access — no allowlist / KYC / geofence (Open Access)
+  - source transparency, audit quality, bytecode-source correspondence (Verifiability)
+
+data_model:
+  primary_entity: ProtocolAssessment
+  identifier: protocol_slug  # seeded from DeFiLlama snapshot
+
+  entities:
+    - name: ProtocolAssessment
+      properties:
+        # identity (seeded from DeFiLlama, human-overridable via JSON overlay)
+        - { name: slug,             range: string,  example: "aave-v3" }
+        - { name: name,             range: string,  example: "Aave v3" }
+        - { name: category,         range: string }
+        - { name: tvl_usd,          range: number,  unit: usd }
+        # five principle grades — three-color scale + unassessed
+        - { name: grade_control,        range: enum, values: [green, orange, red, gray] }
+        - { name: grade_ability_to_exit, range: enum, values: [green, orange, red, gray] }
+        - { name: grade_autonomy,       range: enum, values: [green, orange, red, gray] }
+        - { name: grade_open_access,    range: enum, values: [green, orange, red, gray] }
+        - { name: grade_verifiability,  range: enum, values: [green, orange, red, gray] }
+        # provenance per field
+        - { name: provenance_tag,   range: enum, values: ["[defillama]", "[curated]", "[defi@home]"],
+            description: "Origin of each value: DeFiLlama snapshot, human curator override, or contributor LLM run." }
+
+    - name: PrincipleAssessment
+      description: "One LLM contributor's grade on one principle for one protocol; quorum bot merges ≥3 from different model families."
+      properties:
+        - { name: principle,        range: enum, values: [control, ability_to_exit, autonomy, open_access, verifiability] }
+        - { name: contributor,      range: string }
+        - { name: model,            range: enum, values: [claude, chatgpt, gemini, anthropic_api_automated] }
+        - { name: grade,            range: enum, values: [green, orange, red] }
+        - { name: prompt_version,   range: string,  description: "Pinned prompt hash so re-runs are comparable" }
+        - { name: rationale,        range: string }
+
+  on_chain_heuristics:
+    - dimension: Verifiability
+      rule: "green if GitHub + ≥1 audit; orange if one of two; red if neither."
+    - dimension: Autonomy
+      rule: "red for liquid staking / bridges / RWA lending; orange for forked protocols."
+    - dimension: all_five
+      rule: "centralized exchanges auto-graded red on every principle."
+
+  consensus:
+    quorum_size: 3
+    quorum_rule: "≥3 independent contributors using different model families must agree before the quorum bot merges a grade."
+    automated_voice: "Anthropic API can act as one of the three independent voices."
+
+anchor_example:
+  subject: "Aave v3 (cross-feed anchor)"
+  expected_extract:
+    grade_open_access: "green"           # permissionless, no KYC at protocol layer
+    grade_verifiability: "green"         # GitHub + audits both present, per on-chain heuristic
+    grade_autonomy: "orange"             # external oracles + collateral counterparty exposure
+    grade_control: "speculative — depends on current admin/upgrade configuration"
+    grade_ability_to_exit: "speculative"
+  rationale: >
+    Heuristic rules predict the Verifiability and Open Access grades for Aave v3
+    deterministically. Control / Exit / Autonomy require the LLM-consensus path
+    because they hinge on a current read of admin-key and dependency state.
+
+known_gaps:
+  - Total covered-protocol count (~4,000 claimed) not surfaced on the methodology page; needs a direct count from the dashboard or DB
+  - License declaration (e.g. MIT / Apache) not on the methodology page; repo confirms code is public
+  - Twitter handle and maintainer roster beyond the repo owner not confirmed
+  - Numeric weighting (if any) for cross-principle aggregation — none observed; grades appear to remain per-principle
+  - Anchor example for a fully-graded protocol not on the methodology page; the expected_extract above is reconstructed from the heuristic rules

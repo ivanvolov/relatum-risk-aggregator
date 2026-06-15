@@ -1,0 +1,109 @@
+# Block Analitica — ontology of what one aggregator entry yields per protocol
+# anchor protocol: Aave-v3 (via Aave dashboard) + Sky/USDS (sky.blockanalitica.com)
+# fetched: 2026-06-14
+# provenance: blockanalitica.com, sky.blockanalitica.com, morpho.blockanalitica.com, github.com/blockanalitica
+
+id: blockanalitica
+name: "Block Analitica"
+homepage: "https://blockanalitica.com"
+twitter: "BlockAnalitica"
+github: "blockanalitica"
+maintainer: "Block Analitica (risk team behind Sky USDS/DAI)"
+license: open-source (per-protocol dashboards: AAVE, maker-ui, ajna are MIT)
+access: free dashboards; institutional services paid
+update_cadence: real-time onchain
+
+about: >
+  Per-protocol live risk dashboards. Strongest on lending markets and CDP stablecoins.
+  Runs the Sphere lending analytics product (see defisphere.yaml).
+
+risks_covered:
+  - collateral concentration / depeg
+  - liquidation cascade
+  - oracle deviation / staleness
+  - utilization / IRM regime shift
+  - debt-ceiling / DC-IAM headroom
+  - vault-level borrower concentration
+  - stablecoin peg stress (USDS / DAI)
+
+covered_protocols: [Sky, Spark, Aave, Compound, Morpho, HyperLend, Hyperdrive, eBTC, Ajna, Sphere]
+
+data_model:
+  primary_entity: Market  # one per (protocol, collateral, debt asset)
+  identifier: "(protocol, market_id)"
+
+  entities:
+    - name: Market
+      properties:
+        - { name: protocol,        range: enum, example: "Aave-v3" }
+        - { name: chain,           range: enum, example: "Ethereum" }
+        - { name: collateral,      range: string, example: "wstETH" }
+        - { name: debt_asset,      range: string, example: "USDC" }
+        - { name: tvl_usd,         range: number, unit: usd }
+        - { name: total_supply,    range: number, unit: usd }
+        - { name: total_borrow,    range: number, unit: usd }
+        - { name: utilization,     range: percent, example: 78.4 }
+        - { name: supply_apy,      range: percent, example: 4.7 }
+        - { name: borrow_apy,      range: percent, example: 6.9 }
+        - { name: ltv,             range: percent, example: 75 }
+        - { name: liquidation_threshold, range: percent, example: 78 }
+        - { name: liquidation_bonus,     range: percent, example: 5 }
+        - { name: reserve_factor,        range: percent }
+        - { name: debt_ceiling,    range: number, unit: usd, example: 1000000000 }
+        - { name: oracle_source,   range: string, example: "Chainlink ETH/USD + wstETH/ETH" }
+
+    - name: Position
+      properties:
+        - { name: borrower,        range: address }
+        - { name: collateral_usd,  range: number }
+        - { name: debt_usd,        range: number }
+        - { name: health_factor,   range: number, example: 1.42 }
+        - { name: liquidation_price, range: number }
+
+    - name: LiquidationEvent
+      properties:
+        - { name: tx,              range: hash }
+        - { name: liquidator,      range: address }
+        - { name: borrower,        range: address }
+        - { name: collateral_seized_usd, range: number }
+        - { name: debt_repaid_usd, range: number }
+        - { name: timestamp,       range: datetime }
+
+    - name: CDPVault   # MakerDAO / Sky specific
+      properties:
+        - { name: ilk,             range: string, example: "ETH-A" }
+        - { name: collateral_type, range: string, example: "ETH" }
+        - { name: art,             range: number, description: "Outstanding DAI" }
+        - { name: stability_fee,   range: percent }
+        - { name: liquidation_ratio, range: percent }
+        - { name: debt_ceiling,    range: number }
+        - { name: dust,            range: number }
+
+    - name: SavingsRate
+      properties:
+        - { name: rate,            range: percent, example: 6.5 }
+        - { name: token,           range: enum, example: "sUSDS" }
+        - { name: tvl_usd,         range: number }
+
+    - name: StablecoinPeg
+      properties:
+        - { name: token,           range: string, example: "USDS" }
+        - { name: spot_price,      range: number, example: 1.0001 }
+        - { name: dex_depth_2pct,  range: number, unit: usd }
+        - { name: psm_capacity,    range: number, unit: usd }
+
+anchor_example:
+  subject: "Aave v3 on Ethereum, wstETH / USDC market"
+  expected_extract:
+    utilization: 78
+    supply_apy: 4.7
+    borrow_apy: 6.9
+    ltv: 75
+    liquidation_threshold: 78
+    debt_ceiling: 1_000_000_000
+    top_borrower_share: 0.18
+    bad_debt_usd: 0
+
+known_gaps:
+  - Some dashboards (HyperLend, Hyperdrive) are L2-specific
+  - Position-level data partial for protocols without subgraphs

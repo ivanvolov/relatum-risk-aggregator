@@ -1,0 +1,65 @@
+@prefix rfp:  <https://relatum.xyz/ns/rfp#> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix aave: <https://relatum.xyz/ns/protocol/aave/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Source: aave.blockanalitica.com — live market dashboard
+# Block Analitica = risk team behind Sky USDS/DAI; Aave is independently dashboarded.
+# Coverage: per-market live metrics. Sampling one market (wstETH/USDC) for illustration.
+
+aave:v3-ethereum-wstETH-USDC a rfp:Market ;
+    rdfs:label "Aave v3 Ethereum wstETH (collateral) / USDC (debt)" .
+
+# Market-level live observations (sample values; live feed updates these continuously)
+aave:ba-m1-utilization a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "utilization" ; rfp:scoreValue 78.4 ; rfp:scoreUnit "percent" .
+aave:ba-m1-supply-apy a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "supply-apy" ; rfp:scoreValue 4.7 ; rfp:scoreUnit "percent" .
+aave:ba-m1-borrow-apy a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "borrow-apy" ; rfp:scoreValue 6.9 ; rfp:scoreUnit "percent" .
+aave:ba-m1-ltv a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "max-ltv" ; rfp:scoreValue 75 ; rfp:scoreUnit "percent" .
+aave:ba-m1-liquidation-threshold a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "liquidation-threshold" ; rfp:scoreValue 78 ; rfp:scoreUnit "percent" .
+aave:ba-m1-liquidation-bonus a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "liquidation-bonus" ; rfp:scoreValue 5 ; rfp:scoreUnit "percent" .
+aave:ba-m1-reserve-factor a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "reserve-factor" ; rfp:scoreValue 15 ; rfp:scoreUnit "percent" .
+aave:ba-m1-tvl a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "tvl" ; rfp:scoreValue 1240000000 ; rfp:scoreUnit "usd" .
+aave:ba-m1-debt-ceiling a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "debt-ceiling" ; rfp:scoreValue 1000000000 ; rfp:scoreUnit "usd" .
+
+# Position-concentration risk (a Block Analitica specialty)
+aave:ba-m1-top-borrower-share a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "top-1-borrower-share" ; rfp:scoreValue 18 ; rfp:scoreUnit "percent" ;
+    rdfs:label "Share of debt held by single largest borrower" .
+
+# Bad debt observation
+aave:ba-bad-debt a rfp:Score ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "bad-debt" ; rfp:scoreValue 0 ; rfp:scoreUnit "usd" .
+
+# Oracle observation
+aave:ba-oracle-source a rfp:Finding ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "oracle" ;
+    rdfs:label "Chainlink ETH/USD + wstETH/ETH composite (no functional fallback)" .
+
+# Methodology disclosure: Block Analitica covers Aave with the same dashboard family
+# they run for Sky/USDS — but stops at "we observe" rather than "we score".
+aave:ba-coverage a rfp:CoverageStatement ;
+    rfp:statedBy feed:blockanalitica ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "covered" ;
+    rfp:coverageReason "Live per-market dashboard. No composite score published; observed metrics only." .

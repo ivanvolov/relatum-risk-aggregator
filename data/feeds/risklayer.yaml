@@ -1,0 +1,61 @@
+# RiskLayer — ontology stub (public surface is a single-line landing page)
+# fetched: 2026-06-15
+# provenance: risklayer.io homepage (title only: "RiskLayer | Asset-Level Intelligence")
+#           + RFP entry + user-provided summary
+# status caveat: site is explicitly labeled experimental beta — included for
+#               coverage parity with the RFP's 14-feed registry, but the public
+#               surface does not yet expose enough structure for a deep ontology
+
+id: risklayer
+name: "RiskLayer"
+homepage: "https://www.risklayer.io"
+tagline: "Asset-Level Intelligence"
+maintainer: "not on page"
+license: "not on page"
+access: "not on page (no public dashboard URL surfaced; site is single-page landing)"
+update_cadence: "not on page"
+status: "experimental beta (per user-provided summary; site itself carries this disclaimer)"
+
+about: >
+  EigenLayer-secured Risk Oracle AVS. Staked validators score protocols and
+  emit attested risk scores via a "Proof of Risk" consensus mechanism. Per the
+  RFP, the feed is positioned as economic-security middleware — risk-as-an-
+  oracle rather than risk-as-a-dashboard. Public site does not yet expose the
+  attested score format, the validator set, or the scoring dimensions.
+
+risks_covered:
+  - protocol-level risk scoring (validator-attested, dimensions not published)
+  # Specific risk vectors not enumerated on the public site as of 2026-06-15.
+
+data_model:
+  primary_entity: AttestedRiskScore
+  identifier: "not on page"
+
+  entities:
+    - name: AttestedRiskScore
+      description: "Validator-attested risk score for an on-chain object. Structure not published."
+      properties:
+        - { name: subject,            range: string,  description: "Protocol / asset identifier — format not published" }
+        - { name: score,              range: "not on page" }
+        - { name: attesting_validators, range: "not on page" }
+        - { name: consensus_signature, range: "not on page" }
+        - { name: epoch,              range: "not on page" }
+
+    - name: Validator
+      description: "EigenLayer-restaked operator scoring protocols. Slashing / staking economics not published."
+      properties:
+        - { name: operator_address,   range: "not on page" }
+        - { name: stake_eth,          range: "not on page" }
+        - { name: slashing_conditions, range: "not on page" }
+
+known_gaps:
+  # This whole file is a coverage placeholder. Fill in once the team publishes
+  # methodology, AVS specs, or opens the dashboard.
+  - Public homepage is single-line — no methodology, dashboard, API, repo, or team page reachable from it
+  - "docs.risklayer.io and www.risklayer.io/{about,methodology} all returned 4xx or were unreachable on 2026-06-15"
+  - Score format, scale, and bands not published
+  - Scope of covered protocols not published
+  - Validator set, slashing model, and EigenLayer AVS contract addresses not published
+  - Twitter handle / discord / repo not surfaced from homepage
+  - Beta disclaimers per user summary; not literally observable from landing page text on 2026-06-15
+  # Direct contact with the team is probably the fastest path to a real ontology entry.

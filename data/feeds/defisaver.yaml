@@ -1,0 +1,93 @@
+# DeFi Saver — ontology of what one aggregator entry yields per protocol
+# anchor protocol: Aave-v3 (covered first-class — main "dashboard" view)
+# fetched: 2026-06-14
+# provenance: defisaver.com X bio, github.com/defisaver/{defisaver-positions-sdk, defisaver-tokens, automation-sdk}, help.defisaver.com
+
+id: defisaver
+name: "DeFi Saver"
+homepage: "https://defisaver.com"
+twitter: "DeFiSaver"
+github: "defisaver"
+maintainer: "DeFi Saver team"
+license: open-source contracts + SDKs (MIT-style)
+access: free UI; gas + small protocol fees on actions
+update_cadence: live (chain reads)
+
+about: >
+  Position management front-end + automation for Aave, Spark, Fluid, Compound, Morpho.
+  Not a neutral data feed — it is execution-first. Surfaces per-position risk metrics
+  and offers automated repay/boost actions to keep positions out of liquidation.
+
+risks_covered:
+  - personal-position liquidation risk
+  - leverage band drift
+  - debt/collateral price drift relative to health factor
+
+covered_protocols: [Aave-v2, Aave-v3, Spark, Fluid, Compound-v2, Compound-v3, Morpho-Blue, MakerDAO/Sky]
+
+data_model:
+  primary_entity: UserPosition
+
+  entities:
+    - name: UserPosition
+      properties:
+        - { name: owner,            range: address }
+        - { name: protocol,         range: enum,    example: "Aave-v3" }
+        - { name: chain,            range: enum }
+        - { name: supplied_assets,  range: list<{asset, amount, usd}> }
+        - { name: borrowed_assets,  range: list<{asset, amount, usd}> }
+        - { name: collateral_usd,   range: number }
+        - { name: debt_usd,         range: number }
+        - { name: net_apy,          range: percent }
+        - { name: health_factor,    range: number,  example: 1.42 }
+        - { name: safety_ratio,     range: percent, example: 165,
+            description: "DSR-style collateralization ratio. 150% = at liquidation threshold for many configs." }
+        - { name: liquidation_price, range: map<asset, number> }
+        - { name: max_ltv,          range: percent }
+
+    - name: AutomationStrategy
+      properties:
+        - { name: strategy_name,    range: enum,    values: [Repay, Boost, Close, LimitOrder, Stop-Loss, Take-Profit] }
+        - { name: trigger,          range: string,  example: "if ratio < 165% then Repay to 200%" }
+        - { name: trigger_metric,   range: enum,    values: [Ratio, HealthFactor, Price] }
+        - { name: trigger_threshold, range: number }
+        - { name: target_value,     range: number }
+        - { name: active,           range: boolean }
+        - { name: enabled_on,       range: enum,    values: [Mainnet, L2] }
+
+    - name: ProtocolMarket   # mirror of the underlying protocol's market params
+      properties:
+        - { name: asset,            range: string }
+        - { name: supply_apy,       range: percent }
+        - { name: borrow_apy,       range: percent }
+        - { name: ltv_max,          range: percent }
+        - { name: liquidation_threshold, range: percent }
+        - { name: liquidation_bonus, range: percent }
+        - { name: oracle_price,     range: number }
+        - { name: utilization,      range: percent }
+
+    - name: Action  # 1-tx zaps
+      values: [Looping/Leverage, CollateralSwap, DebtSwap, YieldZap, BoostFromLoan, RepayFromLoan, FlashloanRefinance, ProtocolMigrate]
+
+anchor_example:
+  subject: "Aave v3 — single user position"
+  expected_extract:
+    protocol: "Aave-v3"
+    collateral: { wstETH: 12.5, value_usd: 31250 }
+    debt: { USDC: 18000, value_usd: 18000 }
+    health_factor: 1.41
+    liquidation_price: { wstETH_USD: 1820 }
+    automation:
+      - { strategy: Repay, trigger: "ratio < 165%", target: "ratio = 200%" }
+      - { strategy: Boost, trigger: "ratio > 250%", target: "ratio = 200%" }
+
+caveats:
+  - "Not a neutral data feed: included in the RFP universe because the maintainer
+    is recognized in the EF consultation list, but it does not produce risk ratings.
+    It produces per-position risk metrics (health factor, liquidation price) and
+    executes risk-mitigation actions."
+
+known_gaps:
+  - No protocol-level risk score
+  - No stablecoin peg coverage
+  - Position-only schema; market-level data is a mirror, not a primary feed

@@ -1,0 +1,123 @@
+@prefix rfp:  <https://relatum.xyz/ns/rfp#> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix aave: <https://relatum.xyz/ns/protocol/aave/> .
+@prefix dep:  <https://relatum.xyz/ns/protocol/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Source: github.com/deficollective/defiscan/src/content/protocols/aave/ethereum.md
+#         github.com/deficollective/defiscan-data/Aave-v3-ethereum/{list_contracts,result}.json
+# Author of the review: sagaciousyves, 2025-05-07
+
+# --- Subject ---------------------------------------------------------
+aave:v3-ethereum a rfp:Protocol ;
+    rdfs:label "Aave v3 — Ethereum Core" ;
+    rfp:issues aave:GHO .
+
+# === Claims by DeFiScan ===
+
+# Stage rating (composite per DeFiScan's own scale)
+aave:v3-eth-defiscan-stage a rfp:Rating ;
+    rfp:statedBy   feed:defiscan ;
+    rfp:about      aave:v3-ethereum ;
+    rfp:dimension  "stage" ;
+    rfp:ratingScale "Stage 0..2 (incl R, O, I0, I1, I2)" ;
+    rfp:ratingValue "0" ;
+    rfp:observedAt "2025-05-07T00:00:00Z"^^xsd:dateTime ;
+    rfp:sourceURL  "https://defiscan.info/projects/aave/ethereum"^^xsd:anyURI .
+
+# Five-axis published risks: ["L","H","H","H","L"]
+aave:v3-eth-defiscan-risk-chain a rfp:Rating ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "chain" ; rfp:ratingScale "L/M/H" ; rfp:ratingValue "L" .
+aave:v3-eth-defiscan-risk-upgradeability a rfp:Rating ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "upgradeability" ; rfp:ratingScale "L/M/H" ; rfp:ratingValue "H" .
+aave:v3-eth-defiscan-risk-autonomy a rfp:Rating ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "autonomy" ; rfp:ratingScale "L/M/H" ; rfp:ratingValue "H" .
+aave:v3-eth-defiscan-risk-exit a rfp:Rating ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "exit-window" ; rfp:ratingScale "L/M/H" ; rfp:ratingValue "H" .
+aave:v3-eth-defiscan-risk-accessibility a rfp:Rating ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "accessibility" ; rfp:ratingScale "L/M/H" ; rfp:ratingValue "L" .
+
+# Stage requirements outcomes (9 atomic findings: 6 fixed, 3 unfixed)
+aave:v3-eth-req-s0-1 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-0-req" ;
+    rdfs:label "Assets are not in custody by a centralized entity — fixed" .
+aave:v3-eth-req-s0-2 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-0-req" ;
+    rdfs:label "All contracts are verified — fixed" .
+aave:v3-eth-req-s0-3 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-0-req" ;
+    rdfs:label "Source-available codebase — fixed" .
+aave:v3-eth-req-s0-4 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-0-req" ;
+    rdfs:label "Public documentation exists — fixed" .
+aave:v3-eth-req-s1-1 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-1-req" ;
+    rdfs:label "Upgrades with potential loss-of-funds not protected with Exit Window >= 7 days OR sufficient Security Council — unfixed" .
+aave:v3-eth-req-s1-2 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-1-req" ;
+    rdfs:label "Dependency with a High centralization score without mitigation — unfixed" .
+aave:v3-eth-req-s1-3 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-1-req" ;
+    rdfs:label "Frontend backups or self-hosting option exists — fixed" .
+aave:v3-eth-req-s2-1 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-2-req" ;
+    rdfs:label "Loss-of-funds upgrades not protected with onchain governance AND Exit Window >= 30 days — unfixed" .
+aave:v3-eth-req-s2-2 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-2-req" ;
+    rdfs:label "Dependencies with High/Medium centralization score without mitigation — unfixed" .
+aave:v3-eth-req-s2-3 a rfp:Finding ; rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "stage-2-req" ;
+    rdfs:label "Alternative third-party frontends exist — fixed" .
+
+# Permission-scanner outputs (summary triples — raw graph has 412 functions)
+aave:v3-eth-scan-summary a rfp:Finding ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "permission-scanner-summary" ;
+    rdfs:label "51 contracts, 746 functions, 412 msg.sender-gated" ;
+    rfp:sourceURL "https://github.com/deficollective/defiscan-data/tree/main/Aave-v3-ethereum"^^xsd:anyURI .
+
+# Notable permission roles (extracted from review prose)
+aave:v3-eth-perm-emergency-admin a rfp:Permission ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rdfs:label "EMERGENCY_ADMIN role: can pause reserves or entire Pool; can disable grace period for liquidations" ;
+    rfp:dimension "permission" .
+aave:v3-eth-perm-risk-council a rfp:Permission ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rdfs:label "Risk Council multisig: GhoDirectMinter caps; reserve-parameter stewards" ;
+    rfp:dimension "permission" .
+aave:v3-eth-perm-aave-governance a rfp:Permission ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rdfs:label "Aave Governance: full upgradeability over Pool, aTokens, debt tokens, GhoStabilityModule, GhoDirectMinter" ;
+    rfp:dimension "permission" .
+aave:v3-eth-perm-governance-guardian a rfp:Permission ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rdfs:label "Aave Governance v3 Guardian multisig: can cancel proposals (Security Council compliant)" ;
+    rfp:dimension "permission" .
+
+# Dependencies
+aave:v3-eth-dep-chainlink a rfp:Dependency ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rdfs:label "Chainlink oracle feeds — High centralization, unmitigated (no functional fallback)" ;
+    rfp:dimension "oracle-dependency" .
+aave:v3-eth-dep-adi a rfp:Dependency ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rdfs:label "a.DI cross-chain messaging (2/3 bridge threshold) for governance votes held on Polygon" ;
+    rfp:dimension "cross-chain-dependency" .
+aave:v3-eth-dep-usdc a rfp:Dependency ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rdfs:label "GHO mintable 1:1 against centralized USDC and USDT via GhoStabilityModule" ;
+    rfp:dimension "stablecoin-dependency" .
+
+# Exit window
+aave:v3-eth-exitwindow a rfp:ExitWindow ;
+    rfp:statedBy feed:defiscan ; rfp:about aave:v3-ethereum ;
+    rfp:scoreValue 604800 ;
+    rfp:scoreUnit "seconds" ;
+    rdfs:label "7 days exit window applies only to GovernanceV3 and AAVE token upgrades (Level 2). Level 1 upgrades have no exit window." .

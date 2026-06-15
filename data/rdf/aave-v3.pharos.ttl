@@ -1,0 +1,92 @@
+@prefix rfp:  <https://relatum.xyz/ns/rfp#> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix aave: <https://relatum.xyz/ns/protocol/aave/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Source: pharos.watch/stablecoin/gho-aave (public profile, June 2026)
+# Pharos rates stablecoins, not protocols. We model:
+#   - GHO as a Stablecoin subject (Aave's native stablecoin),
+#   - linked to aave:v3-ethereum via rfp:issues,
+#   - so that GHO claims propagate to Aave's risk surface via dependency.
+
+aave:GHO a rfp:Stablecoin ;
+    rdfs:label "GHO" ;
+    rfp:dependsOn aave:v3-ethereum .
+
+# Classification badges
+aave:gho-class-peg a rfp:Finding ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "peg" ; rdfs:label "USD" .
+aave:gho-class-backing a rfp:Finding ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "backing" ; rdfs:label "Crypto-Collateralized" .
+aave:gho-class-governance a rfp:Finding ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "governance" ; rdfs:label "CeFi-Dependent" .
+aave:gho-class-status a rfp:Finding ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "status" ; rdfs:label "active" .
+
+# Five-dimension Pharos grades + composite
+aave:gho-grade-overall a rfp:Rating ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "overall-safety" ; rfp:ratingScale "A+..F" ; rfp:ratingValue "B" .
+aave:gho-grade-peg-stability a rfp:Rating ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "peg-stability" ; rfp:ratingScale "A+..F" ; rfp:ratingValue "A-" .
+aave:gho-grade-liquidity-exit a rfp:Rating ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "liquidity-exit" ; rfp:ratingScale "A+..F" ; rfp:ratingValue "A" .
+aave:gho-grade-decentralization a rfp:Rating ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "decentralization" ; rfp:ratingScale "A+..F" ; rfp:ratingValue "B" .
+aave:gho-grade-dependency-risk a rfp:Rating ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "dependency-risk" ; rfp:ratingScale "A+..F" ; rfp:ratingValue "B" .
+
+# Numerical 0–100 scores
+aave:gho-peg-score a rfp:Score ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "peg-score" ; rfp:scoreValue 88 ; rfp:scoreUnit "0-100" .
+aave:gho-liquidity-score a rfp:Score ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "liquidity-score" ; rfp:scoreValue 82 ; rfp:scoreUnit "0-100" .
+aave:gho-mint-authority-score a rfp:Score ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "mint-authority-score" ; rfp:scoreValue 60 ; rfp:scoreUnit "0-100" .
+aave:gho-dews a rfp:Score ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "DEWS" ; rfp:scoreValue 7 ; rfp:scoreUnit "0-100" ;
+    rdfs:label "Depeg Early Warning Score — forward-looking; low = calm" .
+aave:gho-psi a rfp:Score ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "PSI" ; rfp:scoreValue 94 ; rfp:scoreUnit "0-100" .
+
+# Mechanism + collateral observations
+aave:gho-peg-mechanism a rfp:Finding ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "peg-mechanism" ;
+    rdfs:label "Overcollateralized minting via Aave V3 facilitator model" .
+aave:gho-collateral a rfp:Finding ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "collateral-types" ;
+    rdfs:label "ETH, wBTC, USDC, USDT, others" .
+aave:gho-redemption-backstop a rfp:Finding ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "redemption-backstop" ;
+    rdfs:label "PSM swap + stability modules" .
+aave:gho-blacklist a rfp:Finding ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "blacklist-capability" ; rdfs:label "Upstream (via USDC)" .
+
+# Chain deployment count (8 chains as observed)
+aave:gho-chain-coverage a rfp:Score ;
+    rfp:statedBy feed:pharos ; rfp:about aave:GHO ;
+    rfp:dimension "chain-deployments" ; rfp:scoreValue 8 ; rfp:scoreUnit "count" ;
+    rdfs:label "Ethereum, Arbitrum, Base, Gnosis, Ink, Avalanche, Mantle, Plasma" .
+
+aave:gho-pharos-coverage a rfp:CoverageStatement ;
+    rfp:statedBy feed:pharos ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "partiallyCovered" ;
+    rfp:coverageReason "Pharos rates GHO (Aave's stablecoin), not the Aave protocol itself. GHO claims project onto Aave's surface via the issues/dependsOn link." .

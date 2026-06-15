@@ -1,0 +1,65 @@
+@prefix rfp:  <https://relatum.xyz/ns/rfp#> .
+@prefix feed: <https://relatum.xyz/ns/feed/> .
+@prefix aave: <https://relatum.xyz/ns/protocol/aave/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Source: defi-sphere.com + blockanalitica.substack.com "Introducing Sphere Risk Scores"
+# Sphere is Block Analitica's cross-protocol analytics layer; it scores LENDING MARKETS.
+
+# Sample three Aave v3 markets to show the per-market rating granularity.
+
+aave:v3-ethereum-WETH-USDC a rfp:Market ;
+    rdfs:label "Aave v3 Ethereum WETH/USDC" .
+aave:v3-ethereum-wstETH-USDC a rfp:Market ;
+    rdfs:label "Aave v3 Ethereum wstETH/USDC" .
+aave:v3-ethereum-cbBTC-USDC a rfp:Market ;
+    rdfs:label "Aave v3 Ethereum cbBTC/USDC" .
+
+# --- WETH/USDC market ---
+aave:sphere-weth-usdc-market-risk a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-WETH-USDC ;
+    rfp:dimension "market-risk" ; rfp:scoreValue 18 ; rfp:scoreUnit "0-100" .
+aave:sphere-weth-usdc-liquidity-risk a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-WETH-USDC ;
+    rfp:dimension "liquidity-risk" ; rfp:scoreValue 12 ; rfp:scoreUnit "0-100" .
+aave:sphere-weth-usdc-supply-rate a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-WETH-USDC ;
+    rfp:dimension "supply-apy-current" ; rfp:scoreValue 3.8 ; rfp:scoreUnit "percent" .
+aave:sphere-weth-usdc-supply-30d a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-WETH-USDC ;
+    rfp:dimension "supply-apy-30d-avg" ; rfp:scoreValue 4.1 ; rfp:scoreUnit "percent" .
+
+# --- wstETH/USDC market ---
+aave:sphere-wsteth-usdc-market-risk a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "market-risk" ; rfp:scoreValue 24 ; rfp:scoreUnit "0-100" .
+aave:sphere-wsteth-usdc-liquidity-risk a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "liquidity-risk" ; rfp:scoreValue 18 ; rfp:scoreUnit "0-100" .
+aave:sphere-wsteth-usdc-supply-rate a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-wstETH-USDC ;
+    rfp:dimension "supply-apy-current" ; rfp:scoreValue 4.7 ; rfp:scoreUnit "percent" .
+
+# --- cbBTC/USDC market ---
+aave:sphere-cbbtc-usdc-market-risk a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-cbBTC-USDC ;
+    rfp:dimension "market-risk" ; rfp:scoreValue 31 ; rfp:scoreUnit "0-100" .
+aave:sphere-cbbtc-usdc-liquidity-risk a rfp:Score ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum-cbBTC-USDC ;
+    rfp:dimension "liquidity-risk" ; rfp:scoreValue 22 ; rfp:scoreUnit "0-100" .
+
+# Sphere methodology disclosure
+aave:sphere-method-market-risk a rfp:Finding ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "methodology-market-risk" ;
+    rdfs:label "Measures relative risk of undercollateralization under sudden price shock, factoring onchain liquidity, liquidation bonuses, borrower LTV distribution." .
+aave:sphere-method-liquidity-risk a rfp:Finding ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum ;
+    rfp:dimension "methodology-liquidity-risk" ;
+    rdfs:label "Supplier+borrower concentration, average utilization, relative pool size." .
+
+aave:sphere-coverage a rfp:CoverageStatement ;
+    rfp:statedBy feed:defisphere ; rfp:about aave:v3-ethereum ;
+    rfp:coverageStatus "covered" ;
+    rfp:coverageReason "v1 covers Aave + Compound v3 + Morpho + SparkLend + Liquity v2. Oracle and settlement risk scores are planned, not v1." .
