@@ -15,7 +15,7 @@
   <a class="tab" href="protocol-aave.html">Aave v3 (worked example)</a>
   <a class="tab active" href="methodology.html">Methodology</a>
   <span class="spacer"></span>
-  <span class="meta">v0.1 · data layer: RDF (Turtle) · 17 feeds · 20 protocols</span>
+  <span class="meta">v0.1 · data layer: RDF (Turtle) · 15 feeds · 20 protocols</span>
 </nav>
 
 <main class="page">
@@ -287,8 +287,8 @@ HAVING (COUNT(DISTINCT ?val) &gt; 1)
   <!-- ============ Feed Registry ============ -->
   <div class="mblock">
     <h2>The feed registry</h2>
-    <p>Full list of all 17 providers Relatum aggregates from. Each feed has its own methodology and focus. <strong>We do not rank them.</strong> v1 covers the 14 providers named in the RFP feed registry plus 3 proposed additions (Chronicle, Accountable for verifiability; Stablewatch for the yield-bearing stablecoin axis) widening methodology diversity to <strong>6 types</strong>: Rating, Dashboard, Monitoring, Research, Verification, Analysis.</p>
-    <p>Per-feed schema docs live alongside the registry at <code>data/feeds/&lt;feed&gt;.yaml</code> — entity model, scoring dimensions, anchor examples, and known coverage gaps for each provider. Twelve of the seventeen are committed at v0.1; the remaining five (pigi.finance, Zyfai Risk, LlamaRisk, Chronicle, Accountable) land as feeds are onboarded.</p>
+    <p>Full list of all 15 providers Relatum aggregates from. Each feed has its own methodology and focus. <strong>We do not rank them.</strong> v1 covers the 14 providers named in the RFP feed registry plus Stablewatch, which adds the yield-bearing stablecoin axis. Methodology spans <strong>4 types</strong>: Rating, Dashboard, Monitoring, Research.</p>
+    <p>Per-feed schema docs live alongside the registry at <code>data/feeds/&lt;feed&gt;.yaml</code> — entity model, scoring dimensions, anchor examples, and known coverage gaps for each provider. Twelve of the fifteen are committed at v0.1; the remaining three (pigi.finance, Zyfai Risk, LlamaRisk) land as feeds are onboarded.</p>
     <div id="feedRegistry"></div>
   </div>
 
@@ -319,7 +319,7 @@ HAVING (COUNT(DISTINCT ?val) &gt; 1)
 </main>
 
 <footer class="page-footer">
-  AGPL-3.0 · Charter: no composite scoring · Schema vocabulary: rfp: · Open data layer: 17 feeds, 20 protocols
+  AGPL-3.0 · Charter: no composite scoring · Schema vocabulary: rfp: · Open data layer: 15 feeds, 20 protocols
 </footer>
 
 <script src="data.js"></script>

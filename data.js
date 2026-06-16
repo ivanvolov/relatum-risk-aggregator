@@ -5,7 +5,7 @@
 
 window.RELATUM = (function () {
 
-  /* ---------- Feed registry (17 feeds: RFP Section 4 + 3 proposed additions) ---------- */
+  /* ---------- Feed registry (15 feeds: 14 RFP-listed + StableWatch) ---------- */
   const FEEDS = [
     { id: "defiscan",       name: "DeFiScan",        type: "Rating",       focus: "Decentralization maturity (Stage 0/1/2) + permission scanner",       methodology: "Reviews each protocol against a fixed Stage 0/1/2 framework + 5-axis L/M/H risk on chain, upgradeability, autonomy, exit window, accessibility.", schemaDoc: "data/feeds/defiscan.yaml" },
     { id: "blockanalitica", name: "Block Analitica", type: "Dashboard",    focus: "Quantitative on-chain risk dashboards for lending markets",            methodology: "Per-protocol live dashboards. Surfaces TVL, utilization, LTV, liquidation thresholds, borrower concentration, bad debt. No composite score.", schemaDoc: "data/feeds/blockanalitica.yaml" },
@@ -22,8 +22,6 @@ window.RELATUM = (function () {
     { id: "llamarisk",      name: "LlamaRisk",       type: "Research",     focus: "Protocol risk research + parameter recommendations",                   methodology: "Long-form research; collateral and governance risk; parameter proposals to DAOs (Curve, Sky)." },
     { id: "philidor",       name: "Philidor",        type: "Rating",       focus: "Deterministic vault scoring, 700+ vaults",                             methodology: "Three-vector framework — asset quality, platform code maturity, governance controls. Open methodology.", schemaDoc: "data/feeds/philidor.yaml" },
     { id: "stablewatch",    name: "Stablewatch",     type: "Dashboard",    focus: "Yield-bearing stablecoin landscape (60+ assets)",                      methodology: "Real-time APY, TVL, yield paid out. Category framework (blue-chip vs hidden-gem) with qualitative per-category risk vectors.", schemaDoc: "data/feeds/stablewatch.yaml" },
-    { id: "chronicle",      name: "Chronicle",       type: "Verification", focus: "Cryptographic oracle attestation",                                     methodology: "Schnorr-aggregated signatures. Adds a verifiability class absent from the seed list. PROPOSED ADDITION." },
-    { id: "accountable",    name: "Accountable",     type: "Verification", focus: "ZK proof of reserves + NAV",                                           methodology: "ZK-attested reserve composition. Complements Chronicle on the verifiability axis. PROPOSED ADDITION." },
   ];
 
   /* ---------- 20 seed protocols (from RFP Section 3, with TVL from DefiLlama)
@@ -86,27 +84,27 @@ window.RELATUM = (function () {
   /* ---------- Coverage matrix: protocol × feed → status + optional source URL.
        cov = covered  |  part = partial  |  none = not yet covered  ---------- */
   const COVERAGE = {
-    /*               defiscan blockanalitica curatorwatch defipunkd pharos defisphere defisaver credora risklayer pigi xerberus zyfai llamarisk philidor stablewatch chronicle accountable */
-    aave:       { defiscan:"cov", blockanalitica:"cov", curatorwatch:"part", defipunkd:"none", pharos:"part", defisphere:"cov", defisaver:"cov", credora:"cov", risklayer:"part", pigi:"part", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"part", chronicle:"none", accountable:"none" },
-    sky:        { defiscan:"cov", blockanalitica:"cov", curatorwatch:"part", defipunkd:"none", pharos:"cov",  defisphere:"none", defisaver:"cov", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"cov",  chronicle:"none", accountable:"part" },
-    spark:      { defiscan:"cov", blockanalitica:"cov", curatorwatch:"cov", defipunkd:"none", pharos:"part", defisphere:"cov", defisaver:"cov", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"part", chronicle:"none", accountable:"none" },
-    morpho:     { defiscan:"cov", blockanalitica:"cov", curatorwatch:"cov", defipunkd:"none", pharos:"none", defisphere:"cov", defisaver:"cov", credora:"cov", risklayer:"none", pigi:"cov", xerberus:"part", zyfai:"none", llamarisk:"cov", philidor:"cov", stablewatch:"none", chronicle:"none", accountable:"none" },
-    compound:   { defiscan:"cov", blockanalitica:"cov", curatorwatch:"part", defipunkd:"none", pharos:"none", defisphere:"cov", defisaver:"cov", credora:"cov", risklayer:"none", pigi:"part", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    euler:      { defiscan:"part", blockanalitica:"part", curatorwatch:"part", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    liquity:    { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"cov",  defisphere:"cov",  defisaver:"none", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    fluid:      { defiscan:"part", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"cov", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    gearbox:    { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    uniswap:    { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"part", llamarisk:"part", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    curve:      { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"part", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"part", llamarisk:"cov", philidor:"none", stablewatch:"part", chronicle:"none", accountable:"none" },
-    balancer:   { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"part", llamarisk:"part", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    cowswap:    { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"none", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    yearn:      { defiscan:"part", blockanalitica:"none", curatorwatch:"part", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"part", risklayer:"none", pigi:"cov", xerberus:"cov", zyfai:"none", llamarisk:"cov", philidor:"cov", stablewatch:"none", chronicle:"none", accountable:"none" },
-    pendle:     { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"part", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    mellow:     { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"part", zyfai:"none", llamarisk:"none", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    ethena:     { defiscan:"cov", blockanalitica:"none", curatorwatch:"part", defipunkd:"none", pharos:"cov",  defisphere:"none", defisaver:"none", credora:"cov", risklayer:"none", pigi:"part", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"cov", chronicle:"none", accountable:"part" },
-    etherfi:    { defiscan:"none", blockanalitica:"none", curatorwatch:"part", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
-    lido:       { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"part", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"none", chronicle:"cov", accountable:"none" },
-    rocketpool: { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none", chronicle:"none", accountable:"none" },
+    /*               defiscan blockanalitica curatorwatch defipunkd pharos defisphere defisaver credora risklayer pigi xerberus zyfai llamarisk philidor stablewatch */
+    aave:       { defiscan:"cov", blockanalitica:"cov", curatorwatch:"part", defipunkd:"none", pharos:"part", defisphere:"cov", defisaver:"cov", credora:"cov", risklayer:"part", pigi:"part", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"part" },
+    sky:        { defiscan:"cov", blockanalitica:"cov", curatorwatch:"part", defipunkd:"none", pharos:"cov",  defisphere:"none", defisaver:"cov", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"cov" },
+    spark:      { defiscan:"cov", blockanalitica:"cov", curatorwatch:"cov", defipunkd:"none", pharos:"part", defisphere:"cov", defisaver:"cov", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"part" },
+    morpho:     { defiscan:"cov", blockanalitica:"cov", curatorwatch:"cov", defipunkd:"none", pharos:"none", defisphere:"cov", defisaver:"cov", credora:"cov", risklayer:"none", pigi:"cov", xerberus:"part", zyfai:"none", llamarisk:"cov", philidor:"cov", stablewatch:"none" },
+    compound:   { defiscan:"cov", blockanalitica:"cov", curatorwatch:"part", defipunkd:"none", pharos:"none", defisphere:"cov", defisaver:"cov", credora:"cov", risklayer:"none", pigi:"part", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"none" },
+    euler:      { defiscan:"part", blockanalitica:"part", curatorwatch:"part", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none" },
+    liquity:    { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"cov",  defisphere:"cov",  defisaver:"none", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"none" },
+    fluid:      { defiscan:"part", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"cov", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none" },
+    gearbox:    { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none" },
+    uniswap:    { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"part", llamarisk:"part", philidor:"none", stablewatch:"none" },
+    curve:      { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"part", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"part", llamarisk:"cov", philidor:"none", stablewatch:"part" },
+    balancer:   { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"part", llamarisk:"part", philidor:"none", stablewatch:"none" },
+    cowswap:    { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"none", philidor:"none", stablewatch:"none" },
+    yearn:      { defiscan:"part", blockanalitica:"none", curatorwatch:"part", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"part", risklayer:"none", pigi:"cov", xerberus:"cov", zyfai:"none", llamarisk:"cov", philidor:"cov", stablewatch:"none" },
+    pendle:     { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"part", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"none" },
+    mellow:     { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"none", risklayer:"none", pigi:"none", xerberus:"part", zyfai:"none", llamarisk:"none", philidor:"none", stablewatch:"none" },
+    ethena:     { defiscan:"cov", blockanalitica:"none", curatorwatch:"part", defipunkd:"none", pharos:"cov",  defisphere:"none", defisaver:"none", credora:"cov", risklayer:"none", pigi:"part", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"cov" },
+    etherfi:    { defiscan:"none", blockanalitica:"none", curatorwatch:"part", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none" },
+    lido:       { defiscan:"cov", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"part", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"cov", philidor:"none", stablewatch:"none" },
+    rocketpool: { defiscan:"none", blockanalitica:"none", curatorwatch:"none", defipunkd:"none", pharos:"none", defisphere:"none", defisaver:"none", credora:"part", risklayer:"none", pigi:"none", xerberus:"none", zyfai:"none", llamarisk:"part", philidor:"none", stablewatch:"none" },
   };
 
   /* ---------- Aave v3 Ethereum — fully populated detail (extracted from the RDF graph) ---------- */
@@ -388,20 +386,6 @@ window.RELATUM = (function () {
         status: "part",
         sourceUrl: "https://www.stablewatch.io",
         coverageReason: "Stablewatch tracks yield-bearing stablecoins. Aave's aTokens (aUSDC, aDAI, aGHO) are candidate entries but not currently indexed; GHO via Pharos is the closest indirect surface."
-      },
-
-      /* ---------- Chronicle (proposed addition) ---------- */
-      {
-        feedId: "chronicle",
-        status: "none",
-        coverageReason: "Chronicle attests oracle data verifiability. Aave depends on Chainlink, not Chronicle — coverage candidate if Aave adopts a Chronicle fallback feed."
-      },
-
-      /* ---------- Accountable (proposed addition) ---------- */
-      {
-        feedId: "accountable",
-        status: "none",
-        coverageReason: "Accountable provides ZK proof-of-reserves. Applicable to wrapped collateral on Aave (e.g. RWA backings) but not Aave-the-protocol directly."
       },
     ]
   };

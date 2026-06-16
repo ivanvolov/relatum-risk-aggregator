@@ -37,14 +37,14 @@ python3 -m http.server 8000
 
 | Path | What it is |
 |---|---|
-| `index.html`            | Summary matrix — 20 protocols × 17 feeds, sortable, with coverage badges |
+| `index.html`            | Summary matrix — 20 protocols × 15 feeds, sortable, with coverage badges |
 | `protocol-aave.html`    | Aave v3 detail page — fully populated worked example |
 | `methodology.html`      | Methodology + provenance taxonomy + feed registry |
 | `styles.css`            | One stylesheet (L2Beat / DeFiScan visual family) |
 | `data.js`               | Pre-baked from the RDF graph in `data/rdf/` |
 | `app.js`                | Matrix sort/filter + detail rendering |
 | `data/_protocols.yaml`  | Seed-20 protocol list with DefiLlama TVL (2026-06-14 snapshot) |
-| `data/feeds/<feed>.yaml`| Per-feed schema docs — entity model, scales, anchor examples, known gaps. 12 of 17 committed at v0.1 |
+| `data/feeds/<feed>.yaml`| Per-feed schema docs — entity model, scales, anchor examples, known gaps. 12 of 15 committed at v0.1 |
 | `data/rdf/vocab.ttl`    | The `rfp:` ontology + feed registry |
 | `data/rdf/aave-v3.*.ttl`| Per-feed claims about Aave v3 (8 feeds) + the merged 667-triple combined graph |
 
