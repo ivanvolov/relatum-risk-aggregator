@@ -18,39 +18,55 @@ The aggregation the RFP asks for is a single SPARQL query — every dimension wh
 
 ## Run locally
 
-No build step, no server, no dependencies.
+The frontend `fetch()`es `data/index.json` and `data/protocols/<slug>.json` at page load, so you need a static server (browsers block `fetch` from `file://`):
 
 ```bash
 git clone https://github.com/ivanvolov/relatum-risk-aggregator
 cd relatum-risk-aggregator
-open index.html        # macOS — or just double-click the file
-```
-
-For path-relative resource loading (the `data/feeds/*.yaml` schema links) to work in some browsers, you can also serve it:
-
-```bash
 python3 -m http.server 8000
 # then visit http://localhost:8000/
 ```
+
+GH Pages (https) is the deployed equivalent — no configuration needed beyond Settings → Pages → Source = `main` / root.
+
+## Regenerate the data layer
+
+The JSON the frontend reads is generated from the RDF ontology by a small Node pipeline. Re-run it after editing any TTL or `_prose.yaml`:
+
+```bash
+cd scripts
+npm install                # one-time: pulls n3 + yaml
+node build-all.mjs         # combine-ttl → ttl-to-json → build-index
+```
+
+Output lands in `data/index.json` + `data/protocols/<slug>.json`. Commit both.
 
 ## What's here
 
 | Path | What it is |
 |---|---|
-| `index.html`            | Summary matrix — 20 protocols × 15 feeds, sortable, with coverage badges |
-| `protocol-aave.html`    | Aave v3 detail page — fully populated worked example |
-| `methodology.html`      | Methodology + provenance taxonomy + feed registry |
-| `styles.css`            | One stylesheet (L2Beat / DeFiScan visual family) |
-| `data.js`               | Pre-baked from the RDF graph in `data/rdf/` |
-| `app.js`                | Matrix sort/filter + detail rendering |
-| `data/_protocols.yaml`  | Seed-20 protocol list with DefiLlama TVL (2026-06-14 snapshot) |
-| `data/feeds/<feed>.yaml`| Per-feed schema docs — entity model, scales, anchor examples, known gaps. 12 of 15 committed at v0.1 |
-| `data/rdf/vocab.ttl`    | The `rfp:` ontology + feed registry |
-| `data/rdf/aave-v3.*.ttl`| Per-feed claims about Aave v3 (8 feeds) + the merged 667-triple combined graph |
+| `index.html`             | Summary matrix — 20 protocols × 15 feeds, sortable, with coverage badges |
+| `protocol-aave.html`     | Aave v3 detail page — fully populated worked example |
+| `protocol-<slug>.html`   | Detail page for each of the other 19 protocols (template; renders coverage badges + stub cards) |
+| `methodology.html`       | Methodology + provenance taxonomy + feed registry |
+| `styles.css`             | One stylesheet (L2Beat / DeFiScan visual family) |
+| `app.js`                 | Async fetch loaders + matrix / detail / registry rendering |
+| `data/index.json`        | Generated — feed registry + protocol list + coverage matrix the summary page reads |
+| `data/protocols/<slug>.json` | Generated — per-protocol detail the worked-example page reads |
+| `ontology/vocab.ttl`     | The `rfp:` ontology (schema only) |
+| `ontology/feeds.ttl`     | Feed registry — instances of `rfp:Feed`, methodology URLs |
+| `ontology/protocols/<slug>/combined.ttl` | Canonical merged TTL per protocol (aave-v3 is the worked example: 667 triples across 8 feeds) |
+| `ontology/protocols/<slug>/<feed>.ttl`   | Per-feed claim files; concatenated by `scripts/combine-ttl.mjs` |
+| `ontology/protocols/<slug>/_prose.yaml`  | Hand-curated overlay — sidecards, audit history, per-feed methodology / notable / findings prose |
+| `feeds/<feed>.yaml`      | Per-feed schema docs — entity model, scales, anchor examples, known gaps |
+| `seeds/protocols.yaml`   | Seed-20 protocol list with DefiLlama TVL (2026-06-14 snapshot) |
+| `seeds/coverage-seed.yaml` | Baseline coverage matrix for protocols without a per-feed TTL; overridden by TTL when present |
+| `scripts/`               | Build pipeline (TTL → JSON), see "Regenerate the data layer" above |
+| `adapters-raw/`          | Local scrapers (per-feed `.mjs`) + dated raw scrape outputs — quarantined, not browser-visible |
 
 ### What a feed schema doc contains
 
-Each `data/feeds/<feed>.yaml` captures the feed's ontology before any of its data is mapped into the graph:
+Each `feeds/<feed>.yaml` captures the feed's ontology before any of its data is mapped into the graph:
 
 - **Identity** — name, homepage, maintainer, license, access mode, update cadence.
 - **Data model** — the primary entity each assessment yields (e.g. `ProtocolAssessment`, `VaultAssessment`, `AttestedRiskScore`), its properties, scoring dimensions, and native scales.
@@ -72,20 +88,22 @@ This mockup follows that family:
 ## How the data flows
 
 ```
-data/rdf/             ← RDF (Turtle) graph — the data layer
-   ├── vocab.ttl                              rfp: ontology + feed registry
-   ├── aave-v3.<feed>.ttl  × 8                per-feed claims about Aave
-   └── aave-v3.combined.ttl                   merged, 667 triples
-                ↓ (in production: SPARQL query at request time)
-                ↓ (in this mockup: pre-baked into data.js)
-   data.js
-                ↓
-   index.html / protocol-aave.html / methodology.html
+adapters-raw/scrapers/<feed>.mjs        ← scrapers (run locally)
+        ↓ produce
+adapters-raw/output/<feed>-YYYY-MM-DD.json
+        ↓ map (per-feed adapter, written incrementally; only aave-v3 done so far)
+ontology/protocols/<slug>/<feed>.ttl    ← per-feed RDF claims
+        ↓ scripts/combine-ttl.mjs (concat + normalise prefixes)
+ontology/protocols/<slug>/combined.ttl  ← canonical per-protocol graph
+        ↓ scripts/ttl-to-json.mjs (n3 parse + _prose.yaml overlay)
+data/protocols/<slug>.json              ← per-protocol JSON the browser fetches
+        ↓ scripts/build-index.mjs (rolls per-feed status up into a coverage matrix)
+data/index.json                         ← summary page + cross-protocol metadata
+        ↓ fetch() at page load
+index.html / protocol-*.html / methodology.html
 ```
 
-In production the HTML is rendered server-side or client-side from a SPARQL
-query against the live graph. For this mockup `data.js` is a static snapshot
-so the pages work by double-click without a server.
+Pipeline stages live in `scripts/`; run `node scripts/build-all.mjs` after editing any TTL or `_prose.yaml`. The frontend has no runtime dependency on the ontology — it only reads `data/*.json`. In production the per-feed TTL would be generated nightly by GH Actions; for this submission the scrapers run locally and the JSONs are committed.
 
 ## Mapping to RFP M1 deliverables
 
@@ -101,12 +119,8 @@ so the pages work by double-click without a server.
 
 ## What's not here (yet)
 
-- Only Aave v3 has the full detail-page worked example. The remaining 19
-  protocols share the same template; the data layer (`data.js`) extends mechanically.
-- The matrix coverage values are best-known approximations based on each
-  feed's public scope as of June 2026. In production the coverage state is
-  computed from the presence/absence of claims in the live graph, not stored
-  by hand.
+- Only Aave v3 has a `combined.ttl` + `_prose.yaml` and renders the full detail page. The other 19 protocols use the same template but render the stub fallback (coverage badges + per-feed cards seeded from `seeds/coverage-seed.yaml`); their per-feed TTLs are pending — see `scripts/adapter-to-ttl/` for the staging dir.
+- The summary coverage matrix is currently a mix of TTL-derived statuses (aave) and the hand-curated seed (the 19 stubs). When per-feed adapters land they replace seed rows incrementally; the build script prefers TTL-derived coverage whenever a `combined.ttl` exists.
 - No backend, no auth, no community-correction PR flow (that's M2 scope).
   The data-layer-as-RDF design makes the PR flow trivial: one feed = one
   Turtle file = one PR.
@@ -117,7 +131,7 @@ The triple counts on the methodology page are real, measured with rdflib:
 
 ```bash
 python3 -c "from rdflib import Graph; g=Graph(); \
-  g.parse('data/rdf/aave-v3.combined.ttl'); print(len(g))"
+  g.parse('ontology/protocols/aave-v3/combined.ttl'); print(len(g))"
 # → 667
 ```
 

@@ -1,0 +1,165 @@
+# Build-time overlay: hand-curated prose blocks, sidecards, audits, incidents.
+# Merged into data/protocols/aave.json by scripts/ttl-to-json.mjs after the TTL is parsed.
+# Structured claims (Score/Rating/Finding triples) live in combined.ttl — this file
+# holds only the per-feed narrative text and the per-protocol metadata that doesn't
+# fit the claim model.
+
+slug: aave
+name: "Aave v3 — Ethereum Core"
+category: Lending
+tvl_usd: 10130542675
+family: Aave
+versions: [v3, v4]
+description: "Open-source, non-custodial lending protocol. Users supply ERC-20 assets and borrow against them with variable rates; Aave also issues GHO, its native overcollateralized stablecoin."
+lastUpdated: "2026-06-14"
+governance_summary: "5/9 · 2d"
+governance_degrade_note: "Safe API fetch failed — showing static data"
+inlineRating:
+  defiscan: "Stage 0"
+
+audit_history:
+  - firm: "Trail of Bits"
+    date: "2022-11"
+    report_url: "https://github.com/trailofbits/publications/blob/master/reviews/2022-11-aave-v3-securityreview.pdf"
+  - firm: "OpenZeppelin"
+    date: "2022-08"
+    report_url: "https://blog.openzeppelin.com/aave-v3-audit/"
+  - firm: "Sigma Prime"
+    date: "2022-08"
+    report_url: "https://github.com/sigp/public-audits/blob/master/reports/aave-v3/review.pdf"
+  - firm: "ABDK Consulting"
+    date: "2022-06"
+    report_url: "https://github.com/aave/aave-v3-core/tree/master/audits"
+  - firm: "Certora (formal verification)"
+    date: "2022-05"
+    report_url: "https://www.certora.com/reports/Formal_Verification_Report_for_Aave_v3.pdf"
+
+incidents: []
+
+sidecards:
+  - title: Identity
+    rows:
+      - { k: Slug,     v: aave-v3-ethereum }
+      - { k: Chain,    v: Ethereum mainnet }
+      - { k: Category, v: Lending }
+      - { k: Website,  v: aave.com, url: "https://aave.com" }
+      - { k: X,        v: "@aave",  url: "https://x.com/aave" }
+      - { k: GitHub,   v: "aave-dao/aave-v3-origin", url: "https://github.com/aave-dao/aave-v3-origin" }
+  - title: "TVL & Volume"
+    prov: feed
+    rows:
+      - { k: "ETH TVL",   v: "$10.13B" }
+      - { k: Chains,      v: "20+" }
+      - { k: DefiLlama,   v: "aave-v3", url: "https://defillama.com/protocol/aave-v3" }
+  - title: Governance
+    prov: onchain
+    rows:
+      - { k: Snapshot,            v: "aave.eth", url: "https://snapshot.org/#/aave.eth" }
+      - { k: Executor,            v: "0xEC56…2252c", url: "https://etherscan.io/address/0xEC568fffba86c094cf06b22134B23074DFE2252c" }
+      - { k: "Gov v3 Guardian",   v: "Security Council" }
+      - { k: "Emergency Admin",   v: "Multisig (DAO insiders)" }
+      - { k: "Risk Council",      v: "Multisig" }
+      - { k: "Exit window (L2)",  v: "7 days" }
+      - { k: "Exit window (L1)",  v: "0 days" }
+
+# Per-feed narrative overlay. Merged into the corresponding feeds[] entry by
+# matching on feedId. TTL contributes status / sourceUrl / observedAt / claims.
+feeds:
+  defiscan:
+    sourceUrl: "https://defiscan.info/projects/aave/ethereum"
+    observedAt: "2025-05-07"
+    methodology: "Structural review: assigns Stage 0/1/2 maturity, plus 5-axis L/M/H risks (chain, upgradeability, autonomy, exit window, accessibility). Permission scanner emits per-contract / per-function findings."
+    notable:
+      label: "Why Stage 0 — 3 unfixed Stage-1 requirements"
+      text: "Loss-of-funds upgrades not protected by ≥7-day exit window OR a Security-Council-compliant multisig (Emergency Admin disqualifies — members are Aave insiders); dependency with High centralization score without mitigation (Chainlink); 1 of 3 fixed (frontend backups exist)."
+    findings:
+      label: "Notable permission roles surfaced"
+      text: "EMERGENCY_ADMIN multisig can pause any reserve or entire Pool; can disable post-pause liquidation grace period. Risk Council controls GhoDirectMinter caps. Aave Governance has full upgradeability over Pool, aTokens, debt tokens, GhoStabilityModule. Governance v3 Guardian multisig (Security Council compliant) can cancel proposals."
+
+  blockanalitica:
+    sourceUrl: "https://aave.blockanalitica.com"
+    observedAt: "2026-06-14"
+    methodology: "Live per-market dashboard. Surfaces observed parameters; no composite score. Sampling the wstETH/USDC market for illustration."
+    notable:
+      label: "Sampled market: wstETH (collateral) / USDC (debt)"
+      text: "BlockAnalitica runs a similar dashboard for every active Aave reserve. The graph stores one Market entity per (collateral, debt) pair with ~10 numeric metrics each — easily ~300 triples per protocol when fully expanded."
+
+  pharos:
+    sourceUrl: "https://pharos.watch/stablecoin/gho-aave/"
+    observedAt: "2026-06-14"
+    methodology: "Pharos rates stablecoins, not protocols. GHO (Aave's stablecoin) carries 5-dimension A+..F grading plus 0–100 forward-looking scores. Claims about GHO project onto Aave via the issues/dependsOn link."
+    notable:
+      label: "Coverage scope"
+      text: "Pharos covers GHO (the stablecoin Aave issues), not the Aave protocol itself. Graph stores Pharos's claims about GHO with an explicit edge `aave:GHO rfp:issuedBy aave:v3-ethereum` so the surface still appears on the protocol page — clearly attributed."
+
+  defisphere:
+    sourceUrl: "https://defi-sphere.com"
+    observedAt: "2026-06-14"
+    methodology: "Cross-protocol lending analytics. Per-market market-risk and liquidity-risk scores on a 0–100 scale. v1 covers Aave + Compound v3 + Morpho + SparkLend + Liquity v2. Oracle/settlement risk on roadmap."
+    notable:
+      label: "Disagreement with DeFiScan"
+      text: "DeFiScan rates Upgradeability High because admins can change the rules. Sphere rates market risk Low because borrower LTV is well-distributed and on-chain liquidity is deep. These answer different questions — exactly the case the aggregator exists to display."
+
+  credora:
+    sourceUrl: "https://credora.network"
+    observedAt: "2026-06-01"
+    methodology: "100,000 Monte Carlo simulations per market, calibrated against 30+ years of TradFi probability-of-default data. Single A+..D scale per token / vault / lending pair."
+    notable:
+      label: "No-composite-scoring stress test"
+      text: "Credora's published output IS itself a composite (A-). The aggregator passes it through verbatim with rfp:statedBy feed:credora — never blended with DeFiScan's Stage rating or Pharos's grades."
+
+  defisaver:
+    status: cov
+    sourceUrl: "https://app.defisaver.com/aave"
+    observedAt: "2026-06-14"
+    methodology: "Execution-first: no protocol-level risk score. Surfaces protocol parameter mirror plus per-position health metrics and automated repay / boost / close strategies."
+    notable:
+      label: "Why no Rating triples"
+      text: "DeFi Saver doesn't publish risk scores — it surfaces parameter mirrors and provides risk-mitigation actions. The graph reflects that: only Finding triples, no Rating triples. Honest coverage, not forced ratings."
+
+  curatorwatch:
+    sourceUrl: "https://curatorwatch.com"
+    observedAt: "2026-06-14"
+    coverageReason: "CuratorWatch tracks curator-managed vaults, not lending protocols. Aave-the-protocol has no direct entry. Surfaced instead: curators with material Aave exposure."
+    methodology: "Curator-level grading (A+..NR). Shows AUM, vaults managed, jurisdiction, recent liquidations per curator."
+    notable:
+      label: "Indirect signals via curators allocating to Aave"
+      text: "Gauntlet (curator, A-grade) provides risk-parameter recommendations to Aave Governance. Spark Protocol (curator #2 by TVL on CuratorWatch) deposits into Aave; an Aave exploit propagates to Spark vault TVL. These dependencies are stored as explicit edges in the graph."
+
+  defipunkd:
+    status: none
+    coverageReason: "Aave is not currently in DeFi Punk'd's covered set. Coverage candidate flagged."
+
+  risklayer:
+    status: part
+    sourceUrl: "https://risklayer.online"
+    methodology: "6-stage AI pipeline (discovery → contract → governance → audit → scoring) feeding a Monte Carlo engine. Validator-attested via EigenLayer."
+    coverageReason: "RiskLayer's AI pipeline ingests Aave but composite 0–100 not finalized at scan time."
+
+  pigi:
+    status: part
+    sourceUrl: "https://pigi.finance"
+    coverageReason: "Partial vault analytics on Aave-built vaults (yield-bearing aTokens), not Aave-the-protocol."
+
+  xerberus:
+    coverageReason: "Xerberus focuses on vault rating; Aave-the-protocol is out of its primary entity scope."
+
+  zyfai:
+    coverageReason: "Zyfai focuses on liquidity-pool risk; Aave reserves are not pools."
+
+  llamarisk:
+    status: cov
+    sourceUrl: "https://www.llamarisk.com"
+    observedAt: "2026-06-10"
+    methodology: "Long-form research and parameter recommendations to DAOs. Multiple published Aave research pieces."
+    notable:
+      label: "Surface type"
+      text: "LlamaRisk publishes prose research, not structured rating triples. The graph stores reference URLs and topic tags rather than numeric values — illustrating that the data model accommodates Research-type feeds via Finding triples without forcing them into a rating scale."
+
+  philidor:
+    coverageReason: "Philidor rates vaults, not protocols. Aave aTokens are coverage candidates."
+
+  stablewatch:
+    status: part
+    sourceUrl: "https://www.stablewatch.io"
+    coverageReason: "Stablewatch tracks yield-bearing stablecoins. Aave's aTokens (aUSDC, aDAI, aGHO) are candidate entries but not currently indexed; GHO via Pharos is the closest indirect surface."

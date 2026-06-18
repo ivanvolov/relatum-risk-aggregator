@@ -1,0 +1,543 @@
+{
+  "fetched_at": "2026-06-17T08:07:37.580Z",
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": false
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": true,
+      "opportunity_count": 4,
+      "total_tvl": 128026.4346122588,
+      "avg_apy": 0.26812828137301487,
+      "chains": [
+        1,
+        8453,
+        42161
+      ],
+      "pools": [
+        {
+          "protocol": "Aave V3",
+          "pool": "cbBTC",
+          "chain_id": 1,
+          "tvl": 16117.68952004,
+          "apy": 0.0010980722107802564,
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf&marketName=proto_mainnet_v3"
+        },
+        {
+          "protocol": "Aave V3",
+          "pool": "cbBTC",
+          "chain_id": 8453,
+          "tvl": 2264.75014363,
+          "apy": 0.017716754476968778,
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf&marketName=proto_base_v3"
+        },
+        {
+          "protocol": "Aave V3",
+          "pool": "WETH",
+          "chain_id": 42161,
+          "tvl": 106839.16787816881,
+          "apy": 1.011139347819691,
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0x82af49447d8a07e3bd95bd0d56f35241523fbab1&marketName=proto_arbitrum_v3"
+        },
+        {
+          "protocol": "Aave V3",
+          "pool": "WBTC",
+          "chain_id": 42161,
+          "tvl": 2804.82707042,
+          "apy": 0.04255895098461946,
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f&marketName=proto_arbitrum_v3"
+        }
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": true,
+      "opportunity_count": 4,
+      "total_tvl": 472895126.8102491,
+      "avg_apy": 3.103525,
+      "chains": [
+        1,
+        8453,
+        42161
+      ],
+      "pools": [
+        {
+          "protocol": "Spark",
+          "pool": "USDC",
+          "chain_id": 1,
+          "tvl": 339800619.70391715,
+          "apy": 3.5999999999999996,
+          "url": "https://app.spark.fi/"
+        },
+        {
+          "protocol": "Spark",
+          "pool": "WETH",
+          "chain_id": 1,
+          "tvl": 70326.26177736447,
+          "apy": 1.6,
+          "url": "https://app.spark.fi/"
+        },
+        {
+          "protocol": "Spark",
+          "pool": "USDC",
+          "chain_id": 8453,
+          "tvl": 6722671.452917258,
+          "apy": 3.6065,
+          "url": "https://app.spark.fi"
+        },
+        {
+          "protocol": "Spark",
+          "pool": "USDC",
+          "chain_id": 42161,
+          "tvl": 126301509.39163734,
+          "apy": 3.6075999999999997,
+          "url": "https://app.spark.fi/"
+        }
+      ]
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": false
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": false
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": true,
+      "opportunity_count": 26,
+      "total_tvl": 1094349992.9207232,
+      "avg_apy": 3.42610039907143,
+      "chains": [
+        1,
+        8453,
+        42161
+      ],
+      "pools": [
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet USDC RWA",
+          "chain_id": 1,
+          "tvl": 12640622.190550003,
+          "apy": 5.318828474954232,
+          "url": "https://app.morpho.org/ethereum/vault/0xA8875aaeBc4f830524e35d57F9772FfAcbdD6C45/gauntlet-usdc-rwa"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse High Yield Instant",
+          "chain_id": 1,
+          "tvl": 35769986.684847526,
+          "apy": 4.661551457300985,
+          "url": "https://app.morpho.org/ethereum/vault/0xbeeff2C5bF38f90e3482a8b19F12E5a6D2FCa757/steakhouse-high-yield-instant"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Re Ecosystem Vault",
+          "chain_id": 1,
+          "tvl": 7124396.742829403,
+          "apy": 4.596444675410429,
+          "url": "https://app.morpho.org/ethereum/vault/0xD1E9242e075Db4bdd3f3c721D7d5fd4180A94A7e/re-ecosystem-vault"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse USDC",
+          "chain_id": 1,
+          "tvl": 97149552.45568657,
+          "apy": 3.5880782271998575,
+          "url": "https://app.morpho.org/ethereum/vault/0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB/steakhouse-usdc"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Avantgarde USDC Conservative",
+          "chain_id": 1,
+          "tvl": 1302403.7152934042,
+          "apy": 3.3787655124763774,
+          "url": "https://app.morpho.org/ethereum/vault/0xeBBaE8CfAbB0092d5B32f00EBeE0c8139d24dDcd/avantgarde-usdc-conservative"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Hyperithm cbBTC Apex",
+          "chain_id": 1,
+          "tvl": 0.9677745495033252,
+          "apy": 2.2245779137580914,
+          "url": "https://app.morpho.org/ethereum/vault/0xCdbe4A5B5bAd2BC04492052Df2F881B5727d034d/hyperithm-cbbtc-apex"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse Prime Instant",
+          "chain_id": 1,
+          "tvl": 9688.88067978882,
+          "apy": 1.6155887453374596,
+          "url": "https://app.morpho.org/ethereum/vault/0xbeef0046fcab1dE47E41fB75BB3dC4Dfc94108E3/steakhouse-prime-instant"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse ETH",
+          "chain_id": 1,
+          "tvl": 11898.080659421548,
+          "apy": 1.5744635614150793,
+          "url": "https://app.morpho.org/ethereum/vault/0xBEEf050ecd6a16c4e7bfFbB52Ebba7846C4b8cD4/steakhouse-eth"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet WETH Prime",
+          "chain_id": 1,
+          "tvl": 10438.24381499521,
+          "apy": 1.559435538850816,
+          "url": "https://app.morpho.org/ethereum/vault/0x2371e134e3455e0593363cBF89d3b6cf53740618/gauntlet-weth-prime"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet WETH Core",
+          "chain_id": 1,
+          "tvl": 1816.5354867064032,
+          "apy": 1.4861127906803708,
+          "url": "https://app.morpho.org/ethereum/vault/0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658/gauntlet-weth-core"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Vault Bridge WETH",
+          "chain_id": 1,
+          "tvl": 13146.953533499205,
+          "apy": 1.40103077488635,
+          "url": "https://app.morpho.org/ethereum/vault/0x31A5684983EeE865d943A696AAC155363bA024f9/vault-bridge-weth"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet USDC Frontier",
+          "chain_id": 8453,
+          "tvl": 209635.78694669978,
+          "apy": 5.278199555999076,
+          "url": "https://app.morpho.org/base/vault/0x236919F11ff9eA9550A4287696C2FC9e18E6e890/gauntlet-usdc-frontier"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse High Yield USDC",
+          "chain_id": 8453,
+          "tvl": 4090724.7913884427,
+          "apy": 5.266463476492862,
+          "url": "https://app.morpho.org/base/vault/0xBEEFA7B88064FeEF0cEe02AAeBBd95D30df3878F/steakhouse-high-yield-usdc-v11"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet USDC Prime",
+          "chain_id": 8453,
+          "tvl": 418299517.8363368,
+          "apy": 4.334621024151038,
+          "url": "https://app.morpho.org/base/vault/0xeE8F4eC5672F09119b96Ab6fB59C27E1b7e44b61/gauntlet-usdc-prime"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse Prime USDC",
+          "chain_id": 8453,
+          "tvl": 239825462.20952266,
+          "apy": 4.10937372565067,
+          "url": "https://app.morpho.org/base/vault/0xBEEFE94c8aD530842bfE7d8B397938fFc1cb83b2/steakhouse-prime-usdc"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Spark USDC Vault",
+          "chain_id": 8453,
+          "tvl": 8082179.269680142,
+          "apy": 3.947946230885272,
+          "url": "https://app.morpho.org/base/vault/0x7BfA7C4f149E7415b73bdeDfe609237e29CBF34A/spark-usdc-vault"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet USDC Core",
+          "chain_id": 8453,
+          "tvl": 1934723.8341455716,
+          "apy": 3.9081200955936124,
+          "url": "https://app.morpho.org/base/vault/0xc0c5689e6f4D256E861F65465b691aeEcC0dEb12/gauntlet-usdc-core"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse USDC",
+          "chain_id": 8453,
+          "tvl": 260215292.217247,
+          "apy": 3.230555313378145,
+          "url": "https://app.morpho.org/base/vault/0xbeeF010f9cb27031ad51e3333f9aF9C6B1228183/steakhouse-usdc"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet WETH Core",
+          "chain_id": 8453,
+          "tvl": 253.5007032622633,
+          "apy": 1.3404618699203432,
+          "url": "https://app.morpho.org/base/vault/0x6b13c060F13Af1fdB319F52315BbbF3fb1D88844/gauntlet-weth-core"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Moonwell Frontier cbBTC",
+          "chain_id": 8453,
+          "tvl": 27.849127661222017,
+          "apy": 0.9771761893207158,
+          "url": "https://app.morpho.org/base/vault/0x543257eF2161176D7C8cD90BA65C2d4CaEF5a796/moonwell-frontier-cbbtc"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet cbBTC Core",
+          "chain_id": 8453,
+          "tvl": 3.2716204848504153,
+          "apy": 0.03315954565028218,
+          "url": "https://app.morpho.org/base/vault/0x6770216aC60F634483Ec073cBABC4011c94307Cb/gauntlet-cbbtc-core"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse Prime USDC",
+          "chain_id": 42161,
+          "tvl": 178317.01706012175,
+          "apy": 6.198797455153965,
+          "url": "https://app.morpho.org/arbitrum/vault/0x250CF7c82bAc7cB6cf899b6052979d4B5BA1f9ca/steakhouse-prime-usdc"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Steakhouse High Yield USDC",
+          "chain_id": 42161,
+          "tvl": 2617082.851083162,
+          "apy": 5.697175565533006,
+          "url": "https://app.morpho.org/arbitrum/vault/0x5c0C306Aaa9F877de636f4d5822cA9F2E81563BA/steakhouse-high-yield-usdc"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet USDC Prime",
+          "chain_id": 42161,
+          "tvl": 963385.8911704781,
+          "apy": 5.17911300224775,
+          "url": "https://app.morpho.org/arbitrum/vault/0x7c574174DA4b2be3f705c6244B4BfA0815a8B3Ed/gauntlet-usdc-prime"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Hyperithm USDC",
+          "chain_id": 42161,
+          "tvl": 657144.3820931043,
+          "apy": 4.348958775852639,
+          "url": "https://app.morpho.org/arbitrum/vault/0x4B6F1C9E5d470b97181786b26da0d0945A7cf027/hyperithm-usdc"
+        },
+        {
+          "protocol": "Morpho",
+          "pool": "Gauntlet USDC Core",
+          "chain_id": 42161,
+          "tvl": 3242290.761441138,
+          "apy": 3.8236108777577718,
+          "url": "https://app.morpho.org/arbitrum/vault/0x7e97fa6893871A2751B5fE961978DCCb2c201E65/gauntlet-usdc-core"
+        }
+      ]
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": false
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": true,
+      "opportunity_count": 4,
+      "total_tvl": 350421055.30559045,
+      "avg_apy": 2.4314488267022156,
+      "chains": [
+        1,
+        8453,
+        42161
+      ],
+      "pools": [
+        {
+          "protocol": "Compound V3",
+          "pool": "USDC",
+          "chain_id": 1,
+          "tvl": 326141388.4835328,
+          "apy": 3.278024696876062,
+          "url": "https://app.compound.finance/?market=usdc-mainnet"
+        },
+        {
+          "protocol": "Compound V3",
+          "pool": "WBTC",
+          "chain_id": 1,
+          "tvl": 25.20569885,
+          "apy": 0.328085611704,
+          "url": "https://app.compound.finance/?market=wbtc-mainnet"
+        },
+        {
+          "protocol": "Compound V3",
+          "pool": "USDC",
+          "chain_id": 8453,
+          "tvl": 8669602.53321152,
+          "apy": 3.2299913525904,
+          "url": "https://app.compound.finance/?market=usdc-basemainnet"
+        },
+        {
+          "protocol": "Compound V3",
+          "pool": "USDC",
+          "chain_id": 42161,
+          "tvl": 15610039.083147306,
+          "apy": 2.8896936456384,
+          "url": "https://app.compound.finance/?market=usdc-arb"
+        }
+      ]
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": false
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": true,
+      "opportunity_count": 1,
+      "total_tvl": 91643.28852597102,
+      "avg_apy": 1.5,
+      "chains": [
+        1
+      ],
+      "pools": [
+        {
+          "protocol": "Fluid",
+          "pool": "WETH",
+          "chain_id": 1,
+          "tvl": 91643.28852597102,
+          "apy": 1.5,
+          "url": "https://fluid.io/lending/1/ETH"
+        }
+      ]
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": false
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": true,
+      "opportunity_count": 2,
+      "total_tvl": 941.7099289641919,
+      "avg_apy": 1.9375324943870065,
+      "chains": [
+        1
+      ],
+      "pools": [
+        {
+          "protocol": "Yearn",
+          "pool": "WETH-2",
+          "chain_id": 1,
+          "tvl": 941.4846978146846,
+          "apy": 2.05946556784784,
+          "url": "https://yearn.fi/vaults/1/0xAc37729B76db6438CE62042AE1270ee574CA7571"
+        },
+        {
+          "protocol": "Yearn",
+          "pool": "WETH",
+          "chain_id": 1,
+          "tvl": 0.22523114950724737,
+          "apy": 1.8155994209261728,
+          "url": "https://yearn.fi/vaults/1/0xd9BA99D93ea94a65b5BC838a0106cA3AbC82Ec4F"
+        }
+      ]
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": true,
+      "opportunity_count": 8,
+      "total_tvl": 1207510.415047479,
+      "avg_apy": 1.285633410213837,
+      "chains": [
+        1,
+        8453,
+        42161
+      ],
+      "pools": [
+        {
+          "protocol": "Euler",
+          "pool": "Euler Prime WETH",
+          "chain_id": 1,
+          "tvl": 671.793716408297,
+          "apy": 1.4894293642841339,
+          "url": "https://app.euler.finance/vault/0xD8b27CF359b7D15710a5BE299AF6e7Bf904984C2?network=ethereum"
+        },
+        {
+          "protocol": "Euler",
+          "pool": "Euler Earn USDC",
+          "chain_id": 1,
+          "tvl": 0,
+          "apy": 0,
+          "url": "https://app.euler.finance/vault/0xe0a80d35bb6618cba260120b279d357978c42bce?network=ethereum"
+        },
+        {
+          "protocol": "Euler",
+          "pool": "Clearstar ETH Fusion",
+          "chain_id": 8453,
+          "tvl": 2397.5125087455613,
+          "apy": 3.694479614575833,
+          "url": "https://app.euler.finance/lend/0xdc4efb20ce286b421f6361734a2a006a1f24af8d?network=8453"
+        },
+        {
+          "protocol": "Euler",
+          "pool": "AlphaGrowth WETH",
+          "chain_id": 8453,
+          "tvl": 244.06083713847636,
+          "apy": 1.1385200908556081,
+          "url": "https://app.euler.finance/lend/0x859160DB5841E5cfB8D3f144C6b3381A85A4b410?network=8453"
+        },
+        {
+          "protocol": "Euler",
+          "pool": "Euler Base cbBTC",
+          "chain_id": 8453,
+          "tvl": 3.88875172,
+          "apy": 0.0016596542712530964,
+          "url": "https://app.euler.finance/lend/0x882018411Bc4A020A879CEE183441fC9fa5D7f8B?network=8453"
+        },
+        {
+          "protocol": "Euler",
+          "pool": "K3 Capital USDai Cluster",
+          "chain_id": 42161,
+          "tvl": 768664.661655,
+          "apy": 3.7906276866952493,
+          "url": "https://app.euler.finance/vault/0x6aFB8d3F6D4A34e9cB2f217317f4dc8e05Aa673b?network=arbitrumone"
+        },
+        {
+          "protocol": "Euler",
+          "pool": "Euler Arbitrum WBTC",
+          "chain_id": 42161,
+          "tvl": 0.3114633,
+          "apy": 0.17018234733319734,
+          "url": "https://app.euler.finance/vault/0x889E1c458B2469b70aCcdfb5B59726dC1668896C?network=arbitrumone"
+        },
+        {
+          "protocol": "Euler",
+          "pool": "Euler Earn USDC",
+          "chain_id": 42161,
+          "tvl": 435528.18611516675,
+          "apy": 0.00016852369542075252,
+          "url": "https://app.euler.finance/earn/0xe4783824593a50Bfe9dc873204CEc171ebC62dE0?network=arbitrumone"
+        }
+      ]
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": false
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false
+    }
+  }
+}

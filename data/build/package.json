@@ -1,0 +1,12 @@
+{
+  "name": "relatum-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-all.mjs"
+  },
+  "dependencies": {
+    "n3": "^2.0.0",
+    "yaml": "^2.6.0"
+  }
+}

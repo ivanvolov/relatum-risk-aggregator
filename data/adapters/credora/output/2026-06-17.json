@@ -1,0 +1,203 @@
+{
+  "fetched_at": "2026-06-17T08:07:37.756Z",
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "credora_protocol": "steth",
+      "covered": true,
+      "report_count": 1,
+      "latest_report_date": "2026-03-17",
+      "reports": [
+        {
+          "date": "2026-03-17",
+          "filename": "REP-STETH-20260317-V1.pdf",
+          "url": "https://reports.credora.io/steth/REP-STETH-20260317-V1.pdf"
+        }
+      ]
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "spark": {
+      "slug": "spark",
+      "credora_protocol": "spark",
+      "covered": true,
+      "report_count": 17,
+      "latest_report_date": "2026-06-08",
+      "reports": [
+        {
+          "date": "2026-06-08",
+          "filename": "REP-SPARK-20260608-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260608-V1.pdf"
+        },
+        {
+          "date": "2026-06-01",
+          "filename": "REP-SPARK-20260601-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260601-V1.pdf"
+        },
+        {
+          "date": "2026-05-25",
+          "filename": "REP-SPARK-20260525-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260525-V1.pdf"
+        },
+        {
+          "date": "2026-05-18",
+          "filename": "REP-SPARK-20260518-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260518-V1.pdf"
+        },
+        {
+          "date": "2026-05-11",
+          "filename": "REP-SPARK-20260511-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260511-V1.pdf"
+        },
+        {
+          "date": "2026-05-04",
+          "filename": "REP-SPARK-20260504-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260504-V1.pdf"
+        },
+        {
+          "date": "2026-04-27",
+          "filename": "REP-SPARK-20260427-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260427-V1.pdf"
+        },
+        {
+          "date": "2026-04-20",
+          "filename": "REP-SPARK-20260420-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260420-V1.pdf"
+        },
+        {
+          "date": "2026-04-14",
+          "filename": "REP-SPARK-20260414-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260414-V1.pdf"
+        },
+        {
+          "date": "2026-04-07",
+          "filename": "REP-SPARK-20260407-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260407-V1.pdf"
+        },
+        {
+          "date": "2026-03-30",
+          "filename": "REP-SPARK-20260330-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260330-V1.pdf"
+        },
+        {
+          "date": "2026-03-24",
+          "filename": "REP-SPARK-20260324-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260324-V1.pdf"
+        },
+        {
+          "date": "2026-03-16",
+          "filename": "REP-SPARK-20260316-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260316-V1.pdf"
+        },
+        {
+          "date": "2026-03-10",
+          "filename": "REP-SPARK-20260310-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260310-V1.pdf"
+        },
+        {
+          "date": "2026-02-23",
+          "filename": "REP-SPARK-20260223-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260223-V1.pdf"
+        },
+        {
+          "date": "2026-02-23",
+          "filename": "REP-SPARK-20260223-V2.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260223-V2.pdf"
+        },
+        {
+          "date": "2026-02-03",
+          "filename": "REP-SPARK-20260203-V1.pdf",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260203-V1.pdf"
+        }
+      ]
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "reason": "not in public reports index"
+    }
+  }
+}

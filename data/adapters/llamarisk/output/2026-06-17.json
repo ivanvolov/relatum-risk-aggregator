@@ -1,0 +1,391 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-16T22:49:42.997Z",
+    "total_substack_posts": 87,
+    "archive_oldest": "2021-12-24",
+    "archive_newest": "2025-12-22"
+  },
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": true,
+      "post_count": 1,
+      "first_post_date": "2024-06-20",
+      "latest_post_date": "2024-06-20",
+      "posts": [
+        {
+          "slug": "aave-explainer-series-the-gho-stablecoin",
+          "title": "Aave Explainer Series - The GHO Stablecoin",
+          "post_date": "2024-06-20",
+          "url": "https://llamarisk.substack.com/p/aave-explainer-series-the-gho-stablecoin"
+        }
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": true,
+      "post_count": 2,
+      "first_post_date": "2022-10-03",
+      "latest_post_date": "2023-09-15",
+      "posts": [
+        {
+          "slug": "asset-risk-assessment-dai-exposure",
+          "title": "Asset Risk Assessment: DAI Exposure to Real World Assets",
+          "post_date": "2023-09-15",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-dai-exposure"
+        },
+        {
+          "slug": "makerdao-endgame-and-its-repercussions",
+          "title": "MakerDAO Endgame and its Repercussions on Curve Finance",
+          "post_date": "2022-10-03",
+          "url": "https://llamarisk.substack.com/p/makerdao-endgame-and-its-repercussions"
+        }
+      ]
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": true,
+      "post_count": 2,
+      "first_post_date": "2024-05-15",
+      "latest_post_date": "2024-12-18",
+      "posts": [
+        {
+          "slug": "ethena-reserve-fund-drawdown-methodology",
+          "title": "Ethena Reserve Fund Drawdown Methodology V2",
+          "post_date": "2024-12-18",
+          "url": "https://llamarisk.substack.com/p/ethena-reserve-fund-drawdown-methodology"
+        },
+        {
+          "slug": "asset-risk-assessment-ethena-usde",
+          "title": "Asset Risk Assessment: Ethena USDe",
+          "post_date": "2024-05-15",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-ethena-usde"
+        }
+      ]
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": true,
+      "post_count": 1,
+      "first_post_date": "2025-01-09",
+      "latest_post_date": "2025-01-09",
+      "posts": [
+        {
+          "slug": "morpho-vaults-collateral-risk-disclaimer",
+          "title": "Morpho Vaults Collateral Risk Disclaimer",
+          "post_date": "2025-01-09",
+          "url": "https://llamarisk.substack.com/p/morpho-vaults-collateral-risk-disclaimer"
+        }
+      ]
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": true,
+      "post_count": 32,
+      "first_post_date": "2021-12-24",
+      "latest_post_date": "2025-02-20",
+      "posts": [
+        {
+          "slug": "curve-market-health-scores-methodology",
+          "title": "Curve Market Health Scores Methodology",
+          "post_date": "2025-02-20",
+          "url": "https://llamarisk.substack.com/p/curve-market-health-scores-methodology"
+        },
+        {
+          "slug": "llamalend-monetary-policy-optimization",
+          "title": "LlamaLend: Monetary Policy Optimization",
+          "post_date": "2025-02-06",
+          "url": "https://llamarisk.substack.com/p/llamalend-monetary-policy-optimization"
+        },
+        {
+          "slug": "pegkeeper-onboarding-review-first",
+          "title": "Pegkeeper Onboarding Review: First Digital FDUSD",
+          "post_date": "2024-12-18",
+          "url": "https://llamarisk.substack.com/p/pegkeeper-onboarding-review-first"
+        },
+        {
+          "slug": "sturdy-crvusd-aggregator-interest",
+          "title": "Sturdy crvUSD Aggregator: Interest Rate Model Upgrade",
+          "post_date": "2024-06-04",
+          "url": "https://llamarisk.substack.com/p/sturdy-crvusd-aggregator-interest"
+        },
+        {
+          "slug": "interest-rate-model-of-the-crvusd",
+          "title": "Interest Rate Model of the crvUSD MetaMorpho Vault",
+          "post_date": "2024-05-20",
+          "url": "https://llamarisk.substack.com/p/interest-rate-model-of-the-crvusd"
+        },
+        {
+          "slug": "introducing-the-crvusd-metamorpho",
+          "title": "Introducing the crvUSD MetaMorpho Vault",
+          "post_date": "2024-05-08",
+          "url": "https://llamarisk.substack.com/p/introducing-the-crvusd-metamorpho"
+        },
+        {
+          "slug": "sturdy-v2-crvusd-lp-silos-dashboards",
+          "title": "Sturdy V2 crvUSD LP Silos Dashboards",
+          "post_date": "2024-03-27",
+          "url": "https://llamarisk.substack.com/p/sturdy-v2-crvusd-lp-silos-dashboards"
+        },
+        {
+          "slug": "a-primer-on-curve-lending",
+          "title": "A Primer on Curve Lending ",
+          "post_date": "2024-03-21",
+          "url": "https://llamarisk.substack.com/p/a-primer-on-curve-lending"
+        },
+        {
+          "slug": "sturdy-finance-crvusd-aggregator",
+          "title": "Sturdy Finance crvUSD Aggregator: Understanding the Oracle",
+          "post_date": "2024-02-12",
+          "url": "https://llamarisk.substack.com/p/sturdy-finance-crvusd-aggregator"
+        },
+        {
+          "slug": "crv-collateral-risk-in-defi-markets",
+          "title": "CRV Collateral Risk in DeFi Markets",
+          "post_date": "2023-10-06",
+          "url": "https://llamarisk.substack.com/p/crv-collateral-risk-in-defi-markets"
+        },
+        {
+          "slug": "asset-risk-assessment-gemini-dollar",
+          "title": "Asset Risk Assessment: Gemini Dollar (GUSD)",
+          "post_date": "2023-09-07",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-gemini-dollar"
+        },
+        {
+          "slug": "asset-risk-assessment-trueusd-tusd",
+          "title": "Asset Risk Assessment: TrueUSD (TUSD)",
+          "post_date": "2023-08-19",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-trueusd-tusd"
+        },
+        {
+          "slug": "asset-risk-assessment-reserve-protocol",
+          "title": "Asset Risk Assessment: Reserve Protocol (eUSD)",
+          "post_date": "2023-06-09",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-reserve-protocol"
+        },
+        {
+          "slug": "asset-risk-assessment-membrane-finance",
+          "title": "Asset Risk Assessment - Membrane Finance (EUROe)",
+          "post_date": "2023-05-30",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-membrane-finance"
+        },
+        {
+          "slug": "consequences-of-the-euler-exploit",
+          "title": "Consequences of the Euler Exploit for Angle's agEUR and Euro-Denominated Curve Pools",
+          "post_date": "2023-04-28",
+          "url": "https://llamarisk.substack.com/p/consequences-of-the-euler-exploit"
+        },
+        {
+          "slug": "cross-chain-gauges-and-ecosystem",
+          "title": "Cross-Chain Gauges & Ecosystem Assessment: Multichain",
+          "post_date": "2023-02-08",
+          "url": "https://llamarisk.substack.com/p/cross-chain-gauges-and-ecosystem"
+        },
+        {
+          "slug": "asset-risk-assessment-monerium",
+          "title": "Asset Risk Assessment - Monerium",
+          "post_date": "2022-12-29",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-monerium"
+        },
+        {
+          "slug": "asset-risk-assessment-liquity-chicken",
+          "title": "Asset Risk Assessment: Liquity Chicken Bonds",
+          "post_date": "2022-11-28",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-liquity-chicken"
+        },
+        {
+          "slug": "asset-risk-assessment-paladin-warden",
+          "title": "Asset Risk Assessment - Paladin / Warden",
+          "post_date": "2022-11-22",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-paladin-warden"
+        },
+        {
+          "slug": "the-vetoken-standard",
+          "title": "The veToken Standard",
+          "post_date": "2022-11-02",
+          "url": "https://llamarisk.substack.com/p/the-vetoken-standard"
+        },
+        {
+          "slug": "makerdao-endgame-and-its-repercussions",
+          "title": "MakerDAO Endgame and its Repercussions on Curve Finance",
+          "post_date": "2022-10-03",
+          "url": "https://llamarisk.substack.com/p/makerdao-endgame-and-its-repercussions"
+        },
+        {
+          "slug": "a-risk-assessment-on-neutrinos-usdn",
+          "title": "A risk assessment on Neutrino’s USDN ecosystem for veCRV holders and LPs",
+          "post_date": "2022-09-13",
+          "url": "https://llamarisk.substack.com/p/a-risk-assessment-on-neutrinos-usdn"
+        },
+        {
+          "slug": "risk-assessment-synthetix-atomic",
+          "title": "Risk Assessment: Synthetix Atomic Swaps",
+          "post_date": "2022-08-26",
+          "url": "https://llamarisk.substack.com/p/risk-assessment-synthetix-atomic"
+        },
+        {
+          "slug": "curve-risk-multisig-now-voting-on",
+          "title": "Curve Risk Multisig Now Voting on Convex!",
+          "post_date": "2022-05-26",
+          "url": "https://llamarisk.substack.com/p/curve-risk-multisig-now-voting-on"
+        },
+        {
+          "slug": "asset-risk-assessment-vesta-finance",
+          "title": "Asset Risk Assessment - Vesta Finance",
+          "post_date": "2022-02-24",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-vesta-finance"
+        },
+        {
+          "slug": "asset-risk-assessment-qidao",
+          "title": "Asset Risk Assessment - QiDao",
+          "post_date": "2022-01-20",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-qidao"
+        },
+        {
+          "slug": "asset-risk-assessment-fei-protocol",
+          "title": "Asset Risk Assessment - Fei Protocol",
+          "post_date": "2022-01-11",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-fei-protocol"
+        },
+        {
+          "slug": "on-abracadabra-degenbox-strategies",
+          "title": "On Abracadabra Degenbox Strategies, dwindling Anchor Protocol Yield Reserves, and risk to Curve liquidity providers",
+          "post_date": "2022-01-07",
+          "url": "https://llamarisk.substack.com/p/on-abracadabra-degenbox-strategies"
+        },
+        {
+          "slug": "asset-risk-assessment-ramp-rusd",
+          "title": "Asset Risk Assessment - RAMP (rUSD)",
+          "post_date": "2021-12-30",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-ramp-rusd"
+        },
+        {
+          "slug": "asset-risk-assessment-rai",
+          "title": "Asset Risk Assessment - RAI",
+          "post_date": "2021-12-28",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-rai"
+        },
+        {
+          "slug": "ust-december-2021",
+          "title": "Asset Risk Assessment - Terra (UST)",
+          "post_date": "2021-12-26",
+          "url": "https://llamarisk.substack.com/p/ust-december-2021"
+        },
+        {
+          "slug": "asset-risk-assessment-frax-finance",
+          "title": "Asset Risk Assessment - FRAX Finance",
+          "post_date": "2021-12-24",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-frax-finance"
+        }
+      ]
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": true,
+      "post_count": 1,
+      "first_post_date": "2022-11-28",
+      "latest_post_date": "2022-11-28",
+      "posts": [
+        {
+          "slug": "asset-risk-assessment-liquity-chicken",
+          "title": "Asset Risk Assessment: Liquity Chicken Bonds",
+          "post_date": "2022-11-28",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-liquity-chicken"
+        }
+      ]
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": true,
+      "post_count": 1,
+      "first_post_date": "2023-04-28",
+      "latest_post_date": "2023-04-28",
+      "posts": [
+        {
+          "slug": "consequences-of-the-euler-exploit",
+          "title": "Consequences of the Euler Exploit for Angle's agEUR and Euro-Denominated Curve Pools",
+          "post_date": "2023-04-28",
+          "url": "https://llamarisk.substack.com/p/consequences-of-the-euler-exploit"
+        }
+      ]
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rfp:    <https://relatum.xyz/ns/rfp#> .
+@prefix feed:   <https://relatum.xyz/ns/feed/> .
+
+# Feed registry — instances of rfp:Feed.
+# Schema lives in vocab.ttl; this file is the closed set of feeds the aggregator tracks.
+
+feed:defiscan       a rfp:Feed ; rdfs:label "DeFiScan" ;
+    rfp:methodologyURL "https://defiscan.info/framework"^^xsd:anyURI .
+feed:blockanalitica a rfp:Feed ; rdfs:label "Block Analitica" ;
+    rfp:methodologyURL "https://blockanalitica.com"^^xsd:anyURI .
+feed:curatorwatch   a rfp:Feed ; rdfs:label "CuratorWatch" ;
+    rfp:methodologyURL "https://curatorwatch.com"^^xsd:anyURI .
+feed:defipunkd      a rfp:Feed ; rdfs:label "DeFiPunk'd" ;
+    rfp:methodologyURL "https://defipunkd.com"^^xsd:anyURI .
+feed:pharos         a rfp:Feed ; rdfs:label "Pharos" ;
+    rfp:methodologyURL "https://pharos.watch/methodology/"^^xsd:anyURI .
+feed:defisphere     a rfp:Feed ; rdfs:label "DeFi Sphere" ;
+    rfp:methodologyURL "https://blockanalitica.substack.com/p/introducing-sphere-risk-scores"^^xsd:anyURI .
+feed:defisaver      a rfp:Feed ; rdfs:label "DeFi Saver" ;
+    rfp:methodologyURL "https://help.defisaver.com"^^xsd:anyURI .
+feed:credora        a rfp:Feed ; rdfs:label "Credora" ;
+    rfp:methodologyURL "https://credora.network"^^xsd:anyURI .
+feed:risklayer      a rfp:Feed ; rdfs:label "RiskLayer" ;
+    rfp:methodologyURL "https://risklayer.io"^^xsd:anyURI .
+feed:pigi           a rfp:Feed ; rdfs:label "pigi.finance" ;
+    rfp:methodologyURL "https://pigi.finance"^^xsd:anyURI .
+feed:xerberus       a rfp:Feed ; rdfs:label "Xerberus" ;
+    rfp:methodologyURL "https://xerberus.io"^^xsd:anyURI .
+feed:zyfai          a rfp:Feed ; rdfs:label "Zyfai Risk" ;
+    rfp:methodologyURL "https://zyf.ai"^^xsd:anyURI .
+feed:llamarisk      a rfp:Feed ; rdfs:label "LlamaRisk" ;
+    rfp:methodologyURL "https://www.llamarisk.com"^^xsd:anyURI .
+feed:philidor       a rfp:Feed ; rdfs:label "Philidor" ;
+    rfp:methodologyURL "https://philidor.io"^^xsd:anyURI .
+feed:stablewatch    a rfp:Feed ; rdfs:label "Stablewatch" ;
+    rfp:methodologyURL "https://www.stablewatch.io"^^xsd:anyURI .

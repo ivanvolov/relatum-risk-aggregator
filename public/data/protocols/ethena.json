@@ -1,0 +1,251 @@
+{
+  "slug": "ethena",
+  "name": "Ethena",
+  "category": "Synthetic Yield",
+  "tvl_usd": 4837397870,
+  "family": "Ethena",
+  "versions": null,
+  "description": null,
+  "lastUpdated": "2025-09-04",
+  "governance_summary": "—",
+  "governance_degrade_note": null,
+  "inlineRating": {
+    "defiscan": "Stage 0"
+  },
+  "sidecards": [],
+  "audit_history": [],
+  "incidents": [],
+  "feeds": [
+    {
+      "feedId": "defiscan",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "sourceUrl": "https://defiscan.info/projects/ethena/ethereum",
+      "observedAt": "2025-09-04",
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "Chain",
+          "value": "L",
+          "scale": "L/M/H",
+          "level": "low",
+          "observedAt": "2025-09-04"
+        },
+        {
+          "dim": "Upgradeability",
+          "value": "H",
+          "scale": "L/M/H",
+          "level": "high",
+          "observedAt": "2025-09-04"
+        },
+        {
+          "dim": "Autonomy",
+          "value": "H",
+          "scale": "L/M/H",
+          "level": "high",
+          "observedAt": "2025-09-04"
+        },
+        {
+          "dim": "Exit window",
+          "value": "H",
+          "scale": "L/M/H",
+          "level": "high",
+          "observedAt": "2025-09-04"
+        },
+        {
+          "dim": "Accessibility",
+          "value": "H",
+          "scale": "L/M/H",
+          "level": "high",
+          "observedAt": "2025-09-04"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "curatorwatch",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defipunkd",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "pharos",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisaver",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "credora",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "risklayer",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "pigi",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "xerberus",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "zyfai",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "llamarisk",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "philidor",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "stablewatch",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    }
+  ]
+}

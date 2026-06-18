@@ -1,0 +1,469 @@
+{
+  "aave": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "aave",
+        "name": "Aave v3",
+        "website": "https://aave.com",
+        "defillama_slug": [
+          "aave-v3"
+        ],
+        "chains": {
+          "arbitrum": {
+            "stage": 0,
+            "risks": [
+              "M",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-06-10"
+          },
+          "etherfi": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-06-10"
+          },
+          "prime": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-06-10"
+          },
+          "ethereum": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-05-07"
+          }
+        }
+      }
+    ]
+  },
+  "morpho": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "morpho",
+        "name": "Morpho",
+        "website": "https://morpho.org/",
+        "defillama_slug": [
+          "morpho-blue"
+        ],
+        "chains": {
+          "ethereum": {
+            "stage": 1,
+            "risks": [
+              "L",
+              "M",
+              "M",
+              "M",
+              "L"
+            ],
+            "publish_date": "2025-05-21"
+          },
+          "base": {
+            "stage": 0,
+            "risks": [
+              "M",
+              "M",
+              "H",
+              "M",
+              "L"
+            ],
+            "publish_date": "2025-09-08"
+          }
+        }
+      }
+    ]
+  },
+  "sky": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "sky",
+        "name": "Sky",
+        "website": "https://sky.money/",
+        "defillama_slug": [
+          "sky-lending",
+          "sky-rwa"
+        ],
+        "chains": {
+          "ethereum": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-05-15"
+          }
+        }
+      }
+    ]
+  },
+  "spark": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "spark",
+        "name": "Spark",
+        "website": "https://spark.fi",
+        "defillama_slug": [
+          "sparklend",
+          "spark-liquidity-layer"
+        ],
+        "chains": {
+          "ethereum": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-06-05"
+          }
+        }
+      }
+    ]
+  },
+  "ethena": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "ethena",
+        "name": "Ethena",
+        "website": "https://ethena.fi/",
+        "defillama_slug": [
+          "ethena-usde"
+        ],
+        "chains": {
+          "usde": {
+            "stage": null,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "H"
+            ],
+            "publish_date": "2025-09-04"
+          }
+        }
+      }
+    ]
+  },
+  "lido": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "lido-v2",
+        "name": "Lido V2",
+        "website": "https://lido.fi/",
+        "defillama_slug": [
+          "lido"
+        ],
+        "chains": {
+          "ethereum": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "L",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-06-19"
+          }
+        }
+      }
+    ]
+  },
+  "uniswap": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "uniswap-v3",
+        "name": "Uniswap V3",
+        "website": "https://uniswap.org/",
+        "defillama_slug": [
+          "uniswap-v3"
+        ],
+        "chains": {
+          "base": {
+            "stage": 1,
+            "risks": [
+              "M",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "publish_date": "2025-01-22"
+          },
+          "polygon": {
+            "stage": 0,
+            "risks": [
+              "H",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "publish_date": "2025-01-22"
+          },
+          "arbitrum": {
+            "stage": 1,
+            "risks": [
+              "M",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "publish_date": "2024-12-16"
+          },
+          "ethereum": {
+            "stage": 2,
+            "risks": [
+              "L",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "publish_date": "2025-01-08"
+          }
+        }
+      },
+      {
+        "defiscan_slug": "uniswap-v2",
+        "name": "Uniswap V2",
+        "website": "https://uniswap.org/",
+        "defillama_slug": [
+          "uniswap-v2"
+        ],
+        "chains": {
+          "base": {
+            "stage": 1,
+            "risks": [
+              "M",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "publish_date": "2025-01-29"
+          },
+          "ethereum": {
+            "stage": 2,
+            "risks": [
+              "L",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "publish_date": "2025-01-22"
+          }
+        }
+      }
+    ]
+  },
+  "curve": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "curve-finance",
+        "name": "Curve Finance",
+        "website": "https://curve.finance/",
+        "defillama_slug": [
+          "curve-dex",
+          "crvusd",
+          "curve-llamalend"
+        ],
+        "chains": {
+          "ethereum": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "L",
+              "H",
+              "M"
+            ],
+            "publish_date": "1970-01-01"
+          }
+        }
+      }
+    ]
+  },
+  "compound": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "compound-v3",
+        "name": "Compound V3",
+        "website": "https://compound.finance/",
+        "defillama_slug": [
+          "compound-v3"
+        ],
+        "chains": {
+          "arbitrum": {
+            "stage": 0,
+            "risks": [
+              "M",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-03-18"
+          },
+          "ethereum": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "2025-03-18"
+          }
+        }
+      },
+      {
+        "defiscan_slug": "compound-v2",
+        "name": "Compound V2",
+        "website": "https://compound.finance/",
+        "defillama_slug": [
+          "compound-v2"
+        ],
+        "chains": {
+          "ethereum": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "H",
+              "H",
+              "L"
+            ],
+            "publish_date": "1970-01-01"
+          }
+        }
+      }
+    ]
+  },
+  "pendle": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "pendle",
+        "name": "Pendle V2",
+        "website": "https://www.pendle.finance/",
+        "defillama_slug": [
+          "pendle"
+        ],
+        "chains": {
+          "ethereum": {
+            "stage": 0,
+            "risks": [
+              "L",
+              "H",
+              "L",
+              "H",
+              "H"
+            ],
+            "publish_date": "1970-01-01"
+          }
+        }
+      }
+    ]
+  },
+  "liquity": {
+    "covered": true,
+    "deployments": [
+      {
+        "defiscan_slug": "liquity",
+        "name": "Liquity",
+        "website": "https://www.liquity.org",
+        "defillama_slug": [
+          "liquity-v1"
+        ],
+        "chains": {
+          "ethereum": {
+            "stage": 2,
+            "risks": [
+              "L",
+              "L",
+              "L",
+              "L",
+              "L"
+            ],
+            "publish_date": "2024-10-23"
+          }
+        }
+      }
+    ]
+  },
+  "rocketpool": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "balancer": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "etherfi": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "fluid": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "yearn": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "euler": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "mellow": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "gearbox": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "cowswap": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  }
+}

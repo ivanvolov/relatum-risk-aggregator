@@ -118,23 +118,4 @@ rfp:issues a owl:ObjectProperty ;
 rfp:curates a owl:ObjectProperty ;
     rdfs:domain rfp:Curator ; rdfs:range rfp:Vault .
 
-# --- Feed registry --------------------------------------------------
-
-@prefix feed: <https://relatum.xyz/ns/feed/> .
-
-feed:defiscan       a rfp:Feed ; rdfs:label "DeFiScan" ;
-    rfp:methodologyURL "https://defiscan.info/framework"^^xsd:anyURI .
-feed:blockanalitica a rfp:Feed ; rdfs:label "Block Analitica" ;
-    rfp:methodologyURL "https://blockanalitica.com"^^xsd:anyURI .
-feed:curatorwatch   a rfp:Feed ; rdfs:label "CuratorWatch" ;
-    rfp:methodologyURL "https://curatorwatch.com"^^xsd:anyURI .
-feed:pharos         a rfp:Feed ; rdfs:label "Pharos" ;
-    rfp:methodologyURL "https://pharos.watch/methodology/"^^xsd:anyURI .
-feed:defisphere     a rfp:Feed ; rdfs:label "DeFi Sphere" ;
-    rfp:methodologyURL "https://blockanalitica.substack.com/p/introducing-sphere-risk-scores"^^xsd:anyURI .
-feed:defisaver      a rfp:Feed ; rdfs:label "DeFi Saver" ;
-    rfp:methodologyURL "https://help.defisaver.com"^^xsd:anyURI .
-feed:credora        a rfp:Feed ; rdfs:label "Credora" ;
-    rfp:methodologyURL "https://credora.network"^^xsd:anyURI .
-feed:stablewatch    a rfp:Feed ; rdfs:label "Stablewatch" ;
-    rfp:methodologyURL "https://www.stablewatch.io"^^xsd:anyURI .
+# Feed instances live in feeds.ttl.

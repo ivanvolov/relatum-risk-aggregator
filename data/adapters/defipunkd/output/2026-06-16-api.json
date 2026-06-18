@@ -1,0 +1,2238 @@
+{
+  "sky-lending": {
+    "slug": "sky-lending",
+    "snapshot": {
+      "slug": "sky-lending",
+      "name": "Sky Lending",
+      "category": "CDP",
+      "chains": [
+        "Ethereum"
+      ],
+      "tvl": 5791031989.818243,
+      "tvl_by_chain": {
+        "Ethereum-staking": 579595001.3490459,
+        "Ethereum": 5791031989.818243,
+        "staking": 579595001.3490459
+      },
+      "website": "https://app.sky.money/",
+      "twitter": "SkyEcosystem",
+      "github": null,
+      "audit_count": 2,
+      "audit_links": [
+        "https://security.makerdao.com/"
+      ],
+      "hallmarks": [],
+      "parent_slug": "maker",
+      "forked_from": null,
+      "logo": "https://icons.llama.fi/sky-lending.jpg",
+      "is_dead": false,
+      "is_parent": false,
+      "first_seen_at": "2026-04-22T15:57:20.991Z",
+      "last_seen_at": "2026-06-08T10:47:49.151Z",
+      "delisted_at": null,
+      "module": "maker/index.js"
+    },
+    "slices": {
+      "verifiability": {
+        "schema_version": 3,
+        "slug": "sky-lending",
+        "slice": "verifiability",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "green",
+        "consensus_strength": "weak",
+        "short_headline": "Verified source and top-tier audit coverage",
+        "merged_at": "2026-05-02T07:43:27.543Z",
+        "primary_submission_path": "data/submissions/sky-lending/verifiability/models-2026-04-29.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/sky-lending/verifiability/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "green",
+            "weight": 0.1,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/verifiability/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/verifiability/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "green",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/sky-ecosystem",
+            "https://github.com/makerdao",
+            "https://github.com/makerdao/dss",
+            "https://github.com/sky-ecosystem/stusds",
+            "https://github.com/sky-ecosystem/dss-lite-psm",
+            "https://github.com/sky-ecosystem/spells-mainnet",
+            "https://github.com/sky-ecosystem/dss",
+            "https://github.com/sky-ecosystem/dss-cdp-manager",
+            "https://github.com/sky-ecosystem/usds",
+            "https://github.com/sky-ecosystem/sky",
+            "https://github.com/sky-ecosystem/sky-contracts"
+          ],
+          "audits": [
+            {
+              "firm": "ChainSecurity",
+              "url": "https://github.com/sky-ecosystem/stusds/blob/master/audit/20250812-ChainSecurity_Sky_stUSDS_audit.pdf",
+              "date": "2025-08-12"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/sky-ecosystem/stusds/blob/master/audit/20250818-cantina-report-sky-stusds.pdf",
+              "date": "2025-08-18"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://www.chainsecurity.com/security-audit/nst-smart-contracts",
+              "date": "2024"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://github.com/sky-ecosystem/dss-lite-psm/blob/main/audits/ChainSecurity_MakerDAO_PSM_Lite_audit.pdf",
+              "date": "2024"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/sky-ecosystem/dss-lite-psm/blob/main/audits/report-review-makerdao-dss-lite-psm.pdf",
+              "date": "2024"
+            },
+            {
+              "firm": "Sherlock",
+              "url": "https://developers.skyeco.com/security/security-measures/overview/",
+              "date": "2024-08-05"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/sky-ecosystem/mcd-security/blob/master/Audit%20Reports/TOB_MakerDAO_Final_Report.pdf",
+              "date": "2019-08"
+            },
+            {
+              "firm": "PeckShield",
+              "url": "https://github.com/sky-ecosystem/mcd-security/blob/master/Audit%20Reports/PeckShield_Final_Audit_Report.pdf",
+              "date": "2019-10"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://www.chainsecurity.com/security-audit/makerdao-sky-smart-contracts",
+              "date": "2024-09-04"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://github.com/sky-ecosystem/usds/blob/dev/audit/20240904-ChainSecurity_MakerDAO_USDS_audit.pdf",
+              "date": "2024-09-04"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://www.chainsecurity.com/security-audit/makerdao-savings-nst",
+              "date": "2024-09-30"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://github.com/makerdao/audits/blob/master/ChainSecurity/MakerDAO_Sky_Protocol_Upgrade_Audit.pdf",
+              "date": "2024-07-15"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/makerdao/audits/blob/master/Trail%20of%20Bits/MakerDAO_Sky_Upgrade_Security_Assessment.pdf",
+              "date": "2024-08-20"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0xbe8e3e3618f7474f8cb1d074a26affef007e98fb",
+              "role": "MCD_PAUSE (DSPauseProxy) — governance executor with timelock",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f34745d170713C1430c423d229b2EE",
+              "role": "DSPause (Timelock/Proxy)",
+              "actor_class": "timelock"
+            }
+          ],
+          "docs_url": "https://developers.skyeco.com",
+          "governance_forum": "https://forum.sky.money",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/sky/information/",
+          "security_contact": "security@sky.money",
+          "deployed_contracts_doc": "https://chainlog.sky.money/",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x56072C95FAA701256059aa122697B133aDEd9279",
+            "symbol": "SKY"
+          }
+        }
+      },
+      "autonomy": {
+        "schema_version": 3,
+        "slug": "sky-lending",
+        "slice": "autonomy",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "orange",
+        "consensus_strength": "weak",
+        "short_headline": "USDC and RWA custody dominate collateral",
+        "merged_at": "2026-05-02T07:43:27.538Z",
+        "primary_submission_path": "data/submissions/sky-lending/autonomy/models-2026-04-29.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/sky-lending/autonomy/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "orange",
+            "weight": 0.1,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/autonomy/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "red",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/autonomy/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "orange",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/sky-ecosystem",
+            "https://github.com/makerdao",
+            "https://github.com/makerdao/dss",
+            "https://github.com/makerdao/osm",
+            "https://github.com/sky-ecosystem/dss"
+          ],
+          "audits": [
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/makerdao/audits/blob/master/Trail%20of%20Bits%20-%20MakerDAO%20DSS%20Audit.pdf",
+              "date": "2019-11"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB",
+              "role": "DSPauseProxy (executes governance spells after 18h delay)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x0a3f6849f78076aefaDf113F5BED87720274dDC0",
+              "role": "DSChief (continuous-approval MKR/SKY voting)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x09e05fF6142F2f9de8B6B65855A1d56B6cfE4c58",
+              "role": "ESM (Emergency Shutdown Module)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x76416A4d5190d071bfed309861527431304aA14f",
+              "role": "OsmMom (no-timelock per-ilk OSM stop())",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xF51a075d468dE7dE3599C1Dc47F5C42d02C9230e",
+              "role": "SplitterMom",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x467b32b0407Ad764f56304420Cddaa563bDab425",
+              "role": "DssLitePsmMom",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x6eEB68B2C7A918f36B78E2DB80dcF279236DDFb8",
+              "role": "MkrAuthority",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xbE286431454714F511008713973d3B053A2d38f3",
+              "role": "Sky MCD Pause timelock",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f301f0AAa4A18a959b93C5f1511178",
+              "role": "Governance Pause (GSM)",
+              "actor_class": "timelock"
+            }
+          ],
+          "docs_url": "https://docs.sky.money/",
+          "governance_forum": "https://forum.sky.money/",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/sky/",
+          "security_contact": "https://security.makerdao.com/",
+          "deployed_contracts_doc": "https://developers.sky.money/",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+            "symbol": "MKR"
+          }
+        }
+      },
+      "ability-to-exit": {
+        "schema_version": 3,
+        "slug": "sky-lending",
+        "slice": "ability-to-exit",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "green",
+        "consensus_strength": "weak",
+        "short_headline": "Permissionless exits via settlement or vault wipe",
+        "merged_at": "2026-05-02T07:43:27.536Z",
+        "primary_submission_path": "data/submissions/sky-lending/ability-to-exit/models-2026-04-29.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/sky-lending/ability-to-exit/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "green",
+            "weight": 0.1,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/ability-to-exit/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/ability-to-exit/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "green",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/sky-ecosystem",
+            "https://github.com/makerdao",
+            "https://github.com/sky-ecosystem/usds",
+            "https://github.com/sky-ecosystem/sdai",
+            "https://github.com/makerdao/dss",
+            "https://github.com/makerdao/dss-lite-psm",
+            "https://github.com/makerdao/esm",
+            "https://github.com/sky-ecosystem/dss",
+            "https://github.com/sky-ecosystem/dss-cdp-manager",
+            "https://github.com/sky-ecosystem/dss-proxy-actions",
+            "https://github.com/sky-ecosystem/sky-scripts"
+          ],
+          "audits": [
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/makerdao/audits/blob/master/Trail%20of%20Bits/MakerDAO%20-%20Multi-Collateral%20Dai%20-%20Summary%20Report.pdf",
+              "date": "2019-11"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB",
+              "role": "MCD_PAUSE_PROXY (governance executor, 48h GSM_PAUSE_DELAY)",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x09e05fF6142F2f9de8B6B65855A1d56B6cfE4c58",
+              "role": "ESM (Emergency Shutdown Module, fire-able by anyone with 100k MKR threshold)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xBB856d1742fD182a90239D7AE85706C2FE4e5922",
+              "role": "MCD_END (Emergency Shutdown End contract)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xbe286431454714f511008713973d3b053a2d38f3",
+              "role": "MCD Pause GSM timelock for Sky governance spells",
+              "actor_class": "timelock"
+            }
+          ],
+          "docs_url": "https://developers.skyeco.com/",
+          "governance_forum": "https://forum.sky.money/",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/makerdao/",
+          "security_contact": "https://security.makerdao.com/",
+          "deployed_contracts_doc": "https://chainlog.makerdao.com/",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x56072C95FAA701256059aa122697B133aDEd9279",
+            "symbol": "SKY"
+          }
+        }
+      },
+      "control": {
+        "schema_version": 3,
+        "slug": "sky-lending",
+        "slice": "control",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "orange",
+        "consensus_strength": "strong",
+        "short_headline": "SKY governance reaches T1 powers under 48h delay",
+        "merged_at": "2026-05-02T07:43:27.534Z",
+        "primary_submission_path": "data/submissions/sky-lending/control/models-2026-04-29.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/sky-lending/control/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "orange",
+            "weight": 0.1,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/control/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/control/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "orange",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/sky-ecosystem",
+            "https://github.com/makerdao",
+            "https://github.com/sky-ecosystem/dss-chain-log",
+            "https://github.com/sky-ecosystem/stusds",
+            "https://github.com/sky-ecosystem/chief",
+            "https://github.com/sky-ecosystem/dss",
+            "https://github.com/sky-ecosystem/dss-exec-lib"
+          ],
+          "audits": [
+            {
+              "firm": "ChainSecurity",
+              "url": "https://github.com/sky-ecosystem/stusds/blob/master/audit/20250812-ChainSecurity_Sky_stUSDS_audit.pdf",
+              "date": "2025-08-12"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/sky-ecosystem/stusds/blob/master/audit/20250818-cantina-report-sky-stusds.pdf",
+              "date": "2025-08-18"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://www.chainsecurity.com/security-audit/sky-chief-smart-contracts",
+              "date": "2025-04"
+            },
+            {
+              "firm": "Sherlock",
+              "url": "https://developers.skyeco.com/security/security-measures/overview/",
+              "date": "2024"
+            },
+            {
+              "firm": "ABDK",
+              "url": "https://developers.skyeco.com/security/security-measures/overview/",
+              "date": "2024"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://developers.skyeco.com/security/security-measures/overview/",
+              "date": "2019"
+            },
+            {
+              "firm": "PeckShield",
+              "url": "https://developers.skyeco.com/security/security-measures/overview/",
+              "date": "2019"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/makerdao/audits/blob/master/Trail%20of%20Bits/MakerDAO%20-%20Vat%20and%20Jug.pdf",
+              "date": "2019-03"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB",
+              "role": "MCD_PAUSE_PROXY — sole ward of Vat, sole upgrader of USDS implementation; called only by DSPause",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xbE286431454714F511008713973d3B053A2d38f3",
+              "role": "MCD_PAUSE (DSPause) — 86400s delay between plot and exec; authority = Chief",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x929d9A1435662357F54AdcF64DcEE4d6b867a6f9",
+              "role": "Chief (MCD_ADM) — SKY-weighted continuous approval voting; sets DSPause authority via hat",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x09e05fF6142F2f9de8B6B65855A1d56B6cfE4c58",
+              "role": "MCD_ESM Emergency Shutdown Module — currently disabled (min = 2^256-1)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x0a3f6849f78076aefaDf113F5BED87720274dDC0",
+              "role": "Governance (DSChief)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f301f0c9784782905c21f4608AD584",
+              "role": "Timelock (GSM)",
+              "actor_class": "timelock"
+            }
+          ],
+          "docs_url": "https://docs.sky.money/",
+          "governance_forum": "https://forum.sky.money/",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/sky/information/",
+          "security_contact": "https://immunefi.com/bug-bounty/sky/information/",
+          "deployed_contracts_doc": "https://chainlog.sky.money/",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x56072C95FAA701256059aa122697B133aDEd9279",
+            "symbol": "SKY"
+          }
+        }
+      },
+      "open-access": {
+        "schema_version": 3,
+        "slug": "sky-lending",
+        "slice": "open-access",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "orange",
+        "consensus_strength": "strong",
+        "short_headline": "Frontend geo-blocked; contracts permissionless",
+        "merged_at": "2026-05-02T07:43:27.541Z",
+        "primary_submission_path": "data/submissions/sky-lending/open-access/models-2026-04-29.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/sky-lending/open-access/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "orange",
+            "weight": 0.1,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/open-access/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sky-lending/open-access/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "orange",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/sky-ecosystem",
+            "https://github.com/makerdao",
+            "https://github.com/sky-ecosystem/usds",
+            "https://github.com/sky-ecosystem/dss-lite-psm",
+            "https://github.com/sky-ecosystem/dss",
+            "https://github.com/sky-ecosystem/stusds",
+            "https://github.com/sky-ecosystem/sky"
+          ],
+          "audits": [
+            {
+              "firm": "ChainSecurity",
+              "url": "https://github.com/sky-ecosystem/stusds/blob/master/audit/20250812-ChainSecurity_Sky_stUSDS_audit.pdf",
+              "date": "2025-08-12"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/sky-ecosystem/stusds/blob/master/audit/20250818-cantina-report-sky-stusds.pdf",
+              "date": "2025-08-18"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://github.com/sky-ecosystem/usds/blob/dev/audit/20240904-ChainSecurity_MakerDAO_USDS_audit.pdf",
+              "date": "2024-09-04"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/sky-ecosystem/mcd-security/blob/master/Audit%20Reports/TOB_MakerDAO_Final_Report.pdf",
+              "date": "2019"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/makerdao/audits/blob/master/Trail%20of%20Bits%20-%20MakerDAO%20Sky%20Upgrade.pdf",
+              "date": "2024-08"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x0a3f6849f78076aefadf113f5bed87720274ddc0",
+              "role": "Sky governance pause contract",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB",
+              "role": "MCD Pause Proxy governance execution identity",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e15e02845564F984758b1712fb39A91914c",
+              "role": "Pause Proxy (Governance Control)",
+              "actor_class": "governance"
+            }
+          ],
+          "docs_url": "https://docs.sky.money",
+          "governance_forum": "https://forum.sky.money",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/sky/information/",
+          "security_contact": "security@sky.money",
+          "deployed_contracts_doc": "https://developers.sky.money",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x56072C95FAA701256059aa122697B133aDEd9279",
+            "symbol": "SKY"
+          }
+        }
+      }
+    }
+  },
+  "sparklend": {
+    "slug": "sparklend",
+    "snapshot": {
+      "slug": "sparklend",
+      "name": "SparkLend",
+      "category": "Lending",
+      "chains": [
+        "Ethereum",
+        "xDai"
+      ],
+      "tvl": 3404645195.2832675,
+      "tvl_by_chain": {
+        "Ethereum-staking": 10667097.828459658,
+        "Ethereum": 3404298941.118099,
+        "Ethereum-borrowed": 1567428925.9929206,
+        "xDai": 346254.1651680486,
+        "xDai-borrowed": 152321.36972060183,
+        "staking": 10667097.828459658,
+        "borrowed": 1567581247.3626413
+      },
+      "website": "https://app.spark.fi/points/KNQ5HD",
+      "twitter": "sparkdotfi",
+      "github": null,
+      "audit_count": 2,
+      "audit_links": [
+        "https://devs.spark.fi/security/security-and-audits"
+      ],
+      "hallmarks": [],
+      "parent_slug": "spark",
+      "forked_from": null,
+      "logo": "https://icons.llama.fi/sparklend.jpg",
+      "is_dead": false,
+      "is_parent": false,
+      "first_seen_at": "2026-04-22T15:57:20.991Z",
+      "last_seen_at": "2026-06-08T10:47:49.151Z",
+      "delisted_at": null,
+      "module": "spark-fi/index.js"
+    },
+    "slices": {
+      "control": {
+        "error": "404 https://raw.githubusercontent.com/guil-lambert/defipunkd/main/data/assessments/sparklend/control.json"
+      },
+      "ability-to-exit": {
+        "schema_version": 3,
+        "slug": "sparklend",
+        "slice": "ability-to-exit",
+        "snapshot_generated_at": "2026-05-04T08:26:37.214Z",
+        "consensus_grade": "red",
+        "consensus_strength": "strong",
+        "short_headline": "Multisig can pause withdrawals indefinitely",
+        "merged_at": "2026-05-12T08:39:19.544Z",
+        "primary_submission_path": "data/submissions/sparklend/ability-to-exit/autorun-claude-sonnet-4-5-2026-05-08-0205.json",
+        "merged_from": [
+          {
+            "path": "data/submissions/sparklend/ability-to-exit/autorun-claude-sonnet-4-5-2026-05-08-0205.json",
+            "model": "claude-sonnet-4-5 (autorun)",
+            "grade": "red",
+            "weight": 0.07,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sparklend/ability-to-exit/models-2026-05-01.json#0",
+            "model": "gpt-5.5",
+            "grade": "red",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sparklend/ability-to-exit/models-2026-05-01.json#1",
+            "model": "gemini-3-flash-preview",
+            "grade": "red",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/sparkdotfi",
+            "https://github.com/marsfoundation/spark-v3-core",
+            "https://github.com/marsfoundation/spark-v3-periphery"
+          ],
+          "audits": [
+            {
+              "firm": "Multiple firms - see audit repo",
+              "url": "https://devs.spark.fi/security/security-and-audits"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://docs.spark.fi/assets/Chainsecurity-SparkLend-Deployment-Verification.pdf",
+              "date": "2023-04-26"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://reports.chainsecurity.com/MakerDAO/ChainSecurity_MakerDAO_SparkLendFreezer_Audit.pdf",
+              "date": "2024-01"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://docs.spark.fi/dev/security-and-audits",
+              "date": "2023-04"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://docs.spark.fi/dev/security-and-audits",
+              "date": "2023-05"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x44efFc473e81632B12486866AA1678edbb7BEeC3",
+              "role": "Freezer multisig (emergency pause/freeze authority)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x237e3985dD7E373F2ec878EC1Ac48A228Cf2e7a3",
+              "role": "SparkLendFreezerMom (pause/freeze coordinator)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x929d9A1435662357F54AdcF64DcEE4d6b867a6f9",
+              "role": "FreezerMom authority (MakerDAO Chief - governance contract)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x3300f198988e4C9C63F75dF86De36421f06af8c4",
+              "role": "Spark DAO proxy (FreezerMom owner)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x542DBa469bdE58FAeE189ffB60C6b49CE60E0738",
+              "role": "PoolConfigurator (admin functions for pool)",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x7274f4679c2c64453f39aa0509e73667f86a953b",
+              "role": "Spark Risk Council (Emergency Admin)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x1BB969A26065939182217E1d1aeE85a21672F0dc",
+              "role": "Spark Proxy (Pool Admin)",
+              "actor_class": "governance"
+            }
+          ],
+          "docs_url": "https://docs.spark.fi",
+          "governance_forum": "https://forum.makerdao.com/",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/sparklend/information/",
+          "security_contact": "https://github.com/marsfoundation/spark-v3-core/blob/master/SECURITY.md",
+          "deployed_contracts_doc": "https://docs.spark.fi/dev/deployments/",
+          "upgradeability": "upgradeable",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+            "symbol": "MKR"
+          }
+        }
+      },
+      "open-access": {
+        "error": "404 https://raw.githubusercontent.com/guil-lambert/defipunkd/main/data/assessments/sparklend/open-access.json"
+      },
+      "autonomy": {
+        "schema_version": 3,
+        "slug": "sparklend",
+        "slice": "autonomy",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "red",
+        "consensus_strength": "weak",
+        "short_headline": "Oracle failure risks ~100% TVS unmitigated",
+        "merged_at": "2026-05-04T23:09:09.757Z",
+        "primary_submission_path": "data/submissions/sparklend/autonomy/models-2026-05-01.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/sparklend/autonomy/models-2026-05-01.json#0",
+            "model": "gpt-5.5",
+            "grade": "red",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sparklend/autonomy/models-2026-05-01.json#1",
+            "model": "gemini-3-flash-preview",
+            "grade": "red",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/sparkdotfi/spark-address-registry",
+            "https://github.com/sparkdotfi/sparklend-v1-core",
+            "https://github.com/sparkdotfi/sparklend-advanced",
+            "https://github.com/sparkdotfi/sparklend-cap-automator",
+            "https://github.com/sparkdotfi/sparklend-deployments",
+            "https://github.com/sparkdotfi/smart-contracts-v3",
+            "https://github.com/marsfoundation/spark-lending"
+          ],
+          "audits": [
+            {
+              "firm": "ChainSecurity",
+              "url": "https://docs.spark.fi/assets/Chainsecurity-SparkLend-Deployment-Verification.pdf",
+              "date": "2023-04-26"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://docs.spark.fi/dev/security-and-audits",
+              "date": "2023-03"
+            },
+            {
+              "firm": "ABDK",
+              "url": "https://docs.spark.fi/dev/security-and-audits",
+              "date": "2023-03"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x3300f198988e4C9C63F75dF86De36421f06af8c4",
+              "role": "Spark DAO proxy",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB",
+              "role": "Sky Pause Proxy referenced by Spark registry",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x44efFc473e81632B12486866AA1678edbb7BEeC3",
+              "role": "SparkLend freezer multisig",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Gnosis",
+              "address": "0xc4218C1127cB24a0D6c1e7D25dc34e10f2625f5A",
+              "role": "Gnosis AMB executor",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x3b2969Cc35AaA651188C446F092B15C297745245",
+              "role": "Spark Executor (Timelock)",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x2e153026064076369360df860011163d774bb307",
+              "role": "Spark Proxy Admin",
+              "actor_class": "multisig"
+            }
+          ],
+          "docs_url": "https://docs.spark.fi/",
+          "governance_forum": "https://forum.sky.money/",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/sparklend/information/",
+          "security_contact": "security@spark.fi",
+          "deployed_contracts_doc": "https://docs.spark.fi/dev/deployments/",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+            "symbol": "MKR"
+          }
+        }
+      },
+      "verifiability": {
+        "schema_version": 3,
+        "slug": "sparklend",
+        "slice": "verifiability",
+        "snapshot_generated_at": "2026-05-04T08:26:37.214Z",
+        "consensus_grade": "green",
+        "consensus_strength": "weak",
+        "short_headline": "Verified source, audited, zero post-audit drift",
+        "merged_at": "2026-05-12T08:39:19.545Z",
+        "primary_submission_path": "data/submissions/sparklend/verifiability/autorun-claude-sonnet-4-6-2026-05-07-cc2a.json",
+        "merged_from": [
+          {
+            "path": "data/submissions/sparklend/verifiability/autorun-claude-sonnet-4-6-2026-05-07-cc2a.json",
+            "model": "claude-sonnet-4-6 (autorun)",
+            "grade": "green",
+            "weight": 0.7,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sparklend/verifiability/models-2026-05-01.json#0",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/sparklend/verifiability/models-2026-05-01.json#1",
+            "model": "gemini-3-flash-preview",
+            "grade": "green",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/sparkdotfi/sparklend-v1-core",
+            "https://github.com/sparkdotfi/sparklend-advanced",
+            "https://github.com/sparkdotfi/sparklend-cap-automator",
+            "https://github.com/sparkdotfi/spark-gov-relay",
+            "https://github.com/sparkdotfi/xchain-helpers",
+            "https://github.com/sparkdotfi/sparklend-deployments",
+            "https://github.com/sparkdotfi/spark-address-registry",
+            "https://github.com/marsfoundation/spark-protocol"
+          ],
+          "audits": [
+            {
+              "firm": "ChainSecurity",
+              "url": "https://docs.spark.fi/assets/Chainsecurity-SparkLend-Deployment-Verification.pdf",
+              "date": "2023-04"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://www.chainsecurity.com/security-audit/makerdao-sparklend-advanced",
+              "date": "2024-01"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://www.chainsecurity.com/security-audit/makerdao-sparklend-cap-automator",
+              "date": "2024-01"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/sparkdotfi/sparklend-v1-core/tree/master/audits",
+              "date": "2021-10"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/sparkdotfi/sparklend-v1-core/tree/master/audits",
+              "date": "2021-10"
+            },
+            {
+              "firm": "PeckShield",
+              "url": "https://github.com/sparkdotfi/sparklend-v1-core/tree/master/audits",
+              "date": "2022-12"
+            },
+            {
+              "firm": "SigmaPrime",
+              "url": "https://github.com/sparkdotfi/sparklend-v1-core/tree/master/audits",
+              "date": "2022-12"
+            },
+            {
+              "firm": "Certora",
+              "url": "https://github.com/sparkdotfi/sparklend-v1-core/tree/master/audits",
+              "date": "2022-01"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://reports.chainsecurity.com/Spark/ChainSecurity_Spark_SparkLendCoreUpdates_Audit.pdf",
+              "date": "2024-03-15"
+            },
+            {
+              "firm": "Trail of Bits",
+              "url": "https://github.com/trailofbits/publications/blob/master/reviews/2023-08-sparkprotocol-securityreview.pdf",
+              "date": "2023-08"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://chainsecurity.com/security-audit/spark-protocol/",
+              "date": "2023-03"
+            },
+            {
+              "firm": "Sigma Prime",
+              "url": "https://github.com/sigp/publications/blob/master/reports/spark-protocol/v1.0/Spark_Protocol_Smart_Contract_Security_Audit_Report_v1.0.pdf",
+              "date": "2023-05"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x3300f198988e4C9C63F75dF86De36421f06af8c4",
+              "role": "Spark DAO proxy",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x44efFc473e81632B12486866AA1678edbb7BEeC3",
+              "role": "SparkLend freezer multisig",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x3b2969Cc35AaA651188C446F092B15C297745245",
+              "role": "Spark Executor (Timelock)",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x2e153026064076369360df860011163d774bb307",
+              "role": "Spark Proxy Admin",
+              "actor_class": "governance"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x7274f4679c2c64453f39aa0509e73667f86a953b",
+              "role": "Spark Risk Council (Emergency Admin)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xBE8E3e3618f34745d170713C1437723472125261",
+              "role": "MakerDAO DSPause (Governance Timelock)",
+              "actor_class": "timelock"
+            }
+          ],
+          "docs_url": "https://docs.spark.fi/",
+          "governance_forum": "https://forum.makerdao.com/c/spark/",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/sparklend/information/",
+          "security_contact": "https://github.com/marsfoundation/spark-protocol/blob/main/SECURITY.md",
+          "deployed_contracts_doc": "https://docs.spark.fi/dev/deployments/",
+          "upgradeability": "upgradeable",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+            "symbol": "MKR"
+          }
+        }
+      }
+    }
+  },
+  "morpho-blue": {
+    "slug": "morpho-blue",
+    "snapshot": {
+      "slug": "morpho-blue",
+      "name": "Morpho Blue",
+      "category": "Lending",
+      "chains": [
+        "Ethereum",
+        "Base",
+        "Hyperliquid L1",
+        "Monad",
+        "Katana",
+        "Flare",
+        "Arbitrum",
+        "Sei",
+        "World Chain",
+        "Plume Mainnet",
+        "Optimism",
+        "Polygon",
+        "Stable",
+        "Citrea",
+        "Etherlink",
+        "Tempo",
+        "Unichain",
+        "Hemi",
+        "Celo",
+        "TAC",
+        "Klaytn",
+        "Abstract",
+        "Lisk",
+        "Soneium",
+        "Binance",
+        "Fraxtal",
+        "Corn",
+        "Sonic",
+        "Scroll",
+        "Botanix",
+        "Ink",
+        "Arc",
+        "Zircuit",
+        "xDai",
+        "Linea",
+        "Bitlayer",
+        "Mode"
+      ],
+      "tvl": 6527007819.866338,
+      "tvl_by_chain": {
+        "Zircuit": 0,
+        "xDai": 0,
+        "Zircuit-borrowed": 0,
+        "xDai-borrowed": 0,
+        "Sei-borrowed": 19565696.260469474,
+        "Optimism-borrowed": 3433071.527007031,
+        "Scroll-borrowed": 1.0945130872723974,
+        "Linea-borrowed": 0,
+        "Sonic-borrowed": 12.49676708485965,
+        "Botanix-borrowed": 0,
+        "Sonic": 83.79628007304227,
+        "Fraxtal-borrowed": 211.40437127114475,
+        "Linea": 0,
+        "Bitlayer-borrowed": 0,
+        "Bitlayer": 0,
+        "Soneium": 27496.449773702378,
+        "Corn-borrowed": 0,
+        "Soneium-borrowed": 9317.772388287225,
+        "Etherlink-borrowed": 2008326.5074745335,
+        "Klaytn-borrowed": 22471.171223575115,
+        "Mode": 0,
+        "Lisk-borrowed": 3035.642683806257,
+        "Celo-borrowed": 85376.71693038521,
+        "Lisk": 108381.61415685927,
+        "Fraxtal": 261.4061098069568,
+        "Binance-borrowed": 3.9966148398201913,
+        "Mode-borrowed": 0,
+        "Stable-borrowed": 0.8609705720365434,
+        "Scroll": 35.8277071132477,
+        "Hemi-borrowed": 8.757734035955473,
+        "Tempo-borrowed": 1934.070728567161,
+        "Botanix": 15.225173178183747,
+        "Citrea-borrowed": 0,
+        "Citrea": 3813043.7342166915,
+        "Binance": 4629.7319649019755,
+        "Ink-borrowed": 0.8994795594617429,
+        "Etherlink": 3559120.7681055577,
+        "Arc-borrowed": 0.008997715356305573,
+        "Unichain-borrowed": 1026123.2924293361,
+        "Ink": 13.332174204273352,
+        "Celo": 839840.7453280181,
+        "Hemi": 1734130.9007299987,
+        "Sei": 30512220.23136895,
+        "World Chain-borrowed": 5250092.261563779,
+        "Tempo": 2837707.771904147,
+        "Katana-borrowed": 52881090.54262806,
+        "Flare-borrowed": 18798962.259193473,
+        "Stable": 5318608.334260201,
+        "Unichain": 2118607.4646951477,
+        "World Chain": 29021237.824302033,
+        "Corn": 128.3892870243421,
+        "Optimism": 7153348.7660656,
+        "Abstract-borrowed": 56827.643031522406,
+        "Klaytn": 447081.7087463736,
+        "Arc": 0.04889234049973077,
+        "Abstract": 395735.46609840496,
+        "Plume Mainnet-borrowed": 4654219.773254835,
+        "Hyperliquid L1-borrowed": 121368038.99668631,
+        "Katana": 86062413.8874194,
+        "TAC-borrowed": 311717.2632576763,
+        "Flare": 42434288.633763924,
+        "TAC": 525174.2998789526,
+        "Hyperliquid L1": 323421002.2778282,
+        "Plume Mainnet": 7239510.365386158,
+        "Arbitrum-borrowed": 25655000.308952622,
+        "Monad-borrowed": 59148285.162638284,
+        "Monad": 100025021.21929206,
+        "Polygon-borrowed": 1642098.4941067246,
+        "Arbitrum": 41015647.91370324,
+        "Polygon": 6713923.867106695,
+        "Ethereum-borrowed": 1828542388.3892126,
+        "Ethereum": 3332722285.2943735,
+        "Base-borrowed": 1310904429.8636763,
+        "Base": 2556217000.600965,
+        "borrowed": 3403789742.402712
+      },
+      "website": "https://app.morpho.org",
+      "twitter": "Morpho",
+      "github": null,
+      "audit_count": 2,
+      "audit_links": [
+        "https://docs.morpho.org/morpho-blue/concepts/security/audits/"
+      ],
+      "hallmarks": [],
+      "parent_slug": "morpho",
+      "forked_from": null,
+      "logo": "https://icons.llama.fi/morpho-blue.png",
+      "is_dead": false,
+      "is_parent": false,
+      "first_seen_at": "2026-04-22T15:57:20.991Z",
+      "last_seen_at": "2026-06-08T10:47:49.151Z",
+      "delisted_at": null,
+      "module": "morpho-blue/index.js"
+    },
+    "slices": {
+      "open-access": {
+        "error": "404 https://raw.githubusercontent.com/guil-lambert/defipunkd/main/data/assessments/morpho-blue/open-access.json"
+      },
+      "autonomy": {
+        "error": "404 https://raw.githubusercontent.com/guil-lambert/defipunkd/main/data/assessments/morpho-blue/autonomy.json"
+      },
+      "control": {
+        "schema_version": 3,
+        "slug": "morpho-blue",
+        "slice": "control",
+        "snapshot_generated_at": "2026-05-04T08:26:37.214Z",
+        "consensus_grade": "orange",
+        "consensus_strength": "weak",
+        "short_headline": "5/9 multisig controls fees, no timelock",
+        "merged_at": "2026-06-02T13:51:17.634Z",
+        "primary_submission_path": "data/submissions/morpho-blue/control/autorun-claude-opus-4-6-2026-05-05-0761.json",
+        "merged_from": [
+          {
+            "path": "data/submissions/morpho-blue/control/autorun-claude-opus-4-6-2026-05-05-0761.json",
+            "model": "claude-opus-4-6 (autorun)",
+            "grade": "orange",
+            "weight": 0.42,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/morpho-blue/control/models-2026-05-01.json#0",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/morpho-blue/control/models-2026-05-01.json#1",
+            "model": "gemini-3-flash-preview",
+            "grade": "green",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/morpho-org/morpho-blue",
+            "https://github.com/morpho-org/metamorpho"
+          ],
+          "audits": [
+            {
+              "firm": "Multiple (see audit page)",
+              "url": "https://docs.morpho.org/morpho-blue/concepts/security/audits/",
+              "date": "2024-01"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-10-25-Cantina-MorphoBlue.pdf",
+              "date": "2023-10"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-09-22-OpenZeppelin-MorphoBlue.pdf",
+              "date": "2023-09"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa",
+              "role": "DAO governance multisig, owner of Morpho Blue core",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xF057afeEc22E220f47AD4220871364e9E828b2e9",
+              "role": "MORPHO Rewards multisig (3/5)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xcBa28b381748926701ed11F1702b210C04965C44",
+              "role": "Morpho DAO Executor (unverified ABI, not current owner)",
+              "actor_class": "unknown"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x640428D38189B11B844dAEBDBAAbbdfbd8aE0143",
+              "role": "Morpho Operator multisig documented for legacy emergency/operator powers",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x969179778A566ddAD7bAA44F99E7493d591c983C",
+              "role": "Security Committee",
+              "actor_class": "multisig"
+            }
+          ],
+          "docs_url": "https://docs.morpho.org",
+          "governance_forum": "https://forum.morpho.org/",
+          "bug_bounty_url": "https://immunefi.com/bounty/morpho/",
+          "security_contact": "security@morpho.org",
+          "deployed_contracts_doc": "https://legacy.docs.morpho.org/addresses/",
+          "upgradeability": "immutable",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
+            "symbol": "MORPHO"
+          }
+        }
+      },
+      "ability-to-exit": {
+        "schema_version": 3,
+        "slug": "morpho-blue",
+        "slice": "ability-to-exit",
+        "snapshot_generated_at": "2026-05-04T08:26:37.214Z",
+        "consensus_grade": "green",
+        "consensus_strength": "strong",
+        "short_headline": "Permissionless immutable exits, no admin pause",
+        "merged_at": "2026-05-12T08:39:19.515Z",
+        "primary_submission_path": "data/submissions/morpho-blue/ability-to-exit/autorun-claude-sonnet-4-5-2026-05-08-93d4.json",
+        "merged_from": [
+          {
+            "path": "data/submissions/morpho-blue/ability-to-exit/autorun-claude-sonnet-4-5-2026-05-08-93d4.json",
+            "model": "claude-sonnet-4-5 (autorun)",
+            "grade": "green",
+            "weight": 0.06,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/morpho-blue/ability-to-exit/models-2026-05-01.json#0",
+            "model": "gpt-5.5",
+            "grade": "green",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/morpho-blue/ability-to-exit/models-2026-05-01.json#1",
+            "model": "gemini-3-flash-preview",
+            "grade": "green",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/morpho-org/morpho-blue",
+            "https://github.com/morpho-org/metamorpho"
+          ],
+          "audits": [
+            {
+              "firm": "Multiple (see audits folder)",
+              "url": "https://docs.morpho.org/morpho-blue/concepts/security/audits/"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-11-01-OpenZeppelin.pdf",
+              "date": "2023-11"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-10-27-Cantina.pdf",
+              "date": "2023-10"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa",
+              "role": "DAO governance multisig, owner of Morpho Blue core",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Base",
+              "address": "0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa",
+              "role": "DAO governance multisig on Base",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xF057afeEc22E220f47AD4220871364e9E828b2e9",
+              "role": "MORPHO Rewards multisig",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xcBa28b381748926701ed11F1702b210C04965C44",
+              "role": "Morpho DAO Executor",
+              "actor_class": "governance"
+            }
+          ],
+          "docs_url": "https://docs.morpho.org",
+          "governance_forum": "https://forum.morpho.org",
+          "bug_bounty_url": "https://immunefi.com/bounty/morpho",
+          "security_contact": "security@morpho.org",
+          "deployed_contracts_doc": "https://docs.morpho.org/morpho-blue/addresses",
+          "upgradeability": "immutable",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
+            "symbol": "MORPHO"
+          }
+        }
+      },
+      "verifiability": {
+        "schema_version": 3,
+        "slug": "morpho-blue",
+        "slice": "verifiability",
+        "snapshot_generated_at": "2026-05-04T08:26:37.214Z",
+        "consensus_grade": "green",
+        "consensus_strength": "weak",
+        "short_headline": "Immutable, verified, multi-audited by top firms",
+        "merged_at": "2026-05-12T08:39:19.516Z",
+        "primary_submission_path": "data/submissions/morpho-blue/verifiability/autorun-claude-sonnet-4-6-2026-05-07-be6f.json",
+        "merged_from": [
+          {
+            "path": "data/submissions/morpho-blue/verifiability/autorun-claude-sonnet-4-6-2026-05-07-be6f.json",
+            "model": "claude-sonnet-4-6 (autorun)",
+            "grade": "green",
+            "weight": 0.5,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/morpho-blue/verifiability/models-2026-05-01.json#0",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/morpho-blue/verifiability/models-2026-05-01.json#1",
+            "model": "gemini-3-flash-preview",
+            "grade": "green",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/morpho-org/morpho-blue",
+            "https://github.com/morpho-org/morpho-blue-irm",
+            "https://github.com/morpho-org/morpho-blue-oracles",
+            "https://github.com/morpho-org/metamorpho-v1.1",
+            "https://github.com/morpho-org/vault-v2",
+            "https://github.com/morpho-org/bundler3",
+            "https://github.com/morpho-org/pre-liquidation",
+            "https://github.com/morpho-org/public-allocator",
+            "https://github.com/morpho-org/universal-rewards-distributor",
+            "https://github.com/morpho-org/metamorpho"
+          ],
+          "audits": [
+            {
+              "firm": "Spearbit",
+              "url": "https://github.com/morpho-org/morpho-blue/tree/main/audits",
+              "date": "2023-10"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/morpho-org/morpho-blue/tree/main/audits",
+              "date": "2023-10"
+            },
+            {
+              "firm": "Certora",
+              "url": "https://github.com/morpho-org/morpho-blue/tree/main/audits",
+              "date": "2023-11"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://github.com/morpho-org/metamorpho/tree/main/audits",
+              "date": "2023-11"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/morpho-org/metamorpho/tree/main/audits",
+              "date": "2023-11"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://github.com/morpho-org/metamorpho-v1.1/tree/main/audits",
+              "date": "2024-11"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/morpho-org/metamorpho-v1.1/tree/main/audits",
+              "date": "2024-11"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://github.com/morpho-org/pre-liquidation/tree/main/audits",
+              "date": "2024-10"
+            },
+            {
+              "firm": "ABDK Consulting",
+              "url": "https://github.com/morpho-org/pre-liquidation/tree/main/audits",
+              "date": "2024-11"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://github.com/morpho-org/vault-v2/tree/main/audits",
+              "date": "2025-05"
+            },
+            {
+              "firm": "ChainSecurity",
+              "url": "https://github.com/morpho-org/vault-v2/tree/main/audits",
+              "date": "2025-09"
+            },
+            {
+              "firm": "Zellic",
+              "url": "https://github.com/morpho-org/vault-v2/tree/main/audits",
+              "date": "2025-07"
+            },
+            {
+              "firm": "Blackthorn",
+              "url": "https://github.com/morpho-org/vault-v2/tree/main/audits",
+              "date": "2025-09"
+            },
+            {
+              "firm": "Certora",
+              "url": "https://github.com/morpho-org/vault-v2/tree/main/audits",
+              "date": "2025-12"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-10-13-morpho-blue-and-speed-jump-irm-open-zeppelin.pdf",
+              "date": "2023-10-13"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-11-13-morpho-blue-cantina-managed-review.pdf",
+              "date": "2023-11-13"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2024-01-05-morpho-blue-cantina-competition.pdf",
+              "date": "2024-01-05"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/morpho-org/metamorpho/blob/main/audits/2023-11-14-metamorpho-cantina-managed-review.pdf",
+              "date": "2023-11-14"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/morpho-org/metamorpho/blob/main/audits/2023-11-16-morpho-blue-periphery-open-zeppelin.pdf",
+              "date": "2023-11-16"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://github.com/morpho-org/metamorpho/blob/main/audits/2024-01-05-periphery-cantina-competition.pdf",
+              "date": "2024-01-05"
+            },
+            {
+              "firm": "OpenZeppelin",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-09-29-OpenZeppelin.pdf",
+              "date": "2023-09"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-10-26-Cantina.pdf",
+              "date": "2023-10"
+            },
+            {
+              "firm": "Certora",
+              "url": "https://github.com/morpho-org/morpho-blue/blob/main/audits/2024-01-19-Certora.pdf",
+              "date": "2024-01"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa",
+              "role": "DAO governance multisig (5/9), owner of Morpho Blue core",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xF057afeEc22E220f47AD4220871364e9E828b2e9",
+              "role": "MORPHO Rewards multisig (3/5)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x969179778A566ddAD7bAA44F99E7493d591c983C",
+              "role": "Security Committee",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Base",
+              "address": "0xcBa28b38103307Ec8dA98377ffF9816C164f9AFa",
+              "role": "DAO governance multisig on Base (5/9)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0xcBa28b3817489267313F183F913028A31145d1f9",
+              "role": "Morpho DAO / Owner",
+              "actor_class": "multisig"
+            }
+          ],
+          "docs_url": "https://docs.morpho.org",
+          "governance_forum": "https://forum.morpho.org",
+          "bug_bounty_url": "https://cantina.xyz/bounties/35a5f0a1-2ffd-432c-8f3b-77d169add8c3",
+          "security_contact": "https://github.com/morpho-org/morpho-blue/blob/main/SECURITY.md",
+          "deployed_contracts_doc": "https://docs.morpho.org/get-started/resources/addresses/",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
+            "symbol": "MORPHO"
+          }
+        }
+      }
+    }
+  },
+  "ethena-usde": {
+    "slug": "ethena-usde",
+    "snapshot": {
+      "slug": "ethena-usde",
+      "name": "Ethena USDe",
+      "category": "Basis Trading",
+      "chains": [
+        "Ethereum"
+      ],
+      "tvl": 4497268899.01496,
+      "tvl_by_chain": {
+        "Ethereum": 4497268899.01496
+      },
+      "website": "https://www.app.ethena.fi/join/3y20d",
+      "twitter": "ethena_labs",
+      "github": null,
+      "audit_count": 2,
+      "audit_links": [
+        "https://ethena-labs.gitbook.io/ethena-labs/resources/audits#quantstamp-audit-on-v2-of-contracts"
+      ],
+      "hallmarks": [],
+      "parent_slug": "ethena",
+      "forked_from": null,
+      "logo": "https://icons.llama.fi/ethena-usde.png",
+      "is_dead": false,
+      "is_parent": false,
+      "first_seen_at": "2026-04-22T15:57:20.991Z",
+      "last_seen_at": "2026-06-08T10:47:49.151Z",
+      "delisted_at": null,
+      "module": "ethena/index.js"
+    },
+    "slices": {
+      "verifiability": {
+        "schema_version": 3,
+        "slug": "ethena-usde",
+        "slice": "verifiability",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "green",
+        "consensus_strength": "weak",
+        "short_headline": "Verified source, multi-firm audits, no drift",
+        "merged_at": "2026-05-02T07:43:25.912Z",
+        "primary_submission_path": "data/submissions/ethena-usde/verifiability/models-2026-04-29.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/ethena-usde/verifiability/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "green",
+            "weight": 0.1,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/verifiability/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/verifiability/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "green",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/ethena-labs",
+            "https://github.com/code-423n4/2023-10-ethena",
+            "https://github.com/code-423n4/2024-11-ethena-labs",
+            "https://github.com/ethena-labs/bbp-public-assets",
+            "https://github.com/ethena-labs/ethena-core"
+          ],
+          "audits": [
+            {
+              "firm": "Zellic",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023"
+            },
+            {
+              "firm": "Quantstamp",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Pashov",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-22"
+            },
+            {
+              "firm": "Code4rena",
+              "url": "https://code4rena.com/contests/2023-10-ethena-labs",
+              "date": "2023-11-13"
+            },
+            {
+              "firm": "Cyfrin",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2024-10-31"
+            },
+            {
+              "firm": "Code4rena",
+              "url": "https://code4rena.com/reports/2024-11-ethena-labs",
+              "date": "2024-11"
+            },
+            {
+              "firm": "Zellic",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2FGZbd1DrrG3YmnTlJnTHa%2FEthena%20-%20Zellic%20Audit%20Report%20Draft.pdf?alt=media&token=2e65890c-6724-49b7-97f4-6d2223ba086e",
+              "date": "2023-07-05"
+            },
+            {
+              "firm": "Quantstamp",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2F17Ucep7IYMBZ6mAHGLyw%2FEthena%20Final%20Report%20%281%29.pdf?alt=media&token=51a6a101-516e-4984-8360-14daf860a961",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Spearbit/Cantina",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2FsX7xO54StGnS6RlZM0Qa%2FSpearbit%20_Ethena_v2_Final_report-ethena__1_.pdf?alt=media&token=d0968065-7e4d-4661-b53f-a1d5181c30bd",
+              "date": "2023-10-31"
+            },
+            {
+              "firm": "Pashov",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2FzUZDAQ77jrhUOIMqFka9%2FEthena-security-review%20%281%29.pdf?alt=media&token=0358ec8b-36fe-4166-a159-2c782a9f8d40",
+              "date": "2023-10-22"
+            },
+            {
+              "firm": "Code4rena",
+              "url": "https://code4rena.com/reports/2023-10-ethena",
+              "date": "2023-12-21"
+            },
+            {
+              "firm": "Pashov Audit Group",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2FJHbdthPqKCPoZFzrpryW%2Fv2-audit.pdf?alt=media&token=68bbdbae-4fcf-4e90-ad20-8c4d6a5a29a0",
+              "date": "2024-05-23"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2024-02"
+            },
+            {
+              "firm": "Zellic",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-10"
+            },
+            {
+              "firm": "Quantstamp",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-11"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x3b0aaf6e6fcd4a7ceef8c92c32dfea9e64dc1862",
+              "role": "Ethena dev multisig / owner of deployed mainnet smart contracts",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x71e4f98e8f20c88112489de3dded4489802a3a87",
+              "role": "sUSDe yield distributions multisig",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x2b7f0930033641b809839790D577672266907097",
+              "role": "Ethena Multi-sig",
+              "actor_class": "multisig"
+            }
+          ],
+          "docs_url": "https://docs.ethena.fi",
+          "governance_forum": "https://governance.ethena.fi",
+          "bug_bounty_url": "https://immunefi.com/bug-bounty/ethena/",
+          "security_contact": "security@ethena.fi",
+          "deployed_contracts_doc": "https://docs.ethena.fi/solution-design/key-addresses",
+          "upgradeability": "immutable",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+            "symbol": "ENA"
+          }
+        }
+      },
+      "autonomy": {
+        "schema_version": 3,
+        "slug": "ethena-usde",
+        "slice": "autonomy",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "red",
+        "consensus_strength": "strong",
+        "short_headline": "CEX custodians control ~100% of TVS",
+        "merged_at": "2026-05-02T07:43:25.910Z",
+        "primary_submission_path": "data/submissions/ethena-usde/autonomy/models-2026-04-29.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/ethena-usde/autonomy/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "red",
+            "weight": 0.1,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/autonomy/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "red",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/autonomy/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "red",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/ethena-labs",
+            "https://github.com/ethena-labs/bbp-public-assets",
+            "https://github.com/ethena-labs/code4arena-contest",
+            "https://github.com/ethena-labs/ethena-minting"
+          ],
+          "audits": [
+            {
+              "firm": "Zellic",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10"
+            },
+            {
+              "firm": "Quantstamp",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Pashov",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-22"
+            },
+            {
+              "firm": "Code4rena",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-11-13"
+            },
+            {
+              "firm": "Chaos Labs",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2024"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://github.com/ethena-labs/ethena-minting/blob/main/audits/Spearbit_Ethena_Final_Report.pdf",
+              "date": "2023-10"
+            },
+            {
+              "firm": "Cantina",
+              "url": "https://cantina.ai/audits/...",
+              "date": "2024-02"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x3b0aaf6e6fcd4a7ceef8c92c32dfea9e64dc1862",
+              "role": "Dev Multisig — owner of mainnet contracts, can modify parameters",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x2b5ab59163a6e93b4486f6055d33ca4a115dd4d5",
+              "role": "Reserve Fund multisig (4-of-10)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x71e4f98e8f20c88112489de3dded4489802a3a87",
+              "role": "sUSDe Payout Fund (3-of-11)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x2b5a7f99670758986736f8136c8520742fdb5e2d",
+              "role": "Admin Multisig",
+              "actor_class": "multisig"
+            }
+          ],
+          "docs_url": "https://docs.ethena.fi",
+          "governance_forum": "https://gov.ethenafoundation.com",
+          "bug_bounty_url": "https://immunefi.com/bounty/ethena/",
+          "security_contact": "security@ethena.fi",
+          "deployed_contracts_doc": "https://docs.ethena.fi/solution-design/key-addresses",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+            "symbol": "ENA"
+          }
+        }
+      },
+      "ability-to-exit": {
+        "schema_version": 3,
+        "slug": "ethena-usde",
+        "slice": "ability-to-exit",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "red",
+        "consensus_strength": "weak",
+        "short_headline": "Exits gated by whitelist and operator control",
+        "merged_at": "2026-04-29T18:35:41.527Z",
+        "primary_submission_path": "data/submissions/ethena-usde/ability-to-exit/models-2026-04-29.json#1",
+        "merged_from": [
+          {
+            "path": "data/submissions/ethena-usde/ability-to-exit/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "orange",
+            "weight": 0.7,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/ability-to-exit/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "red",
+            "weight": 0.55,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/ability-to-exit/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "red",
+            "weight": 0.45,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/ethena-labs",
+            "https://github.com/ethena-labs/bbp-public-assets",
+            "https://github.com/ethena-labs/role-verification",
+            "https://github.com/ethena-labs/ethena-core"
+          ],
+          "audits": [
+            {
+              "firm": "Zellic",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2FGZbd1DrrG3YmnTlJnTHa%2FEthena%20-%20Zellic%20Audit%20Report%20Draft.pdf?alt=media&token=2e65890c-6724-49b7-97f4-6d2223ba086e",
+              "date": "2023-07-05"
+            },
+            {
+              "firm": "Quantstamp",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2F17Ucep7IYMBZ6mAHGLyw%2FEthena%20Final%20Report%20%281%29.pdf?alt=media&token=51a6a101-516e-4984-8360-14daf860a961",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2FsX7xO54StGnS6RlZM0Qa%2FSpearbit%20_Ethena_v2_Final_report-ethena__1_.pdf?alt=media&token=d0968065-7e4d-4661-b53f-a1d5181c30bd",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Pashov",
+              "url": "https://596495599-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FsBsPyff5ft3inFy9jyjt%2Fuploads%2FJHbdthPqKCPoZFzrpryW%2Fv2-audit.pdf?alt=media&token=68bbdbae-4fcf-4e90-ad20-8c4d6a5a29a0",
+              "date": "2024-05-23"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-08"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x3B0AAF6E6FCd4A7CEEf8c92C32dfeA9E64DC1862",
+              "role": "sUSDe StakedUSDeV2 owner / DEFAULT_ADMIN_ROLE (sets cooldownDuration up to 90d, blacklist control)",
+              "actor_class": "unknown"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x2b0730533298960823393088788f93c75d059503",
+              "role": "Admin Multisig",
+              "actor_class": "multisig"
+            }
+          ],
+          "docs_url": "https://docs.ethena.fi",
+          "governance_forum": "https://gov.ethenafoundation.com",
+          "bug_bounty_url": "https://immunefi.com/bounty/ethena/",
+          "security_contact": "security@ethena.fi",
+          "deployed_contracts_doc": "https://ethena-labs.gitbook.io/ethena-labs/solution-overview/solution-addresses",
+          "upgradeability": "immutable",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+            "symbol": "ENA"
+          }
+        }
+      },
+      "open-access": {
+        "schema_version": 3,
+        "slug": "ethena-usde",
+        "slice": "open-access",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "red",
+        "consensus_strength": "weak",
+        "short_headline": "Minting gated by whitelist and operator keys",
+        "merged_at": "2026-04-30T16:34:12.507Z",
+        "primary_submission_path": "data/submissions/ethena-usde/open-access/models-2026-04-29.json#1",
+        "merged_from": [
+          {
+            "path": "data/submissions/ethena-usde/open-access/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "orange",
+            "weight": 0.7,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/open-access/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "red",
+            "weight": 0.7,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/open-access/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "red",
+            "weight": 0.02,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/ethena-labs",
+            "https://github.com/ethena-labs/bbp-public-assets",
+            "https://github.com/ethena-labs/ethena-minting-client",
+            "https://github.com/ethena-labs/ethena-core"
+          ],
+          "audits": [
+            {
+              "firm": "Spearbit",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-08"
+            },
+            {
+              "firm": "Zellic",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-10"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x3b0aaf6e6fcd4a7ceef8c92c32dfea9e64dc1862",
+              "role": "Dev multisig; owner of deployed mainnet smart contracts and able to modify contract parameters",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x71E4F98E8f1757354850225659503E997a7c9c5B",
+              "role": "Admin Multisig",
+              "actor_class": "multisig"
+            }
+          ],
+          "docs_url": "https://docs.ethena.fi",
+          "bug_bounty_url": "https://immunefi.com/bounty/ethena/",
+          "security_contact": "security@ethena.fi",
+          "deployed_contracts_doc": "https://docs.ethena.fi/solution-design/key-addresses",
+          "upgradeability": "mixed",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x57e114B69f373F88f04c264c947197c7ae62447e",
+            "symbol": "ENA"
+          }
+        }
+      },
+      "control": {
+        "schema_version": 3,
+        "slug": "ethena-usde",
+        "slice": "control",
+        "snapshot_generated_at": "2026-04-27T08:19:52.420Z",
+        "consensus_grade": "orange",
+        "consensus_strength": "strong",
+        "short_headline": "Multisig controls mint/redeem with instant pause power",
+        "merged_at": "2026-05-02T07:43:25.906Z",
+        "primary_submission_path": "data/submissions/ethena-usde/control/models-2026-04-29.json#0",
+        "merged_from": [
+          {
+            "path": "data/submissions/ethena-usde/control/models-2026-04-29.json#0",
+            "model": "claude-opus-4-7",
+            "grade": "orange",
+            "weight": 0.1,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/control/models-2026-04-29.json#1",
+            "model": "gpt-5.5",
+            "grade": "orange",
+            "weight": 0.02,
+            "chat_url": null
+          },
+          {
+            "path": "data/submissions/ethena-usde/control/models-2026-04-29.json#2",
+            "model": "gemini-3-flash-preview",
+            "grade": "orange",
+            "weight": 0,
+            "chat_url": null
+          }
+        ],
+        "protocol_metadata": {
+          "github": [
+            "https://github.com/ethena-labs",
+            "https://github.com/ethena-labs/bbp-public-assets",
+            "https://github.com/ethena-labs/ethena-core"
+          ],
+          "audits": [
+            {
+              "firm": "Zellic",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-10"
+            },
+            {
+              "firm": "Quantstamp",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Pashov",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2023-10-22"
+            },
+            {
+              "firm": "Code4rena",
+              "url": "https://github.com/code-423n4/2023-10-ethena",
+              "date": "2023-11-13"
+            },
+            {
+              "firm": "Cyfrin",
+              "url": "https://ethena-labs.gitbook.io/ethena-labs/resources/audits",
+              "date": "2024-10-31"
+            },
+            {
+              "firm": "Zellic",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023"
+            },
+            {
+              "firm": "Quantstamp",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Spearbit",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-18"
+            },
+            {
+              "firm": "Pashov",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-10-22"
+            },
+            {
+              "firm": "Code4rena",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2023-11-13"
+            },
+            {
+              "firm": "Chaos Labs",
+              "url": "https://docs.ethena.fi/resources/audits",
+              "date": "2024"
+            }
+          ],
+          "admin_addresses": [
+            {
+              "chain": "Ethereum",
+              "address": "0x3b0aaf6e6fcd4a7ceef8c92c32dfea9e64dc1862",
+              "role": "Dev multisig — owner / DEFAULT_ADMIN_ROLE on USDe, EthenaMinting V2, sUSDe (5/11 per docs)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x71e4f98e8f20c88112489de3dded4489802a3a87",
+              "role": "sUSDe Payout Fund multisig — distributes USDe rewards (3/11 per docs)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x2b5ab59163a6e93b4486f6055d33ca4a115dd4d5",
+              "role": "Reserve Fund multisig — covers negative funding (4/10 per docs)",
+              "actor_class": "multisig"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x1870630635487739504495561081699742723679",
+              "role": "Timelock",
+              "actor_class": "timelock"
+            },
+            {
+              "chain": "Ethereum",
+              "address": "0x78B6a455803908f01503165BA239c73C92a0a512",
+              "role": "Main Multisig",
+              "actor_class": "multisig"
+            }
+          ],
+          "docs_url": "https://docs.ethena.fi",
+          "governance_forum": "https://gov.ethenafoundation.com/",
+          "bug_bounty_url": "https://github.com/ethena-labs/bbp-public-assets",
+          "security_contact": "security@ethena.fi",
+          "deployed_contracts_doc": "https://docs.ethena.fi/solution-design/key-addresses",
+          "upgradeability": "immutable",
+          "voting_token": {
+            "chain": "Ethereum",
+            "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+            "symbol": "ENA"
+          }
+        }
+      }
+    }
+  }
+}

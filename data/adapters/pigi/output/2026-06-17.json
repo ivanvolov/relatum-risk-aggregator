@@ -1,0 +1,329 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-16T22:40:58.416Z",
+    "total_strategies_in_feed": 43
+  },
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": true,
+      "strategy_count": 1,
+      "avg_risk": 0.2,
+      "avg_yield30d": 2.45,
+      "total_tvl": 15463579030.86,
+      "strategies": [
+        {
+          "id": 13,
+          "name": "Lido - stETH",
+          "token": "stETH",
+          "type": "eth",
+          "risk": 0.2,
+          "yield30d": 2.45,
+          "tvl": 15463579030.86
+        }
+      ]
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": false,
+      "strategies": []
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": false,
+      "strategies": []
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": true,
+      "strategy_count": 1,
+      "avg_risk": 0.52,
+      "avg_yield30d": 3.56,
+      "total_tvl": 5878198972.27,
+      "strategies": [
+        {
+          "id": 2,
+          "name": "Sky Spark - Savings Account",
+          "token": "USDS",
+          "type": "usd",
+          "risk": 0.52,
+          "yield30d": 3.56,
+          "tvl": 5878198972.27
+        }
+      ]
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": true,
+      "strategy_count": 1,
+      "avg_risk": 0.9,
+      "avg_yield30d": 3.92,
+      "total_tvl": 1734515853.7,
+      "strategies": [
+        {
+          "id": 5,
+          "name": "Ethena - sUSDe",
+          "token": "USDe",
+          "type": "usd",
+          "risk": 0.9,
+          "yield30d": 3.92,
+          "tvl": 1734515853.7
+        }
+      ]
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": true,
+      "strategy_count": 6,
+      "avg_risk": 1.4212999999999998,
+      "avg_yield30d": 1.6033333333333333,
+      "total_tvl": 3361872.29,
+      "strategies": [
+        {
+          "id": 44,
+          "name": "Morpho - Pocky's High Yield USDC",
+          "token": "USDC",
+          "type": "usd",
+          "risk": 2.94,
+          "yield30d": 0,
+          "tvl": 0
+        },
+        {
+          "id": 45,
+          "name": "Morpho - Steakhouse High Yield Turbo USDC",
+          "token": "USDC",
+          "type": "usd",
+          "risk": 2,
+          "yield30d": 0,
+          "tvl": 0
+        },
+        {
+          "id": 48,
+          "name": "Morpho - Gauntlet eUSD Core",
+          "token": "eUSD",
+          "type": "usd",
+          "risk": 1.35,
+          "yield30d": 0,
+          "tvl": 0
+        },
+        {
+          "id": 47,
+          "name": "Morpho - Gauntlet WBTC Vault Bridge",
+          "token": "WBTC",
+          "type": "btc",
+          "risk": 0.9978,
+          "yield30d": 0,
+          "tvl": 0
+        },
+        {
+          "id": 49,
+          "name": "Morpho - Clearstar USDC Reactor",
+          "token": "USDC",
+          "type": "usd",
+          "risk": 0.81,
+          "yield30d": 0,
+          "tvl": 0
+        },
+        {
+          "id": 11,
+          "name": "Morpho - MEV Capital WETH Vault",
+          "token": "WETH",
+          "type": "eth",
+          "risk": 0.43,
+          "yield30d": 9.62,
+          "tvl": 3361872.29
+        }
+      ]
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": true,
+      "strategy_count": 1,
+      "avg_risk": 2.21,
+      "avg_yield30d": 3.95,
+      "total_tvl": 99276831.86,
+      "strategies": [
+        {
+          "id": 4,
+          "name": "Ether.fi Liquid - ETH Yield",
+          "token": "WETH",
+          "type": "eth",
+          "risk": 2.21,
+          "yield30d": 3.95,
+          "tvl": 99276831.86
+        }
+      ]
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "strategies": []
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": false,
+      "strategies": []
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": false,
+      "strategies": []
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "strategies": []
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": true,
+      "strategy_count": 1,
+      "avg_risk": 3.594,
+      "avg_yield30d": 0,
+      "total_tvl": 0,
+      "strategies": [
+        {
+          "id": 33,
+          "name": "Factor — weETH Auto-Compound (Pendle)",
+          "token": "weETH",
+          "type": "eth",
+          "risk": 3.594,
+          "yield30d": 0,
+          "tvl": 0
+        }
+      ]
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": true,
+      "strategy_count": 3,
+      "avg_risk": 0.961,
+      "avg_yield30d": 5.39,
+      "total_tvl": 181442383.67000002,
+      "strategies": [
+        {
+          "id": 58,
+          "name": "Fluid Lite - USD Vault",
+          "token": "USDC",
+          "type": "usd",
+          "risk": 1.083,
+          "yield30d": 8.2,
+          "tvl": 34350865.39
+        },
+        {
+          "id": 7,
+          "name": "Fluid (InstaDapp) - GHO Lending",
+          "token": null,
+          "type": null,
+          "risk": 0.9,
+          "yield30d": 4.02,
+          "tvl": 11778182.42
+        },
+        {
+          "id": 9,
+          "name": "Fluid (InstaDapp) - stETH Vault",
+          "token": "stETH",
+          "type": "eth",
+          "risk": 0.9,
+          "yield30d": 3.95,
+          "tvl": 135313335.86
+        }
+      ]
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": true,
+      "strategy_count": 3,
+      "avg_risk": 2.893333333333333,
+      "avg_yield30d": 3.5066666666666664,
+      "total_tvl": 14800714.73,
+      "strategies": [
+        {
+          "id": 17,
+          "name": "Felix (Liquity v2 fork) - HYPE Stability Pool",
+          "token": "feUSD",
+          "type": "usd",
+          "risk": 8,
+          "yield30d": 0,
+          "tvl": 0
+        },
+        {
+          "id": 3,
+          "name": "Liquity v1 - Stability Pool",
+          "token": "LUSD",
+          "type": "usd",
+          "risk": 0.5,
+          "yield30d": 7.81,
+          "tvl": 7931481.73
+        },
+        {
+          "id": 42,
+          "name": "Liquity v2 - ETH Stability Pool",
+          "token": "BOLD",
+          "type": "usd",
+          "risk": 0.18,
+          "yield30d": 2.71,
+          "tvl": 6869233
+        }
+      ]
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": true,
+      "strategy_count": 1,
+      "avg_risk": 3.128,
+      "avg_yield30d": 1.17,
+      "total_tvl": 5036.58,
+      "strategies": [
+        {
+          "id": 21,
+          "name": "Asymmetry - USDaf Yearn Vault",
+          "token": "USDaf",
+          "type": "usd",
+          "risk": 3.128,
+          "yield30d": 1.17,
+          "tvl": 5036.58
+        }
+      ]
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": false,
+      "strategies": []
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "strategies": []
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "strategies": []
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": true,
+      "strategy_count": 1,
+      "avg_risk": 0.9999132,
+      "avg_yield30d": 0,
+      "total_tvl": 0,
+      "strategies": [
+        {
+          "id": 53,
+          "name": "Gearbox - USDT0",
+          "token": "USDT0",
+          "type": "usd",
+          "risk": 0.9999132,
+          "yield30d": 0,
+          "tvl": 0
+        }
+      ]
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "strategies": []
+    }
+  }
+}

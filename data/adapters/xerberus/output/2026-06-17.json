@@ -1,0 +1,307 @@
+{
+  "fetched_at": "2026-06-17T08:07:37.298Z",
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.8449923195084486,
+      "versions": [
+        {
+          "id": "lido-v2",
+          "name": "Lido v2",
+          "website": "https://lido.fi",
+          "composite_score": 0.8449923195084486,
+          "domain_scores": {
+            "security": 0.9142857142857143,
+            "economics": 0.5714285714285714,
+            "governance": 0.8225806451612904,
+            "receipt_tokens": 0.9166666666666666,
+            "cross_chain": 1
+          }
+        }
+      ]
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.8180426074777737,
+      "versions": [
+        {
+          "id": "aave-v3",
+          "name": "Aave v3",
+          "website": "https://aave.com",
+          "composite_score": 0.8180426074777737,
+          "domain_scores": {
+            "security": 0.782608695652174,
+            "economics": 0.5882352941176471,
+            "governance": 0.8860357142857141,
+            "receipt_tokens": 1,
+            "cross_chain": 0.8333333333333334
+          }
+        }
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": true,
+      "version_count": 2,
+      "avg_composite": 0.6226196043930442,
+      "versions": [
+        {
+          "id": "spark-v1",
+          "name": "Spark v1",
+          "website": "https://spark.fi",
+          "composite_score": 0.6282781580614507,
+          "domain_scores": {
+            "security": 0.6829268292682927,
+            "economics": 0.8181818181818182,
+            "governance": 0.6402821428571429,
+            "receipt_tokens": 1,
+            "cross_chain": 0
+          }
+        },
+        {
+          "id": "spark-savings-v2",
+          "name": "Spark Savings v2",
+          "website": "https://spark.fi",
+          "composite_score": 0.6169610507246377,
+          "domain_scores": {
+            "security": 0.65625,
+            "economics": 0.5333333333333333,
+            "governance": 0.4782608695652174,
+            "receipt_tokens": 0.8,
+            "cross_chain": null
+          }
+        }
+      ]
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.5462653288740246,
+      "versions": [
+        {
+          "id": "ethena-v1",
+          "name": "Ethena",
+          "website": "https://ethena.fi",
+          "composite_score": 0.5462653288740246,
+          "domain_scores": {
+            "security": 0.6,
+            "economics": 0.6153846153846154,
+            "governance": 0.3333333333333333,
+            "receipt_tokens": 0.782608695652174,
+            "cross_chain": 0.4
+          }
+        }
+      ]
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": true,
+      "version_count": 2,
+      "avg_composite": 0.6893052422723476,
+      "versions": [
+        {
+          "id": "morpho-v1",
+          "name": "Morpho",
+          "website": "https://morpho.org",
+          "composite_score": 0.6580277777777778,
+          "domain_scores": {
+            "security": 0.8,
+            "economics": 0.375,
+            "governance": 0.5071111111111111,
+            "receipt_tokens": 0.95,
+            "cross_chain": null
+          }
+        },
+        {
+          "id": "morpho-v2",
+          "name": "Morpho V2",
+          "website": "https://morpho.org",
+          "composite_score": 0.7205827067669173,
+          "domain_scores": {
+            "security": 0.7894736842105263,
+            "economics": 0.6666666666666666,
+            "governance": 0.47619047619047616,
+            "receipt_tokens": 0.95,
+            "cross_chain": null
+          }
+        }
+      ]
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.6123630484330485,
+      "versions": [
+        {
+          "id": "curve-v2",
+          "name": "Curve Finance",
+          "website": "https://curve.fi",
+          "composite_score": 0.6123630484330485,
+          "domain_scores": {
+            "security": 0.7037037037037037,
+            "economics": 0.5384615384615384,
+            "governance": 0.71965,
+            "receipt_tokens": 0.9,
+            "cross_chain": 0.2
+          }
+        }
+      ]
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.7323447204968945,
+      "versions": [
+        {
+          "id": "compound-v3",
+          "name": "Compound v3",
+          "website": "https://compound.finance",
+          "composite_score": 0.7323447204968945,
+          "domain_scores": {
+            "security": 0.65,
+            "economics": 0.6428571428571429,
+            "governance": 0.68,
+            "receipt_tokens": 0.9565217391304348,
+            "cross_chain": null
+          }
+        }
+      ]
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.5962871451355662,
+      "versions": [
+        {
+          "id": "pendle-v2",
+          "name": "Pendle v2",
+          "website": "https://www.pendle.finance",
+          "composite_score": 0.5962871451355662,
+          "domain_scores": {
+            "security": 0.5151515151515151,
+            "economics": 1,
+            "governance": 0.6162842105263158,
+            "receipt_tokens": 0.85,
+            "cross_chain": 0
+          }
+        }
+      ]
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.6795542947860963,
+      "versions": [
+        {
+          "id": "fluid-v1",
+          "name": "Fluid",
+          "website": "https://fluid.instadapp.io",
+          "composite_score": 0.6795542947860963,
+          "domain_scores": {
+            "security": 0.6764705882352942,
+            "economics": 0.5909090909090909,
+            "governance": 0.4508375,
+            "receipt_tokens": 1,
+            "cross_chain": null
+          }
+        }
+      ]
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.7732282717282718,
+      "versions": [
+        {
+          "id": "euler-v2",
+          "name": "Euler v2",
+          "website": "https://www.euler.finance",
+          "composite_score": 0.7732282717282718,
+          "domain_scores": {
+            "security": 0.8076923076923077,
+            "economics": 0.6363636363636364,
+            "governance": 0.7488571428571429,
+            "receipt_tokens": 0.9,
+            "cross_chain": null
+          }
+        }
+      ]
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": true,
+      "version_count": 1,
+      "avg_composite": 0.7615383768115942,
+      "versions": [
+        {
+          "id": "gearbox-v3",
+          "name": "Gearbox v3",
+          "website": "https://gearbox.fi",
+          "composite_score": 0.7615383768115942,
+          "domain_scores": {
+            "security": 0.8333333333333334,
+            "economics": 0.6956521739130435,
+            "governance": 0.6171679999999999,
+            "receipt_tokens": 0.9,
+            "cross_chain": null
+          }
+        }
+      ]
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    }
+  }
+}

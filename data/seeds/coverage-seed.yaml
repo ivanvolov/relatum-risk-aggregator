@@ -1,0 +1,344 @@
+# Coverage seed extracted from data.js COVERAGE matrix at refactor time.
+# Acts as the fallback when a protocol has no per-feed TTL.
+# When ontology/protocols/<slug>/combined.ttl exists, build-index.mjs derives
+# coverage from rfp:CoverageStatement triples and ignores this file for that slug.
+
+aave:
+  defiscan: cov
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: cov
+  defisphere: cov
+  defisaver: cov
+  credora: cov
+  risklayer: none
+  pigi: none
+  xerberus: cov
+  zyfai: cov
+  llamarisk: cov
+  philidor: none
+  stablewatch: cov
+
+sky:
+  defiscan: cov
+  blockanalitica: cov
+  curatorwatch: cov
+  defipunkd: cov
+  pharos: cov
+  defisphere: none
+  defisaver: cov
+  credora: part
+  risklayer: none
+  pigi: cov
+  xerberus: none
+  zyfai: none
+  llamarisk: cov
+  philidor: none
+  stablewatch: cov
+
+spark:
+  defiscan: cov
+  blockanalitica: cov
+  curatorwatch: cov
+  defipunkd: cov
+  pharos: cov
+  defisphere: cov
+  defisaver: cov
+  credora: cov
+  risklayer: none
+  pigi: none
+  xerberus: cov
+  zyfai: cov
+  llamarisk: cov
+  philidor: none
+  stablewatch: none
+
+morpho:
+  defiscan: cov
+  blockanalitica: cov
+  curatorwatch: cov
+  defipunkd: cov
+  pharos: none
+  defisphere: cov
+  defisaver: cov
+  credora: cov
+  risklayer: none
+  pigi: cov
+  xerberus: cov
+  zyfai: cov
+  llamarisk: cov
+  philidor: cov
+  stablewatch: none
+
+compound:
+  defiscan: cov
+  blockanalitica: cov
+  curatorwatch: none
+  defipunkd: part
+  pharos: none
+  defisphere: cov
+  defisaver: cov
+  credora: cov
+  risklayer: none
+  pigi: none
+  xerberus: cov
+  zyfai: cov
+  llamarisk: cov
+  philidor: none
+  stablewatch: none
+
+euler:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: cov
+  defipunkd: none
+  pharos: none
+  defisphere: none
+  defisaver: cov
+  credora: part
+  risklayer: none
+  pigi: none
+  xerberus: cov
+  zyfai: cov
+  llamarisk: part
+  philidor: none
+  stablewatch: none
+
+liquity:
+  defiscan: cov
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: cov
+  defisphere: cov
+  defisaver: cov
+  credora: part
+  risklayer: none
+  pigi: cov
+  xerberus: none
+  zyfai: none
+  llamarisk: cov
+  philidor: none
+  stablewatch: cov
+
+fluid:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: none
+  pharos: cov
+  defisphere: none
+  defisaver: cov
+  credora: none
+  risklayer: none
+  pigi: cov
+  xerberus: cov
+  zyfai: cov
+  llamarisk: part
+  philidor: none
+  stablewatch: none
+
+gearbox:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: none
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: cov
+  xerberus: cov
+  zyfai: none
+  llamarisk: part
+  philidor: none
+  stablewatch: none
+
+uniswap:
+  defiscan: cov
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: none
+  xerberus: none
+  zyfai: none
+  llamarisk: part
+  philidor: none
+  stablewatch: none
+
+curve:
+  defiscan: cov
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: cov
+  defisphere: none
+  defisaver: cov
+  credora: none
+  risklayer: none
+  pigi: none
+  xerberus: cov
+  zyfai: none
+  llamarisk: cov
+  philidor: none
+  stablewatch: cov
+
+balancer:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: part
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: none
+  xerberus: none
+  zyfai: none
+  llamarisk: part
+  philidor: none
+  stablewatch: none
+
+cowswap:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: none
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: none
+  xerberus: none
+  zyfai: none
+  llamarisk: none
+  philidor: none
+  stablewatch: none
+
+yearn:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: none
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: part
+  risklayer: none
+  pigi: cov
+  xerberus: none
+  zyfai: cov
+  llamarisk: cov
+  philidor: cov
+  stablewatch: none
+
+pendle:
+  defiscan: cov
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: cov
+  xerberus: cov
+  zyfai: none
+  llamarisk: cov
+  philidor: none
+  stablewatch: none
+
+mellow:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: none
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: none
+  xerberus: none
+  zyfai: none
+  llamarisk: none
+  philidor: none
+  stablewatch: none
+
+ethena:
+  defiscan: cov
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: cov
+  defisphere: none
+  defisaver: none
+  credora: cov
+  risklayer: none
+  pigi: cov
+  xerberus: cov
+  zyfai: none
+  llamarisk: cov
+  philidor: none
+  stablewatch: cov
+
+etherfi:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: part
+  risklayer: none
+  pigi: cov
+  xerberus: none
+  zyfai: none
+  llamarisk: part
+  philidor: none
+  stablewatch: none
+
+lido:
+  defiscan: cov
+  blockanalitica: none
+  curatorwatch: cov
+  defipunkd: cov
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: cov
+  risklayer: none
+  pigi: cov
+  xerberus: cov
+  zyfai: none
+  llamarisk: cov
+  philidor: none
+  stablewatch: none
+
+rocketpool:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: part
+  risklayer: none
+  pigi: none
+  xerberus: none
+  zyfai: none
+  llamarisk: part
+  philidor: none
+  stablewatch: none

@@ -1,0 +1,141 @@
+{
+  "fetched_at": "2026-06-16T22:58:55.490Z",
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": false,
+      "surfaces": []
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": false,
+      "surfaces": []
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "surfaces": []
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "surfaces": []
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "surfaces": []
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": false,
+      "surfaces": []
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": false,
+      "surfaces": []
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ]
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "surfaces": []
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "surfaces": []
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": false,
+      "surfaces": []
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "surfaces": []
+    }
+  }
+}

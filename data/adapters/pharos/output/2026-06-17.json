@@ -1,0 +1,214 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-16T22:44:44.078Z",
+    "total_stablecoins_in_feed": 406,
+    "anchor_profile_usds_sky": {
+      "slug": "usds-sky",
+      "governance_model": "CeFi-Dependent",
+      "backing_model": "Crypto-Collateralized",
+      "peg": "US Dollar",
+      "text_excerpt": "USDS (Sky Dollar) Stablecoin Risk Profile | Pharos Skip to main content Skip to data table PHAROS live stablecoin signals Menu Sky Dollar USDS CeFi-Dependent · Crypto-Collateralized · US Dollar Loading the full research dossier: price, safety, liquidity, flows, and historical context. Price Market Cap Supply Liquidity Jump to Section Research dossier loading Safety Score Overview Chart Info Liquidity Sky Dollar (USDS) stablecoin analytics USDS is Sky's upgraded successor to DAI, minted 1:1 from DAI or against the same Maker vault system of RWA, USDC, and crypto collateral. Static Profile Static stablecoin profile Sky Dollar (USDS) static profile: governance model CeFi-Dependent; backing model Crypto-Collateralized; peg US Dollar. CeFi-Dependent Crypto-Collateralized US Dollar AI summary / Updated Jun 3, 2026 Sky Dollar still commands the single best redemption infrastructure in stablecoins: a permissionless PSM with atomic, zero-fee settlement and nearly half of total supply available as immediate exit capacity — no other stablecoin at scale offers anything close. The B+ safety... AI summary · drafted by claude-opus-4-8 · reviewed by @TokenBrice on Jun 3, 2026 · facts as of Jun 3, 2026 Collateral RWA (U.S. Treasuries ~40%), USDC via PSM (~30%), crypto (ETH/wstETH ~20%), other vaults; USDS is the upgraded DAI (1:1 swap), same vault system Peg Mechanism Peg Stability Modules enabling 1:1 swaps with USDC and DAI Jurisdiction Not disclosed in the static profile. Proof Of Reserves"
+    }
+  },
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": true,
+      "stablecoin_count": 3,
+      "stablecoins": [
+        {
+          "slug": "gho-aave",
+          "page": "https://pharos.watch/stablecoin/gho-aave/"
+        },
+        {
+          "slug": "sgho-aave",
+          "page": "https://pharos.watch/stablecoin/sgho-aave/"
+        },
+        {
+          "slug": "stkgho-umbrella-aave",
+          "page": "https://pharos.watch/stablecoin/stkgho-umbrella-aave/"
+        }
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": true,
+      "stablecoin_count": 2,
+      "stablecoins": [
+        {
+          "slug": "susdt-spark",
+          "page": "https://pharos.watch/stablecoin/susdt-spark/"
+        },
+        {
+          "slug": "susdc-spark",
+          "page": "https://pharos.watch/stablecoin/susdc-spark/"
+        }
+      ]
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": true,
+      "stablecoin_count": 5,
+      "stablecoins": [
+        {
+          "slug": "usds-sky",
+          "page": "https://pharos.watch/stablecoin/usds-sky/"
+        },
+        {
+          "slug": "susds-sky",
+          "page": "https://pharos.watch/stablecoin/susds-sky/"
+        },
+        {
+          "slug": "stusds-sky",
+          "page": "https://pharos.watch/stablecoin/stusds-sky/"
+        },
+        {
+          "slug": "dai-makerdao",
+          "page": "https://pharos.watch/stablecoin/dai-makerdao/"
+        },
+        {
+          "slug": "sdai-sky",
+          "page": "https://pharos.watch/stablecoin/sdai-sky/"
+        }
+      ]
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": true,
+      "stablecoin_count": 3,
+      "stablecoins": [
+        {
+          "slug": "usde-ethena",
+          "page": "https://pharos.watch/stablecoin/usde-ethena/"
+        },
+        {
+          "slug": "susde-ethena",
+          "page": "https://pharos.watch/stablecoin/susde-ethena/"
+        },
+        {
+          "slug": "usdtb-ethena",
+          "page": "https://pharos.watch/stablecoin/usdtb-ethena/"
+        }
+      ]
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": true,
+      "stablecoin_count": 2,
+      "stablecoins": [
+        {
+          "slug": "crvusd-curve",
+          "page": "https://pharos.watch/stablecoin/crvusd-curve/"
+        },
+        {
+          "slug": "scrvusd-curve",
+          "page": "https://pharos.watch/stablecoin/scrvusd-curve/"
+        }
+      ]
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": true,
+      "stablecoin_count": 1,
+      "stablecoins": [
+        {
+          "slug": "dusd-fluid",
+          "page": "https://pharos.watch/stablecoin/dusd-fluid/"
+        }
+      ]
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": true,
+      "stablecoin_count": 2,
+      "stablecoins": [
+        {
+          "slug": "bold-liquity",
+          "page": "https://pharos.watch/stablecoin/bold-liquity/"
+        },
+        {
+          "slug": "lusd-liquity",
+          "page": "https://pharos.watch/stablecoin/lusd-liquity/"
+        }
+      ]
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    }
+  }
+}

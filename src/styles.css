@@ -973,6 +973,25 @@ table.feeds-table td.schema-cell .dim { color: var(--ink-faint); }
   margin-left: 4px;
 }
 
+/* ============ stub-protocol banner ============ */
+.stub-banner {
+  margin: 16px 0 24px;
+  padding: 14px 18px;
+  background: #fff8e1;
+  border: 1px solid #f0d36e;
+  border-left-width: 3px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.stub-banner strong {
+  color: var(--ink);
+}
+.stub-banner a {
+  font-weight: 600;
+}
+
 /* ============ summary matrix extras ============ */
 .cat-chips {
   display: flex;
@@ -1561,3 +1580,39 @@ footer.page-footer {
   font-family: var(--mono);
   letter-spacing: 0.2px;
 }
+
+/* --- Adapter pending state (added in v0.2 refactor) ----------------- */
+.dot-cell.pending {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--ink-faint, #9aa0a6),
+    var(--ink-faint, #9aa0a6) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  border: 1px dashed var(--ink-faint, #9aa0a6);
+  opacity: 0.6;
+}
+.badge.pending {
+  background: rgba(154, 160, 166, 0.12);
+  color: var(--ink-faint, #9aa0a6);
+  border: 1px dashed var(--ink-faint, #9aa0a6);
+}
+.feed-card.pending {
+  opacity: 0.7;
+  border-style: dashed;
+}
+.feed-card.pending .coverage-only {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(154, 160, 166, 0.04),
+    rgba(154, 160, 166, 0.04) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+.history-block .history-feed { margin-top: 18px; }
+.history-block .history-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.history-block .history-table th,
+.history-block .history-table td { padding: 4px 8px; border-bottom: 1px solid var(--bg-faint, #eee); text-align: left; }
+.history-block .history-table .date { font-family: var(--mono, ui-monospace, monospace); color: var(--ink-faint, #9aa0a6); }

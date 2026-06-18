@@ -1,0 +1,234 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-16T22:57:01.503Z",
+    "total_assets_in_feed": 94,
+    "ypo_aggregate": {
+      "all_time_sum": 1764282791.5756052,
+      "ypo7d": 15485265.69440438,
+      "ypo30d": 66963200.588387154
+    }
+  },
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "stablewatch_name": "Lido",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "aave": {
+      "slug": "aave",
+      "stablewatch_name": "Aave",
+      "covered": true,
+      "asset_count": 2,
+      "total_tvl": 141667761,
+      "assets": [
+        {
+          "asset": "sGHO",
+          "address": "0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d",
+          "tvl_current": 126937599,
+          "tvl_avg30d": 135838419.36666667,
+          "price_usd": 1
+        },
+        {
+          "asset": "sGHO (Umbrella)",
+          "address": "0x4f827a63755855cdf3e8f3bcd20265c833f15033",
+          "tvl_current": 14730162,
+          "tvl_avg30d": 14987558.2,
+          "price_usd": 0.998809
+        }
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "stablewatch_name": "Spark",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "sky": {
+      "slug": "sky",
+      "stablewatch_name": "Sky",
+      "covered": true,
+      "asset_count": 2,
+      "total_tvl": 6345842084,
+      "assets": [
+        {
+          "asset": "sDAI",
+          "address": "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+          "tvl_current": 176861811,
+          "tvl_avg30d": 181583310.7,
+          "price_usd": 1.18
+        },
+        {
+          "asset": "sUSDS",
+          "address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+          "tvl_current": 6168980273,
+          "tvl_avg30d": 6167861242.833333,
+          "price_usd": 1.1
+        }
+      ]
+    },
+    "ethena": {
+      "slug": "ethena",
+      "stablewatch_name": "Ethena",
+      "covered": true,
+      "asset_count": 1,
+      "total_tvl": 1728614585,
+      "assets": [
+        {
+          "asset": "sUSDe",
+          "address": "66985a81-9c51-46ca-9977-42b4fe7bc6df",
+          "tvl_current": 1728614585,
+          "tvl_avg30d": 1776499297,
+          "price_usd": 1.23
+        }
+      ]
+    },
+    "morpho": {
+      "slug": "morpho",
+      "stablewatch_name": "Morpho",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "stablewatch_name": "ether.fi",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "stablewatch_name": "Uniswap",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "curve": {
+      "slug": "curve",
+      "stablewatch_name": "Curve",
+      "covered": true,
+      "asset_count": 1,
+      "total_tvl": 20619417,
+      "assets": [
+        {
+          "asset": "scrvUSD",
+          "address": "5fd328af-4203-471b-bd16-1705c726d926",
+          "tvl_current": 20619417,
+          "tvl_avg30d": 20616328.258064516,
+          "price_usd": 1.11
+        }
+      ]
+    },
+    "compound": {
+      "slug": "compound",
+      "stablewatch_name": "Compound",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "stablewatch_name": "Rocket Pool",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "pendle": {
+      "slug": "pendle",
+      "stablewatch_name": "Pendle",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "fluid": {
+      "slug": "fluid",
+      "stablewatch_name": "Fluid",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "liquity": {
+      "slug": "liquity",
+      "stablewatch_name": "Liquity",
+      "covered": true,
+      "asset_count": 2,
+      "total_tvl": 13049123,
+      "assets": [
+        {
+          "asset": "sBOLD",
+          "address": "0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11",
+          "tvl_current": 8106236,
+          "tvl_avg30d": 8464914.066666666,
+          "price_usd": 1.062870902233928
+        },
+        {
+          "asset": "yBOLD",
+          "address": "0x9F4330700a36B29952869fac9b33f45EEdd8A3d8",
+          "tvl_current": 4942887,
+          "tvl_avg30d": 5116804.466666667,
+          "price_usd": 1.071975039307529
+        }
+      ]
+    },
+    "yearn": {
+      "slug": "yearn",
+      "stablewatch_name": "Yearn",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "euler": {
+      "slug": "euler",
+      "stablewatch_name": "Euler",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "mellow": {
+      "slug": "mellow",
+      "stablewatch_name": "Mellow",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "balancer": {
+      "slug": "balancer",
+      "stablewatch_name": "Balancer",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "stablewatch_name": "Gearbox",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "stablewatch_name": "CoW Swap",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    }
+  }
+}

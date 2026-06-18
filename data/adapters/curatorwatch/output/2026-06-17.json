@@ -1,0 +1,2817 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-16T22:33:59.662Z",
+    "total_curators": 20,
+    "total_aum_usd": 16300078045.637486,
+    "total_vaults": 222
+  },
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": true,
+      "vault_count": 5,
+      "total_tvl_usd": 130684870.01836118,
+      "avg_risk_score": 50,
+      "grade_distribution": {
+        "medium-grade": 3,
+        "low-grade": 2
+      },
+      "risk_distribution": {
+        "Moderate Risk": 5
+      },
+      "curators": [
+        "Theoriq",
+        null,
+        "Re7 Labs",
+        "Steakhouse Financial"
+      ],
+      "vaults": [
+        {
+          "address": "turtle-aacf8276-d395-4a7d-9244-13ba0572ab3e",
+          "name": "Theoriq AlphaVault ETH",
+          "curator": "Theoriq",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 226455.25589781,
+          "net_apy": 0.06376899999999999,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.23M < $1M minimum",
+            "Curator AUM $0.33M < $10M minimum"
+          ]
+        },
+        {
+          "address": "turtle-580b6cfd-5a84-4075-831b-c37fb10ef29c",
+          "name": "Lido EarnETH",
+          "curator": null,
+          "asset": "ETH",
+          "chain": "Ethereum",
+          "tvl_usd": 90175646.46093702,
+          "net_apy": 0.033459,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 77d < 90d minimum",
+            "Curator has no legal entity",
+            "No curator assigned",
+            "Curator AUM $0.00M < $10M minimum"
+          ]
+        },
+        {
+          "address": "turtle-ca509c6e-6f88-4b50-8653-af28b92c62b9",
+          "name": "Lido EarnUSD",
+          "curator": null,
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 6773488.52409523,
+          "net_apy": 0.039147,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 72d < 90d minimum",
+            "Curator has no legal entity",
+            "No curator assigned",
+            "Curator AUM $0.00M < $10M minimum"
+          ]
+        },
+        {
+          "address": "turtle-93b40530-ffbe-4db9-9b4f-704a7cec78cc",
+          "name": "Acre Bitcoin",
+          "curator": "Re7 Labs",
+          "asset": "tBTC",
+          "chain": "Ethereum",
+          "tvl_usd": 4409415.70752757,
+          "net_apy": 0.0469,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 89d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-d95f6e56-d318-48f2-aa41-6ac7ad419226",
+          "name": "Lido DVV",
+          "curator": "Steakhouse Financial",
+          "asset": "wstETH",
+          "chain": "Ethereum",
+          "tvl_usd": 29099864.06990356,
+          "net_apy": 0.031861,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 89d < 90d minimum"
+          ]
+        }
+      ]
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": true,
+      "vault_count": 138,
+      "total_tvl_usd": 1679338009.1173055,
+      "avg_risk_score": 50,
+      "grade_distribution": {
+        "medium-grade": 96,
+        "low-grade": 30,
+        "high-grade": 12
+      },
+      "risk_distribution": {
+        "Moderate Risk": 138
+      },
+      "curators": [
+        "Galaxy Digital",
+        "Gauntlet",
+        "Unified Labs Regulated",
+        "Steakhouse Financial",
+        "Trezor Steakhouse",
+        "Bloom",
+        "GOATed",
+        "Utorg",
+        "Hyperithm",
+        "Clearstar Labs AG",
+        "Re7 Labs",
+        "AlphaPing",
+        "OV",
+        "SingularV",
+        "YieldNest",
+        "Hackarrot",
+        "HavenFi",
+        "Chip",
+        "NuWealth",
+        "August Digital",
+        "Yearn Finance",
+        "Sentora",
+        "Flowdesk",
+        "Gtsy",
+        "RockawayX",
+        "Rini Oak",
+        "CCM",
+        "Etherealm",
+        "Origin Protocol",
+        "KPK",
+        "Sky",
+        "Spark Chip",
+        "Mainstreet",
+        "My USDS",
+        "API3",
+        "Wintermute",
+        "Avantgarde Finance",
+        "StakeDAO",
+        "Flowmark FGenesis",
+        "DeTrade",
+        "Fiber",
+        "SigmaLabs",
+        "Keyrock",
+        "Brrrstr",
+        "3Jane Ecosystem"
+      ],
+      "vaults": [
+        {
+          "address": "0x71ffB6a81786eC285D429d531Cf655107B9D878d",
+          "name": "Galaxy USDT Quality",
+          "curator": "Galaxy Digital",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 27723802.13142658,
+          "net_apy": 0.02491855220160983,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 70d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0x7aD470Ba664cfc15998dB4d458699A4E76f2d0B6",
+          "name": "Gauntlet USDC Prime",
+          "curator": "Gauntlet",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 320819.3918804738,
+          "net_apy": 0.03200280888579007,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.32M < $1M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x91393F69A308844a1B4830dE1a57FB489c9D88cE",
+          "name": "Unified Labs Regulated USDC",
+          "curator": "Unified Labs Regulated",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 6000.119669044262,
+          "net_apy": 0.07282374066127033,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum",
+            "Vault age 6d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.01M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0xbeef0046fcab1dE47E41fB75BB3dC4Dfc94108E3",
+          "name": "Steakhouse Prime ETH",
+          "curator": "Steakhouse Financial",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 17276940.11960839,
+          "net_apy": 0.01467656102494476,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xde6c23E561F3e55846207EC45A91b777e0F7C889",
+          "name": "Trezor Steakhouse USDC Prime",
+          "curator": "Trezor Steakhouse",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 3800274.119134919,
+          "net_apy": 0.03933731511676895,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 53d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $8.78M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xbeeffABcd0dB09589Dd21854aa760C52aB4bf04F",
+          "name": "Steakhouse tGBP",
+          "curator": "Steakhouse Financial",
+          "asset": "tGBP",
+          "chain": "Ethereum",
+          "tvl_usd": 5219330.203801476,
+          "net_apy": 0.00005680292156568457,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 60d < 90d minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: tGBP)"
+          ]
+        },
+        {
+          "address": "0x503Bc34d78288AC601dD73b6a8151954433869Fc",
+          "name": "Bloom Ethereum USDC",
+          "curator": "Bloom",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 19594.77701172219,
+          "net_apy": 0.1462476311366645,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.02M < $1M minimum",
+            "Vault age 43d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.02M < $10M minimum",
+            "APR 23.20% > 20% maximum",
+            "Collateral 4% institutional < 80% minimum (unrecognized: PT-savUSD-14MAY2026, apyUSD, msY +20 more)",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x0026038A7FEfEf439D94Bd99b4A10017e839D3A7",
+          "name": "GOATed Vault USDC",
+          "curator": "GOATed",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 500766.606674794,
+          "net_apy": 0.1183854174472783,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.50M < $1M minimum",
+            "Vault age 47d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.50M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: PT-apyUSD-18JUN2026, stcUSD, PT-apxUSD-18JUN2026 +1 more)",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xE48fc1A3fD6C3Da483FB587d6C24151E402BE02c",
+          "name": "Utorg USD Yield",
+          "curator": "Utorg",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 1050.225949522422,
+          "net_apy": 0.05948101949799216,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum",
+            "Vault age 39d < 90d minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.00M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xCdbe4A5B5bAd2BC04492052Df2F881B5727d034d",
+          "name": "Hyperithm cbBTC Apex",
+          "curator": "Hyperithm",
+          "asset": "cbBTC",
+          "chain": "Ethereum",
+          "tvl_usd": 64150.99488007516,
+          "net_apy": 0.02269834420563819,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.06M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0xF3Cc5c9A25508D8d959618fd48F6AbC18cA4Db49",
+          "name": "Clearstar Boring USDC",
+          "curator": "Clearstar Labs AG",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 499386.5711043239,
+          "net_apy": 0.03600605580986105,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.50M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0xae9A5aa54ae43BB8811435F02A29E9d2B43CDC7C",
+          "name": "Clearstar Reactor ETH",
+          "curator": "Re7 Labs",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 7437.821553997622,
+          "net_apy": 0.01671337060535872,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0x0bF0164D17469241B6E086dA4016DCc54FEAA334",
+          "name": "Alpha USDC Delta V2",
+          "curator": "AlphaPing",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 55469511.94721048,
+          "net_apy": 0.1378991588154178,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 63d < 90d minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: savUSD, msY)"
+          ]
+        },
+        {
+          "address": "0x18032C694f8ebfdcc030cB8C54c3701a107c2F72",
+          "name": "OV USDC",
+          "curator": "OV",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 121386.2072530405,
+          "net_apy": 0.0303894631406847,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.12M < $1M minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.17M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xF39AC02DEc8faE8292d5f42202e4Cd885356256B",
+          "name": "SingularV ETH",
+          "curator": "SingularV",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 468210.4692917215,
+          "net_apy": 0.01530426576362026,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.47M < $1M minimum",
+            "Curator AUM $0.56M < $10M minimum",
+            "Collateral 67% institutional < 80% minimum (unrecognized: ETH+, hgETH)"
+          ]
+        },
+        {
+          "address": "0x5181cD56C2C71d20094d23d43F4D6362834643AE",
+          "name": "Re7 WETH",
+          "curator": "Re7 Labs",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 208989.8748155017,
+          "net_apy": 0.005460383333626117,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.21M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0x244f46262D9aD408B746E74aBdD010E9002fb7eE",
+          "name": "UltraYield USDC Core",
+          "curator": "YieldNest",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 100471.5242357911,
+          "net_apy": 0.0377600106957754,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.10M < $1M minimum",
+            "Vault age 56d < 90d minimum",
+            "Curator AUM $3.44M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0xDa823Abb0B1F0e60CddF34039e92fBcaC9001D23",
+          "name": "Hackarrot USDT prime",
+          "curator": "Hackarrot",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 50011.34374521719,
+          "net_apy": 0.05974905825586069,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.05M < $1M minimum",
+            "Vault age 56d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.20M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x14A90D27338f40E22E1458A92934061cCAe144fC",
+          "name": "HavenFi EURC - Core",
+          "curator": "HavenFi",
+          "asset": "EURC",
+          "chain": "Ethereum",
+          "tvl_usd": 236311.3863807153,
+          "net_apy": 0,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.24M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.28M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xC9D7B729AdFB2D3F837E0C15b63a252c74224A7e",
+          "name": "HavenFi Balanced USDC (Mainnet)",
+          "curator": "HavenFi",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 47908.86428906705,
+          "net_apy": 0,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.05M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.28M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: siUSD)"
+          ]
+        },
+        {
+          "address": "0x74847d0D124ce5C89Ca8f4e7547AECD09E86B2E0",
+          "name": "Blue Chip USDC Vault (Prime)",
+          "curator": "Chip",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 249019.5288593702,
+          "net_apy": 0.03059529959792937,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.25M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.25M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x2086eB7beAbB123961A940bDC0b018A43De02A85",
+          "name": "NuWealth Anchor USDC",
+          "curator": "NuWealth",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 120282.8768513062,
+          "net_apy": 0.02206508661576929,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.12M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.17M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x6d387c4756610682C4E562c636dac46ac40780c8",
+          "name": "NuWealth Anchor USDT",
+          "curator": "NuWealth",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 10467.41780192313,
+          "net_apy": 0.04315887926466678,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.17M < $10M minimum",
+            "Collateral 60% institutional < 80% minimum (unrecognized: XAUt, sUSDS)",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x02D2488A2292C25D0D313A1b8D882A2d28E74598",
+          "name": "NuWealth Anchor EURC",
+          "curator": "NuWealth",
+          "asset": "EURC",
+          "chain": "Ethereum",
+          "tvl_usd": 42666.94606960824,
+          "net_apy": 0.000005125972700710361,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.04M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.17M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x7ceB0f01Cb7187a2EBED5661eCC4d5701d8F2350",
+          "name": "August USDC V2",
+          "curator": "August Digital",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 5096405.525756441,
+          "net_apy": 0.06618987784065848,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Curator AUM $7.22M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: syzUSD, AA_FalconXUSDC, upUSDC)"
+          ]
+        },
+        {
+          "address": "0xbe518068EB6135117207256F8C9aFf81B4382DB1",
+          "name": "Yearn OG WETH V2",
+          "curator": "Yearn Finance",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 5188.564942434272,
+          "net_apy": 0.01427927976764801,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum",
+            "Curator AUM $1.05M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0xe479bCbc98579bA3E1a1261f7bE85C4C10303d88",
+          "name": "Sentora PYUSD Core V2",
+          "curator": "Sentora",
+          "asset": "PYUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 1880.635623470548,
+          "net_apy": 0.02445345394012095,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0xC21b08C16458202593D4D9B26b9984Ee67b38BbD",
+          "name": "Sentora PRIME Main",
+          "curator": "Sentora",
+          "asset": "PYUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 104441387.2042093,
+          "net_apy": 0.06194283272485433,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 38d < 90d minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: PRIME)"
+          ]
+        },
+        {
+          "address": "0x32401B9fb79065Bc15949DE0BD43927492f02F0C",
+          "name": "Flowdesk AUSD RWA Strategy",
+          "curator": "Flowdesk",
+          "asset": "AUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 12678323.08876375,
+          "net_apy": 0.07383944003678979,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: wSPYx, SPYx, PT-USDat-27AUG2026 +2 more)"
+          ]
+        },
+        {
+          "address": "0xa30D20cB10c869bAf99EbeADFD79408fe7Ad8FaA",
+          "name": "gtsy (usdt)",
+          "curator": "Gtsy",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 994742.0246488315,
+          "net_apy": 0.01981564140974048,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.99M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $1.00M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x8aC91877b93330f52b2979a31a4879506021475c",
+          "name": "Huma USDC Main",
+          "curator": "RockawayX",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 16226269.69310992,
+          "net_apy": 0.06193397105381449,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 10d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0x569C9Af18412D1cDe35c9eA918420F0F5d60B807",
+          "name": "Rini USDC Oak",
+          "curator": "Rini Oak",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 5086.644499353894,
+          "net_apy": 0.04629203188969762,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.01M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: syrupUSDC, mF-ONE, AA_FalconXUSDC)",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x69A238Ae7ebeb3c53ff3B544E48B96a2142fc284",
+          "name": "Clearstar USDC Core",
+          "curator": "Clearstar Labs AG",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 6243213.109340221,
+          "net_apy": 0.0754798908724794,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 10% institutional < 80% minimum (unrecognized: mAPOLLO, sUSN, liUSD-1w +6 more)"
+          ]
+        },
+        {
+          "address": "0xFa17f7AAdbfAc2C5d3C8125555404c1AE17Df853",
+          "name": "Clearstar Yield USDC",
+          "curator": "Clearstar Labs AG",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 401556.6281904723,
+          "net_apy": 6.31553376215003,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.40M < $1M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: reUSD, jrUSDe, xPRISM +7 more)",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x690F0bDc73b8d5e16F5B2d96e195e6bf22595f34",
+          "name": "CCM Atlas Prime",
+          "curator": "CCM",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 19608.51053934933,
+          "net_apy": 0,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.02M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.02M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: ccmETH)",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x842A84Df61DbE701c5dAE345F3f8E64aF727E48C",
+          "name": "Gauntlet EURC Core",
+          "curator": "Gauntlet",
+          "asset": "EURC",
+          "chain": "Ethereum",
+          "tvl_usd": 51495.08984172546,
+          "net_apy": 0.03794137047031653,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.05M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0x85F3d81a39dF458E45d5EA20f9EB937fAafd282f",
+          "name": "UltraYield USDT Core",
+          "curator": "YieldNest",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 100365.9328127144,
+          "net_apy": 0.0249270199822948,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.10M < $1M minimum",
+            "Vault age 50d < 90d minimum",
+            "Curator AUM $3.44M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0xB7305D968ECD8a23a13eC01927E3f9588C7653B5",
+          "name": "Etherealm USDC",
+          "curator": "Etherealm",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 270114.3837335149,
+          "net_apy": 1.718281828393502,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.27M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.27M < $10M minimum",
+            "APR 159.01% > 20% maximum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xFB154c729A16802c4ad1E8f7FF539a8b9f49c960",
+          "name": "OUSD Vault V2",
+          "curator": "Origin Protocol",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 3295069.802672373,
+          "net_apy": 0.04009081904195108,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Curator AUM $3.30M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xB885F6d448dA7E2C642Ec31190B629E40E87B069",
+          "name": "Yearn OG USDC",
+          "curator": "Yearn Finance",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 776468.2108753121,
+          "net_apy": 0.04076849345262044,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.78M < $1M minimum",
+            "Curator AUM $1.05M < $10M minimum",
+            "Collateral 25% institutional < 80% minimum (unrecognized: PT-stcUSD-23JUL2026, YFI, OETH +6 more)"
+          ]
+        },
+        {
+          "address": "0x9f39B13bB472126D6937Bf25A39338E664eeFa82",
+          "name": "Alpha USDC Prime V2",
+          "curator": "AlphaPing",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 4997348.498758448,
+          "net_apy": 0.06294854599021374,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: PT-apyUSD-18JUN2026, muBOND, apyUSD +4 more)"
+          ]
+        },
+        {
+          "address": "0x093272C07700d3cA5301C3Bf9B3A392624179E2F",
+          "name": "Hyperithm USDC Apex",
+          "curator": "Hyperithm",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 5670627.957212057,
+          "net_apy": 0.06257644188523995,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 13% institutional < 80% minimum (unrecognized: PT-USDG-28MAY2026, PT-srUSDat-27AUG2026, mF-ONE +18 more)"
+          ]
+        },
+        {
+          "address": "0x069662D2588fcaC24B5c209456Db965D151556f0",
+          "name": "Apyx USDC",
+          "curator": "Hyperithm",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 9532447.459968662,
+          "net_apy": 0.08541831735380158,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 19d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0xd8CD72A2eB7A4312404C00AeD5172C0026da0C27",
+          "name": "Alpha Frax USD Enhanced V2",
+          "curator": "AlphaPing",
+          "asset": "frxUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 292235.508993697,
+          "net_apy": 0.1515812218870805,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.29M < $1M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: sDOLA, savUSD, USP)"
+          ]
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "name": "Gauntlet USDT Prime",
+          "curator": "Gauntlet",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 19295763.27386457,
+          "net_apy": 0.0249295366681519,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 75% institutional < 80% minimum (unrecognized: sUSDS)"
+          ]
+        },
+        {
+          "address": "0xD5cCe260E7a755DDf0Fb9cdF06443d593AaeaA13",
+          "name": "KPK USDC Yield",
+          "curator": "KPK",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 2879947.757483469,
+          "net_apy": 0.06234248833516731,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: srRoyUSDC, PT-sNUSD-4JUN2026, siUSD +7 more)"
+          ]
+        },
+        {
+          "address": "0x56bfa6f53669B836D1E0Dfa5e99706b12c373ecf",
+          "name": "sky.money USDC Risk Capital",
+          "curator": "Sky",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 15895696.71396265,
+          "net_apy": 0.04890769877362781,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: stUSDS)"
+          ]
+        },
+        {
+          "address": "0x23f5E9c35820f4baB695Ac1F19c203cC3f8e1e11",
+          "name": "sky.money USDT Savings",
+          "curator": "Sky",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 69649350.298844,
+          "net_apy": 0.02714085929502961,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: sUSDS)"
+          ]
+        },
+        {
+          "address": "0xE15fcC81118895b67b6647BBd393182dF44E11E0",
+          "name": "sky.money USDS Flagship",
+          "curator": "Sky",
+          "asset": "USDS",
+          "chain": "Ethereum",
+          "tvl_usd": 34748564.98447393,
+          "net_apy": 0.04879845656460707,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 75% institutional < 80% minimum (unrecognized: stUSDS)"
+          ]
+        },
+        {
+          "address": "0xf42bca228D9bd3e2F8EE65Fec3d21De1063882d4",
+          "name": "sky.money USDS Risk Capital",
+          "curator": "Sky",
+          "asset": "USDS",
+          "chain": "Ethereum",
+          "tvl_usd": 1242719.353386824,
+          "net_apy": 0.0487419761851293,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: stUSDS)"
+          ]
+        },
+        {
+          "address": "0xE571B648569619566CF6ce1060C97B621CB635D3",
+          "name": "Gauntlet USDT Frontier",
+          "curator": "Gauntlet",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 4992720.774254932,
+          "net_apy": 0.03253921808426802,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 56% institutional < 80% minimum (unrecognized: syrupUSDT, sUSDD, stcUSD +1 more)"
+          ]
+        },
+        {
+          "address": "0x8c106EEDAd96553e64287A5A6839c3Cc78afA3D0",
+          "name": "Gauntlet USDC Prime",
+          "curator": "Gauntlet",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 84818007.30049455,
+          "net_apy": 0.0377123481766141,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0x5f342382D5F77F0f99E8f26161E689df6c7Cded3",
+          "name": "Gauntlet WETH Balanced",
+          "curator": "Gauntlet",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 121199.5016795006,
+          "net_apy": 0.01654106159586101,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.12M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0xb0c424116172B55CbB6dD3136F5989F7959e5B91",
+          "name": "Spark Blue Chip USDT Vault",
+          "curator": "Spark Chip",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 56320558.21403228,
+          "net_apy": 0.02240217394825536,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 74d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum"
+          ]
+        },
+        {
+          "address": "0xad755C6C31515aEF8D2f830767D846774F7e9EA9",
+          "name": "Mainstreet USDC",
+          "curator": "Mainstreet",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 2511300.707724273,
+          "net_apy": 0.03470184297202471,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 21d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $5.01M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xbeef088055857739C12CD3765F20b7679Def0f51",
+          "name": "Steakhouse Prime USDC",
+          "curator": "Steakhouse Financial",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 69508767.68438968,
+          "net_apy": 0.03824429138973504,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xBe13aDb76B914a4c42dDab3751723A9B91d0e62d",
+          "name": "My USDS",
+          "curator": "My USDS",
+          "asset": "USDS",
+          "chain": "Ethereum",
+          "tvl_usd": 2004.61073807202,
+          "net_apy": 0.3006345250928493,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum",
+            "Vault age 16d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.00M < $10M minimum",
+            "APR 30.30% > 20% maximum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xbeEFF75262b2eC16a3C62a807F02EE7627654931",
+          "name": "infiniFi x Steakhouse USDC",
+          "curator": "Steakhouse Financial",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 5076355.673739072,
+          "net_apy": 0.06660675057685606,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 47d < 90d minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: PT-iUSD-25JUN2026, siUSD, iUSD)"
+          ]
+        },
+        {
+          "address": "0xbeef003E31546C7210687f1A7b40d096BE83ec58",
+          "name": "Steakhouse Prime EURC",
+          "curator": "Steakhouse Financial",
+          "asset": "EURC",
+          "chain": "Ethereum",
+          "tvl_usd": 261269.3163415453,
+          "net_apy": 0.003232754156348186,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.26M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0xBEeFf08E1887A11D91B9Ca68c133c08Ae3c4B44f",
+          "name": "Steakhouse Reservoir rUSD",
+          "curator": "Steakhouse Financial",
+          "asset": "rUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 58657.80346886299,
+          "net_apy": 0.07033896201194802,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.06M < $1M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: wsrUSD)"
+          ]
+        },
+        {
+          "address": "0x36cfe1568461E499391ef0A555300F1ae2da2439",
+          "name": "Api3 dCOMP USDC",
+          "curator": "API3",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 8460104.508500906,
+          "net_apy": 0.09109544275009082,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 50% institutional < 80% minimum (unrecognized: dCOMP)"
+          ]
+        },
+        {
+          "address": "0xbEeFf89ABb7815cCD5182BD1FF82C4a4F8FCb13D",
+          "name": "Steakhouse High Yield Instant",
+          "curator": "Steakhouse Financial",
+          "asset": "AUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 289703.1113410534,
+          "net_apy": 0.0326873241723733,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.29M < $1M minimum",
+            "Collateral 38% institutional < 80% minimum (unrecognized: PT-USDG-28MAY2026, stcUSD, AA_FalconXUSDC +7 more)"
+          ]
+        },
+        {
+          "address": "0x5dc53a23AdC9f2Bed98de6F59F7F309a7c71FF2B",
+          "name": "Wintermute USDC Prime",
+          "curator": "Wintermute",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 20610837.41617558,
+          "net_apy": 0.03776248975170497,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 55d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0x91600E31fBeDc72433d4a57F16639cfe661Be7d8",
+          "name": "Galaxy USDC Quality",
+          "curator": "Galaxy Digital",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 28895161.45183383,
+          "net_apy": 0.03775722909765726,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 71d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0xBEeFF047C03714965a54b671A37C18beF6b96210",
+          "name": "Steakhouse Reservoir USDC",
+          "curator": "Steakhouse Financial",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 32172424.78695609,
+          "net_apy": 0.05744150637444902,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: wsrUSD)"
+          ]
+        },
+        {
+          "address": "0xbeef00B5d83C1188F07A5184230a805639c39f04",
+          "name": "Steakhouse Prime Instant",
+          "curator": "Steakhouse Financial",
+          "asset": "PYUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 743493.467372937,
+          "net_apy": 0.05018513592067201,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.74M < $1M minimum",
+            "Collateral 67% institutional < 80% minimum (unrecognized: PAXG)"
+          ]
+        },
+        {
+          "address": "0xbeef0D24920098C404c7Fc7942ee6d0f66d65D57",
+          "name": "Safe x Steakhouse Prime Instant",
+          "curator": "Steakhouse Financial",
+          "asset": "EURCV",
+          "chain": "Ethereum",
+          "tvl_usd": 3082106.142208085,
+          "net_apy": 0.0179821325004944,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xE08145eb0132a219aad1B78a85baD8666a97CB94",
+          "name": "Gauntlet USDC Core",
+          "curator": "Gauntlet",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 4110905.043779054,
+          "net_apy": 0.03514552197252959,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x1a1985F50352b58090eb36425AfdFacbaC7806F4",
+          "name": "KPK USDC Prime Core",
+          "curator": "KPK",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 551919.4541339485,
+          "net_apy": 0.03775257000474994,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.55M < $1M minimum",
+            "Vault age 52d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0x5dbf760b4fd0cDdDe0366b33aEb338b2A6d77725",
+          "name": "KPK ETH Yield",
+          "curator": "KPK",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 1028863.065347259,
+          "net_apy": 0.03070557029416912,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 29% institutional < 80% minimum (unrecognized: ARM-WETH-eETH, tETH, ARM-WETH-stETH +2 more)"
+          ]
+        },
+        {
+          "address": "0xeBBaE8CfAbB0092d5B32f00EBeE0c8139d24dDcd",
+          "name": "Avantgarde USDC Conservative",
+          "curator": "Avantgarde Finance",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 1302596.529135547,
+          "net_apy": 0.03392625346024185,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xeb6719c14BA01Bf1D6bFB78A65F63f12FabF202C",
+          "name": "Alpha APXUSD V2",
+          "curator": "AlphaPing",
+          "asset": "apxUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 72252.8181522721,
+          "net_apy": 0.2523227161584123,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.07M < $1M minimum",
+            "APR 25.18% > 20% maximum",
+            "Collateral 20% institutional < 80% minimum (unrecognized: PT-apxUSD-18JUN2026, PT-apyUSD-18JUN2026, sDOLA +1 more)"
+          ]
+        },
+        {
+          "address": "0x610f5B68bD1EED68Af649A3fD3DC2CAa1ee4Ae7E",
+          "name": "Alpha LINK Enhanced V2",
+          "curator": "AlphaPing",
+          "asset": "LINK",
+          "chain": "Ethereum",
+          "tvl_usd": 2780849.028037756,
+          "net_apy": 0.05294305321587738,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: wstLINK)"
+          ]
+        },
+        {
+          "address": "0xaA8d9E2aBa210639cE6C7cE21385e7c673ACa6f3",
+          "name": "Yearn USDC",
+          "curator": "Yearn Finance",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 59098.89282665903,
+          "net_apy": 0.03776542991693042,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.06M < $1M minimum",
+            "Curator AUM $1.05M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0xCE13e39534082FCF8f13F6D84e6D95414D14271e",
+          "name": "Stake DAO frxUSD v2",
+          "curator": "StakeDAO",
+          "asset": "frxUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 4205055.470021928,
+          "net_apy": 0.08913768899966718,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Curator AUM $4.80M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: stakedao-FrxMsUSD, stakedao-crvfrxUSD, stakedao-frxsUSDS)"
+          ]
+        },
+        {
+          "address": "0x64C18DCC4Ccb3b8D27877a4aeBB4C3126CB39cB9",
+          "name": "RockawayX wETH",
+          "curator": "RockawayX",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 2094837.416750017,
+          "net_apy": 0.001058093141408798,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 84d < 90d minimum",
+            "Collateral 75% institutional < 80% minimum (unrecognized: ETH+)"
+          ]
+        },
+        {
+          "address": "0xA2EAaD0D586cF9FD73bb2c09cF6A7E3e187D68cd",
+          "name": "Wintermute USDC Select",
+          "curator": "Wintermute",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 32395894.87511333,
+          "net_apy": 0.04442106666300597,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 55d < 90d minimum",
+            "Collateral 60% institutional < 80% minimum (unrecognized: v-wmtUSDC, stUSDS)"
+          ]
+        },
+        {
+          "address": "0xe2221Aa07ec3266DA87763E2b1e28d07A8a4e53b",
+          "name": "Api3 Core USDC",
+          "curator": "API3",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 5580400.026089926,
+          "net_apy": 0.03466980277373325,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xfA5367bF43b9FC2a9764Ed946b29F6e6150F6439",
+          "name": "Flowmark fGenesis",
+          "curator": "Flowmark FGenesis",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 1399.632723869461,
+          "net_apy": 0.02621202302230477,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum",
+            "Vault age 35d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.00M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0xbeef003C68896c7D2c3c60d363e8d71a49Ab2bf9",
+          "name": "Steakhouse Prime USDT",
+          "curator": "Steakhouse Financial",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 58533648.39045723,
+          "net_apy": 0.0253787407685853,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 78% institutional < 80% minimum (unrecognized: sUSDS, XAUt)"
+          ]
+        },
+        {
+          "address": "0xbeeff2C5bF38f90e3482a8b19F12E5a6D2FCa757",
+          "name": "Steakhouse High Yield USDC",
+          "curator": "Steakhouse Financial",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 36860518.14620972,
+          "net_apy": 0.04814677341464556,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 36% institutional < 80% minimum (unrecognized: PT-cUSD-23JUL2026, stcUSD, USCC +11 more)"
+          ]
+        },
+        {
+          "address": "0xBEEfF0d672ab7F5018dFB614c93981045D4aA98a",
+          "name": "Grove x Steakhouse AUSD",
+          "curator": "Steakhouse Financial",
+          "asset": "AUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 25123814.3050436,
+          "net_apy": 0.03327783534373337,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xbeeff07d991C04CD640DE9F15C08ba59c4FEDEb7",
+          "name": "Steakhouse High Yield USDT",
+          "curator": "Steakhouse Financial",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 2942045.049631005,
+          "net_apy": 0.03526017094884278,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 40% institutional < 80% minimum (unrecognized: PT-srUSDe-25JUN2026, reUSD, wsrUSD +8 more)"
+          ]
+        },
+        {
+          "address": "0xBEEf3f3A04e28895f3D5163d910474901981183D",
+          "name": "3F x Steakhouse USDC",
+          "curator": "Steakhouse Financial",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 9952906.711169075,
+          "net_apy": 0.03764083818919788,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0x8D5b25930799751FB6B288818500ECda66c56254",
+          "name": "DeTrade Serenity WETH",
+          "curator": "DeTrade",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 4342.691844702399,
+          "net_apy": 0.01552986957697847,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum",
+            "Curator AUM $0.06M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xb576765fB15505433aF24FEe2c0325895C559FB2",
+          "name": "Paypal USD Main",
+          "curator": "Sentora",
+          "asset": "PYUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 287043163.8065846,
+          "net_apy": 0.05473220087358681,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 78% institutional < 80% minimum (unrecognized: syrupUSDC, kBTC)"
+          ]
+        },
+        {
+          "address": "0xfed0070Bf03F2f0eCc1074D91058F786df262536",
+          "name": "Hackarrot USDC prime",
+          "curator": "Hackarrot",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 50006.13387346416,
+          "net_apy": 0.03104822053322059,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.05M < $1M minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.20M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x1c7245863000722A71F98Dc8EBFe704579F13056",
+          "name": "Fiber USDC Ethereum",
+          "curator": "Fiber",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 17490.09382224851,
+          "net_apy": 0.02819168929565358,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.02M < $1M minimum",
+            "Vault age 49d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.02M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x6B833881A9f083aD2CCACF8c10ABC0dc151cBF32",
+          "name": "SigmaLabs Prime ETH",
+          "curator": "SigmaLabs",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 8915.731311979891,
+          "net_apy": 0.01541265153870313,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum",
+            "Vault age 8d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.01M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x870F0BF29A25A40E7CC087cD5C53e70C11F2C8A8",
+          "name": "KPK USDT Prime",
+          "curator": "KPK",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 2039570.38940343,
+          "net_apy": 0.02767255023090128,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 57% institutional < 80% minimum (unrecognized: sUSDS, XAUt, syrupUSDT)"
+          ]
+        },
+        {
+          "address": "0x132Fe294ea9b6faD8cA00554D211d5F2b905c1AD",
+          "name": "Avantgarde WETH Conservative",
+          "curator": "Avantgarde Finance",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 651547.77879557,
+          "net_apy": 0.01389880911131885,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.65M < $1M minimum",
+            "Collateral 75% institutional < 80% minimum (unrecognized: ETH+)"
+          ]
+        },
+        {
+          "address": "0x35Cbe8542E70fa2f7F9cDF129F19e593F4b4f560",
+          "name": "Alpha USDC Asia V2",
+          "curator": "AlphaPing",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 7817145.532305666,
+          "net_apy": 0.1565201335665182,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 89d < 90d minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: AZND, muBOND)"
+          ]
+        },
+        {
+          "address": "0x153Bd1abE60104Bd46aa05a27fA12D1346D64A57",
+          "name": "Alpha USDC Forex V2",
+          "curator": "AlphaPing",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 2646906.157806131,
+          "net_apy": 0.07971306300143384,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: USP)"
+          ]
+        },
+        {
+          "address": "0x3a618E9D4159dff94E90bd6239161dE4dd7C0082",
+          "name": "Apyx apxUSD",
+          "curator": "Hyperithm",
+          "asset": "apxUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 2201429.61178345,
+          "net_apy": 0.1676140914100869,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 19d < 90d minimum",
+            "APR 49.83% > 20% maximum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: apxUSD)"
+          ]
+        },
+        {
+          "address": "0x0229dB3921dE71CFa43Cfe9fb6A87b403647A9ae",
+          "name": "Hyperithm USDC Core",
+          "curator": "Hyperithm",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 15531.04898730286,
+          "net_apy": 0.03583345761114361,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.02M < $1M minimum",
+            "Collateral 75% institutional < 80% minimum (unrecognized: syrupUSDC)"
+          ]
+        },
+        {
+          "address": "0x43FB24Ad02a101Acc128eB2AD76a240245C2aD47",
+          "name": "Gauntlet USDT Prime",
+          "curator": "Gauntlet",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 2220442.618621952,
+          "net_apy": 0.0211466970140547,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x04422053aDDbc9bB2759b248B574e3FCA76Bc145",
+          "name": "Keyrock USDC",
+          "curator": "Keyrock",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 685958.0005356976,
+          "net_apy": 0.04955846883944944,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.69M < $1M minimum",
+            "Curator AUM $1.19M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0x8EDCC305E633d29BFB383872e79401c506cE9E6f",
+          "name": "Stake DAO USDC v2",
+          "curator": "StakeDAO",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 596874.0295861687,
+          "net_apy": 0.0431757401947227,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.60M < $1M minimum",
+            "Curator AUM $4.80M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: stakedao-crvfrxUSD, stakedao-crvUSDUSDT-f, stakedao-PYcrvUSD +3 more)"
+          ]
+        },
+        {
+          "address": "0xbeef0C075Da5D01112AE5cF34d257074fB5DDB2f",
+          "name": "Steakhouse Prime EURCV",
+          "curator": "Steakhouse Financial",
+          "asset": "EURCV",
+          "chain": "Ethereum",
+          "tvl_usd": 86367522.94799541,
+          "net_apy": 0.04000000188436217,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 75% institutional < 80% minimum (unrecognized: EUTBL, steakUSDC)"
+          ]
+        },
+        {
+          "address": "0x787FC686879EaCE7Ad94A63fcEcd520fdeAf7AF9",
+          "name": "f(x) Protocol Re7 USDC",
+          "curator": "Re7 Labs",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 10231.33713928569,
+          "net_apy": 0,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x9C605F8cbb74C7D00cE46Ff81de68A313AC17192",
+          "name": "DeTrade Serenity EURC",
+          "curator": "DeTrade",
+          "asset": "EURC",
+          "chain": "Ethereum",
+          "tvl_usd": 6547.630693103209,
+          "net_apy": 0.03447921529517501,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum",
+            "Curator AUM $0.06M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xA01B3A71487753F28d8f5fDF166B7B467C765D09",
+          "name": "Brrrstr USDC",
+          "curator": "Brrrstr",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 1015.635740606613,
+          "net_apy": 0.03313137811183725,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.00M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0xA1B096268D200d0ecFD57015700F6a0DA9c494e2",
+          "name": "YieldNest RWA",
+          "curator": "YieldNest",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 21944.59357663316,
+          "net_apy": 0.114682810127032,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.02M < $1M minimum",
+            "Curator AUM $3.44M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: ynRWAx)"
+          ]
+        },
+        {
+          "address": "0xd0634BF57921Ef4068f284F5e78A3f2623e20129",
+          "name": "Chaince USDC Yield",
+          "curator": "AlphaPing",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 102150.4117912329,
+          "net_apy": 0.08315287698205827,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.10M < $1M minimum",
+            "Vault age 32d < 90d minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: USP, savUSD, PT-reUSD-25JUN2026 +2 more)"
+          ]
+        },
+        {
+          "address": "0x2B58132964f038461E3D8b56df582f49FEcc8745",
+          "name": "Clearstar Boring USDT",
+          "curator": "Clearstar Labs AG",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 386376.1017410749,
+          "net_apy": 0.02492350555289251,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.39M < $1M minimum",
+            "Collateral 67% institutional < 80% minimum (unrecognized: sUSDS)"
+          ]
+        },
+        {
+          "address": "0xE0181090c22579B6A217f1522cbf8c9f1F0C1965",
+          "name": "RockawayX USDC Yield",
+          "curator": "RockawayX",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 125672.1869053643,
+          "net_apy": 0.05948102391001878,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.13M < $1M minimum",
+            "Vault age 84d < 90d minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: AA_FalconXUSDC, siUSD, syrupUSDC +5 more)"
+          ]
+        },
+        {
+          "address": "0x8E56CB6Bc1a8961ed9062B99045D3299b27CDb4D",
+          "name": "Avantgarde USDC Dynamic",
+          "curator": "Avantgarde Finance",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 105015.171492727,
+          "net_apy": 0.03629241724741172,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.11M < $1M minimum",
+            "Collateral 33% institutional < 80% minimum (unrecognized: mF-ONE, stcUSD, reUSD +1 more)"
+          ]
+        },
+        {
+          "address": "0xbeeff9eBE518d1C7E552c4BbfB99487435c4dEc9",
+          "name": "Steakhouse Resolv USR",
+          "curator": "Steakhouse Financial",
+          "asset": "USR",
+          "chain": "Ethereum",
+          "tvl_usd": 1295.128327673602,
+          "net_apy": 0.1237145810009434,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum",
+            "Vault age 89d < 90d minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: USR)"
+          ]
+        },
+        {
+          "address": "0x6dC58a0FdfC8D694e571DC59B9A52EEEa780E6bf",
+          "name": "Sentora RLUSD Main",
+          "curator": "Sentora",
+          "asset": "RLUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 221730579.6288451,
+          "net_apy": 0.05567342140415323,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 71% institutional < 80% minimum (unrecognized: kBTC, syrupUSDC)"
+          ]
+        },
+        {
+          "address": "0xE4e66fd84B84477bADDBab68336568eA21F2f5B1",
+          "name": "Hackarrot USDT Safe",
+          "curator": "Hackarrot",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 50358.16570843953,
+          "net_apy": 0.03663431384370385,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.05M < $1M minimum",
+            "Vault age 56d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.20M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xE9BE5f0e92E941A025d3dd32038250577756a73f",
+          "name": "Keyrock Prime USDT",
+          "curator": "Keyrock",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 500231.7362045801,
+          "net_apy": 0.02263958159926054,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.50M < $1M minimum",
+            "Vault age 9d < 90d minimum",
+            "Curator AUM $1.19M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0x43fCd85E8D9D003D515f886891B7C742AC9f92da",
+          "name": "Gauntlet WETH Prime",
+          "curator": "Gauntlet",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 6908177.105647014,
+          "net_apy": 0.01572110609136252,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xb8274eFADB953FE9ae052D481a3FC5B6A3ceD703",
+          "name": "USDT Prime Vault",
+          "curator": "Gauntlet",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 3870.021266018003,
+          "net_apy": 0.02492482726446458,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum",
+            "Vault age 7d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0x6aB8dd6124E5F5789B8b5074C5760b9917A2DFc6",
+          "name": "Gauntlet USDT Core",
+          "curator": "Gauntlet",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 2168897.238661838,
+          "net_apy": 0.02265576444490653,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xBeefF08dF54897e7544aB01d0e86f013DA354111",
+          "name": "Grove x Steakhouse USDC",
+          "curator": "Steakhouse Financial",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 6044993.577170186,
+          "net_apy": 0.03775826954166056,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xE7F8Fb5CccC3e70B922FE696ae6B550557f88Da5",
+          "name": "August AUSD V2",
+          "curator": "August Digital",
+          "asset": "AUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 2123991.924162624,
+          "net_apy": 0.04125264303085018,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Curator AUM $7.22M < $10M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: upGAMMAusdc)"
+          ]
+        },
+        {
+          "address": "0xA7A78E8e98c734f87A3B07D8DB627C67001ABD02",
+          "name": "gtsy",
+          "curator": "Gtsy",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 10082.08466170135,
+          "net_apy": -0.004987520778486206,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.01M < $1M minimum",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $1.00M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xAbe418cc8c06D265E4EB009C02eA4B265eCA7240",
+          "name": "Saturn USDC",
+          "curator": "Hyperithm",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 5818165.660123542,
+          "net_apy": 0.09814398683788739,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 11d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0x2bD3A43863c07B6A01581FADa0E1614ca5DF0E3d",
+          "name": "sky.money USDT Risk Capital",
+          "curator": "Sky",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 592425.9466402001,
+          "net_apy": 0.04269759334838971,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.59M < $1M minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: stUSDS)"
+          ]
+        },
+        {
+          "address": "0x4Ef53d2cAa51C447fdFEEedee8F07FD1962C9ee6",
+          "name": "KPK USDC Prime",
+          "curator": "KPK",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 25064009.63612607,
+          "net_apy": 0.03841049609440507,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xBb50A5341368751024ddf33385BA8cf61fE65FF9",
+          "name": "KPK ETH Prime",
+          "curator": "KPK",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 3094285.330374464,
+          "net_apy": 0.01673338832016483,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xa877D5bb0274dcCbA8556154A30E1Ca4021a275f",
+          "name": "KPK EURC Yield",
+          "curator": "KPK",
+          "asset": "EURC",
+          "chain": "Ethereum",
+          "tvl_usd": 1321359.323674057,
+          "net_apy": 0.03700842252349806,
+          "grade": "high-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": []
+        },
+        {
+          "address": "0xf1CA44EEa3A4eFFcB195A970a2f1d8553f76F9A1",
+          "name": "Alpha USDC Core V2",
+          "curator": "AlphaPing",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 11497536.35461633,
+          "net_apy": 0.09452523462132602,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: PT-apyUSD-18JUN2026, muBOND, AZND +4 more)"
+          ]
+        },
+        {
+          "address": "0x1878805799273d10aE96a58201A6f5254CF9824F",
+          "name": "Galaxy WETH Quality",
+          "curator": "Galaxy Digital",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 16917099.54692555,
+          "net_apy": 0.01371506506883653,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 56d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0x54Fe9a93830A077424EC5A295926b1C797D3cE14",
+          "name": "Hackarrot USDC Safe",
+          "curator": "Hackarrot",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 50288.15408610505,
+          "net_apy": 0.03775423808336255,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.05M < $1M minimum",
+            "Vault age 56d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.20M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xe3Ba8f17fe581DD473E6699CFaD04502998a57c7",
+          "name": "Mainstreet USDC",
+          "curator": "Mainstreet",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 2500957.341062046,
+          "net_apy": 0.03468217399346653,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 9d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $5.01M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xE4DB1c5A1B709CE4d2adA6985D9D506e58F73829",
+          "name": "Trezor Steakhouse USDT Prime",
+          "curator": "Trezor Steakhouse",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 4976544.665489296,
+          "net_apy": 0.02780683761932451,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 53d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $8.78M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xe05faDf242331808f504661BEA65972594869826",
+          "name": "3Jane Ecosystem Vault",
+          "curator": "3Jane Ecosystem",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 7960145.607323222,
+          "net_apy": 0.1043266195489252,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $7.96M < $10M minimum"
+          ]
+        },
+        {
+          "address": "0xbeef009FF4FB1727297BF2526806F4A73E4b99aD",
+          "name": "Steakhouse Prime frxUSD",
+          "curator": "Steakhouse Financial",
+          "asset": "frxUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 2484.669057407584,
+          "net_apy": 0.006561005378238538,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.00M < $1M minimum"
+          ]
+        },
+        {
+          "address": "0x9a1D6bd5b8642C41F25e0958129B85f8E1176F3e",
+          "name": "Gauntlet USDC Frontier",
+          "curator": "Gauntlet",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 19575045.16256773,
+          "net_apy": 0.05099374958531269,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 29% institutional < 80% minimum (unrecognized: sUSDD, siUSD, AA_FalconXUSDC +2 more)"
+          ]
+        },
+        {
+          "address": "0x54210d3f1A066413891AF9E17210E787d5C6e3f4",
+          "name": "Kabu USDC",
+          "curator": "API3",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 2036010.101889079,
+          "net_apy": 0.03737140629600835,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 25% institutional < 80% minimum (unrecognized: FLUID, ONDO, EIGEN +3 more)"
+          ]
+        },
+        {
+          "address": "0x5f829B1B473cBA86838E1B7BB7E144DbDE228e21",
+          "name": "RockawayX USDC Prime",
+          "curator": "RockawayX",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 63210.13186837044,
+          "net_apy": 0.03775112729473568,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.06M < $1M minimum",
+            "Vault age 85d < 90d minimum"
+          ]
+        },
+        {
+          "address": "0xd65d6E8dbC3Cd3D12418199E6f4014dB3aaa0097",
+          "name": "Figure USDC Main",
+          "curator": "RockawayX",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 3694834.297481506,
+          "net_apy": 0.05127427633821663,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 32d < 90d minimum",
+            "Collateral 75% institutional < 80% minimum (unrecognized: PRIME)"
+          ]
+        },
+        {
+          "address": "0xD1E9242e075Db4bdd3f3c721D7d5fd4180A94A7e",
+          "name": "Re Ecosystem Vault",
+          "curator": "Clearstar Labs AG",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 7125276.284319998,
+          "net_apy": 0.05491750749019265,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: PT-reUSD-25JUN2026, reUSD)"
+          ]
+        },
+        {
+          "address": "0x8C8F6d3c9b647afb942B4Ac0C28818F0674a0F01",
+          "name": "OV USDT",
+          "curator": "OV",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 50278.74107121481,
+          "net_apy": 0.02007199047942327,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.05M < $1M minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Curator AUM $0.17M < $10M minimum",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0xf7c83eD78D1dcAd6736F9f74C8A2293314441De6",
+          "name": "SingularV USDT",
+          "curator": "SingularV",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 90319.68438348576,
+          "net_apy": 0.02735704574201048,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.09M < $1M minimum",
+            "Curator AUM $0.56M < $10M minimum",
+            "Collateral 57% institutional < 80% minimum (unrecognized: XAUt, sUSDD, thBILL)"
+          ]
+        },
+        {
+          "address": "0x29CA54dd3Ae9E43aBb10880f5E08da439Bf25F99",
+          "name": "DeTrade Serenity USDC",
+          "curator": "DeTrade",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 50775.65353175769,
+          "net_apy": 0.04955984531713168,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.05M < $1M minimum",
+            "Curator AUM $0.06M < $10M minimum",
+            "Collateral 75% institutional < 80% minimum (unrecognized: fxSAVE)",
+            "Vault not listed by Morpho governance"
+          ]
+        },
+        {
+          "address": "0x951a9f4A2cE19B9DeA6B37e691d076A345b6c0F8",
+          "name": "Alpha USDC Enhanced V2",
+          "curator": "AlphaPing",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 1290334.91982044,
+          "net_apy": 0.06028425661232941,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: muBOND, savUSD, wbravUSDC)"
+          ]
+        }
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": true,
+      "vault_count": 7,
+      "total_tvl_usd": 1916322388.8724566,
+      "avg_risk_score": 50,
+      "grade_distribution": {
+        "medium-grade": 7
+      },
+      "risk_distribution": {
+        "Moderate Risk": 7
+      },
+      "curators": [
+        "Spark Protocol"
+      ],
+      "vaults": [
+        {
+          "address": "turtle-4a1d35d7-985e-4875-9ae2-a90050b76686",
+          "name": "Spark Savings ETH",
+          "curator": "Spark Protocol",
+          "asset": "WETH",
+          "chain": "Ethereum",
+          "tvl_usd": 125134835.7629403,
+          "net_apy": 0.016,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-c770f6b9-b73c-47ee-a612-13aa06da4478",
+          "name": "Spark Savings USDC",
+          "curator": "Spark Protocol",
+          "asset": "USDC",
+          "chain": "Ethereum",
+          "tvl_usd": 330886541.9914571,
+          "net_apy": 0.036,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-0c559e31-d1d3-4519-b7b9-89e649356aff",
+          "name": "Spark Savings USDT",
+          "curator": "Spark Protocol",
+          "asset": "USDT",
+          "chain": "Ethereum",
+          "tvl_usd": 858121593.722533,
+          "net_apy": 0.025,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-47a33785-d4b2-4fa9-adc7-4e78e4a57615",
+          "name": "Spark Savings USDS",
+          "curator": "Spark Protocol",
+          "asset": "USDS",
+          "chain": "Base",
+          "tvl_usd": 222874496.4059901,
+          "net_apy": 0.036,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-4ced43df-299d-4946-a925-9c69248d66f4",
+          "name": "Spark Savings USDC",
+          "curator": "Spark Protocol",
+          "asset": "USDC",
+          "chain": "Avalanche",
+          "tvl_usd": 18754534.10651754,
+          "net_apy": 0.036,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-4e962429-cdc7-4ee3-9218-677ee4c3ea85",
+          "name": "Spark Savings USDS",
+          "curator": "Spark Protocol",
+          "asset": "USDS",
+          "chain": "Arbitrum",
+          "tvl_usd": 359646310.0997757,
+          "net_apy": 0.036,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-563a3c4f-a90d-444c-865c-6a7a928ffe9a",
+          "name": "Spark Savings PYUSD",
+          "curator": "Spark Protocol",
+          "asset": "PYUSD",
+          "chain": "Ethereum",
+          "tvl_usd": 904076.78324274,
+          "net_apy": 0.036,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "TVL $0.90M < $1M minimum",
+            "Vault age 6d < 90d minimum"
+          ]
+        }
+      ]
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": true,
+      "vault_count": 4,
+      "total_tvl_usd": 6632672270.568393,
+      "avg_risk_score": 50,
+      "grade_distribution": {
+        "medium-grade": 4
+      },
+      "risk_distribution": {
+        "Moderate Risk": 4
+      },
+      "curators": [
+        "Sky"
+      ],
+      "vaults": [
+        {
+          "address": "turtle-0d06353a-771e-4d4c-b124-1f1e717b8480",
+          "name": "Sky Savings USDS",
+          "curator": "Sky",
+          "asset": "USDS",
+          "chain": "Ethereum",
+          "tvl_usd": 5862596814.619761,
+          "net_apy": 0.036,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-fe5ee060-1f31-46f4-b262-bd665e9d296b",
+          "name": "Sky Staked USDS",
+          "curator": "Sky",
+          "asset": "USDS",
+          "chain": "Ethereum",
+          "tvl_usd": 187554649.442866,
+          "net_apy": 0.0662,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-2a363267-3d2d-495e-a98a-0f7794a74b62",
+          "name": "Sky Savings USDS",
+          "curator": "Sky",
+          "asset": "USDS",
+          "chain": "Arbitrum",
+          "tvl_usd": 359646310.0997757,
+          "net_apy": 0.036,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        },
+        {
+          "address": "turtle-f59b0fe7-31e7-47da-87e1-b1504a366c67",
+          "name": "Sky Savings USDS",
+          "curator": "Sky",
+          "asset": "USDS",
+          "chain": "Base",
+          "tvl_usd": 222874496.4059901,
+          "net_apy": 0.036,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 6d < 90d minimum"
+          ]
+        }
+      ]
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": true,
+      "vault_count": 6,
+      "total_tvl_usd": 90841263.28203298,
+      "avg_risk_score": 50,
+      "grade_distribution": {
+        "medium-grade": 2,
+        "low-grade": 4
+      },
+      "risk_distribution": {
+        "Moderate Risk": 6
+      },
+      "curators": [
+        "Hyperithm",
+        "Valos",
+        null
+      ],
+      "vaults": [
+        {
+          "address": "turtle-2af36fdc-839e-4301-9c54-91d0a4ad3ae1",
+          "name": "Hyperithm Euler USDT",
+          "curator": "Hyperithm",
+          "asset": "USDT0",
+          "chain": "Plasma",
+          "tvl_usd": 9010219.92601307,
+          "net_apy": 0.00053,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Collateral 0% institutional < 80% minimum (unrecognized: USDT0)"
+          ]
+        },
+        {
+          "address": "turtle-d58052ce-ff19-4643-a5fe-b4700f737a02",
+          "name": "Valos vUSD/AUSD Market",
+          "curator": "Valos",
+          "asset": "vUSD",
+          "chain": "monad",
+          "tvl_usd": 67848957.00665757,
+          "net_apy": 0.09891899999999999,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 5d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum",
+            "Collateral 0% institutional < 80% minimum (unrecognized: vUSD)"
+          ]
+        },
+        {
+          "address": "turtle-279afd6c-01c0-43e9-9240-59ef7ba38aee",
+          "name": "Valos vUSD/AUSD Market",
+          "curator": "Valos",
+          "asset": "AUSD",
+          "chain": "monad",
+          "tvl_usd": 10869905.28636386,
+          "net_apy": 0.107219,
+          "grade": "medium-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 5d < 90d minimum",
+            "Curator has no legal entity",
+            "Curator foundedYear unknown — cannot verify 6-month minimum"
+          ]
+        },
+        {
+          "address": "turtle-18de414a-99fa-47f2-995e-06958eddb500",
+          "name": "Euler Earn AUSD",
+          "curator": null,
+          "asset": "AUSD",
+          "chain": "Monad",
+          "tvl_usd": 1082443.92062526,
+          "net_apy": 0.034766,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 89d < 90d minimum",
+            "Curator has no legal entity",
+            "No curator assigned",
+            "Curator AUM $0.00M < $10M minimum"
+          ]
+        },
+        {
+          "address": "turtle-336a5554-8996-467c-9812-6cd87044f03d",
+          "name": "Euler Earn USDC",
+          "curator": null,
+          "asset": "USDC",
+          "chain": "Monad",
+          "tvl_usd": 1020435.98387589,
+          "net_apy": 0.053379,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 89d < 90d minimum",
+            "Curator has no legal entity",
+            "No curator assigned",
+            "Curator AUM $0.00M < $10M minimum"
+          ]
+        },
+        {
+          "address": "turtle-659c2b68-550b-4430-9bcd-74b41051a48f",
+          "name": "Euler Earn USDC",
+          "curator": null,
+          "asset": "USDC",
+          "chain": "Arbitrum",
+          "tvl_usd": 1009301.15849735,
+          "net_apy": 0.039157,
+          "grade": "low-grade",
+          "risk": "Moderate Risk",
+          "risk_score": 50,
+          "grade_failures": [
+            "Vault age 89d < 90d minimum",
+            "Curator has no legal entity",
+            "No curator assigned",
+            "Curator AUM $0.00M < $10M minimum"
+          ]
+        }
+      ]
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": false,
+      "vaults": [],
+      "curators": []
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": false,
+      "vaults": [],
+      "curators": []
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "vaults": [],
+      "curators": []
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "curve": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": false,
+      "vaults": [],
+      "curators": []
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": false,
+      "vaults": [],
+      "curators": []
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": false,
+      "vaults": [],
+      "curators": []
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": false,
+      "vaults": [],
+      "curators": []
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    }
+  }
+}

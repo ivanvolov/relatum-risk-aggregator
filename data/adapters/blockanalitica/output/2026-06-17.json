@@ -1,0 +1,288 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-16T22:55:05.889Z",
+    "ba_supported_protocols": [
+      "morpho",
+      "spark",
+      "compound",
+      "sky"
+    ]
+  },
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": true,
+      "stats_url": "https://spark-api.blockanalitica.com/v1/ethereum/markets/stats/?days_ago=1",
+      "stats": {
+        "stats": {
+          "supply": "5094121187.616134684510240741",
+          "real_supply": "5094041772.524668260634712178",
+          "borrow": "1607464911.036306200551815771",
+          "real_borrow": "1607392530.257569545500349618",
+          "tvl": "3486656276.579828483958424970",
+          "supply_change": "5131810406.300964720388744781",
+          "borrow_change": "1618115478.042123314878624882",
+          "real_supply_change": "5131730001.545858505563313762",
+          "real_borrow_change": "1618042168.679742290104297139",
+          "tvl_change": "3513694928.258841405510119899"
+        }
+      },
+      "markets_url": "https://spark-api.blockanalitica.com/v1/ethereum/markets/?days_ago=1",
+      "markets_count": 18
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": true,
+      "stats_url": "https://info-sky.blockanalitica.com/overall/?days_ago=1",
+      "stats": {
+        "date": "2026-06-16",
+        "mkr_price": "1331.328694893614500000",
+        "mkr_price_change": "-5.581620624202800000",
+        "mkr_price_change_percentage": "-0.00417502",
+        "sky_price": "0.057170000000000000",
+        "sky_price_change": "0.000276878000000000",
+        "sky_price_change_percentage": "0.00486663",
+        "usds_price": "0.999824994804986097",
+        "total_dai": "3915017085.027520674509018843",
+        "total_usds": "6365460729.448882026135546139",
+        "total_sky": "23462665147.365966560979671451",
+        "sky_balance": "7710108026.435791977324149696",
+        "usds_balance": "2937088603.929646240619855339",
+        "total_dai_change": "-17700532.902375042443597699",
+        "total_usds_change": "-274668285.207090637704557391",
+        "surplus_buffer": "-13438890.583740007821851156",
+        "total": "10280477814.476402700644564982",
+        "total_pool_usd": "0E-36",
+        "total_pool_usd_change": "0E-36",
+        "treasury_balance_usd": "103778902.682179811438920320",
+        "treasury_balance_usd_change": "2028645.224817283013053311",
+        "treasury_balance_usd_change_percentage": "0.01993749",
+        "total_pool_usd_change_percentage": null,
+        "total_change": "-292368818.109465680148155090",
+        "total_change_percentage": "-0.02765280",
+        "surplus_buffer_change": "-608585.554347733812063877",
+        "surplus_buffer_change_percentage": "0.04743344",
+        "mkr_balance": "321254.501101491332392038",
+        "dai_balance": "2937088603.929646240619855339",
+        "mkr_balance_change": "0E-18",
+        "mkr_balance_change_percentage": "0E-8",
+        "dai_balance_change": "-710260.528085991057251580",
+        "dai_balance_change_percentage": "-0.00024188",
+        "total_collateral": "13913306306.750271933234874322",
+        "total_collateral_change": "-976160067.616681560084138292",
+        "total_collateral_change_percentage": "-0.06556045",
+        "total_revenue": "119026058.186859562139130306",
+        "total_revenue_change": "2939603.315450947951194521",
+        "total_revenue_change_percentage": "0.02532253",
+        "total_dai_change_percentage": "-0.00450084",
+        "total_usds_change_percentage": "-0.04136490",
+        "usds_address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "susds_address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+        "dai_address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "mkr_address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+        "total_mkr_supply": "90313.399629589646023277",
+        "total_circulating_mkr_supply": "90263.840879433900741283",
+        "sdai_address": "0x83f20f44975d03b1b09e64809b757c47f942beea",
+        "spk_address": "0xc20059e0317de91738d13af027dfc4a50781b066",
+        "stusds_address": "0x99cd4ec3f88a45940936f469e4bb72a2a701eeb9",
+        "usdc_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "usdt_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "weth_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "sky_address": "0x56072c95faa701256059aa122697b133aded9279",
+        "total_circulating_sky_supply": "23253982566.068323942992158925"
+      },
+      "extras": {
+        "https://info-sky.blockanalitica.com/save/?days_ago=1": {
+          "date": "2026-06-16",
+          "datetime": "2026-06-16T22:54:52.864861",
+          "total_dsr": "218844835.942558890300308947",
+          "previous_total_dsr": "219205431.070415037284734582",
+          "total_ssr": "5902401520.767719886250967475",
+          "total": "6121246356.710278776551276422",
+          "depositors_dsr": 3647,
+          "depositors_ssr": 5730,
+          "depositors": 9377,
+          "rate": "0.036000000000000000",
+          "dsr_rate": "0.012500000000000000",
+          "ssr_rate": "0.036000000000000000",
+          "utilization_change": "-0.00946528",
+          "utilization": "0.59542430",
+          "total_dsr_change": "-360595.127856146984425635",
+          "total_ssr_change": "-273797830.541103523858687083",
+          "total_change": "-274158425.668959670843112718",
+          "total_change_percentage": "-0.04286803337676562165",
+          "total_ssr_change_percentage": "-0.04433111934495474423",
+          "total_dsr_change_percentage": "-0.00164501000771424109",
+          "utilization_change_percentage": "-0.01564794685337446216"
+        },
+        "https://info-sky.blockanalitica.com/revenue/": {
+          "dsr_cost": "215222015.196919902033788691",
+          "stusds_cost": "11965950.476888016472443453",
+          "stability_fee": "372976589.065025185852396489",
+          "liquidation_income_1month": "266759.277999510611973595",
+          "liquidation_income_3month": "266759.277999510611973595",
+          "liquidation_income_6month": "498376.430477959845712772",
+          "liquidation_income_12month": "1578350.715739404507150591",
+          "dai_expenses_claimed_1month": "161047.710034043301758534",
+          "dai_expenses_claimed_3month": "6690641.710034043301758534",
+          "dai_expenses_claimed_6month": "26310859.262597104215365911",
+          "dai_expenses_claimed_12month": "63133982.461285149259957709",
+          "psm_fees_1month": "0E-18",
+          "psm_fees_3month": "0E-18",
+          "psm_fees_6month": "0E-18",
+          "psm_fees_12month": "0E-18",
+          "total_expenses": "253950532.513944091713266280",
+          "spk_rewards_sales_total": "0E-18",
+          "spk_rewards_sales_24h_total": "0E-18",
+          "sky_rewards_expenses_total": "0E-18",
+          "sky_rewards_expenses_24h_total": "0E-18",
+          "total_expenses_change": "-10344408.608947812258291732",
+          "revenue": "119026056.551081094139130209",
+          "pe": "11.190000000000000000",
+          "pe_change": "-0.220000000000000000",
+          "dsr_cost_change": "-9861229.338577928696218055",
+          "stability_fee_change": "-7403839.409180340307016926",
+          "liquidation_income_12month_change": "0E-18",
+          "dai_expenses_claimed_12month_change": "0E-18",
+          "psm_fees_12month_change": "0E-18",
+          "revenue_change": "2940569.199767471951274807",
+          "dai_expenses_claimed_3month_change": "0E-18",
+          "stusds_cost_change": "-483179.270369883562073677",
+          "sky_rewards_expenses_total_change": "0E-18",
+          "sky_rewards_expenses_total_change_percentage": null,
+          "stusds_cost_change_percentage": "-0.03881229292162456168",
+          "total_expenses_change_percentage": "-0.03913963909032170044",
+          "pe_change_percentage": "-0.01928133216476774759",
+          "dsr_cost_change_percentage": "-0.04381147676686665279",
+          "stability_fee_change_percentage": "-0.01946430166998566207",
+          "liquidation_income_12month_change_percentage": "0E-24",
+          "dai_expenses_claimed_12month_change_percentage": "0E-24",
+          "dai_expenses_claimed_3month_change_percentage": "0E-24",
+          "revenue_change_percentage": "0.02533106649988316994",
+          "psm_fees_12month_change_percentage": null,
+          "spk_rewards_sales_total_change": "0E-18",
+          "spk_rewards_sales_total_change_percentage": null,
+          "spk_rewards_sales_24h_total_change": "0E-18",
+          "sky_rewards_expenses_24h_total_change": "0E-18",
+          "spk_rewards_sales_24h_total_change_percentage": null,
+          "sky_rewards_expenses_24h_total_change_percentage": null
+        }
+      }
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": true,
+      "stats_url": "https://morpho-api.blockanalitica.com/?days_ago=1",
+      "stats": {
+        "total_supply": "2393575355.367556028318664001",
+        "total_borrow": "1969087355.550600265513020945",
+        "total_deposits": "5816322744.075252731632441323",
+        "tvl": "3847235388.524652466119420377",
+        "total_collateral": "3422747388.707696703313777322",
+        "previous_total_supply": "2393575355.367556028318664001",
+        "previous_total_borrow": "1969087355.550600265513020945",
+        "previous_tvl": "3847235388.524652466119420377",
+        "previous_total_collateral": "3422747388.707696703313777322",
+        "previous_total_deposits": "5816322744.075252731632441323"
+      }
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": true,
+      "stats_url": "https://compound-api.blockanalitica.com/v3/",
+      "stats": {
+        "supply": "675651443.728531020379535947",
+        "borrow": "556031755.830422609629778837",
+        "collateral": "864484622.856330779093050616",
+        "supply_change": "2094023.157069845082042570",
+        "supply_change_percentage": "0.00310890073082890100",
+        "borrow_change": "1331853.218631998719227822",
+        "borrow_change_percentage": "0.00240103380649789403",
+        "collateral_change": "-4526747.388476884188949156",
+        "collateral_change_percentage": "-0.00520907728422662888"
+      },
+      "markets_url": "https://compound-api.blockanalitica.com/v3/markets/",
+      "markets_count": 6
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    }
+  }
+}

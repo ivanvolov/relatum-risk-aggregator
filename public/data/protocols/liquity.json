@@ -1,0 +1,261 @@
+{
+  "slug": "liquity",
+  "name": "Liquity",
+  "category": "Lending / CDP",
+  "tvl_usd": 200000000,
+  "family": "Liquity",
+  "versions": [
+    "v1",
+    "v2"
+  ],
+  "description": null,
+  "lastUpdated": "2024-10-23",
+  "governance_summary": "—",
+  "governance_degrade_note": null,
+  "inlineRating": {
+    "defiscan": "Stage 2"
+  },
+  "sidecards": [],
+  "audit_history": [],
+  "incidents": [],
+  "feeds": [
+    {
+      "feedId": "defiscan",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "sourceUrl": "https://defiscan.info/projects/liquity/ethereum",
+      "observedAt": "2024-10-23",
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "Stage",
+          "value": "2",
+          "scale": "Stage 0..2",
+          "label": "DeFiScan Stage classification",
+          "observedAt": "2024-10-23"
+        },
+        {
+          "dim": "Chain",
+          "value": "L",
+          "scale": "L/M/H",
+          "level": "low",
+          "observedAt": "2024-10-23"
+        },
+        {
+          "dim": "Upgradeability",
+          "value": "L",
+          "scale": "L/M/H",
+          "level": "low",
+          "observedAt": "2024-10-23"
+        },
+        {
+          "dim": "Autonomy",
+          "value": "L",
+          "scale": "L/M/H",
+          "level": "low",
+          "observedAt": "2024-10-23"
+        },
+        {
+          "dim": "Exit window",
+          "value": "L",
+          "scale": "L/M/H",
+          "level": "low",
+          "observedAt": "2024-10-23"
+        },
+        {
+          "dim": "Accessibility",
+          "value": "L",
+          "scale": "L/M/H",
+          "level": "low",
+          "observedAt": "2024-10-23"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "curatorwatch",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defipunkd",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "pharos",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisaver",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "credora",
+      "status": "part",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "risklayer",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "pigi",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "xerberus",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "zyfai",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "llamarisk",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "philidor",
+      "status": "none",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "stablewatch",
+      "status": "cov",
+      "adapterStatus": "pending",
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    }
+  ]
+}
