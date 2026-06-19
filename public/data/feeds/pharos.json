@@ -1,0 +1,288 @@
+{
+  "feedId": "pharos",
+  "feedName": "Pharos",
+  "generatedAt": "2026-06-19T11:23:35.728Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/pharos/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": true,
+      "inline": "3 stables",
+      "deeplink": "https://pharos.watch/stablecoin/gho-aave/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "3",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "gho-aave",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/gho-aave/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "sgho-aave",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/sgho-aave/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "stkgho-umbrella-aave",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/stkgho-umbrella-aave/"
+        }
+      ]
+    },
+    "spark": {
+      "covered": true,
+      "inline": "2 stables",
+      "deeplink": "https://pharos.watch/stablecoin/susdt-spark/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "susdt-spark",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/susdt-spark/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "susdc-spark",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/susdc-spark/"
+        }
+      ]
+    },
+    "sky": {
+      "covered": true,
+      "inline": "5 stables",
+      "deeplink": "https://pharos.watch/stablecoin/usds-sky/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "5",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "usds-sky",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/usds-sky/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "susds-sky",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/susds-sky/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "stusds-sky",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/stusds-sky/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "dai-makerdao",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/dai-makerdao/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "sdai-sky",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/sdai-sky/"
+        }
+      ]
+    },
+    "ethena": {
+      "covered": true,
+      "inline": "3 stables",
+      "deeplink": "https://pharos.watch/stablecoin/usde-ethena/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "3",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "usde-ethena",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/usde-ethena/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "susde-ethena",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/susde-ethena/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "usdtb-ethena",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/usdtb-ethena/"
+        }
+      ]
+    },
+    "morpho": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": true,
+      "inline": "2 stables",
+      "deeplink": "https://pharos.watch/stablecoin/crvusd-curve/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "crvusd-curve",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/crvusd-curve/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "scrvusd-curve",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/scrvusd-curve/"
+        }
+      ]
+    },
+    "compound": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": true,
+      "inline": "1 stables",
+      "deeplink": "https://pharos.watch/stablecoin/dusd-fluid/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "dusd-fluid",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/dusd-fluid/"
+        }
+      ]
+    },
+    "liquity": {
+      "covered": true,
+      "inline": "2 stables",
+      "deeplink": "https://pharos.watch/stablecoin/bold-liquity/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "bold-liquity",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/bold-liquity/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "lusd-liquity",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/lusd-liquity/"
+        }
+      ]
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "no Pharos-tracked stablecoins for this protocol",
+      "deeplink": null
+    }
+  }
+}

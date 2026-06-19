@@ -30,7 +30,9 @@ export default function FeedCard({ feedMeta, entry }) {
               {entry.claims.map((c, i) => (
                 <div key={i} className={'claim ' + (c.level || '')}>
                   <div className="dim">{c.dim}</div>
-                  <div className="val">{c.value}</div>
+                  <div className="val">
+                    {c.url ? <a href={c.url} target="_blank" rel="noreferrer">{c.value}</a> : c.value}
+                  </div>
                   <div className="scale">{c.scale || ''}</div>
                 </div>
               ))}

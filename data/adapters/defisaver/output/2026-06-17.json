@@ -136,6 +136,21 @@
       "slug": "cowswap",
       "covered": false,
       "surfaces": []
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "surfaces": []
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "surfaces": []
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "surfaces": []
     }
   }
 }

@@ -1,0 +1,447 @@
+{
+  "feedId": "zyfai",
+  "feedName": "Zyfai Risk",
+  "generatedAt": "2026-06-19T11:23:35.732Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/zyfai/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": true,
+      "inline": "4 pools",
+      "deeplink": "https://zyf.ai",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "4",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$128K",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "26.81%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Aave V3 · cbBTC",
+          "scale": "TVL $16K · APY 0.11%",
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf&marketName=proto_mainnet_v3"
+        },
+        {
+          "dim": "pool",
+          "value": "Aave V3 · cbBTC",
+          "scale": "TVL $2K · APY 1.77%",
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf&marketName=proto_base_v3"
+        },
+        {
+          "dim": "pool",
+          "value": "Aave V3 · WETH",
+          "scale": "TVL $107K · APY 101.11%",
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0x82af49447d8a07e3bd95bd0d56f35241523fbab1&marketName=proto_arbitrum_v3"
+        },
+        {
+          "dim": "pool",
+          "value": "Aave V3 · WBTC",
+          "scale": "TVL $3K · APY 4.26%",
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f&marketName=proto_arbitrum_v3"
+        }
+      ]
+    },
+    "spark": {
+      "covered": true,
+      "inline": "4 pools",
+      "deeplink": "https://zyf.ai",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "4",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$472.9M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "310.35%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Spark · USDC",
+          "scale": "TVL $339.8M · APY 360.00%",
+          "url": "https://app.spark.fi/"
+        },
+        {
+          "dim": "pool",
+          "value": "Spark · WETH",
+          "scale": "TVL $70K · APY 160.00%",
+          "url": "https://app.spark.fi/"
+        },
+        {
+          "dim": "pool",
+          "value": "Spark · USDC",
+          "scale": "TVL $6.7M · APY 360.65%",
+          "url": "https://app.spark.fi"
+        },
+        {
+          "dim": "pool",
+          "value": "Spark · USDC",
+          "scale": "TVL $126.3M · APY 360.76%",
+          "url": "https://app.spark.fi/"
+        }
+      ]
+    },
+    "sky": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "ethena": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "26 pools",
+      "deeplink": "https://zyf.ai",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "26",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$1.09B",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "342.61%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Gauntlet USDC RWA",
+          "scale": "TVL $12.6M · APY 531.88%",
+          "url": "https://app.morpho.org/ethereum/vault/0xA8875aaeBc4f830524e35d57F9772FfAcbdD6C45/gauntlet-usdc-rwa"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Steakhouse High Yield Instant",
+          "scale": "TVL $35.8M · APY 466.16%",
+          "url": "https://app.morpho.org/ethereum/vault/0xbeeff2C5bF38f90e3482a8b19F12E5a6D2FCa757/steakhouse-high-yield-instant"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Re Ecosystem Vault",
+          "scale": "TVL $7.1M · APY 459.64%",
+          "url": "https://app.morpho.org/ethereum/vault/0xD1E9242e075Db4bdd3f3c721D7d5fd4180A94A7e/re-ecosystem-vault"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Steakhouse USDC",
+          "scale": "TVL $97.1M · APY 358.81%",
+          "url": "https://app.morpho.org/ethereum/vault/0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB/steakhouse-usdc"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Avantgarde USDC Conservative",
+          "scale": "TVL $1.3M · APY 337.88%",
+          "url": "https://app.morpho.org/ethereum/vault/0xeBBaE8CfAbB0092d5B32f00EBeE0c8139d24dDcd/avantgarde-usdc-conservative"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Hyperithm cbBTC Apex",
+          "scale": "TVL $1 · APY 222.46%",
+          "url": "https://app.morpho.org/ethereum/vault/0xCdbe4A5B5bAd2BC04492052Df2F881B5727d034d/hyperithm-cbbtc-apex"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "compound": {
+      "covered": true,
+      "inline": "4 pools",
+      "deeplink": "https://zyf.ai",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "4",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$350.4M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "243.14%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Compound V3 · USDC",
+          "scale": "TVL $326.1M · APY 327.80%",
+          "url": "https://app.compound.finance/?market=usdc-mainnet"
+        },
+        {
+          "dim": "pool",
+          "value": "Compound V3 · WBTC",
+          "scale": "TVL $25 · APY 32.81%",
+          "url": "https://app.compound.finance/?market=wbtc-mainnet"
+        },
+        {
+          "dim": "pool",
+          "value": "Compound V3 · USDC",
+          "scale": "TVL $8.7M · APY 323.00%",
+          "url": "https://app.compound.finance/?market=usdc-basemainnet"
+        },
+        {
+          "dim": "pool",
+          "value": "Compound V3 · USDC",
+          "scale": "TVL $15.6M · APY 288.97%",
+          "url": "https://app.compound.finance/?market=usdc-arb"
+        }
+      ]
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": true,
+      "inline": "1 pools",
+      "deeplink": "https://zyf.ai",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$92K",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "150.00%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Fluid · WETH",
+          "scale": "TVL $92K · APY 150.00%",
+          "url": "https://fluid.io/lending/1/ETH"
+        }
+      ]
+    },
+    "liquity": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "yearn": {
+      "covered": true,
+      "inline": "2 pools",
+      "deeplink": "https://zyf.ai",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$942",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "193.75%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Yearn · WETH-2",
+          "scale": "TVL $941 · APY 205.95%",
+          "url": "https://yearn.fi/vaults/1/0xAc37729B76db6438CE62042AE1270ee574CA7571"
+        },
+        {
+          "dim": "pool",
+          "value": "Yearn · WETH",
+          "scale": "TVL $0 · APY 181.56%",
+          "url": "https://yearn.fi/vaults/1/0xd9BA99D93ea94a65b5BC838a0106cA3AbC82Ec4F"
+        }
+      ]
+    },
+    "euler": {
+      "covered": true,
+      "inline": "8 pools",
+      "deeplink": "https://zyf.ai",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "8",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$1.2M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "128.56%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · Euler Prime WETH",
+          "scale": "TVL $672 · APY 148.94%",
+          "url": "https://app.euler.finance/vault/0xD8b27CF359b7D15710a5BE299AF6e7Bf904984C2?network=ethereum"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · Euler Earn USDC",
+          "scale": "TVL $0 · APY 0.00%",
+          "url": "https://app.euler.finance/vault/0xe0a80d35bb6618cba260120b279d357978c42bce?network=ethereum"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · Clearstar ETH Fusion",
+          "scale": "TVL $2K · APY 369.45%",
+          "url": "https://app.euler.finance/lend/0xdc4efb20ce286b421f6361734a2a006a1f24af8d?network=8453"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · AlphaGrowth WETH",
+          "scale": "TVL $244 · APY 113.85%",
+          "url": "https://app.euler.finance/lend/0x859160DB5841E5cfB8D3f144C6b3381A85A4b410?network=8453"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · Euler Base cbBTC",
+          "scale": "TVL $4 · APY 0.17%",
+          "url": "https://app.euler.finance/lend/0x882018411Bc4A020A879CEE183441fC9fa5D7f8B?network=8453"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · K3 Capital USDai Cluster",
+          "scale": "TVL $769K · APY 379.06%",
+          "url": "https://app.euler.finance/vault/0x6aFB8d3F6D4A34e9cB2f217317f4dc8e05Aa673b?network=arbitrumone"
+        }
+      ]
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "no Zyfai-tracked pools for this protocol",
+      "deeplink": null
+    }
+  }
+}

@@ -386,6 +386,24 @@
       "covered": false,
       "post_count": 0,
       "posts": []
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "post_count": 0,
+      "posts": []
     }
   }
 }

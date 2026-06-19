@@ -31,12 +31,12 @@
     {
       "feedId": "blockanalitica",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -59,12 +59,12 @@
     {
       "feedId": "defipunkd",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in DeFiPunk'd assessment set",
       "claims": [],
       "history": [],
       "notable": null,
@@ -73,13 +73,25 @@
     {
       "feedId": "pharos",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "1 stables",
+      "sourceUrl": "https://pharos.watch/stablecoin/dusd-fluid/",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "dusd-fluid",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/dusd-fluid/"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -87,12 +99,12 @@
     {
       "feedId": "defisphere",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -101,13 +113,19 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "lending · dex · leverage",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -115,12 +133,12 @@
     {
       "feedId": "credora",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in public reports index",
       "claims": [],
       "history": [],
       "notable": null,
@@ -129,12 +147,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -143,13 +161,49 @@
     {
       "feedId": "pigi",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "Risk 0.96",
+      "sourceUrl": "https://pigi.finance",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "3",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "0.96",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "5.39%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$181.4M",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Fluid Lite - USD Vault",
+          "scale": "risk 1.083 · yield 8.20%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Fluid (InstaDapp) - GHO Lending",
+          "scale": "risk 0.9 · yield 4.02%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Fluid (InstaDapp) - stETH Vault",
+          "scale": "risk 0.9 · yield 3.95%"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -202,26 +256,53 @@
     {
       "feedId": "zyfai",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "1 pools",
+      "sourceUrl": "https://zyf.ai",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$92K",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "150.00%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Fluid · WETH",
+          "scale": "TVL $92K · APY 150.00%",
+          "url": "https://fluid.io/lending/1/ETH"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "llamarisk",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no LlamaRisk research posts for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -230,12 +311,12 @@
     {
       "feedId": "philidor",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -244,12 +325,12 @@
     {
       "feedId": "stablewatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Stablewatch-tracked yield-bearing assets",
       "claims": [],
       "history": [],
       "notable": null,

@@ -31,12 +31,12 @@
     {
       "feedId": "blockanalitica",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -59,12 +59,12 @@
     {
       "feedId": "defipunkd",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in DeFiPunk'd assessment set",
       "claims": [],
       "history": [],
       "notable": null,
@@ -73,12 +73,12 @@
     {
       "feedId": "pharos",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -87,12 +87,12 @@
     {
       "feedId": "defisphere",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -101,12 +101,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a DeFi Saver execution surface",
       "claims": [],
       "history": [],
       "notable": null,
@@ -114,13 +114,13 @@
     },
     {
       "feedId": "credora",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in public reports index",
       "claims": [],
       "history": [],
       "notable": null,
@@ -129,12 +129,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -143,13 +143,39 @@
     {
       "feedId": "pigi",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "Risk 3.13",
+      "sourceUrl": "https://pigi.finance",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "3.13",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "1.17%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$5K",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Asymmetry - USDaf Yearn Vault",
+          "scale": "risk 3.128 · yield 1.17%"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -171,26 +197,59 @@
     {
       "feedId": "zyfai",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "2 pools",
+      "sourceUrl": "https://zyf.ai",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$942",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "193.75%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Yearn · WETH-2",
+          "scale": "TVL $941 · APY 205.95%",
+          "url": "https://yearn.fi/vaults/1/0xAc37729B76db6438CE62042AE1270ee574CA7571"
+        },
+        {
+          "dim": "pool",
+          "value": "Yearn · WETH",
+          "scale": "TVL $0 · APY 181.56%",
+          "url": "https://yearn.fi/vaults/1/0xd9BA99D93ea94a65b5BC838a0106cA3AbC82Ec4F"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "llamarisk",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no LlamaRisk research posts for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -198,13 +257,13 @@
     },
     {
       "feedId": "philidor",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -213,12 +272,12 @@
     {
       "feedId": "stablewatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Stablewatch-tracked yield-bearing assets",
       "claims": [],
       "history": [],
       "notable": null,

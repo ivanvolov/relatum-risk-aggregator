@@ -229,6 +229,30 @@
       "asset_count": 0,
       "total_tvl": 0,
       "assets": []
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "stablewatch_name": "Morpho Vaults",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "1inch": {
+      "slug": "1inch",
+      "stablewatch_name": "1inch",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
+    },
+    "0x": {
+      "slug": "0x",
+      "stablewatch_name": "0x / Matcha",
+      "covered": false,
+      "asset_count": 0,
+      "total_tvl": 0,
+      "assets": []
     }
   }
 }

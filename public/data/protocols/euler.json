@@ -34,12 +34,12 @@
     {
       "feedId": "blockanalitica",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -83,12 +83,12 @@
     {
       "feedId": "defipunkd",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in DeFiPunk'd assessment set",
       "claims": [],
       "history": [],
       "notable": null,
@@ -97,12 +97,12 @@
     {
       "feedId": "pharos",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -111,12 +111,12 @@
     {
       "feedId": "defisphere",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -125,26 +125,32 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "lending · dex · leverage",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "credora",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in public reports index",
       "claims": [],
       "history": [],
       "notable": null,
@@ -153,12 +159,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -167,12 +173,12 @@
     {
       "feedId": "pigi",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -226,27 +232,101 @@
     {
       "feedId": "zyfai",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "8 pools",
+      "sourceUrl": "https://zyf.ai",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "8",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$1.2M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "128.56%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · Euler Prime WETH",
+          "scale": "TVL $672 · APY 148.94%",
+          "url": "https://app.euler.finance/vault/0xD8b27CF359b7D15710a5BE299AF6e7Bf904984C2?network=ethereum"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · Euler Earn USDC",
+          "scale": "TVL $0 · APY 0.00%",
+          "url": "https://app.euler.finance/vault/0xe0a80d35bb6618cba260120b279d357978c42bce?network=ethereum"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · Clearstar ETH Fusion",
+          "scale": "TVL $2K · APY 369.45%",
+          "url": "https://app.euler.finance/lend/0xdc4efb20ce286b421f6361734a2a006a1f24af8d?network=8453"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · AlphaGrowth WETH",
+          "scale": "TVL $244 · APY 113.85%",
+          "url": "https://app.euler.finance/lend/0x859160DB5841E5cfB8D3f144C6b3381A85A4b410?network=8453"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · Euler Base cbBTC",
+          "scale": "TVL $4 · APY 0.17%",
+          "url": "https://app.euler.finance/lend/0x882018411Bc4A020A879CEE183441fC9fa5D7f8B?network=8453"
+        },
+        {
+          "dim": "pool",
+          "value": "Euler · K3 Capital USDai Cluster",
+          "scale": "TVL $769K · APY 379.06%",
+          "url": "https://app.euler.finance/vault/0x6aFB8d3F6D4A34e9cB2f217317f4dc8e05Aa673b?network=arbitrumone"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "llamarisk",
-      "status": "part",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "1 posts",
+      "sourceUrl": "https://llamarisk.substack.com/p/consequences-of-the-euler-exploit",
+      "observedAt": "2023-04-28",
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "post-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-post",
+          "value": "2023-04-28",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "post",
+          "value": "Consequences of the Euler Exploit for Angle's agEUR and Euro-Denominated Curve Pools",
+          "scale": "2023-04-28",
+          "url": "https://llamarisk.substack.com/p/consequences-of-the-euler-exploit"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -254,12 +334,12 @@
     {
       "feedId": "philidor",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -268,12 +348,12 @@
     {
       "feedId": "stablewatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Stablewatch-tracked yield-bearing assets",
       "claims": [],
       "history": [],
       "notable": null,

@@ -1,0 +1,258 @@
+{
+  "feedId": "credora",
+  "feedName": "Credora",
+  "generatedAt": "2026-06-19T11:23:35.729Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/credora/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": true,
+      "inline": "1 reports",
+      "deeplink": "https://reports.credora.io/steth/REP-STETH-20260317-V1.pdf",
+      "observedAt": "2026-03-17",
+      "claims": [
+        {
+          "dim": "report-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-report",
+          "value": "2026-03-17",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "report",
+          "value": "REP-STETH-20260317-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/steth/REP-STETH-20260317-V1.pdf"
+        }
+      ]
+    },
+    "aave": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "spark": {
+      "covered": true,
+      "inline": "17 reports",
+      "deeplink": "https://reports.credora.io/spark/REP-SPARK-20260608-V1.pdf",
+      "observedAt": "2026-06-08",
+      "claims": [
+        {
+          "dim": "report-count",
+          "value": "17",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-report",
+          "value": "2026-06-08",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260608-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260608-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260601-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260601-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260525-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260525-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260518-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260518-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260511-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260511-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260504-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260504-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260427-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260427-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260420-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260420-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260414-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260414-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260407-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260407-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260330-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260330-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260324-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260324-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260316-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260316-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260310-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260310-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260223-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260223-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260223-V2.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260223-V2.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260203-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260203-V1.pdf"
+        }
+      ]
+    },
+    "sky": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "ethena": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "morpho": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "compound": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "liquity": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "not in public reports index",
+      "deeplink": null
+    }
+  }
+}

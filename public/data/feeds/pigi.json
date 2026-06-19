@@ -1,0 +1,449 @@
+{
+  "feedId": "pigi",
+  "feedName": "pigi.finance",
+  "generatedAt": "2026-06-19T11:23:35.731Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/pigi/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": true,
+      "inline": "Risk 0.20",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "0.20",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "2.45%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$15.46B",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Lido - stETH",
+          "scale": "risk 0.2 · yield 2.45%"
+        }
+      ]
+    },
+    "aave": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "spark": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "sky": {
+      "covered": true,
+      "inline": "Risk 0.52",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "0.52",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "3.56%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$5.88B",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Sky Spark - Savings Account",
+          "scale": "risk 0.52 · yield 3.56%"
+        }
+      ]
+    },
+    "ethena": {
+      "covered": true,
+      "inline": "Risk 0.90",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "0.90",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "3.92%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$1.73B",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Ethena - sUSDe",
+          "scale": "risk 0.9 · yield 3.92%"
+        }
+      ]
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "Risk 1.42",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "6",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "1.42",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "1.60%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$3.4M",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Pocky's High Yield USDC",
+          "scale": "risk 2.94 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Steakhouse High Yield Turbo USDC",
+          "scale": "risk 2 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Gauntlet eUSD Core",
+          "scale": "risk 1.35 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Gauntlet WBTC Vault Bridge",
+          "scale": "risk 0.9978 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Clearstar USDC Reactor",
+          "scale": "risk 0.81 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - MEV Capital WETH Vault",
+          "scale": "risk 0.43 · yield 9.62%"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": true,
+      "inline": "Risk 2.21",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "2.21",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "3.95%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$99.3M",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Ether.fi Liquid - ETH Yield",
+          "scale": "risk 2.21 · yield 3.95%"
+        }
+      ]
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "compound": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": true,
+      "inline": "Risk 3.59",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "3.59",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "0.00%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$0",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Factor — weETH Auto-Compound (Pendle)",
+          "scale": "risk 3.594 · yield 0.00%"
+        }
+      ]
+    },
+    "fluid": {
+      "covered": true,
+      "inline": "Risk 0.96",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "3",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "0.96",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "5.39%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$181.4M",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Fluid Lite - USD Vault",
+          "scale": "risk 1.083 · yield 8.20%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Fluid (InstaDapp) - GHO Lending",
+          "scale": "risk 0.9 · yield 4.02%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Fluid (InstaDapp) - stETH Vault",
+          "scale": "risk 0.9 · yield 3.95%"
+        }
+      ]
+    },
+    "liquity": {
+      "covered": true,
+      "inline": "Risk 2.89",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "3",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "2.89",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "3.51%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$14.8M",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Felix (Liquity v2 fork) - HYPE Stability Pool",
+          "scale": "risk 8 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Liquity v1 - Stability Pool",
+          "scale": "risk 0.5 · yield 7.81%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Liquity v2 - ETH Stability Pool",
+          "scale": "risk 0.18 · yield 2.71%"
+        }
+      ]
+    },
+    "yearn": {
+      "covered": true,
+      "inline": "Risk 3.13",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "3.13",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "1.17%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$5K",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Asymmetry - USDaf Yearn Vault",
+          "scale": "risk 3.128 · yield 1.17%"
+        }
+      ]
+    },
+    "euler": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": true,
+      "inline": "Risk 1.00",
+      "deeplink": "https://pigi.finance",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "1.00",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "0.00%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$0",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Gearbox - USDT0",
+          "scale": "risk 0.9999132 · yield 0.00%"
+        }
+      ]
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "no pigi.finance strategy tracking for this protocol",
+      "deeplink": null
+    }
+  }
+}

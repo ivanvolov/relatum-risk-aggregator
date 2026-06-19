@@ -198,6 +198,21 @@
       "slug": "cowswap",
       "covered": false,
       "reason": "not in public reports index"
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "reason": "not in public reports index"
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "reason": "not in public reports index"
     }
   }
 }

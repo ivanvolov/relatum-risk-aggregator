@@ -6,7 +6,7 @@
   "family": "Sky",
   "versions": null,
   "description": null,
-  "lastUpdated": "2025-06-05",
+  "lastUpdated": "2026-06-08",
   "governance_summary": "2d",
   "governance_degrade_note": null,
   "inlineRating": {},
@@ -62,13 +62,34 @@
     {
       "feedId": "blockanalitica",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "$3.49B",
+      "sourceUrl": "https://spark-api.blockanalitica.com/v1/ethereum/markets/stats/?days_ago=1",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "$5.09B",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "$1.61B",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "$3.49B",
+          "scale": "USD"
+        },
+        {
+          "dim": "utilization",
+          "value": "31.6%",
+          "scale": "%"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -111,13 +132,54 @@
     {
       "feedId": "defipunkd",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "1/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/sparklend",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source, audited, zero post-audit drift",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "red (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Multisig can pause withdrawals indefinitely",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "red (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Oracle failure risks ~100% TVS unmitigated",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -125,13 +187,31 @@
     {
       "feedId": "pharos",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "2 stables",
+      "sourceUrl": "https://pharos.watch/stablecoin/susdt-spark/",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "susdt-spark",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/susdt-spark/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "susdc-spark",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/susdc-spark/"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -139,13 +219,44 @@
     {
       "feedId": "defisphere",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "6 markets",
+      "sourceUrl": "https://defi-sphere.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "6",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$1.42B",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$935.6M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "26.42",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "13.37",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum",
+          "scale": "chains"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -153,13 +264,19 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "lending · dex · leverage",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -167,13 +284,126 @@
     {
       "feedId": "credora",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
+      "adapterStatus": "implemented",
+      "inline": "17 reports",
+      "sourceUrl": "https://reports.credora.io/spark/REP-SPARK-20260608-V1.pdf",
+      "observedAt": "2026-06-08",
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "report-count",
+          "value": "17",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-report",
+          "value": "2026-06-08",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260608-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260608-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260601-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260601-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260525-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260525-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260518-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260518-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260511-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260511-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260504-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260504-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260427-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260427-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260420-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260420-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260414-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260414-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260407-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260407-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260330-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260330-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260324-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260324-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260316-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260316-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260310-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260310-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260223-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260223-V1.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260223-V2.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260223-V2.pdf"
+        },
+        {
+          "dim": "report",
+          "value": "REP-SPARK-20260203-V1.pdf",
+          "scale": "PDF",
+          "url": "https://reports.credora.io/spark/REP-SPARK-20260203-V1.pdf"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -181,12 +411,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -195,12 +425,12 @@
     {
       "feedId": "pigi",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -254,26 +484,71 @@
     {
       "feedId": "zyfai",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "4 pools",
+      "sourceUrl": "https://zyf.ai",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "4",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$472.9M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "310.35%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Spark · USDC",
+          "scale": "TVL $339.8M · APY 360.00%",
+          "url": "https://app.spark.fi/"
+        },
+        {
+          "dim": "pool",
+          "value": "Spark · WETH",
+          "scale": "TVL $70K · APY 160.00%",
+          "url": "https://app.spark.fi/"
+        },
+        {
+          "dim": "pool",
+          "value": "Spark · USDC",
+          "scale": "TVL $6.7M · APY 360.65%",
+          "url": "https://app.spark.fi"
+        },
+        {
+          "dim": "pool",
+          "value": "Spark · USDC",
+          "scale": "TVL $126.3M · APY 360.76%",
+          "url": "https://app.spark.fi/"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "llamarisk",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no LlamaRisk research posts for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -282,12 +557,12 @@
     {
       "feedId": "philidor",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -296,12 +571,12 @@
     {
       "feedId": "stablewatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Stablewatch-tracked yield-bearing assets",
       "claims": [],
       "history": [],
       "notable": null,

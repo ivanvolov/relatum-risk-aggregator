@@ -65,13 +65,29 @@
     {
       "feedId": "blockanalitica",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "—",
+      "sourceUrl": "https://compound-api.blockanalitica.com/v3/",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -92,13 +108,13 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in DeFiPunk'd assessment set",
       "claims": [],
       "history": [],
       "notable": null,
@@ -107,12 +123,12 @@
     {
       "feedId": "pharos",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -121,13 +137,44 @@
     {
       "feedId": "defisphere",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "7 markets",
+      "sourceUrl": "https://defi-sphere.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "7",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$565.3M",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$460.2M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "21.05",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "16.99",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum, arbitrum, base",
+          "scale": "chains"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -135,26 +182,32 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "lending · dex · leverage",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "credora",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in public reports index",
       "claims": [],
       "history": [],
       "notable": null,
@@ -163,12 +216,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -177,12 +230,12 @@
     {
       "feedId": "pigi",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -236,26 +289,71 @@
     {
       "feedId": "zyfai",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "4 pools",
+      "sourceUrl": "https://zyf.ai",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "4",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$350.4M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "243.14%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Compound V3 · USDC",
+          "scale": "TVL $326.1M · APY 327.80%",
+          "url": "https://app.compound.finance/?market=usdc-mainnet"
+        },
+        {
+          "dim": "pool",
+          "value": "Compound V3 · WBTC",
+          "scale": "TVL $25 · APY 32.81%",
+          "url": "https://app.compound.finance/?market=wbtc-mainnet"
+        },
+        {
+          "dim": "pool",
+          "value": "Compound V3 · USDC",
+          "scale": "TVL $8.7M · APY 323.00%",
+          "url": "https://app.compound.finance/?market=usdc-basemainnet"
+        },
+        {
+          "dim": "pool",
+          "value": "Compound V3 · USDC",
+          "scale": "TVL $15.6M · APY 288.97%",
+          "url": "https://app.compound.finance/?market=usdc-arb"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "llamarisk",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no LlamaRisk research posts for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -264,12 +362,12 @@
     {
       "feedId": "philidor",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -278,12 +376,12 @@
     {
       "feedId": "stablewatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Stablewatch-tracked yield-bearing assets",
       "claims": [],
       "history": [],
       "notable": null,

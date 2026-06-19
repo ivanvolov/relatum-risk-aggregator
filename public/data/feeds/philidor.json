@@ -1,0 +1,124 @@
+{
+  "feedId": "philidor",
+  "feedName": "Philidor",
+  "generatedAt": "2026-06-19T11:23:35.733Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/philidor/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "spark": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "sky": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "ethena": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "morpho": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "compound": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "liquity": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "adapter not yet scraped",
+      "deeplink": null
+    }
+  }
+}

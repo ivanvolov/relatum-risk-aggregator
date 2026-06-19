@@ -1,282 +1,143 @@
 {
-  "slug": "curve",
-  "name": "Curve",
-  "category": "DEX / AMM",
-  "tvl_usd": 1430000000,
-  "family": "Curve",
-  "versions": null,
-  "description": null,
-  "lastUpdated": "2025-02-20",
-  "governance_summary": "4/6 · 3d",
-  "governance_degrade_note": null,
-  "inlineRating": {},
-  "sidecards": [],
-  "audit_history": [],
-  "incidents": [],
-  "feeds": [
-    {
-      "feedId": "defiscan",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "Stage 0",
-      "sourceUrl": "https://defiscan.info/projects/curve-finance/ethereum",
-      "observedAt": "1970-01-01",
-      "methodology": null,
-      "coverageReason": null,
+  "feedId": "llamarisk",
+  "feedName": "LlamaRisk",
+  "generatedAt": "2026-06-19T11:23:35.733Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/llamarisk/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": true,
+      "inline": "1 posts",
+      "deeplink": "https://llamarisk.substack.com/p/aave-explainer-series-the-gho-stablecoin",
+      "observedAt": "2024-06-20",
       "claims": [
         {
-          "dim": "stage",
-          "value": "0",
-          "scale": "Stage 0..2"
+          "dim": "post-count",
+          "value": "1",
+          "scale": "count"
         },
         {
-          "dim": "chain",
-          "value": "L",
-          "scale": "L/M/H"
+          "dim": "latest-post",
+          "value": "2024-06-20",
+          "scale": "ISO date"
         },
         {
-          "dim": "upgradeability",
-          "value": "H",
-          "scale": "L/M/H"
-        },
-        {
-          "dim": "autonomy",
-          "value": "L",
-          "scale": "L/M/H"
-        },
-        {
-          "dim": "exit-window",
-          "value": "H",
-          "scale": "L/M/H"
-        },
-        {
-          "dim": "accessibility",
-          "value": "M",
-          "scale": "L/M/H"
+          "dim": "post",
+          "value": "Aave Explainer Series - The GHO Stablecoin",
+          "scale": "2024-06-20",
+          "url": "https://llamarisk.substack.com/p/aave-explainer-series-the-gho-stablecoin"
         }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
+      ]
     },
-    {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
+    "spark": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
     },
-    {
-      "feedId": "curatorwatch",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "not a lending rail curated on CuratorWatch",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defipunkd",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "pharos",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "2 stables",
-      "sourceUrl": "https://pharos.watch/stablecoin/crvusd-curve/",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
+    "sky": {
+      "covered": true,
+      "inline": "2 posts",
+      "deeplink": "https://llamarisk.substack.com/p/asset-risk-assessment-dai-exposure",
+      "observedAt": "2023-09-15",
       "claims": [
         {
-          "dim": "stablecoin-count",
+          "dim": "post-count",
           "value": "2",
           "scale": "count"
         },
         {
-          "dim": "stablecoin",
-          "value": "crvusd-curve",
-          "scale": "pharos page",
-          "url": "https://pharos.watch/stablecoin/crvusd-curve/"
+          "dim": "latest-post",
+          "value": "2023-09-15",
+          "scale": "ISO date"
         },
         {
-          "dim": "stablecoin",
-          "value": "scrvusd-curve",
-          "scale": "pharos page",
-          "url": "https://pharos.watch/stablecoin/scrvusd-curve/"
+          "dim": "post",
+          "value": "Asset Risk Assessment: DAI Exposure to Real World Assets",
+          "scale": "2023-09-15",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-dai-exposure"
+        },
+        {
+          "dim": "post",
+          "value": "MakerDAO Endgame and its Repercussions on Curve Finance",
+          "scale": "2022-10-03",
+          "url": "https://llamarisk.substack.com/p/makerdao-endgame-and-its-repercussions"
         }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
+      ]
     },
-    {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisaver",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "lending · dex · leverage",
-      "sourceUrl": "https://app.defisaver.com",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
+    "ethena": {
+      "covered": true,
+      "inline": "2 posts",
+      "deeplink": "https://llamarisk.substack.com/p/ethena-reserve-fund-drawdown-methodology",
+      "observedAt": "2024-12-18",
       "claims": [
         {
-          "dim": "surfaces",
-          "value": "lending, dex, leverage",
-          "scale": "DeFi Saver flow"
+          "dim": "post-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-post",
+          "value": "2024-12-18",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "post",
+          "value": "Ethena Reserve Fund Drawdown Methodology V2",
+          "scale": "2024-12-18",
+          "url": "https://llamarisk.substack.com/p/ethena-reserve-fund-drawdown-methodology"
+        },
+        {
+          "dim": "post",
+          "value": "Asset Risk Assessment: Ethena USDe",
+          "scale": "2024-05-15",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-ethena-usde"
         }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
+      ]
     },
-    {
-      "feedId": "credora",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "not in public reports index",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "risklayer",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "adapter not yet scraped",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "pigi",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no pigi.finance strategy tracking for this protocol",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "xerberus",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "0.61",
-      "sourceUrl": "https://curve.fi",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
+    "morpho": {
+      "covered": true,
+      "inline": "1 posts",
+      "deeplink": "https://llamarisk.substack.com/p/morpho-vaults-collateral-risk-disclaimer",
+      "observedAt": "2025-01-09",
       "claims": [
         {
-          "dim": "composite",
-          "value": "0.612",
-          "scale": "0..1"
+          "dim": "post-count",
+          "value": "1",
+          "scale": "count"
         },
         {
-          "dim": "security",
-          "value": "0.704",
-          "scale": "0..1"
+          "dim": "latest-post",
+          "value": "2025-01-09",
+          "scale": "ISO date"
         },
         {
-          "dim": "economics",
-          "value": "0.538",
-          "scale": "0..1"
-        },
-        {
-          "dim": "governance",
-          "value": "0.720",
-          "scale": "0..1"
-        },
-        {
-          "dim": "receipt_tokens",
-          "value": "0.900",
-          "scale": "0..1"
-        },
-        {
-          "dim": "cross_chain",
-          "value": "0.200",
-          "scale": "0..1"
+          "dim": "post",
+          "value": "Morpho Vaults Collateral Risk Disclaimer",
+          "scale": "2025-01-09",
+          "url": "https://llamarisk.substack.com/p/morpho-vaults-collateral-risk-disclaimer"
         }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
+      ]
     },
-    {
-      "feedId": "zyfai",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Zyfai-tracked pools for this protocol",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
+    "etherfi": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
     },
-    {
-      "feedId": "llamarisk",
-      "status": "cov",
-      "adapterStatus": "implemented",
+    "uniswap": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": true,
       "inline": "32 posts",
-      "sourceUrl": "https://llamarisk.substack.com/p/curve-market-health-scores-methodology",
+      "deeplink": "https://llamarisk.substack.com/p/curve-market-health-scores-methodology",
       "observedAt": "2025-02-20",
-      "methodology": null,
-      "coverageReason": null,
       "claims": [
         {
           "dim": "post-count",
@@ -480,55 +341,115 @@
           "scale": "2021-12-24",
           "url": "https://llamarisk.substack.com/p/asset-risk-assessment-frax-finance"
         }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
+      ]
     },
-    {
-      "feedId": "philidor",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "adapter not yet scraped",
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
+    "compound": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
     },
-    {
-      "feedId": "stablewatch",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "1 stables · $20.6M",
-      "sourceUrl": "https://stablewatch.io",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
+    "rocketpool": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "liquity": {
+      "covered": true,
+      "inline": "1 posts",
+      "deeplink": "https://llamarisk.substack.com/p/asset-risk-assessment-liquity-chicken",
+      "observedAt": "2022-11-28",
       "claims": [
         {
-          "dim": "asset-count",
+          "dim": "post-count",
           "value": "1",
           "scale": "count"
         },
         {
-          "dim": "total-tvl",
-          "value": "$20.6M",
-          "scale": "USD"
+          "dim": "latest-post",
+          "value": "2022-11-28",
+          "scale": "ISO date"
         },
         {
-          "dim": "asset",
-          "value": "scrvUSD",
-          "scale": "TVL $20.6M",
-          "url": "https://etherscan.io/address/5fd328af-4203-471b-bd16-1705c726d926"
+          "dim": "post",
+          "value": "Asset Risk Assessment: Liquity Chicken Bonds",
+          "scale": "2022-11-28",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-liquity-chicken"
         }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
+      ]
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": true,
+      "inline": "1 posts",
+      "deeplink": "https://llamarisk.substack.com/p/consequences-of-the-euler-exploit",
+      "observedAt": "2023-04-28",
+      "claims": [
+        {
+          "dim": "post-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-post",
+          "value": "2023-04-28",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "post",
+          "value": "Consequences of the Euler Exploit for Angle's agEUR and Euro-Denominated Curve Pools",
+          "scale": "2023-04-28",
+          "url": "https://llamarisk.substack.com/p/consequences-of-the-euler-exploit"
+        }
+      ]
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "no LlamaRisk research posts for this protocol",
+      "deeplink": null
     }
-  ]
+  }
 }

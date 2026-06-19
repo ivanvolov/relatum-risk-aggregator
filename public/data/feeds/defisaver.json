@@ -1,0 +1,196 @@
+{
+  "feedId": "defisaver",
+  "feedName": "DeFi Saver",
+  "generatedAt": "2026-06-19T11:23:35.729Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/defisaver/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "spark": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "sky": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "ethena": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "compound": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "liquity": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": true,
+      "inline": "lending · dex · leverage",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    }
+  }
+}

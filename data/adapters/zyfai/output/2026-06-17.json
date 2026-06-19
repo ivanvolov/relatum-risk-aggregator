@@ -538,6 +538,18 @@
     "cowswap": {
       "slug": "cowswap",
       "covered": false
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false
     }
   }
 }

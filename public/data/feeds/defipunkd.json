@@ -1,0 +1,316 @@
+{
+  "feedId": "defipunkd",
+  "feedName": "DeFiPunk'd",
+  "generatedAt": "2026-06-19T11:23:35.727Z",
+  "snapshotDate": "2026-06-16-api",
+  "sourceFile": "data/adapters/defipunkd/output/2026-06-16-api.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "spark": {
+      "covered": true,
+      "inline": "1/5 green",
+      "deeplink": "https://defipunkd.com/protocol/sparklend",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source, audited, zero post-audit drift",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "red (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Multisig can pause withdrawals indefinitely",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "red (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Oracle failure risks ~100% TVS unmitigated",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        }
+      ]
+    },
+    "sky": {
+      "covered": true,
+      "inline": "2/5 green",
+      "deeplink": "https://defipunkd.com/protocol/sky-lending",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source and top-tier audit coverage",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "SKY governance reaches T1 powers under 48h delay",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Permissionless exits via settlement or vault wipe",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "USDC and RWA custody dominate collateral",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Frontend geo-blocked; contracts permissionless",
+          "scale": "headline"
+        }
+      ]
+    },
+    "ethena": {
+      "covered": true,
+      "inline": "1/5 green",
+      "deeplink": "https://defipunkd.com/protocol/ethena-usde",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source, multi-firm audits, no drift",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Multisig controls mint/redeem with instant pause power",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "red (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Exits gated by whitelist and operator control",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "red (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "CEX custodians control ~100% of TVS",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "red (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Minting gated by whitelist and operator keys",
+          "scale": "headline"
+        }
+      ]
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "2/5 green",
+      "deeplink": "https://defipunkd.com/protocol/morpho-blue",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Immutable, verified, multi-audited by top firms",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "5/9 multisig controls fees, no timelock",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Permissionless immutable exits, no admin pause",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "compound": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "liquity": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "not in DeFiPunk'd assessment set",
+      "deeplink": null
+    }
+  }
+}

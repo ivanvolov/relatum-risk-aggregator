@@ -283,6 +283,21 @@
       "slug": "cowswap",
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol"
     }
   }
 }

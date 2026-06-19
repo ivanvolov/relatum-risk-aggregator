@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T08:47:03.176Z",
+  "generatedAt": "2026-06-19T11:23:35.784Z",
   "feeds": [
     {
       "id": "defiscan",
@@ -17,7 +17,7 @@
       "focus": "Quantitative on-chain risk dashboards for lending markets",
       "methodology": "Per-protocol live dashboards. Surfaces TVL, utilization, LTV, liquidation thresholds, borrower concentration, bad debt. No composite score.",
       "schemaDoc": "data/adapters/blockanalitica/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "curatorwatch",
@@ -35,7 +35,7 @@
       "focus": "Multi-dimension via distributed LLM consensus",
       "methodology": "Control, Exit, Autonomy, Open Access, Verifiability scores produced by distributed LLM consensus across many model providers.",
       "schemaDoc": "data/adapters/defipunkd/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "pharos",
@@ -44,7 +44,7 @@
       "focus": "Stablecoin classification + safety grading + depeg early warning",
       "methodology": "5-dim A+..F grade (peg-stability, liquidity, resilience, decentralization, dependency) plus PSI / DEWS / Mint Authority numeric scores.",
       "schemaDoc": "data/adapters/pharos/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "defisphere",
@@ -53,7 +53,7 @@
       "focus": "Cross-protocol lending market analytics",
       "methodology": "Market-risk and liquidity-risk scores per (protocol, market). Built on Block Analitica infrastructure. Oracle and settlement risk on roadmap.",
       "schemaDoc": "data/adapters/defisphere/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "defisaver",
@@ -62,7 +62,7 @@
       "focus": "Per-position health and liquidation statistics",
       "methodology": "Execution-first. Surfaces health factor, safety ratio, liquidation price per user position. No protocol-level risk score.",
       "schemaDoc": "data/adapters/defisaver/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "credora",
@@ -71,7 +71,7 @@
       "focus": "Institutional-grade credit ratings, A+..D scale",
       "methodology": "100,000 Monte Carlo simulations per market, calibrated against 30+ years of TradFi probability-of-default data. One letter rating per token/vault/lending-pair.",
       "schemaDoc": "data/adapters/credora/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "risklayer",
@@ -80,7 +80,7 @@
       "focus": "Proof-of-Risk consensus on EigenLayer",
       "methodology": "AI-pipeline (discovery → contract → governance → audit → scoring) + Monte Carlo. Validator-attested risk scores 0–100, settled on EigenLayer.",
       "schemaDoc": "data/adapters/risklayer/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "pigi",
@@ -89,7 +89,7 @@
       "focus": "50+ protocol vault analytics, risk-adjusted yield",
       "methodology": "Historical exploits, holder concentration, risk-adjusted APY per vault.",
       "schemaDoc": null,
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "xerberus",
@@ -107,7 +107,7 @@
       "focus": "Real-time pool-level risk scores",
       "methodology": "Risk metrics, TVL, APY, security grades across liquidity pools.",
       "schemaDoc": null,
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "llamarisk",
@@ -116,7 +116,7 @@
       "focus": "Protocol risk research + parameter recommendations",
       "methodology": "Long-form research; collateral and governance risk; parameter proposals to DAOs (Curve, Sky).",
       "schemaDoc": null,
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "philidor",
@@ -125,7 +125,7 @@
       "focus": "Deterministic vault scoring, 700+ vaults",
       "methodology": "Three-vector framework — asset quality, platform code maturity, governance controls. Open methodology.",
       "schemaDoc": "data/adapters/philidor/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "stablewatch",
@@ -134,7 +134,7 @@
       "focus": "Yield-bearing stablecoin landscape (60+ assets)",
       "methodology": "Real-time APY, TVL, yield paid out. Category framework (blue-chip vs hidden-gem) with qualitative per-category risk vectors.",
       "schemaDoc": "data/adapters/stablewatch/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     }
   ],
   "protocols": [
@@ -387,7 +387,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -396,39 +396,39 @@
         "inline": "5 vaults"
       },
       "defipunkd": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1 reports"
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 0.20"
       },
       "xerberus": {
         "status": "cov",
@@ -437,22 +437,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -463,8 +463,8 @@
         "inline": "Stage 0"
       },
       "blockanalitica": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -474,37 +474,37 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
-        "status": "part",
-        "adapterStatus": "pending",
-        "inline": null
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "3 stables"
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "44 markets"
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -514,23 +514,23 @@
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "4 pools"
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1 posts"
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
-        "status": "part",
-        "adapterStatus": "pending",
-        "inline": null
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "2 stables · $141.7M"
       }
     },
     "spark": {
@@ -541,8 +541,8 @@
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "$3.49B"
       },
       "curatorwatch": {
         "status": "cov",
@@ -551,37 +551,37 @@
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1/5 green"
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2 stables"
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "6 markets"
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "17 reports"
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -591,22 +591,22 @@
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "4 pools"
       },
       "llamarisk": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -618,8 +618,8 @@
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "—"
       },
       "curatorwatch": {
         "status": "cov",
@@ -628,38 +628,38 @@
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2/5 green"
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "5 stables"
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 0.52"
       },
       "xerberus": {
         "status": "none",
@@ -668,23 +668,23 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2 posts"
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2 stables · $6.35B"
       }
     },
     "ethena": {
@@ -695,7 +695,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -705,38 +705,38 @@
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1/5 green"
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "3 stables"
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 0.90"
       },
       "xerberus": {
         "status": "cov",
@@ -745,23 +745,23 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2 posts"
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1 stables · $1.73B"
       }
     },
     "morpho": {
@@ -772,8 +772,8 @@
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "—"
       },
       "curatorwatch": {
         "status": "cov",
@@ -782,38 +782,38 @@
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2/5 green"
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "334 markets"
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 1.42"
       },
       "xerberus": {
         "status": "cov",
@@ -822,22 +822,22 @@
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "26 pools"
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1 posts"
       },
       "philidor": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -849,7 +849,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -858,39 +858,39 @@
         "inline": null
       },
       "defipunkd": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 2.21"
       },
       "xerberus": {
         "status": "none",
@@ -899,22 +899,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -926,7 +926,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -935,38 +935,38 @@
         "inline": null
       },
       "defipunkd": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -976,22 +976,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1003,7 +1003,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1012,38 +1012,38 @@
         "inline": null
       },
       "defipunkd": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2 stables"
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -1053,23 +1053,23 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "32 posts"
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1 stables · $20.6M"
       }
     },
     "compound": {
@@ -1080,8 +1080,8 @@
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "—"
       },
       "curatorwatch": {
         "status": "none",
@@ -1089,38 +1089,38 @@
         "inline": null
       },
       "defipunkd": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "7 markets"
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -1130,22 +1130,22 @@
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "4 pools"
       },
       "llamarisk": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1157,7 +1157,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1166,38 +1166,38 @@
         "inline": null
       },
       "defipunkd": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -1207,22 +1207,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1234,7 +1234,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1243,39 +1243,39 @@
         "inline": null
       },
       "defipunkd": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 3.59"
       },
       "xerberus": {
         "status": "cov",
@@ -1284,22 +1284,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1311,7 +1311,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1321,38 +1321,38 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1 stables"
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 0.96"
       },
       "xerberus": {
         "status": "cov",
@@ -1361,22 +1361,22 @@
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1 pools"
       },
       "llamarisk": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1388,7 +1388,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1397,39 +1397,39 @@
         "inline": null
       },
       "defipunkd": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2 stables"
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "6 markets"
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 2.89"
       },
       "xerberus": {
         "status": "none",
@@ -1438,23 +1438,23 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "1 posts"
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2 stables · $13.0M"
       }
     },
     "yearn": {
@@ -1465,7 +1465,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1475,38 +1475,38 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 3.13"
       },
       "xerberus": {
         "status": "none",
@@ -1515,22 +1515,22 @@
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "2 pools"
       },
       "llamarisk": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
-        "status": "cov",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1542,7 +1542,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1552,37 +1552,37 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "lending · dex · leverage"
       },
       "credora": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -1592,22 +1592,22 @@
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "8 pools"
       },
       "llamarisk": {
-        "status": "part",
-        "adapterStatus": "pending",
-        "inline": null
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "1 posts"
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1619,7 +1619,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1629,37 +1629,37 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -1669,22 +1669,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1696,7 +1696,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1706,37 +1706,37 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -1746,22 +1746,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1773,7 +1773,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1782,38 +1782,38 @@
         "inline": null
       },
       "defipunkd": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -1823,22 +1823,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1850,7 +1850,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1860,38 +1860,38 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "Risk 1.00"
       },
       "xerberus": {
         "status": "cov",
@@ -1900,22 +1900,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -1927,7 +1927,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -1937,37 +1937,37 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -1977,22 +1977,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -2004,7 +2004,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -2014,37 +2014,37 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -2054,22 +2054,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     },
@@ -2081,7 +2081,7 @@
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "curatorwatch": {
@@ -2091,37 +2091,37 @@
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "xerberus": {
@@ -2131,22 +2131,22 @@
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "llamarisk": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       }
     }

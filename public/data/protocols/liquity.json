@@ -65,12 +65,12 @@
     {
       "feedId": "blockanalitica",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -92,13 +92,13 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in DeFiPunk'd assessment set",
       "claims": [],
       "history": [],
       "notable": null,
@@ -107,13 +107,31 @@
     {
       "feedId": "pharos",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "2 stables",
+      "sourceUrl": "https://pharos.watch/stablecoin/bold-liquity/",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "bold-liquity",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/bold-liquity/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "lusd-liquity",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/lusd-liquity/"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -121,13 +139,44 @@
     {
       "feedId": "defisphere",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "6 markets",
+      "sourceUrl": "https://defi-sphere.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "6",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$20.0M",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$31.9M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "30.23",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "14.54",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum",
+          "scale": "chains"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -135,26 +184,32 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "lending · dex · leverage",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "credora",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in public reports index",
       "claims": [],
       "history": [],
       "notable": null,
@@ -163,12 +218,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -177,13 +232,49 @@
     {
       "feedId": "pigi",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "Risk 2.89",
+      "sourceUrl": "https://pigi.finance",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "3",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "2.89",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "3.51%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$14.8M",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Felix (Liquity v2 fork) - HYPE Stability Pool",
+          "scale": "risk 8 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Liquity v1 - Stability Pool",
+          "scale": "risk 0.5 · yield 7.81%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Liquity v2 - ETH Stability Pool",
+          "scale": "risk 0.18 · yield 2.71%"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -205,12 +296,12 @@
     {
       "feedId": "zyfai",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Zyfai-tracked pools for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -219,13 +310,30 @@
     {
       "feedId": "llamarisk",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
+      "adapterStatus": "implemented",
+      "inline": "1 posts",
+      "sourceUrl": "https://llamarisk.substack.com/p/asset-risk-assessment-liquity-chicken",
+      "observedAt": "2022-11-28",
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "post-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-post",
+          "value": "2022-11-28",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "post",
+          "value": "Asset Risk Assessment: Liquity Chicken Bonds",
+          "scale": "2022-11-28",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-liquity-chicken"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -233,12 +341,12 @@
     {
       "feedId": "philidor",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -247,13 +355,36 @@
     {
       "feedId": "stablewatch",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "2 stables · $13.0M",
+      "sourceUrl": "https://stablewatch.io",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "asset-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$13.0M",
+          "scale": "USD"
+        },
+        {
+          "dim": "asset",
+          "value": "sBOLD",
+          "scale": "TVL $8.1M",
+          "url": "https://etherscan.io/address/0x50Bd66D59911F5e086Ec87aE43C811e0D059DD11"
+        },
+        {
+          "dim": "asset",
+          "value": "yBOLD",
+          "scale": "TVL $4.9M",
+          "url": "https://etherscan.io/address/0x9F4330700a36B29952869fac9b33f45EEdd8A3d8"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

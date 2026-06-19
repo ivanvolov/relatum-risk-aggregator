@@ -1,0 +1,289 @@
+{
+  "feedId": "defisphere",
+  "feedName": "DeFi Sphere",
+  "generatedAt": "2026-06-19T11:23:35.728Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/defisphere/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": true,
+      "inline": "44 markets",
+      "deeplink": "https://defi-sphere.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "44",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$8.39B",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$5.92B",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "18.08",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "11.93",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum, plasma, arbitrum, base, avalanche",
+          "scale": "chains"
+        }
+      ]
+    },
+    "spark": {
+      "covered": true,
+      "inline": "6 markets",
+      "deeplink": "https://defi-sphere.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "6",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$1.42B",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$935.6M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "26.42",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "13.37",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum",
+          "scale": "chains"
+        }
+      ]
+    },
+    "sky": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "ethena": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "334 markets",
+      "deeplink": "https://defi-sphere.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "334",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$6.66B",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$2.89B",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "2.66",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "18.06",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "base, ethereum, arbitrum",
+          "scale": "chains"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "compound": {
+      "covered": true,
+      "inline": "7 markets",
+      "deeplink": "https://defi-sphere.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "7",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$565.3M",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$460.2M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "21.05",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "16.99",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum, arbitrum, base",
+          "scale": "chains"
+        }
+      ]
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "liquity": {
+      "covered": true,
+      "inline": "6 markets",
+      "deeplink": "https://defi-sphere.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "6",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$20.0M",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$31.9M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "30.23",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "14.54",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum",
+          "scale": "chains"
+        }
+      ]
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "no DeFi Sphere lending market for this protocol",
+      "deeplink": null
+    }
+  }
+}

@@ -57,12 +57,12 @@
     {
       "feedId": "blockanalitica",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -85,13 +85,64 @@
     {
       "feedId": "defipunkd",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "1/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/ethena-usde",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source, multi-firm audits, no drift",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Multisig controls mint/redeem with instant pause power",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "red (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Exits gated by whitelist and operator control",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "red (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "CEX custodians control ~100% of TVS",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "red (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Minting gated by whitelist and operator keys",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -99,13 +150,37 @@
     {
       "feedId": "pharos",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "3 stables",
+      "sourceUrl": "https://pharos.watch/stablecoin/usde-ethena/",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "3",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "usde-ethena",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/usde-ethena/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "susde-ethena",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/susde-ethena/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "usdtb-ethena",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/usdtb-ethena/"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -113,12 +188,12 @@
     {
       "feedId": "defisphere",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -127,12 +202,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a DeFi Saver execution surface",
       "claims": [],
       "history": [],
       "notable": null,
@@ -140,13 +215,13 @@
     },
     {
       "feedId": "credora",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in public reports index",
       "claims": [],
       "history": [],
       "notable": null,
@@ -155,12 +230,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -169,13 +244,39 @@
     {
       "feedId": "pigi",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "Risk 0.90",
+      "sourceUrl": "https://pigi.finance",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "0.90",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "3.92%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$1.73B",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Ethena - sUSDe",
+          "scale": "risk 0.9 · yield 3.92%"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -228,12 +329,12 @@
     {
       "feedId": "zyfai",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Zyfai-tracked pools for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -242,13 +343,36 @@
     {
       "feedId": "llamarisk",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
+      "adapterStatus": "implemented",
+      "inline": "2 posts",
+      "sourceUrl": "https://llamarisk.substack.com/p/ethena-reserve-fund-drawdown-methodology",
+      "observedAt": "2024-12-18",
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "post-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-post",
+          "value": "2024-12-18",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "post",
+          "value": "Ethena Reserve Fund Drawdown Methodology V2",
+          "scale": "2024-12-18",
+          "url": "https://llamarisk.substack.com/p/ethena-reserve-fund-drawdown-methodology"
+        },
+        {
+          "dim": "post",
+          "value": "Asset Risk Assessment: Ethena USDe",
+          "scale": "2024-05-15",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-ethena-usde"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -256,12 +380,12 @@
     {
       "feedId": "philidor",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -270,13 +394,30 @@
     {
       "feedId": "stablewatch",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "1 stables · $1.73B",
+      "sourceUrl": "https://stablewatch.io",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "asset-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$1.73B",
+          "scale": "USD"
+        },
+        {
+          "dim": "asset",
+          "value": "sUSDe",
+          "scale": "TVL $1.73B",
+          "url": "https://etherscan.io/address/66985a81-9c51-46ca-9977-42b4fe7bc6df"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

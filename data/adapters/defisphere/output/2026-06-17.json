@@ -1216,6 +1216,21 @@
       "slug": "cowswap",
       "covered": false,
       "markets": []
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "markets": []
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "markets": []
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "markets": []
     }
   }
 }

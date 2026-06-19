@@ -62,13 +62,29 @@
     {
       "feedId": "blockanalitica",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "—",
+      "sourceUrl": "https://info-sky.blockanalitica.com/overall/?days_ago=1",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -111,13 +127,64 @@
     {
       "feedId": "defipunkd",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "2/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/sky-lending",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source and top-tier audit coverage",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "SKY governance reaches T1 powers under 48h delay",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Permissionless exits via settlement or vault wipe",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "USDC and RWA custody dominate collateral",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Frontend geo-blocked; contracts permissionless",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -125,13 +192,49 @@
     {
       "feedId": "pharos",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "5 stables",
+      "sourceUrl": "https://pharos.watch/stablecoin/usds-sky/",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "5",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "usds-sky",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/usds-sky/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "susds-sky",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/susds-sky/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "stusds-sky",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/stusds-sky/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "dai-makerdao",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/dai-makerdao/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "sdai-sky",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/sdai-sky/"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -139,12 +242,12 @@
     {
       "feedId": "defisphere",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -153,26 +256,32 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "lending · dex · leverage",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "credora",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in public reports index",
       "claims": [],
       "history": [],
       "notable": null,
@@ -181,12 +290,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -195,13 +304,39 @@
     {
       "feedId": "pigi",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "Risk 0.52",
+      "sourceUrl": "https://pigi.finance",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "0.52",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "3.56%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$5.88B",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Sky Spark - Savings Account",
+          "scale": "risk 0.52 · yield 3.56%"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -223,12 +358,12 @@
     {
       "feedId": "zyfai",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Zyfai-tracked pools for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -237,13 +372,36 @@
     {
       "feedId": "llamarisk",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
+      "adapterStatus": "implemented",
+      "inline": "2 posts",
+      "sourceUrl": "https://llamarisk.substack.com/p/asset-risk-assessment-dai-exposure",
+      "observedAt": "2023-09-15",
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "post-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-post",
+          "value": "2023-09-15",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "post",
+          "value": "Asset Risk Assessment: DAI Exposure to Real World Assets",
+          "scale": "2023-09-15",
+          "url": "https://llamarisk.substack.com/p/asset-risk-assessment-dai-exposure"
+        },
+        {
+          "dim": "post",
+          "value": "MakerDAO Endgame and its Repercussions on Curve Finance",
+          "scale": "2022-10-03",
+          "url": "https://llamarisk.substack.com/p/makerdao-endgame-and-its-repercussions"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -251,12 +409,12 @@
     {
       "feedId": "philidor",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -265,13 +423,36 @@
     {
       "feedId": "stablewatch",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "2 stables · $6.35B",
+      "sourceUrl": "https://stablewatch.io",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "asset-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$6.35B",
+          "scale": "USD"
+        },
+        {
+          "dim": "asset",
+          "value": "sDAI",
+          "scale": "TVL $176.9M",
+          "url": "https://etherscan.io/address/0x83F20F44975D03b1b09e64809B757c47f942BEeA"
+        },
+        {
+          "dim": "asset",
+          "value": "sUSDS",
+          "scale": "TVL $6.17B",
+          "url": "https://etherscan.io/address/0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

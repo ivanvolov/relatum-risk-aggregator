@@ -1,0 +1,201 @@
+{
+  "feedId": "blockanalitica",
+  "feedName": "Block Analitica",
+  "generatedAt": "2026-06-19T11:23:35.725Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/blockanalitica/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "spark": {
+      "covered": true,
+      "inline": "$3.49B",
+      "deeplink": "https://spark-api.blockanalitica.com/v1/ethereum/markets/stats/?days_ago=1",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "$5.09B",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "$1.61B",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "$3.49B",
+          "scale": "USD"
+        },
+        {
+          "dim": "utilization",
+          "value": "31.6%",
+          "scale": "%"
+        }
+      ]
+    },
+    "sky": {
+      "covered": true,
+      "inline": "—",
+      "deeplink": "https://info-sky.blockanalitica.com/overall/?days_ago=1",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ]
+    },
+    "ethena": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "—",
+      "deeplink": "https://morpho-api.blockanalitica.com/?days_ago=1",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "compound": {
+      "covered": true,
+      "inline": "—",
+      "deeplink": "https://compound-api.blockanalitica.com/v3/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ]
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "liquity": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "no Block Analitica dashboard for this protocol",
+      "deeplink": null
+    }
+  }
+}

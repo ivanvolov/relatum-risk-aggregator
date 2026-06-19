@@ -209,6 +209,24 @@
       "covered": false,
       "stablecoin_count": 0,
       "stablecoins": []
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
     }
   }
 }

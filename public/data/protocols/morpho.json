@@ -65,13 +65,29 @@
     {
       "feedId": "blockanalitica",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "—",
+      "sourceUrl": "https://morpho-api.blockanalitica.com/?days_ago=1",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -114,13 +130,54 @@
     {
       "feedId": "defipunkd",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "2/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/morpho-blue",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Immutable, verified, multi-audited by top firms",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "5/9 multisig controls fees, no timelock",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Permissionless immutable exits, no admin pause",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -128,12 +185,12 @@
     {
       "feedId": "pharos",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -142,13 +199,44 @@
     {
       "feedId": "defisphere",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "334 markets",
+      "sourceUrl": "https://defi-sphere.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "334",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$6.66B",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$2.89B",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "2.66",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "18.06",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "base, ethereum, arbitrum",
+          "scale": "chains"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -156,26 +244,32 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "lending · dex · leverage",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "credora",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in public reports index",
       "claims": [],
       "history": [],
       "notable": null,
@@ -184,12 +278,12 @@
     {
       "feedId": "risklayer",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -198,13 +292,64 @@
     {
       "feedId": "pigi",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "Risk 1.42",
+      "sourceUrl": "https://pigi.finance",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "strategy-count",
+          "value": "6",
+          "scale": "count"
+        },
+        {
+          "dim": "avg-risk",
+          "value": "1.42",
+          "scale": "pigi risk 0..1"
+        },
+        {
+          "dim": "avg-yield-30d",
+          "value": "1.60%",
+          "scale": "30-day APY"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$3.4M",
+          "scale": "USD"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Pocky's High Yield USDC",
+          "scale": "risk 2.94 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Steakhouse High Yield Turbo USDC",
+          "scale": "risk 2 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Gauntlet eUSD Core",
+          "scale": "risk 1.35 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Gauntlet WBTC Vault Bridge",
+          "scale": "risk 0.9978 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - Clearstar USDC Reactor",
+          "scale": "risk 0.81 · yield 0.00%"
+        },
+        {
+          "dim": "strategy",
+          "value": "Morpho - MEV Capital WETH Vault",
+          "scale": "risk 0.43 · yield 9.62%"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -257,13 +402,70 @@
     {
       "feedId": "zyfai",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "26 pools",
+      "sourceUrl": "https://zyf.ai",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "26",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$1.09B",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "342.61%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Gauntlet USDC RWA",
+          "scale": "TVL $12.6M · APY 531.88%",
+          "url": "https://app.morpho.org/ethereum/vault/0xA8875aaeBc4f830524e35d57F9772FfAcbdD6C45/gauntlet-usdc-rwa"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Steakhouse High Yield Instant",
+          "scale": "TVL $35.8M · APY 466.16%",
+          "url": "https://app.morpho.org/ethereum/vault/0xbeeff2C5bF38f90e3482a8b19F12E5a6D2FCa757/steakhouse-high-yield-instant"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Re Ecosystem Vault",
+          "scale": "TVL $7.1M · APY 459.64%",
+          "url": "https://app.morpho.org/ethereum/vault/0xD1E9242e075Db4bdd3f3c721D7d5fd4180A94A7e/re-ecosystem-vault"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Steakhouse USDC",
+          "scale": "TVL $97.1M · APY 358.81%",
+          "url": "https://app.morpho.org/ethereum/vault/0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB/steakhouse-usdc"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Avantgarde USDC Conservative",
+          "scale": "TVL $1.3M · APY 337.88%",
+          "url": "https://app.morpho.org/ethereum/vault/0xeBBaE8CfAbB0092d5B32f00EBeE0c8139d24dDcd/avantgarde-usdc-conservative"
+        },
+        {
+          "dim": "pool",
+          "value": "Morpho · Hyperithm cbBTC Apex",
+          "scale": "TVL $1 · APY 222.46%",
+          "url": "https://app.morpho.org/ethereum/vault/0xCdbe4A5B5bAd2BC04492052Df2F881B5727d034d/hyperithm-cbbtc-apex"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -271,26 +473,43 @@
     {
       "feedId": "llamarisk",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
+      "adapterStatus": "implemented",
+      "inline": "1 posts",
+      "sourceUrl": "https://llamarisk.substack.com/p/morpho-vaults-collateral-risk-disclaimer",
+      "observedAt": "2025-01-09",
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "post-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-post",
+          "value": "2025-01-09",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "post",
+          "value": "Morpho Vaults Collateral Risk Disclaimer",
+          "scale": "2025-01-09",
+          "url": "https://llamarisk.substack.com/p/morpho-vaults-collateral-risk-disclaimer"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
     },
     {
       "feedId": "philidor",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -299,12 +518,12 @@
     {
       "feedId": "stablewatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no Stablewatch-tracked yield-bearing assets",
       "claims": [],
       "history": [],
       "notable": null,

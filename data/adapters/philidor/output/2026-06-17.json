@@ -1,0 +1,29 @@
+{
+  "fetched_at": "2026-06-17T08:07:37.000Z",
+  "_note": "Adapter not yet scraped against the live Philidor dataset (700+ vaults). All protocols currently marked covered:false pending the next run.",
+  "protocols": {
+    "lido":          { "slug": "lido",          "covered": false, "reason": "adapter not yet scraped" },
+    "aave":          { "slug": "aave",          "covered": false, "reason": "adapter not yet scraped" },
+    "spark":         { "slug": "spark",         "covered": false, "reason": "adapter not yet scraped" },
+    "sky":           { "slug": "sky",           "covered": false, "reason": "adapter not yet scraped" },
+    "ethena":        { "slug": "ethena",        "covered": false, "reason": "adapter not yet scraped" },
+    "morpho":        { "slug": "morpho",        "covered": false, "reason": "adapter not yet scraped" },
+    "etherfi":       { "slug": "etherfi",       "covered": false, "reason": "adapter not yet scraped" },
+    "uniswap":       { "slug": "uniswap",       "covered": false, "reason": "adapter not yet scraped" },
+    "curve":         { "slug": "curve",         "covered": false, "reason": "adapter not yet scraped" },
+    "compound":      { "slug": "compound",      "covered": false, "reason": "adapter not yet scraped" },
+    "rocketpool":    { "slug": "rocketpool",    "covered": false, "reason": "adapter not yet scraped" },
+    "pendle":        { "slug": "pendle",        "covered": false, "reason": "adapter not yet scraped" },
+    "fluid":         { "slug": "fluid",         "covered": false, "reason": "adapter not yet scraped" },
+    "liquity":       { "slug": "liquity",       "covered": false, "reason": "adapter not yet scraped" },
+    "yearn":         { "slug": "yearn",         "covered": false, "reason": "adapter not yet scraped" },
+    "euler":         { "slug": "euler",         "covered": false, "reason": "adapter not yet scraped" },
+    "mellow":        { "slug": "mellow",        "covered": false, "reason": "adapter not yet scraped" },
+    "balancer":      { "slug": "balancer",      "covered": false, "reason": "adapter not yet scraped" },
+    "gearbox":       { "slug": "gearbox",       "covered": false, "reason": "adapter not yet scraped" },
+    "cowswap":       { "slug": "cowswap",       "covered": false, "reason": "adapter not yet scraped" },
+    "morpho-vaults": { "slug": "morpho-vaults", "covered": false, "reason": "adapter not yet scraped" },
+    "1inch":         { "slug": "1inch",         "covered": false, "reason": "adapter not yet scraped" },
+    "0x":            { "slug": "0x",            "covered": false, "reason": "adapter not yet scraped" }
+  }
+}

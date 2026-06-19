@@ -186,13 +186,13 @@
     },
     {
       "feedId": "blockanalitica",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": "https://aave.blockanalitica.com",
       "observedAt": "2026-06-14",
       "methodology": "Live per-market dashboard. Surfaces observed parameters; no composite score. Sampling the wstETH/USDC market for illustration.",
-      "coverageReason": "Live per-market dashboard. No composite score published; observed metrics only.",
+      "coverageReason": "no Block Analitica dashboard for this protocol",
       "claims": [
         {
           "dim": "bad-debt",
@@ -283,12 +283,12 @@
     {
       "feedId": "defipunkd",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "Aave is not currently in DeFi Punk'd's covered set. Coverage candidate flagged.",
+      "coverageReason": "not in DeFiPunk'd assessment set",
       "claims": [],
       "history": [],
       "notable": null,
@@ -296,110 +296,36 @@
     },
     {
       "feedId": "pharos",
-      "status": "part",
-      "adapterStatus": "pending",
-      "inline": null,
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "3 stables",
       "sourceUrl": "https://pharos.watch/stablecoin/gho-aave/",
       "observedAt": "2026-06-14",
       "methodology": "Pharos rates stablecoins, not protocols. GHO (Aave's stablecoin) carries 5-dimension A+..F grading plus 0–100 forward-looking scores. Claims about GHO project onto Aave via the issues/dependsOn link.",
       "coverageReason": "Pharos rates GHO (Aave's stablecoin), not the Aave protocol itself. GHO claims project onto Aave's surface via the issues/dependsOn link.",
       "claims": [
         {
-          "dim": "blacklist-capability",
-          "value": "Upstream (via USDC)",
-          "scale": "blacklist-capability"
+          "dim": "stablecoin-count",
+          "value": "3",
+          "scale": "count"
         },
         {
-          "dim": "chain-deployments",
-          "value": "8",
-          "scale": "count",
-          "label": "Ethereum, Arbitrum, Base, Gnosis, Ink, Avalanche, Mantle, Plasma"
+          "dim": "stablecoin",
+          "value": "gho-aave",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/gho-aave/"
         },
         {
-          "dim": "backing",
-          "value": "Crypto-Collateralized",
-          "scale": "backing"
+          "dim": "stablecoin",
+          "value": "sgho-aave",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/sgho-aave/"
         },
         {
-          "dim": "governance",
-          "value": "CeFi-Dependent",
-          "scale": "governance"
-        },
-        {
-          "dim": "peg",
-          "value": "USD",
-          "scale": "peg"
-        },
-        {
-          "dim": "status",
-          "value": "active",
-          "scale": "status"
-        },
-        {
-          "dim": "collateral-types",
-          "value": "ETH, wBTC, USDC, USDT, others",
-          "scale": "collateral-types"
-        },
-        {
-          "dim": "DEWS",
-          "value": "7",
-          "scale": "0-100",
-          "label": "Depeg Early Warning Score — forward-looking; low = calm"
-        },
-        {
-          "dim": "decentralization",
-          "value": "B",
-          "scale": "A+..F"
-        },
-        {
-          "dim": "dependency-risk",
-          "value": "B",
-          "scale": "A+..F"
-        },
-        {
-          "dim": "liquidity-exit",
-          "value": "A",
-          "scale": "A+..F"
-        },
-        {
-          "dim": "overall-safety",
-          "value": "B",
-          "scale": "A+..F"
-        },
-        {
-          "dim": "peg-stability",
-          "value": "A-",
-          "scale": "A+..F"
-        },
-        {
-          "dim": "liquidity-score",
-          "value": "82",
-          "scale": "0-100"
-        },
-        {
-          "dim": "mint-authority-score",
-          "value": "60",
-          "scale": "0-100"
-        },
-        {
-          "dim": "peg-mechanism",
-          "value": "Overcollateralized minting via Aave V3 facilitator model",
-          "scale": "peg-mechanism"
-        },
-        {
-          "dim": "peg-score",
-          "value": "88",
-          "scale": "0-100"
-        },
-        {
-          "dim": "PSI",
-          "value": "94",
-          "scale": "0-100"
-        },
-        {
-          "dim": "redemption-backstop",
-          "value": "PSM swap + stability modules",
-          "scale": "redemption-backstop"
+          "dim": "stablecoin",
+          "value": "stkgho-umbrella-aave",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/stkgho-umbrella-aave/"
         }
       ],
       "history": [],
@@ -412,42 +338,42 @@
     {
       "feedId": "defisphere",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
+      "adapterStatus": "implemented",
+      "inline": "44 markets",
       "sourceUrl": "https://defi-sphere.com",
       "observedAt": "2026-06-14",
       "methodology": "Cross-protocol lending analytics. Per-market market-risk and liquidity-risk scores on a 0–100 scale. v1 covers Aave + Compound v3 + Morpho + SparkLend + Liquity v2. Oracle/settlement risk on roadmap.",
       "coverageReason": "v1 covers Aave + Compound v3 + Morpho + SparkLend + Liquity v2. Oracle and settlement risk scores are planned, not v1.",
       "claims": [
         {
-          "dim": "liquidity-risk",
-          "value": "22",
-          "scale": "0-100"
+          "dim": "markets",
+          "value": "44",
+          "scale": "count"
         },
         {
-          "dim": "market-risk",
-          "value": "31",
-          "scale": "0-100"
+          "dim": "total-supply",
+          "value": "$8.39B",
+          "scale": "USD"
         },
         {
-          "dim": "methodology-liquidity-risk",
-          "value": "Supplier+borrower concentration, average utilization, relative pool size.",
-          "scale": "methodology-liquidity-risk"
+          "dim": "total-borrow",
+          "value": "$5.92B",
+          "scale": "USD"
         },
         {
-          "dim": "methodology-market-risk",
-          "value": "Measures relative risk of undercollateralization under sudden price shock, factoring onchain liquidity, liquidation bonuses, borrower LTV distribution.",
-          "scale": "methodology-market-risk"
+          "dim": "avg-collateral-risk",
+          "value": "18.08",
+          "scale": "DeFi Sphere risk"
         },
         {
-          "dim": "supply-apy-30d-avg",
-          "value": "4.1%",
-          "scale": "percent"
+          "dim": "avg-liquidity-risk",
+          "value": "11.93",
+          "scale": "DeFi Sphere risk"
         },
         {
-          "dim": "supply-apy-current",
-          "value": "3.8%",
-          "scale": "percent"
+          "dim": "networks",
+          "value": "ethereum, plasma, arbitrum, base, avalanche",
+          "scale": "chains"
         }
       ],
       "history": [],
@@ -460,32 +386,17 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": "https://app.defisaver.com/aave",
+      "adapterStatus": "implemented",
+      "inline": "lending · dex · leverage",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": "2026-06-14",
       "methodology": "Execution-first: no protocol-level risk score. Surfaces protocol parameter mirror plus per-position health metrics and automated repay / boost / close strategies.",
       "coverageReason": "DeFi Saver supports Aave v2/v3 position management and automation but does not publish protocol-level or market-level risk scores. Surfaced data is a parameter mirror plus per-position health metrics.",
       "claims": [
         {
-          "dim": "action",
-          "value": "Collateral swap (1 tx)",
-          "scale": "action"
-        },
-        {
-          "dim": "exposed-metric",
-          "value": "Health Factor (per-position)",
-          "scale": "exposed-metric"
-        },
-        {
-          "dim": "support-status",
-          "value": "Supported on Mainnet, Arbitrum, Optimism, Base, Polygon, Avalanche",
-          "scale": "support-status"
-        },
-        {
-          "dim": "automation-strategy",
-          "value": "Boost: trigger 'ratio > threshold' → leverage up",
-          "scale": "automation-strategy"
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
         }
       ],
       "history": [],
@@ -497,13 +408,13 @@
     },
     {
       "feedId": "credora",
-      "status": "cov",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": "https://credora.network",
       "observedAt": "2026-06-01",
       "methodology": "100,000 Monte Carlo simulations per market, calibrated against 30+ years of TradFi probability-of-default data. Single A+..D scale per token / vault / lending pair.",
-      "coverageReason": "Aave token + multiple lending pairs are in Credora's 177-market universe.",
+      "coverageReason": "not in public reports index",
       "claims": [
         {
           "dim": "token-rating",
@@ -539,13 +450,13 @@
     },
     {
       "feedId": "risklayer",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": "https://risklayer.online",
       "observedAt": null,
       "methodology": "6-stage AI pipeline (discovery → contract → governance → audit → scoring) feeding a Monte Carlo engine. Validator-attested via EigenLayer.",
-      "coverageReason": "RiskLayer's AI pipeline ingests Aave but composite 0–100 not finalized at scan time.",
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -553,13 +464,13 @@
     },
     {
       "feedId": "pigi",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": "https://pigi.finance",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "Partial vault analytics on Aave-built vaults (yield-bearing aTokens), not Aave-the-protocol.",
+      "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "claims": [],
       "history": [],
       "notable": null,
@@ -613,13 +524,58 @@
     {
       "feedId": "zyfai",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "4 pools",
+      "sourceUrl": "https://zyf.ai",
       "observedAt": null,
       "methodology": null,
       "coverageReason": "Zyfai focuses on liquidity-pool risk; Aave reserves are not pools.",
-      "claims": [],
+      "claims": [
+        {
+          "dim": "opportunity-count",
+          "value": "4",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$128K",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-apy",
+          "value": "26.81%",
+          "scale": "APY"
+        },
+        {
+          "dim": "chains",
+          "value": "1, 8453, 42161",
+          "scale": "chain ids"
+        },
+        {
+          "dim": "pool",
+          "value": "Aave V3 · cbBTC",
+          "scale": "TVL $16K · APY 0.11%",
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf&marketName=proto_mainnet_v3"
+        },
+        {
+          "dim": "pool",
+          "value": "Aave V3 · cbBTC",
+          "scale": "TVL $2K · APY 1.77%",
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf&marketName=proto_base_v3"
+        },
+        {
+          "dim": "pool",
+          "value": "Aave V3 · WETH",
+          "scale": "TVL $107K · APY 101.11%",
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0x82af49447d8a07e3bd95bd0d56f35241523fbab1&marketName=proto_arbitrum_v3"
+        },
+        {
+          "dim": "pool",
+          "value": "Aave V3 · WBTC",
+          "scale": "TVL $3K · APY 4.26%",
+          "url": "https://app.aave.com/reserve-overview/?underlyingAsset=0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f&marketName=proto_arbitrum_v3"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -627,13 +583,30 @@
     {
       "feedId": "llamarisk",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": "https://www.llamarisk.com",
-      "observedAt": "2026-06-10",
+      "adapterStatus": "implemented",
+      "inline": "1 posts",
+      "sourceUrl": "https://llamarisk.substack.com/p/aave-explainer-series-the-gho-stablecoin",
+      "observedAt": "2024-06-20",
       "methodology": "Long-form research and parameter recommendations to DAOs. Multiple published Aave research pieces.",
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "post-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "latest-post",
+          "value": "2024-06-20",
+          "scale": "ISO date"
+        },
+        {
+          "dim": "post",
+          "value": "Aave Explainer Series - The GHO Stablecoin",
+          "scale": "2024-06-20",
+          "url": "https://llamarisk.substack.com/p/aave-explainer-series-the-gho-stablecoin"
+        }
+      ],
       "history": [],
       "notable": {
         "label": "Surface type",
@@ -644,12 +617,12 @@
     {
       "feedId": "philidor",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "Philidor rates vaults, not protocols. Aave aTokens are coverage candidates.",
+      "coverageReason": "adapter not yet scraped",
       "claims": [],
       "history": [],
       "notable": null,
@@ -657,18 +630,35 @@
     },
     {
       "feedId": "stablewatch",
-      "status": "part",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": "https://www.stablewatch.io",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "2 stables · $141.7M",
+      "sourceUrl": "https://stablewatch.io",
       "observedAt": null,
       "methodology": null,
       "coverageReason": "Stablewatch tracks yield-bearing stablecoins. Aave's aTokens (aUSDC, aDAI, aGHO) are candidate entries but not currently indexed; GHO via Pharos is the closest indirect surface.",
       "claims": [
         {
-          "dim": "coverage-candidate",
-          "value": "GHO and yield-bearing aTokens (aUSDC, aUSDT) are candidate Stablewatch entries; not currently indexed",
-          "scale": "coverage-candidate"
+          "dim": "asset-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$141.7M",
+          "scale": "USD"
+        },
+        {
+          "dim": "asset",
+          "value": "sGHO",
+          "scale": "TVL $126.9M",
+          "url": "https://etherscan.io/address/0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d"
+        },
+        {
+          "dim": "asset",
+          "value": "sGHO (Umbrella)",
+          "scale": "TVL $14.7M",
+          "url": "https://etherscan.io/address/0x4f827a63755855cdf3e8f3bcd20265c833f15033"
         }
       ],
       "history": [],
