@@ -96,7 +96,7 @@ export default function Summary() {
 
   return (
     <main className="page">
-      <h1>Risk feed coverage for the top 20 Ethereum DeFi protocols</h1>
+      <h1>Risk feed coverage for the top Ethereum DeFi protocols</h1>
       <p className="lede">
         Every cell shows what one risk feed says about one protocol — verbatim, with provenance.
         There is no composite score, no ranking, no synthesis. Coverage gaps are shown explicitly.
@@ -156,11 +156,10 @@ export default function Summary() {
                   <td className="gov-cell">{p.governance_summary || '—'}</td>
                   <td className="tvl">{p._coveredFeeds} feeds</td>
                   {data.feeds.map(f => {
-                    const cell = p._cov[f.id] || { status: 'none', adapterStatus: 'pending' };
-                    const inline = p.inlineRating && p.inlineRating[f.id];
+                    const cell = p._cov[f.id] || { status: 'none', adapterStatus: 'pending', inline: null };
                     return (
                       <td key={f.id} className="cell">
-                        <MatrixCell status={cell.status} adapterStatus={cell.adapterStatus} inline={inline} />
+                        <MatrixCell status={cell.status} adapterStatus={cell.adapterStatus} inline={cell.inline} />
                       </td>
                     );
                   })}

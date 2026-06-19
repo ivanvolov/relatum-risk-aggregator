@@ -9,9 +9,7 @@
   "lastUpdated": "2025-06-05",
   "governance_summary": "2d",
   "governance_degrade_note": null,
-  "inlineRating": {
-    "defiscan": "Stage 0"
-  },
+  "inlineRating": {},
   "sidecards": [],
   "audit_history": [],
   "incidents": [],
@@ -20,52 +18,41 @@
       "feedId": "defiscan",
       "status": "cov",
       "adapterStatus": "implemented",
+      "inline": "Stage 0",
       "sourceUrl": "https://defiscan.info/projects/spark/ethereum",
       "observedAt": "2025-06-05",
       "methodology": null,
       "coverageReason": null,
       "claims": [
         {
-          "dim": "Stage",
+          "dim": "stage",
           "value": "0",
-          "scale": "Stage 0..2",
-          "label": "DeFiScan Stage classification",
-          "observedAt": "2025-06-05"
+          "scale": "Stage 0..2"
         },
         {
-          "dim": "Chain",
+          "dim": "chain",
           "value": "L",
-          "scale": "L/M/H",
-          "level": "low",
-          "observedAt": "2025-06-05"
+          "scale": "L/M/H"
         },
         {
-          "dim": "Upgradeability",
+          "dim": "upgradeability",
           "value": "H",
-          "scale": "L/M/H",
-          "level": "high",
-          "observedAt": "2025-06-05"
+          "scale": "L/M/H"
         },
         {
-          "dim": "Autonomy",
+          "dim": "autonomy",
           "value": "H",
-          "scale": "L/M/H",
-          "level": "high",
-          "observedAt": "2025-06-05"
+          "scale": "L/M/H"
         },
         {
-          "dim": "Exit window",
+          "dim": "exit-window",
           "value": "H",
-          "scale": "L/M/H",
-          "level": "high",
-          "observedAt": "2025-06-05"
+          "scale": "L/M/H"
         },
         {
-          "dim": "Accessibility",
+          "dim": "accessibility",
           "value": "L",
-          "scale": "L/M/H",
-          "level": "low",
-          "observedAt": "2025-06-05"
+          "scale": "L/M/H"
         }
       ],
       "history": [],
@@ -76,6 +63,7 @@
       "feedId": "blockanalitica",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -89,6 +77,7 @@
       "feedId": "curatorwatch",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -102,6 +91,7 @@
       "feedId": "defipunkd",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -115,6 +105,7 @@
       "feedId": "pharos",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -128,6 +119,7 @@
       "feedId": "defisphere",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -141,6 +133,7 @@
       "feedId": "defisaver",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -154,6 +147,7 @@
       "feedId": "credora",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -167,6 +161,7 @@
       "feedId": "risklayer",
       "status": "none",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -180,6 +175,7 @@
       "feedId": "pigi",
       "status": "none",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -193,6 +189,7 @@
       "feedId": "xerberus",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -206,6 +203,7 @@
       "feedId": "zyfai",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -219,6 +217,7 @@
       "feedId": "llamarisk",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -232,6 +231,7 @@
       "feedId": "philidor",
       "status": "none",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -245,6 +245,7 @@
       "feedId": "stablewatch",
       "status": "none",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,

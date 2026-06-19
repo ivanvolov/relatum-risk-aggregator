@@ -465,5 +465,17 @@
   "cowswap": {
     "covered": false,
     "reason": "not in DeFiScan registry"
+  },
+  "morpho-vaults": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "1inch": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
+  },
+  "0x": {
+    "covered": false,
+    "reason": "not in DeFiScan registry"
   }
 }

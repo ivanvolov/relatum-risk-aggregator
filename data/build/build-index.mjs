@@ -8,8 +8,11 @@ import { FEED_REGISTRY, PROTOCOLS } from './lib/registry.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..', '..');
 const ADAPTERS = path.join(ROOT, 'data', 'adapters');
+const FEEDS_DIR = path.join(ROOT, 'public', 'data', 'feeds');
 
-const adapterImplemented = (feedId) => existsSync(path.join(ADAPTERS, feedId, 'to-ttl.mjs'));
+// adapterStatus = implemented when feeds-to-json has produced a normalized JSON for the feed.
+// (Replaces the older existsSync(to-ttl.mjs) check — the JSON is now the source of truth.)
+const adapterImplemented = (feedId) => existsSync(path.join(FEEDS_DIR, `${feedId}.json`));
 
 async function coverageFromJson(slug) {
   const jsonPath = path.join(ROOT, 'public', 'data', 'protocols', `${slug}.json`);
@@ -17,7 +20,7 @@ async function coverageFromJson(slug) {
   const proto = JSON.parse(await readFile(jsonPath, 'utf8'));
   const row = {};
   for (const f of proto.feeds || []) {
-    row[f.feedId] = { status: f.status, adapterStatus: f.adapterStatus };
+    row[f.feedId] = { status: f.status, adapterStatus: f.adapterStatus, inline: f.inline ?? null };
   }
   return row;
 }

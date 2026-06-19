@@ -1,0 +1,504 @@
+{
+  "feedId": "defiscan",
+  "feedName": "DeFiScan",
+  "generatedAt": "2026-06-19T08:08:49.344Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/defiscan/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": true,
+      "inline": "Stage 0",
+      "deeplink": "https://defiscan.info/projects/lido-v2/ethereum",
+      "observedAt": "2025-06-19",
+      "primaryChain": "ethereum",
+      "deploymentName": "Lido V2",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "0",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "aave": {
+      "covered": true,
+      "inline": "Stage 0",
+      "deeplink": "https://defiscan.info/projects/aave/ethereum",
+      "observedAt": "2025-05-07",
+      "primaryChain": "ethereum",
+      "deploymentName": "Aave v3",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "0",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "spark": {
+      "covered": true,
+      "inline": "Stage 0",
+      "deeplink": "https://defiscan.info/projects/spark/ethereum",
+      "observedAt": "2025-06-05",
+      "primaryChain": "ethereum",
+      "deploymentName": "Spark",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "0",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "sky": {
+      "covered": true,
+      "inline": "Stage 0",
+      "deeplink": "https://defiscan.info/projects/sky/ethereum",
+      "observedAt": "2025-05-15",
+      "primaryChain": "ethereum",
+      "deploymentName": "Sky",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "0",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "ethena": {
+      "covered": true,
+      "inline": null,
+      "deeplink": "https://defiscan.info/projects/ethena/usde",
+      "observedAt": "2025-09-04",
+      "primaryChain": "usde",
+      "deploymentName": "Ethena",
+      "claims": [
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "H",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "Stage 1",
+      "deeplink": "https://defiscan.info/projects/morpho/ethereum",
+      "observedAt": "2025-05-21",
+      "primaryChain": "ethereum",
+      "deploymentName": "Morpho",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "1",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "M",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "M",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "M",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": true,
+      "inline": "Stage 2",
+      "deeplink": "https://defiscan.info/projects/uniswap-v3/ethereum",
+      "observedAt": "2025-01-08",
+      "primaryChain": "ethereum",
+      "deploymentName": "Uniswap V3",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "2",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "curve": {
+      "covered": true,
+      "inline": "Stage 0",
+      "deeplink": "https://defiscan.info/projects/curve-finance/ethereum",
+      "observedAt": "1970-01-01",
+      "primaryChain": "ethereum",
+      "deploymentName": "Curve Finance",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "0",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "M",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "compound": {
+      "covered": true,
+      "inline": "Stage 0",
+      "deeplink": "https://defiscan.info/projects/compound-v3/ethereum",
+      "observedAt": "2025-03-18",
+      "primaryChain": "ethereum",
+      "deploymentName": "Compound V3",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "0",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": true,
+      "inline": "Stage 0",
+      "deeplink": "https://defiscan.info/projects/pendle/ethereum",
+      "observedAt": "1970-01-01",
+      "primaryChain": "ethereum",
+      "deploymentName": "Pendle V2",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "0",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "H",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "fluid": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "liquity": {
+      "covered": true,
+      "inline": "Stage 2",
+      "deeplink": "https://defiscan.info/projects/liquity/ethereum",
+      "observedAt": "2024-10-23",
+      "primaryChain": "ethereum",
+      "deploymentName": "Liquity",
+      "claims": [
+        {
+          "dim": "stage",
+          "value": "2",
+          "scale": "Stage 0..2"
+        },
+        {
+          "dim": "chain",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "upgradeability",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "autonomy",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "exit-window",
+          "value": "L",
+          "scale": "L/M/H"
+        },
+        {
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
+        }
+      ]
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "not in DeFiScan registry",
+      "deeplink": null
+    }
+  }
+}

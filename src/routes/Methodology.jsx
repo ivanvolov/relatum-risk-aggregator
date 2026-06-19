@@ -37,7 +37,7 @@ export default function Methodology() {
         <div className="does-card does-do">
           <div className="hd"><span className="mark-check">✓</span><h2>What Relatum does do</h2></div>
           <ul>
-            <li>Aggregates risk feed coverage for the top 20 Ethereum DeFi protocols in one place.</li>
+            <li>Aggregates risk feed coverage for the top Ethereum DeFi protocols in one place.</li>
             <li>Surfaces governance data from onchain sources (Safe API) and verifiable registries.</li>
             <li>Tracks which feeds have — and have not — assessed each protocol.</li>
             <li>Links directly to source assessments. Ratings are shown verbatim, never normalized.</li>
@@ -101,7 +101,7 @@ export default function Methodology() {
 
       <div className="mblock">
         <h2>The feed registry</h2>
-        <p>Full list of all 15 providers Relatum aggregates from. Each feed has its own methodology and focus. <strong>We do not rank them.</strong> Adapter status reflects whether the TTL mapper that consumes the feed's output is wired up; "pending" feeds appear in the matrix with a distinct visual state.</p>
+        <p>Full list of {data ? `all ${data.feeds.length} providers` : 'all providers'} Relatum aggregates from. Each feed has its own methodology and focus. <strong>We do not rank them.</strong> Adapter status reflects whether the TTL mapper that consumes the feed's output is wired up; "pending" feeds appear in the matrix with a distinct visual state.</p>
         {data ? (
           <table className="feeds-table">
             <thead>
@@ -128,7 +128,7 @@ export default function Methodology() {
       </div>
 
       <footer className="page-footer">
-        AGPL-3.0 · Charter: no composite scoring · Schema vocabulary: rfp: · Open data layer: 15 feeds, 20 protocols
+        AGPL-3.0 · Charter: no composite scoring · Schema vocabulary: rfp: · Open data layer: {data ? `${data.feeds.length} feeds, ${data.protocols.length} protocols` : 'feed registry + canonical protocol list'}
       </footer>
     </main>
   );

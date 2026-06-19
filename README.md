@@ -59,8 +59,8 @@ Output lands in `data/index.json` + `data/protocols/<slug>.json`. Commit both.
 | `ontology/protocols/<slug>/<feed>.ttl`   | Per-feed claim files; concatenated by `scripts/combine-ttl.mjs` |
 | `ontology/protocols/<slug>/_prose.yaml`  | Hand-curated overlay — sidecards, audit history, per-feed methodology / notable / findings prose |
 | `feeds/<feed>.yaml`      | Per-feed schema docs — entity model, scales, anchor examples, known gaps |
-| `seeds/protocols.yaml`   | Seed-20 protocol list with DefiLlama TVL (2026-06-14 snapshot) |
-| `seeds/coverage-seed.yaml` | Baseline coverage matrix for protocols without a per-feed TTL; overridden by TTL when present |
+| `build/lib/registry.mjs` | One canonical list — the RFP §3 seed-20 protocols + the 15-entry feed registry. Edit here to add a protocol or feed. |
+| `seeds/coverage-seed.yaml` | Baseline coverage matrix for protocols without a wired-up feed adapter; overridden once `public/data/feeds/<feed>.json` exists |
 | `scripts/`               | Build pipeline (TTL → JSON), see "Regenerate the data layer" above |
 | `adapters-raw/`          | Local scrapers (per-feed `.mjs`) + dated raw scrape outputs — quarantined, not browser-visible |
 

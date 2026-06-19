@@ -137,66 +137,41 @@
       "feedId": "defiscan",
       "status": "cov",
       "adapterStatus": "implemented",
+      "inline": "Stage 0",
       "sourceUrl": "https://defiscan.info/projects/aave/ethereum",
       "observedAt": "2025-05-07",
       "methodology": "Structural review: assigns Stage 0/1/2 maturity, plus 5-axis L/M/H risks (chain, upgradeability, autonomy, exit window, accessibility). Permission scanner emits per-contract / per-function findings.",
       "coverageReason": null,
       "claims": [
         {
-          "dim": "accessibility",
-          "value": "L",
-          "scale": "L/M/H",
-          "level": "low"
-        },
-        {
-          "dim": "autonomy",
-          "value": "H",
-          "scale": "L/M/H",
-          "level": "high"
+          "dim": "stage",
+          "value": "0",
+          "scale": "Stage 0..2"
         },
         {
           "dim": "chain",
           "value": "L",
-          "scale": "L/M/H",
-          "level": "low"
-        },
-        {
-          "dim": "exit-window",
-          "value": "H",
-          "scale": "L/M/H",
-          "level": "high"
+          "scale": "L/M/H"
         },
         {
           "dim": "upgradeability",
           "value": "H",
-          "scale": "L/M/H",
-          "level": "high"
+          "scale": "L/M/H"
         },
         {
-          "dim": "stage-0-req",
-          "value": "Assets are not in custody by a centralized entity — fixed",
-          "scale": "stage-0-req"
+          "dim": "autonomy",
+          "value": "H",
+          "scale": "L/M/H"
         },
         {
-          "dim": "stage-1-req",
-          "value": "Upgrades with potential loss-of-funds not protected with Exit Window >= 7 days OR sufficient Security Council — unfixed",
-          "scale": "stage-1-req"
+          "dim": "exit-window",
+          "value": "H",
+          "scale": "L/M/H"
         },
         {
-          "dim": "stage-2-req",
-          "value": "Loss-of-funds upgrades not protected with onchain governance AND Exit Window >= 30 days — unfixed",
-          "scale": "stage-2-req"
-        },
-        {
-          "dim": "permission-scanner-summary",
-          "value": "51 contracts, 746 functions, 412 msg.sender-gated",
-          "scale": "permission-scanner-summary"
-        },
-        {
-          "dim": "stage",
-          "value": "0",
-          "scale": "Stage 0..2 (incl R, O, I0, I1, I2)",
-          "observedAt": "2025-05-07"
+          "dim": "accessibility",
+          "value": "L",
+          "scale": "L/M/H"
         }
       ],
       "history": [],
@@ -213,6 +188,7 @@
       "feedId": "blockanalitica",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://aave.blockanalitica.com",
       "observedAt": "2026-06-14",
       "methodology": "Live per-market dashboard. Surfaces observed parameters; no composite score. Sampling the wstETH/USDC market for illustration.",
@@ -291,6 +267,7 @@
       "feedId": "curatorwatch",
       "status": "part",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://curatorwatch.com",
       "observedAt": "2026-06-14",
       "methodology": "Curator-level grading (A+..NR). Shows AUM, vaults managed, jurisdiction, recent liquidations per curator.",
@@ -307,6 +284,7 @@
       "feedId": "defipunkd",
       "status": "none",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -320,6 +298,7 @@
       "feedId": "pharos",
       "status": "part",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://pharos.watch/stablecoin/gho-aave/",
       "observedAt": "2026-06-14",
       "methodology": "Pharos rates stablecoins, not protocols. GHO (Aave's stablecoin) carries 5-dimension A+..F grading plus 0–100 forward-looking scores. Claims about GHO project onto Aave via the issues/dependsOn link.",
@@ -434,6 +413,7 @@
       "feedId": "defisphere",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://defi-sphere.com",
       "observedAt": "2026-06-14",
       "methodology": "Cross-protocol lending analytics. Per-market market-risk and liquidity-risk scores on a 0–100 scale. v1 covers Aave + Compound v3 + Morpho + SparkLend + Liquity v2. Oracle/settlement risk on roadmap.",
@@ -481,6 +461,7 @@
       "feedId": "defisaver",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://app.defisaver.com/aave",
       "observedAt": "2026-06-14",
       "methodology": "Execution-first: no protocol-level risk score. Surfaces protocol parameter mirror plus per-position health metrics and automated repay / boost / close strategies.",
@@ -518,6 +499,7 @@
       "feedId": "credora",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://credora.network",
       "observedAt": "2026-06-01",
       "methodology": "100,000 Monte Carlo simulations per market, calibrated against 30+ years of TradFi probability-of-default data. Single A+..D scale per token / vault / lending pair.",
@@ -559,6 +541,7 @@
       "feedId": "risklayer",
       "status": "part",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://risklayer.online",
       "observedAt": null,
       "methodology": "6-stage AI pipeline (discovery → contract → governance → audit → scoring) feeding a Monte Carlo engine. Validator-attested via EigenLayer.",
@@ -572,6 +555,7 @@
       "feedId": "pigi",
       "status": "part",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://pigi.finance",
       "observedAt": null,
       "methodology": null,
@@ -585,6 +569,7 @@
       "feedId": "xerberus",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -598,6 +583,7 @@
       "feedId": "zyfai",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -611,6 +597,7 @@
       "feedId": "llamarisk",
       "status": "cov",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://www.llamarisk.com",
       "observedAt": "2026-06-10",
       "methodology": "Long-form research and parameter recommendations to DAOs. Multiple published Aave research pieces.",
@@ -627,6 +614,7 @@
       "feedId": "philidor",
       "status": "none",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
@@ -640,6 +628,7 @@
       "feedId": "stablewatch",
       "status": "part",
       "adapterStatus": "pending",
+      "inline": null,
       "sourceUrl": "https://www.stablewatch.io",
       "observedAt": null,
       "methodology": null,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T20:23:54.613Z",
+  "generatedAt": "2026-06-19T08:08:49.397Z",
   "feeds": [
     {
       "id": "defiscan",
@@ -145,10 +145,7 @@
       "tvl_usd": 14940071550,
       "family": "Lido",
       "twitter": "LidoFinance",
-      "governance_summary": "5/7 · 3d",
-      "inlineRating": {
-        "defiscan": "Stage 0"
-      }
+      "governance_summary": "5/7 · 3d"
     },
     {
       "slug": "aave",
@@ -162,9 +159,6 @@
       ],
       "twitter": "aave",
       "governance_summary": "5/9 · 2d",
-      "inlineRating": {
-        "defiscan": "Stage 0"
-      },
       "ontologyDir": "aave-v3"
     },
     {
@@ -174,10 +168,7 @@
       "tvl_usd": 7100000000,
       "family": "Sky",
       "twitter": "sparkdotfi",
-      "governance_summary": "2d",
-      "inlineRating": {
-        "defiscan": "Stage 0"
-      }
+      "governance_summary": "2d"
     },
     {
       "slug": "sky",
@@ -186,10 +177,7 @@
       "tvl_usd": 6042932584,
       "family": "Sky",
       "twitter": "SkyEcosystem",
-      "governance_summary": "2d",
-      "inlineRating": {
-        "defiscan": "Stage 0"
-      }
+      "governance_summary": "2d"
     },
     {
       "slug": "ethena",
@@ -198,10 +186,7 @@
       "tvl_usd": 4837397870,
       "family": "Ethena",
       "twitter": "ethena",
-      "governance_summary": "—",
-      "inlineRating": {
-        "defiscan": "Stage 0"
-      }
+      "governance_summary": "—"
     },
     {
       "slug": "morpho",
@@ -214,10 +199,7 @@
         "v2"
       ],
       "twitter": "MorphoLabs",
-      "governance_summary": "5/9 · 7d",
-      "inlineRating": {
-        "defiscan": "Stage 1"
-      }
+      "governance_summary": "5/9 · 7d"
     },
     {
       "slug": "etherfi",
@@ -240,10 +222,7 @@
         "UniswapX"
       ],
       "twitter": "Uniswap",
-      "governance_summary": "2d",
-      "inlineRating": {
-        "defiscan": "Stage 2"
-      }
+      "governance_summary": "2d"
     },
     {
       "slug": "curve",
@@ -252,10 +231,7 @@
       "tvl_usd": 1430000000,
       "family": "Curve",
       "twitter": "CurveFinance",
-      "governance_summary": "4/6 · 3d",
-      "inlineRating": {
-        "defiscan": "Stage 0"
-      }
+      "governance_summary": "4/6 · 3d"
     },
     {
       "slug": "compound",
@@ -268,10 +244,7 @@
         "v3"
       ],
       "twitter": "compoundfinance",
-      "governance_summary": "2d",
-      "inlineRating": {
-        "defiscan": "Stage 0"
-      }
+      "governance_summary": "2d"
     },
     {
       "slug": "rocketpool",
@@ -289,10 +262,7 @@
       "tvl_usd": 800000000,
       "family": "Pendle",
       "twitter": "pendle_fi",
-      "governance_summary": "—",
-      "inlineRating": {
-        "defiscan": "Stage 0"
-      }
+      "governance_summary": "—"
     },
     {
       "slug": "fluid",
@@ -314,10 +284,7 @@
         "v2"
       ],
       "twitter": "LiquityProtocol",
-      "governance_summary": "—",
-      "inlineRating": {
-        "defiscan": "Stage 2"
-      }
+      "governance_summary": "—"
     },
     {
       "slug": "yearn",
@@ -348,6 +315,15 @@
       "tvl_usd": 120000000,
       "family": "Mellow",
       "twitter": "mellowprotocol",
+      "governance_summary": "—"
+    },
+    {
+      "slug": "morpho-vaults",
+      "name": "Morpho Vaults",
+      "category": "Yield / Vault",
+      "tvl_usd": null,
+      "family": "Morpho",
+      "twitter": "MorphoLabs",
       "governance_summary": "—"
     },
     {
@@ -382,1247 +358,1796 @@
       "twitter": "CoWSwap",
       "volume_usd_24h": 280000000,
       "governance_summary": "—"
+    },
+    {
+      "slug": "1inch",
+      "name": "1inch",
+      "category": "Swap Aggregator",
+      "tvl_usd": null,
+      "family": "1inch",
+      "twitter": "1inch",
+      "governance_summary": "—"
+    },
+    {
+      "slug": "0x",
+      "name": "0x / Matcha",
+      "category": "Swap Aggregator",
+      "tvl_usd": null,
+      "family": "0x",
+      "twitter": "0xProject",
+      "governance_summary": "—"
     }
   ],
   "coverage": {
     "lido": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 0"
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "aave": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 0"
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "spark": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 0"
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "sky": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 0"
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "ethena": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "morpho": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 1"
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "etherfi": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "uniswap": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 2"
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "curve": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 0"
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "compound": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 0"
       },
       "blockanalitica": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "rocketpool": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "pendle": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 0"
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "fluid": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "liquity": {
       "defiscan": {
         "status": "cov",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": "Stage 2"
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "yearn": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "euler": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "mellow": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
+      }
+    },
+    "morpho-vaults": {
+      "defiscan": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "curatorwatch": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defipunkd": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "pharos": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defisaver": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "credora": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "risklayer": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "pigi": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "xerberus": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "zyfai": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "llamarisk": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "philidor": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "stablewatch": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "balancer": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "gearbox": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "part",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       }
     },
     "cowswap": {
       "defiscan": {
         "status": "none",
-        "adapterStatus": "implemented"
+        "adapterStatus": "implemented",
+        "inline": null
       },
       "blockanalitica": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defipunkd": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pharos": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisphere": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "defisaver": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "credora": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "risklayer": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "pigi": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "zyfai": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "llamarisk": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "philidor": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
       },
       "stablewatch": {
         "status": "none",
-        "adapterStatus": "pending"
+        "adapterStatus": "pending",
+        "inline": null
+      }
+    },
+    "1inch": {
+      "defiscan": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "curatorwatch": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defipunkd": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "pharos": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defisaver": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "credora": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "risklayer": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "pigi": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "xerberus": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "zyfai": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "llamarisk": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "philidor": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "stablewatch": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      }
+    },
+    "0x": {
+      "defiscan": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "curatorwatch": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defipunkd": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "pharos": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "defisaver": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "credora": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "risklayer": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "pigi": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "xerberus": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "zyfai": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "llamarisk": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "philidor": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
+      },
+      "stablewatch": {
+        "status": "none",
+        "adapterStatus": "pending",
+        "inline": null
       }
     }
   }

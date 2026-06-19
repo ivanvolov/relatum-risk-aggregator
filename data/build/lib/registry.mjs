@@ -37,27 +37,34 @@ export const FEED_REGISTRY = [
     methodology: 'Real-time APY, TVL, yield paid out. Category framework (blue-chip vs hidden-gem) with qualitative per-category risk vectors.' },
 ];
 
+// Canonical protocol list: RFP §3 seed-20 plus three top-TVL incumbents (sky, ethena, etherfi)
+// that the RFP didn't enumerate but DefiLlama still ranks in the real top-20 by funds at risk.
+// tvl_usd left as-is until the DefiLlama adapter lands; new entries without numbers are null.
+// inlineRating: { defiscan: ... } was removed — matrix Stage cells now read from public/data/feeds/defiscan.json.
 export const PROTOCOLS = [
-  { slug: 'lido',       name: 'Lido',           category: 'Liquid Staking',   tvl_usd: 14940071550, family: 'Lido',              twitter: 'LidoFinance',     governance_summary: '5/7 · 3d', inlineRating: { defiscan: 'Stage 0' } },
-  { slug: 'aave',       name: 'Aave',           category: 'Lending',          tvl_usd: 10130542675, family: 'Aave',              versions: ['v3','v4'],     twitter: 'aave',           governance_summary: '5/9 · 2d', inlineRating: { defiscan: 'Stage 0' }, ontologyDir: 'aave-v3' },
-  { slug: 'spark',      name: 'Spark',          category: 'Lending',          tvl_usd:  7100000000, family: 'Sky',                                            twitter: 'sparkdotfi',     governance_summary: '2d',       inlineRating: { defiscan: 'Stage 0' } },
-  { slug: 'sky',        name: 'Sky (MakerDAO)', category: 'CDP / Stablecoin', tvl_usd:  6042932584, family: 'Sky',                                            twitter: 'SkyEcosystem',   governance_summary: '2d',       inlineRating: { defiscan: 'Stage 0' } },
-  { slug: 'ethena',     name: 'Ethena',         category: 'Synthetic Yield',  tvl_usd:  4837397870, family: 'Ethena',                                         twitter: 'ethena',         governance_summary: '—',        inlineRating: { defiscan: 'Stage 0' } },
-  { slug: 'morpho',     name: 'Morpho',         category: 'Lending',          tvl_usd:  3476196272, family: 'Morpho',            versions: ['v1','v2'],     twitter: 'MorphoLabs',     governance_summary: '5/9 · 7d', inlineRating: { defiscan: 'Stage 1' } },
-  { slug: 'etherfi',    name: 'ether.fi',       category: 'Liquid Restaking', tvl_usd:  2970000000, family: 'ether.fi',                                       twitter: 'ether_fi',       governance_summary: '—' },
-  { slug: 'uniswap',    name: 'Uniswap',        category: 'DEX / AMM',        tvl_usd:  1910000000, family: 'Uniswap',           versions: ['v3','v4','UniswapX'], twitter: 'Uniswap',  governance_summary: '2d',       inlineRating: { defiscan: 'Stage 2' } },
-  { slug: 'curve',      name: 'Curve',          category: 'DEX / AMM',        tvl_usd:  1430000000, family: 'Curve',                                          twitter: 'CurveFinance',   governance_summary: '4/6 · 3d', inlineRating: { defiscan: 'Stage 0' } },
-  { slug: 'compound',   name: 'Compound',       category: 'Lending',          tvl_usd:  1050000000, family: 'Compound',          versions: ['v2','v3'],     twitter: 'compoundfinance',governance_summary: '2d',       inlineRating: { defiscan: 'Stage 0' } },
-  { slug: 'rocketpool', name: 'Rocket Pool',    category: 'Liquid Staking',   tvl_usd:   900000000, family: 'Rocket Pool',                                    twitter: 'Rocket_Pool',    governance_summary: '—' },
-  { slug: 'pendle',     name: 'Pendle',         category: 'Yield / Vault',    tvl_usd:   800000000, family: 'Pendle',                                         twitter: 'pendle_fi',      governance_summary: '—',        inlineRating: { defiscan: 'Stage 0' } },
-  { slug: 'fluid',      name: 'Fluid',          category: 'Lending',          tvl_usd:   580000000, family: 'Fluid (Instadapp)',                              twitter: '0xfluid',        governance_summary: '—' },
-  { slug: 'liquity',    name: 'Liquity',        category: 'Lending / CDP',    tvl_usd:   200000000, family: 'Liquity',           versions: ['v1','v2'],     twitter: 'LiquityProtocol',governance_summary: '—',        inlineRating: { defiscan: 'Stage 2' } },
-  { slug: 'yearn',      name: 'Yearn',          category: 'Yield / Vault',    tvl_usd:   160000000, family: 'Yearn',                                          twitter: 'yearnfi',        governance_summary: '—' },
-  { slug: 'euler',      name: 'Euler',          category: 'Lending',          tvl_usd:   140000000, family: 'Euler',             versions: ['v1','v2'],     twitter: 'eulerfinance',   governance_summary: '—' },
-  { slug: 'mellow',     name: 'Mellow',         category: 'Yield / Vault',    tvl_usd:   120000000, family: 'Mellow',                                         twitter: 'mellowprotocol', governance_summary: '—' },
-  { slug: 'balancer',   name: 'Balancer',       category: 'DEX / AMM',        tvl_usd:    90000000, family: 'Balancer',          versions: ['v2','v3','CoW AMM'], twitter: 'Balancer',  governance_summary: '—' },
-  { slug: 'gearbox',    name: 'Gearbox',        category: 'Lending',          tvl_usd:    14000000, family: 'Gearbox',                                        twitter: 'GearboxProtocol',governance_summary: '—' },
-  { slug: 'cowswap',    name: 'CoW Swap',       category: 'Swap Aggregator',  tvl_usd:           0, family: 'CoW',                                            twitter: 'CoWSwap',        volume_usd_24h: 280000000, governance_summary: '—' },
+  { slug: 'lido',          name: 'Lido',           category: 'Liquid Staking',   tvl_usd: 14940071550, family: 'Lido',              twitter: 'LidoFinance',      governance_summary: '5/7 · 3d' },
+  { slug: 'aave',          name: 'Aave',           category: 'Lending',          tvl_usd: 10130542675, family: 'Aave',              versions: ['v3','v4'],         twitter: 'aave',           governance_summary: '5/9 · 2d', ontologyDir: 'aave-v3' },
+  { slug: 'spark',         name: 'Spark',          category: 'Lending',          tvl_usd:  7100000000, family: 'Sky',                                            twitter: 'sparkdotfi',       governance_summary: '2d' },
+  { slug: 'sky',           name: 'Sky (MakerDAO)', category: 'CDP / Stablecoin', tvl_usd:  6042932584, family: 'Sky',                                            twitter: 'SkyEcosystem',     governance_summary: '2d' },
+  { slug: 'ethena',        name: 'Ethena',         category: 'Synthetic Yield',  tvl_usd:  4837397870, family: 'Ethena',                                         twitter: 'ethena',           governance_summary: '—' },
+  { slug: 'morpho',        name: 'Morpho',         category: 'Lending',          tvl_usd:  3476196272, family: 'Morpho',            versions: ['v1','v2'],         twitter: 'MorphoLabs',     governance_summary: '5/9 · 7d' },
+  { slug: 'etherfi',       name: 'ether.fi',       category: 'Liquid Restaking', tvl_usd:  2970000000, family: 'ether.fi',                                       twitter: 'ether_fi',         governance_summary: '—' },
+  { slug: 'uniswap',       name: 'Uniswap',        category: 'DEX / AMM',        tvl_usd:  1910000000, family: 'Uniswap',           versions: ['v3','v4','UniswapX'], twitter: 'Uniswap',     governance_summary: '2d' },
+  { slug: 'curve',         name: 'Curve',          category: 'DEX / AMM',        tvl_usd:  1430000000, family: 'Curve',                                          twitter: 'CurveFinance',     governance_summary: '4/6 · 3d' },
+  { slug: 'compound',      name: 'Compound',       category: 'Lending',          tvl_usd:  1050000000, family: 'Compound',          versions: ['v2','v3'],         twitter: 'compoundfinance',governance_summary: '2d' },
+  { slug: 'rocketpool',    name: 'Rocket Pool',    category: 'Liquid Staking',   tvl_usd:   900000000, family: 'Rocket Pool',                                    twitter: 'Rocket_Pool',      governance_summary: '—' },
+  { slug: 'pendle',        name: 'Pendle',         category: 'Yield / Vault',    tvl_usd:   800000000, family: 'Pendle',                                         twitter: 'pendle_fi',        governance_summary: '—' },
+  { slug: 'fluid',         name: 'Fluid',          category: 'Lending',          tvl_usd:   580000000, family: 'Fluid (Instadapp)',                              twitter: '0xfluid',          governance_summary: '—' },
+  { slug: 'liquity',       name: 'Liquity',        category: 'Lending / CDP',    tvl_usd:   200000000, family: 'Liquity',           versions: ['v1','v2'],         twitter: 'LiquityProtocol',governance_summary: '—' },
+  { slug: 'yearn',         name: 'Yearn',          category: 'Yield / Vault',    tvl_usd:   160000000, family: 'Yearn',                                          twitter: 'yearnfi',          governance_summary: '—' },
+  { slug: 'euler',         name: 'Euler',          category: 'Lending',          tvl_usd:   140000000, family: 'Euler',             versions: ['v1','v2'],         twitter: 'eulerfinance',   governance_summary: '—' },
+  { slug: 'mellow',        name: 'Mellow',         category: 'Yield / Vault',    tvl_usd:   120000000, family: 'Mellow',                                         twitter: 'mellowprotocol',   governance_summary: '—' },
+  { slug: 'morpho-vaults', name: 'Morpho Vaults',  category: 'Yield / Vault',    tvl_usd:          null, family: 'Morpho',                                       twitter: 'MorphoLabs',       governance_summary: '—' },
+  { slug: 'balancer',      name: 'Balancer',       category: 'DEX / AMM',        tvl_usd:    90000000, family: 'Balancer',          versions: ['v2','v3','CoW AMM'], twitter: 'Balancer',     governance_summary: '—' },
+  { slug: 'gearbox',       name: 'Gearbox',        category: 'Lending',          tvl_usd:    14000000, family: 'Gearbox',                                        twitter: 'GearboxProtocol',governance_summary: '—' },
+  { slug: 'cowswap',       name: 'CoW Swap',       category: 'Swap Aggregator',  tvl_usd:           0, family: 'CoW',                                            twitter: 'CoWSwap',          volume_usd_24h: 280000000, governance_summary: '—' },
+  { slug: '1inch',         name: '1inch',          category: 'Swap Aggregator',  tvl_usd:          null, family: '1inch',                                        twitter: '1inch',            governance_summary: '—' },
+  { slug: '0x',            name: '0x / Matcha',    category: 'Swap Aggregator',  tvl_usd:          null, family: '0x',                                           twitter: '0xProject',        governance_summary: '—' },
 ];
 
 export const slugToOntologyDir = (slug) => {

@@ -20,6 +20,23 @@ aave:
   philidor: none
   stablewatch: cov
 
+spark:
+  defiscan: cov
+  blockanalitica: cov
+  curatorwatch: cov
+  defipunkd: cov
+  pharos: cov
+  defisphere: cov
+  defisaver: cov
+  credora: cov
+  risklayer: none
+  pigi: none
+  xerberus: cov
+  zyfai: cov
+  llamarisk: cov
+  philidor: none
+  stablewatch: none
+
 sky:
   defiscan: cov
   blockanalitica: cov
@@ -37,20 +54,37 @@ sky:
   philidor: none
   stablewatch: cov
 
-spark:
+ethena:
   defiscan: cov
-  blockanalitica: cov
-  curatorwatch: cov
+  blockanalitica: none
+  curatorwatch: none
   defipunkd: cov
   pharos: cov
-  defisphere: cov
-  defisaver: cov
+  defisphere: none
+  defisaver: none
   credora: cov
   risklayer: none
-  pigi: none
+  pigi: cov
   xerberus: cov
-  zyfai: cov
+  zyfai: none
   llamarisk: cov
+  philidor: none
+  stablewatch: cov
+
+etherfi:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: cov
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: part
+  risklayer: none
+  pigi: cov
+  xerberus: none
+  zyfai: none
+  llamarisk: part
   philidor: none
   stablewatch: none
 
@@ -275,40 +309,6 @@ mellow:
   philidor: none
   stablewatch: none
 
-ethena:
-  defiscan: cov
-  blockanalitica: none
-  curatorwatch: none
-  defipunkd: cov
-  pharos: cov
-  defisphere: none
-  defisaver: none
-  credora: cov
-  risklayer: none
-  pigi: cov
-  xerberus: cov
-  zyfai: none
-  llamarisk: cov
-  philidor: none
-  stablewatch: cov
-
-etherfi:
-  defiscan: none
-  blockanalitica: none
-  curatorwatch: none
-  defipunkd: cov
-  pharos: none
-  defisphere: none
-  defisaver: none
-  credora: part
-  risklayer: none
-  pigi: cov
-  xerberus: none
-  zyfai: none
-  llamarisk: part
-  philidor: none
-  stablewatch: none
-
 lido:
   defiscan: cov
   blockanalitica: none
@@ -340,5 +340,59 @@ rocketpool:
   xerberus: none
   zyfai: none
   llamarisk: part
+  philidor: none
+  stablewatch: none
+
+# New entries from the RFP §3 top-20. Defiscan column will be overridden by
+# public/data/feeds/defiscan.json once Phase 2 of the slice lands. Other feeds
+# stay 'none' until each feed's adapter is wired.
+morpho-vaults:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: none
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: none
+  xerberus: none
+  zyfai: none
+  llamarisk: none
+  philidor: none
+  stablewatch: none
+
+1inch:
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: none
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: none
+  xerberus: none
+  zyfai: none
+  llamarisk: none
+  philidor: none
+  stablewatch: none
+
+"0x":
+  defiscan: none
+  blockanalitica: none
+  curatorwatch: none
+  defipunkd: none
+  pharos: none
+  defisphere: none
+  defisaver: none
+  credora: none
+  risklayer: none
+  pigi: none
+  xerberus: none
+  zyfai: none
+  llamarisk: none
   philidor: none
   stablewatch: none
