@@ -3,11 +3,13 @@
 //   2. feeds-to-json   — emit public/data/feeds/<feedId>.json per implemented adapter
 //   3. ttl-to-json     — emit public/data/protocols/<slug>.json (feed JSON overrides TTL/seed)
 //   4. build-index     — emit public/data/index.json (feeds + protocols + coverage matrix)
+//   5. coverage-report — emit COVERAGE.md at repo root (per-feed cov / not-cov audit)
 
-import { run as combineTtl }  from './combine-ttl.mjs';
-import { run as feedsToJson } from './feeds-to-json.mjs';
-import { run as ttlToJson  }  from './ttl-to-json.mjs';
-import { run as buildIndex }  from './build-index.mjs';
+import { run as combineTtl }     from './combine-ttl.mjs';
+import { run as feedsToJson }    from './feeds-to-json.mjs';
+import { run as ttlToJson  }     from './ttl-to-json.mjs';
+import { run as buildIndex }     from './build-index.mjs';
+import { run as coverageReport } from './coverage-report.mjs';
 
 console.log('# combine-ttl');
 await combineTtl();
@@ -21,4 +23,7 @@ const written = await ttlToJson();
 console.log('\n# build-index');
 await buildIndex();
 
-console.log(`\ndone — ${written} per-protocol JSON file(s) + data/index.json`);
+console.log('\n# coverage-report');
+await coverageReport();
+
+console.log(`\ndone — ${written} per-protocol JSON file(s) + data/index.json + COVERAGE.md`);
