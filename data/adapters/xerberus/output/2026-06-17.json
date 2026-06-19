@@ -302,6 +302,21 @@
       "slug": "cowswap",
       "covered": false,
       "reason": "not in Xerberus dendrogram"
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "reason": "not in Xerberus dendrogram"
     }
   }
 }

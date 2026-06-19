@@ -2812,6 +2812,18 @@
     "cowswap": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "tracked as part of Morpho protocol coverage"
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
+    },
+    "0x": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch"
     }
   }
 }

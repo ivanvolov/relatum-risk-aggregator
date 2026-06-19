@@ -76,13 +76,34 @@
     {
       "feedId": "curatorwatch",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "4 vaults",
+      "sourceUrl": "https://curatorwatch.com/sky",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "4",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$6.63B",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "4× medium-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "1",
+          "scale": "count"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -188,12 +209,12 @@
     {
       "feedId": "xerberus",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not in Xerberus dendrogram",
       "claims": [],
       "history": [],
       "notable": null,

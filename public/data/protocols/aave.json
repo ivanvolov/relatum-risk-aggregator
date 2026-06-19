@@ -265,13 +265,13 @@
     },
     {
       "feedId": "curatorwatch",
-      "status": "part",
-      "adapterStatus": "pending",
+      "status": "none",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": "https://curatorwatch.com",
       "observedAt": "2026-06-14",
       "methodology": "Curator-level grading (A+..NR). Shows AUM, vaults managed, jurisdiction, recent liquidations per curator.",
-      "coverageReason": "CuratorWatch tracks curator-managed vaults, not lending protocols. Aave-the-protocol has no direct entry. Surfaced instead: curators with material Aave exposure.",
+      "coverageReason": "not a lending rail curated on CuratorWatch",
       "claims": [],
       "history": [],
       "notable": {
@@ -568,13 +568,44 @@
     {
       "feedId": "xerberus",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "0.82",
+      "sourceUrl": "https://aave.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": "Xerberus focuses on vault rating; Aave-the-protocol is out of its primary entity scope.",
-      "claims": [],
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.818",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.783",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.588",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.886",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "1.000",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.833",
+          "scale": "0..1"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

@@ -76,12 +76,12 @@
     {
       "feedId": "curatorwatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a lending rail curated on CuratorWatch",
       "claims": [],
       "history": [],
       "notable": null,
@@ -188,13 +188,44 @@
     {
       "feedId": "xerberus",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "0.60",
+      "sourceUrl": "https://www.pendle.finance",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.596",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.515",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "1.000",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.616",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.850",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.000",
+          "scale": "0..1"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

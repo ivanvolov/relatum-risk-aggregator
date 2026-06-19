@@ -55,9 +55,85 @@ function defiscanRow(slug, raw) {
   };
 }
 
+// Xerberus: composite (0..1) + 5 domain subscores per protocol version.
+// We pick the first version (adapters that find multiple deployments still record
+// one composite per version — the first-listed is the largest/canonical one).
+const XERBERUS_DOMAINS = ['security', 'economics', 'governance', 'receipt_tokens', 'cross_chain'];
+
+function xerberusRow(slug, raw) {
+  if (!raw || raw.covered === false) {
+    return {
+      covered: false,
+      reason: raw?.reason ?? 'not in Xerberus dendrogram',
+      deeplink: null,
+    };
+  }
+  const version = raw.versions?.[0];
+  if (!version) {
+    return { covered: false, reason: 'no version payload', deeplink: null };
+  }
+  const composite = version.composite_score;
+  const claims = [
+    { dim: 'composite', value: composite != null ? composite.toFixed(3) : '—', scale: '0..1' },
+  ];
+  const ds = version.domain_scores || {};
+  for (const d of XERBERUS_DOMAINS) {
+    const v = ds[d];
+    claims.push({ dim: d, value: v != null ? v.toFixed(3) : '—', scale: '0..1' });
+  }
+  return {
+    covered: true,
+    inline: composite != null ? composite.toFixed(2) : null,
+    deeplink: version.website ?? null,
+    observedAt: null,
+    deploymentName: version.name ?? null,
+    claims,
+  };
+}
+
+// CuratorWatch: per-protocol curated Morpho/Aave/Euler/Compound vault stats.
+// Inline = vault_count ("N vaults"). Claims = vault_count, total_tvl_usd, grade distribution.
+const fmtUsdShort = (n) => {
+  if (n == null) return '—';
+  if (n >= 1e9) return `$${(n/1e9).toFixed(2)}B`;
+  if (n >= 1e6) return `$${(n/1e6).toFixed(1)}M`;
+  if (n >= 1e3) return `$${(n/1e3).toFixed(0)}K`;
+  return `$${n.toFixed(0)}`;
+};
+
+function curatorwatchRow(slug, raw) {
+  if (!raw || raw.covered === false) {
+    return {
+      covered: false,
+      reason: raw?.reason ?? 'not a lending rail curated on CuratorWatch',
+      deeplink: null,
+    };
+  }
+  const grades = raw.grade_distribution || {};
+  const gradeSummary = Object.entries(grades)
+    .map(([k, v]) => `${v}× ${k}`)
+    .join(', ');
+  const curators = (raw.curators || []).filter(Boolean);
+  const claims = [
+    { dim: 'vaults', value: String(raw.vault_count ?? '—'), scale: 'count' },
+    { dim: 'tvl', value: fmtUsdShort(raw.total_tvl_usd), scale: 'USD' },
+    { dim: 'grade-distribution', value: gradeSummary || '—', scale: 'CuratorWatch grade' },
+    { dim: 'curator-count', value: String(curators.length), scale: 'count' },
+  ];
+  return {
+    covered: true,
+    inline: raw.vault_count != null ? `${raw.vault_count} vaults` : null,
+    deeplink: `https://curatorwatch.com/${slug}`,
+    observedAt: null,
+    claims,
+  };
+}
+
 // Per-feed normalizers. Register one when a feed's adapter output should drive the UI.
 const NORMALIZERS = {
   defiscan: defiscanRow,
+  xerberus: xerberusRow,
+  curatorwatch: curatorwatchRow,
 };
 
 async function latestOutputFile(feedId) {
@@ -68,6 +144,10 @@ async function latestOutputFile(feedId) {
   return path.join(outDir, files[files.length - 1]);
 }
 
+// Some adapters write {summary, protocols: {<slug>: {...}}}; others write the flat
+// {<slug>: {...}}. Resolve transparently so normalizers don't repeat the dance.
+const rowForSlug = (raw, slug) => raw?.[slug] ?? raw?.protocols?.[slug] ?? null;
+
 async function normalizeFeed(feed) {
   const normalize = NORMALIZERS[feed.id];
   if (!normalize) return null;
@@ -77,7 +157,7 @@ async function normalizeFeed(feed) {
   const snapshotDate = path.basename(sourceFile, '.json');
   const protocols = {};
   for (const proto of PROTOCOLS) {
-    protocols[proto.slug] = normalize(proto.slug, raw[proto.slug]);
+    protocols[proto.slug] = normalize(proto.slug, rowForSlug(raw, proto.slug));
   }
   return {
     feedId: feed.id,

@@ -1,0 +1,239 @@
+{
+  "feedId": "curatorwatch",
+  "feedName": "CuratorWatch",
+  "generatedAt": "2026-06-19T08:47:03.123Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/curatorwatch/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": true,
+      "inline": "5 vaults",
+      "deeplink": "https://curatorwatch.com/lido",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "5",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$130.7M",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "3× medium-grade, 2× low-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "3",
+          "scale": "count"
+        }
+      ]
+    },
+    "aave": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "spark": {
+      "covered": true,
+      "inline": "7 vaults",
+      "deeplink": "https://curatorwatch.com/spark",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "7",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$1.92B",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "7× medium-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "1",
+          "scale": "count"
+        }
+      ]
+    },
+    "sky": {
+      "covered": true,
+      "inline": "4 vaults",
+      "deeplink": "https://curatorwatch.com/sky",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "4",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$6.63B",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "4× medium-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "1",
+          "scale": "count"
+        }
+      ]
+    },
+    "ethena": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "138 vaults",
+      "deeplink": "https://curatorwatch.com/morpho",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "138",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$1.68B",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "96× medium-grade, 30× low-grade, 12× high-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "45",
+          "scale": "count"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "compound": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "liquity": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": true,
+      "inline": "6 vaults",
+      "deeplink": "https://curatorwatch.com/euler",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "6",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$90.8M",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "2× medium-grade, 4× low-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "2",
+          "scale": "count"
+        }
+      ]
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "tracked as part of Morpho protocol coverage",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "not a lending rail curated on CuratorWatch",
+      "deeplink": null
+    }
+  }
+}

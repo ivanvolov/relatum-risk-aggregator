@@ -79,13 +79,34 @@
     {
       "feedId": "curatorwatch",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "138 vaults",
+      "sourceUrl": "https://curatorwatch.com/morpho",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "138",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$1.68B",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "96× medium-grade, 30× low-grade, 12× high-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "45",
+          "scale": "count"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -191,13 +212,44 @@
     {
       "feedId": "xerberus",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "0.66",
+      "sourceUrl": "https://morpho.org",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.658",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.800",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.375",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.507",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.950",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "—",
+          "scale": "0..1"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

@@ -1,0 +1,498 @@
+{
+  "feedId": "xerberus",
+  "feedName": "Xerberus",
+  "generatedAt": "2026-06-19T08:47:03.124Z",
+  "snapshotDate": "2026-06-17",
+  "sourceFile": "data/adapters/xerberus/output/2026-06-17.json",
+  "protocols": {
+    "lido": {
+      "covered": true,
+      "inline": "0.84",
+      "deeplink": "https://lido.fi",
+      "observedAt": null,
+      "deploymentName": "Lido v2",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.845",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.914",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.571",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.823",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.917",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "1.000",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "aave": {
+      "covered": true,
+      "inline": "0.82",
+      "deeplink": "https://aave.com",
+      "observedAt": null,
+      "deploymentName": "Aave v3",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.818",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.783",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.588",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.886",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "1.000",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.833",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "spark": {
+      "covered": true,
+      "inline": "0.63",
+      "deeplink": "https://spark.fi",
+      "observedAt": null,
+      "deploymentName": "Spark v1",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.628",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.683",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.818",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.640",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "1.000",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.000",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "sky": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "ethena": {
+      "covered": true,
+      "inline": "0.55",
+      "deeplink": "https://ethena.fi",
+      "observedAt": null,
+      "deploymentName": "Ethena",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.546",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.600",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.615",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.333",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.783",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.400",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "0.66",
+      "deeplink": "https://morpho.org",
+      "observedAt": null,
+      "deploymentName": "Morpho",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.658",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.800",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.375",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.507",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.950",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "—",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": true,
+      "inline": "0.61",
+      "deeplink": "https://curve.fi",
+      "observedAt": null,
+      "deploymentName": "Curve Finance",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.612",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.704",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.538",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.720",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.900",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.200",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "compound": {
+      "covered": true,
+      "inline": "0.73",
+      "deeplink": "https://compound.finance",
+      "observedAt": null,
+      "deploymentName": "Compound v3",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.732",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.650",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.643",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.680",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.957",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "—",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": true,
+      "inline": "0.60",
+      "deeplink": "https://www.pendle.finance",
+      "observedAt": null,
+      "deploymentName": "Pendle v2",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.596",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.515",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "1.000",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.616",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.850",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.000",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "fluid": {
+      "covered": true,
+      "inline": "0.68",
+      "deeplink": "https://fluid.instadapp.io",
+      "observedAt": null,
+      "deploymentName": "Fluid",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.680",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.676",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.591",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.451",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "1.000",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "—",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "liquity": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": true,
+      "inline": "0.77",
+      "deeplink": "https://www.euler.finance",
+      "observedAt": null,
+      "deploymentName": "Euler v2",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.773",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.808",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.636",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.749",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.900",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "—",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": true,
+      "inline": "0.76",
+      "deeplink": "https://gearbox.fi",
+      "observedAt": null,
+      "deploymentName": "Gearbox v3",
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.762",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.833",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.696",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.617",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.900",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "—",
+          "scale": "0..1"
+        }
+      ]
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "not in Xerberus dendrogram",
+      "deeplink": null
+    }
+  }
+}

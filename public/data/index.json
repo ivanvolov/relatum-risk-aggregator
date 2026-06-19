@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T08:08:49.397Z",
+  "generatedAt": "2026-06-19T08:47:03.176Z",
   "feeds": [
     {
       "id": "defiscan",
@@ -26,7 +26,7 @@
       "focus": "Vault curator allocations and risk on Morpho/Aave/Euler/Compound/Spark",
       "methodology": "Tracks curators (not protocols). Vault Grade A+..NR, jurisdiction disclosed, AUM, vaults managed, recent liquidations.",
       "schemaDoc": "data/adapters/curatorwatch/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "defipunkd",
@@ -98,7 +98,7 @@
       "focus": "300+ subscores across 85+ mechanisms",
       "methodology": "Investor-focused open-source vault rating. Decomposes risk into mechanism-level subscores.",
       "schemaDoc": "data/adapters/xerberus/schema.yaml",
-      "adapterStatus": "pending"
+      "adapterStatus": "implemented"
     },
     {
       "id": "zyfai",
@@ -392,8 +392,8 @@
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "5 vaults"
       },
       "defipunkd": {
         "status": "cov",
@@ -432,8 +432,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.84"
       },
       "zyfai": {
         "status": "none",
@@ -468,8 +468,8 @@
         "inline": null
       },
       "curatorwatch": {
-        "status": "part",
-        "adapterStatus": "pending",
+        "status": "none",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -509,8 +509,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.82"
       },
       "zyfai": {
         "status": "cov",
@@ -546,8 +546,8 @@
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "7 vaults"
       },
       "defipunkd": {
         "status": "cov",
@@ -586,8 +586,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.63"
       },
       "zyfai": {
         "status": "cov",
@@ -623,8 +623,8 @@
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "4 vaults"
       },
       "defipunkd": {
         "status": "cov",
@@ -663,7 +663,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -700,7 +700,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -740,8 +740,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.55"
       },
       "zyfai": {
         "status": "none",
@@ -777,8 +777,8 @@
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "138 vaults"
       },
       "defipunkd": {
         "status": "cov",
@@ -817,8 +817,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.66"
       },
       "zyfai": {
         "status": "cov",
@@ -854,7 +854,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -894,7 +894,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -931,7 +931,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -971,7 +971,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -1008,7 +1008,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1048,8 +1048,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.61"
       },
       "zyfai": {
         "status": "none",
@@ -1085,7 +1085,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1125,8 +1125,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.73"
       },
       "zyfai": {
         "status": "cov",
@@ -1162,7 +1162,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1202,7 +1202,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -1239,7 +1239,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1279,8 +1279,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.60"
       },
       "zyfai": {
         "status": "none",
@@ -1316,7 +1316,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1356,8 +1356,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.68"
       },
       "zyfai": {
         "status": "cov",
@@ -1393,7 +1393,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1433,7 +1433,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -1470,7 +1470,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1510,7 +1510,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -1547,8 +1547,8 @@
       },
       "curatorwatch": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "6 vaults"
       },
       "defipunkd": {
         "status": "none",
@@ -1587,8 +1587,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.77"
       },
       "zyfai": {
         "status": "cov",
@@ -1624,7 +1624,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1664,7 +1664,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -1701,7 +1701,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1741,7 +1741,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -1778,7 +1778,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1818,7 +1818,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -1855,7 +1855,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1895,8 +1895,8 @@
       },
       "xerberus": {
         "status": "cov",
-        "adapterStatus": "pending",
-        "inline": null
+        "adapterStatus": "implemented",
+        "inline": "0.76"
       },
       "zyfai": {
         "status": "none",
@@ -1932,7 +1932,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -1972,7 +1972,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -2009,7 +2009,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -2049,7 +2049,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {
@@ -2086,7 +2086,7 @@
       },
       "curatorwatch": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "defipunkd": {
@@ -2126,7 +2126,7 @@
       },
       "xerberus": {
         "status": "none",
-        "adapterStatus": "pending",
+        "adapterStatus": "implemented",
         "inline": null
       },
       "zyfai": {

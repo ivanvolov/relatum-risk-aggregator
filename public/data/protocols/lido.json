@@ -76,13 +76,34 @@
     {
       "feedId": "curatorwatch",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "5 vaults",
+      "sourceUrl": "https://curatorwatch.com/lido",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "5",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$130.7M",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "3× medium-grade, 2× low-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "3",
+          "scale": "count"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -188,13 +209,44 @@
     {
       "feedId": "xerberus",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "0.84",
+      "sourceUrl": "https://lido.fi",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.845",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.914",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.571",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.823",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.917",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "1.000",
+          "scale": "0..1"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

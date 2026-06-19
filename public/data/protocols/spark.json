@@ -76,13 +76,34 @@
     {
       "feedId": "curatorwatch",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "7 vaults",
+      "sourceUrl": "https://curatorwatch.com/spark",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "vaults",
+          "value": "7",
+          "scale": "count"
+        },
+        {
+          "dim": "tvl",
+          "value": "$1.92B",
+          "scale": "USD"
+        },
+        {
+          "dim": "grade-distribution",
+          "value": "7× medium-grade",
+          "scale": "CuratorWatch grade"
+        },
+        {
+          "dim": "curator-count",
+          "value": "1",
+          "scale": "count"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -188,13 +209,44 @@
     {
       "feedId": "xerberus",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "0.63",
+      "sourceUrl": "https://spark.fi",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.628",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.683",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.818",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.640",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "1.000",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.000",
+          "scale": "0..1"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

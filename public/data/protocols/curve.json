@@ -76,12 +76,12 @@
     {
       "feedId": "curatorwatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a lending rail curated on CuratorWatch",
       "claims": [],
       "history": [],
       "notable": null,
@@ -188,13 +188,44 @@
     {
       "feedId": "xerberus",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "0.61",
+      "sourceUrl": "https://curve.fi",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.612",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.704",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.538",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.720",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "0.900",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "0.200",
+          "scale": "0..1"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

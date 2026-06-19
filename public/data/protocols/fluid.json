@@ -45,12 +45,12 @@
     {
       "feedId": "curatorwatch",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a lending rail curated on CuratorWatch",
       "claims": [],
       "history": [],
       "notable": null,
@@ -157,13 +157,44 @@
     {
       "feedId": "xerberus",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "0.68",
+      "sourceUrl": "https://fluid.instadapp.io",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "composite",
+          "value": "0.680",
+          "scale": "0..1"
+        },
+        {
+          "dim": "security",
+          "value": "0.676",
+          "scale": "0..1"
+        },
+        {
+          "dim": "economics",
+          "value": "0.591",
+          "scale": "0..1"
+        },
+        {
+          "dim": "governance",
+          "value": "0.451",
+          "scale": "0..1"
+        },
+        {
+          "dim": "receipt_tokens",
+          "value": "1.000",
+          "scale": "0..1"
+        },
+        {
+          "dim": "cross_chain",
+          "value": "—",
+          "scale": "0..1"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
