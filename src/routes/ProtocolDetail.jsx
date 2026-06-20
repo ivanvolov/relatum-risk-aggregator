@@ -102,9 +102,26 @@ export default function ProtocolDetail() {
 
       <div className="detail-grid">
         <div>
-          {D.sidecards.map((sc, i) => (
+          {D.sidecards.length ? D.sidecards.map((sc, i) => (
             <Sidecard key={i} sc={sc} degradeNote={D.governance_degrade_note} />
-          ))}
+          )) : (
+            <div className="sidecard">
+              <h3>Overview</h3>
+              {[
+                { k: 'Category', v: D.category },
+                { k: 'Family', v: D.family },
+                { k: 'ETH TVL', v: D.tvl_usd ? fmtUsd(D.tvl_usd) : null },
+                { k: 'Volume (24h)', v: D.volume_usd_24h ? fmtUsd(D.volume_usd_24h) : null },
+                { k: 'Governance', v: D.governance_summary },
+                { k: 'Last updated', v: D.lastUpdated },
+              ].map((r, i) => (
+                <div key={i} className="kv">
+                  <span className="k">{r.k}</span>
+                  <span className={'v' + (r.v ? '' : ' dim')}>{r.v || '—'}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div>

@@ -87,7 +87,7 @@ export default function Summary() {
     'DEX / AMM': 'DEX',
     'Lending': 'Lending',
     'Lending / CDP': 'CDP',
-    'Liquid Restaking': 'Liquid Restaking',
+    'Liquid And n': 'Liquid Restaking',
     'Liquid Staking': 'Liquid Staking',
     'Swap Aggregator': 'Swap Swap',
     'Synthetic Yield': 'Synthetic Yield',
