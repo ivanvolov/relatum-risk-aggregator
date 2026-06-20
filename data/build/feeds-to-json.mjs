@@ -389,13 +389,17 @@ function passthroughCoverageOnly(slug, raw) {
 }
 
 // Per-feed normalizers. Register one when a feed's adapter output should drive the UI.
+// DeFi Saver intentionally NOT registered — its source is a position-management UI,
+// not a risk feed; revisit once we decide whether its per-asset market table adds
+// signal beyond what BlockAnalitica already publishes. Without a registration here,
+// adapterStatus stays "pending" and the matrix renders hatched cells.
 const NORMALIZERS = {
   defiscan: defiscanRow,
   xerberus: xerberusRow,
   curatorwatch: curatorwatchRow,
   pharos: pharosRow,
   defisphere: defisphereRow,
-  defisaver: defisaverRow,
+  // defisaver: defisaverRow,   // disabled — see note above
   stablewatch: stablewatchRow,
   blockanalitica: blockanaliticaRow,
   defipunkd: defipunkdRow,

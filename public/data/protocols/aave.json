@@ -8,6 +8,7 @@
     "v3",
     "v4"
   ],
+  "logoUrl": "https://icons.llamao.fi/icons/protocols/aave-v3.png",
   "description": "Open-source, non-custodial lending protocol. Users supply ERC-20 assets and borrow against them with variable rates; Aave also issues GHO, its native overcollateralized stablecoin.",
   "lastUpdated": "2026-06-14",
   "governance_summary": "5/9 · 2d",
@@ -386,17 +387,32 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "lending · dex · leverage",
-      "sourceUrl": "https://app.defisaver.com",
+      "adapterStatus": "pending",
+      "inline": null,
+      "sourceUrl": "https://app.defisaver.com/aave",
       "observedAt": "2026-06-14",
       "methodology": "Execution-first: no protocol-level risk score. Surfaces protocol parameter mirror plus per-position health metrics and automated repay / boost / close strategies.",
       "coverageReason": "DeFi Saver supports Aave v2/v3 position management and automation but does not publish protocol-level or market-level risk scores. Surfaced data is a parameter mirror plus per-position health metrics.",
       "claims": [
         {
-          "dim": "surfaces",
-          "value": "lending, dex, leverage",
-          "scale": "DeFi Saver flow"
+          "dim": "action",
+          "value": "Collateral swap (1 tx)",
+          "scale": "action"
+        },
+        {
+          "dim": "exposed-metric",
+          "value": "Health Factor (per-position)",
+          "scale": "exposed-metric"
+        },
+        {
+          "dim": "support-status",
+          "value": "Supported on Mainnet, Arbitrum, Optimism, Base, Polygon, Avalanche",
+          "scale": "support-status"
+        },
+        {
+          "dim": "automation-strategy",
+          "value": "Boost: trigger 'ratio > threshold' → leverage up",
+          "scale": "automation-strategy"
         }
       ],
       "history": [],

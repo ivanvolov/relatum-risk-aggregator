@@ -1,19 +1,22 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { loadIndex, loadProtocol } from '../lib/data.js';
-import { fmtUsd, initials } from '../lib/format.js';
+import { fmtUsd } from '../lib/format.js';
 import FeedCard from '../components/FeedCard.jsx';
 import PendingAdapterCard from '../components/PendingAdapterCard.jsx';
 import HistorySection from '../components/HistorySection.jsx';
 import Sidecard from '../components/Sidecard.jsx';
+import Avatar from '../components/Avatar.jsx';
 
 export default function ProtocolDetail() {
   const { slug } = useParams();
   const [index, setIndex] = useState(null);
   const [detail, setDetail] = useState(undefined); // undefined = loading, null = not found
+  const [openFeeds, setOpenFeeds] = useState(null); // Set of expanded feedIds; null = use defaults
 
   useEffect(() => {
     let cancel = false;
+    setOpenFeeds(null); // reset on slug change so the new protocol opens its first covered feed
     Promise.all([loadIndex(), loadProtocol(slug)]).then(([i, d]) => {
       if (cancel) return;
       setIndex(i);
@@ -36,16 +39,42 @@ export default function ProtocolDetail() {
   }
 
   const D = detail;
-  const coveredFeeds = D.feeds.filter(f => f.status === 'cov' || f.status === 'part');
-  const pendingFeeds = D.feeds.filter(f => f.adapterStatus === 'pending');
-  const notYet = D.feeds.filter(f => f.status === 'none' && f.adapterStatus === 'implemented')
-    .map(f => index.feedById(f.feedId))
-    .filter(Boolean);
+  // Pending-adapter feeds are hidden from the public UI entirely — neither column
+  // on the matrix nor card here. They remain in the methodology page registry so a
+  // reviewer can confirm we acknowledged them. Re-enabling = re-register the
+  // normalizer in data/build/feeds-to-json.mjs.
+  const visibleFeeds = D.feeds.filter(f => f.adapterStatus !== 'pending');
+  const coveredFeeds = visibleFeeds.filter(f => f.status === 'cov' || f.status === 'part');
+
+  // Sort: covered first (alphabetical within), then partial, then not-covered.
+  const sortRank = (e) => {
+    if (e.status === 'cov') return 0;
+    if (e.status === 'part') return 1;
+    return 2;
+  };
+  const sortedFeeds = [...visibleFeeds].sort((a, b) => {
+    const ra = sortRank(a), rb = sortRank(b);
+    if (ra !== rb) return ra - rb;
+    return a.feedId.localeCompare(b.feedId);
+  });
+
+  // First covered feed is open by default. Multiple cards can be open at once —
+  // once the user clicks anything, openFeeds is a Set they fully control.
+  const firstCovered = sortedFeeds.find(e => e.status === 'cov' || e.status === 'part');
+  const defaults = firstCovered ? new Set([firstCovered.feedId]) : new Set();
+  const activeOpen = openFeeds ?? defaults;
+  const isOpen = (feedId) => activeOpen.has(feedId);
+  const toggleOpen = (feedId) => setOpenFeeds(prev => {
+    const next = new Set(prev ?? defaults);
+    if (next.has(feedId)) next.delete(feedId);
+    else next.add(feedId);
+    return next;
+  });
 
   return (
     <main className="page" id="detail">
       <div className="detail-header">
-        <div className="avatar-lg">{initials(D.name)}</div>
+        <Avatar name={D.name} logoUrl={D.logoUrl} size="lg" />
         <div className="header-text">
           <div className="breadcrumbs"><Link to="/">All protocols</Link> &nbsp;/&nbsp; {D.category} &nbsp;/&nbsp; {D.name}</div>
           <h1>{D.name}</h1>
@@ -72,29 +101,24 @@ export default function ProtocolDetail() {
           </div>
           <p className="feeds-section-sub">
             Each card is one provider's view of this protocol. Methodology shown before findings.
-            Ratings shown verbatim where they exist. {pendingFeeds.length ? `${pendingFeeds.length} adapter(s) pending — those cards mark themselves as such.` : null}
+            Ratings shown verbatim where they exist.
           </p>
-          <div className="feed-grid">
-            {D.feeds.map(entry => {
+          <div className="feed-accordion">
+            {sortedFeeds.map(entry => {
               const meta = index.feedById(entry.feedId);
               if (!meta) return null;
-              if (entry.adapterStatus === 'pending' && entry.status === 'none') {
-                return <PendingAdapterCard key={entry.feedId} feed={meta} />;
-              }
-              return <FeedCard key={entry.feedId} feedMeta={meta} entry={entry} />;
+              return (
+                <FeedCard
+                  key={entry.feedId}
+                  feedMeta={meta}
+                  entry={entry}
+                  isOpen={isOpen(entry.feedId)}
+                  onToggle={() => toggleOpen(entry.feedId)}
+                />
+              );
             })}
           </div>
 
-          {notYet.length ? (
-            <div className="not-yet-covered">
-              <span className="lbl">Not yet covered by:</span>{' '}
-              {notYet.map((f, i) => (
-                <span key={f.id}>
-                  {i > 0 ? ', ' : ''}<span className="feed-name">{f.name}</span>
-                </span>
-              ))}
-            </div>
-          ) : null}
         </div>
       </div>
 

@@ -13,5 +13,5 @@ export function initials(name) {
 export const STATUS_LABELS = {
   cov: 'covered',
   part: 'partial',
-  none: 'not yet',
+  none: 'not covered',
 };

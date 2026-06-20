@@ -5,6 +5,7 @@
   "tvl_usd": 580000000,
   "family": "Fluid (Instadapp)",
   "versions": null,
+  "logoUrl": "https://icons.llamao.fi/icons/protocols/fluid-lending.png",
   "description": null,
   "lastUpdated": "2026-06-17",
   "governance_summary": "—",
@@ -113,19 +114,13 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "lending · dex · leverage",
-      "sourceUrl": "https://app.defisaver.com",
+      "adapterStatus": "pending",
+      "inline": null,
+      "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [
-        {
-          "dim": "surfaces",
-          "value": "lending, dex, leverage",
-          "scale": "DeFi Saver flow"
-        }
-      ],
+      "claims": [],
       "history": [],
       "notable": null,
       "findings": null

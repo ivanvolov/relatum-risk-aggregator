@@ -53,7 +53,7 @@ export default function Methodology() {
         <div className="cov-state-list">
           <div className="cov-state"><span className="badge cov">covered</span> <span>the feed publishes an assessment of this exact subject; data is in the graph</span></div>
           <div className="cov-state"><span className="badge part">partial</span> <span>the feed covers a related entity (e.g. Pharos on Aave via GHO); the relationship is modeled as an explicit graph edge</span></div>
-          <div className="cov-state"><span className="badge none">not yet</span> <span>explicit statement of absence with reason. A typed <code>rfp:CoverageStatement</code> triple, not a TODO.</span></div>
+          <div className="cov-state"><span className="badge none">not covered</span> <span>explicit statement of absence with reason. A typed <code>rfp:CoverageStatement</code> triple, not a TODO.</span></div>
           <div className="cov-state"><span className="badge pending">adapter pending</span> <span>the feed's TTL mapper hasn't been written yet — distinct from "not covered." Visible everywhere this distinction matters.</span></div>
         </div>
       </div>

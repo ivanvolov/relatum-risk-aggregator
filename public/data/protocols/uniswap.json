@@ -9,6 +9,7 @@
     "v4",
     "UniswapX"
   ],
+  "logoUrl": "https://icons.llamao.fi/icons/protocols/uniswap-v3.png",
   "description": null,
   "lastUpdated": "2025-01-08",
   "governance_summary": "2d",
@@ -136,12 +137,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "implemented",
+      "adapterStatus": "pending",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not a DeFi Saver execution surface",
+      "coverageReason": null,
       "claims": [],
       "history": [],
       "notable": null,

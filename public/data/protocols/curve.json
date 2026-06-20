@@ -5,6 +5,7 @@
   "tvl_usd": 1430000000,
   "family": "Curve",
   "versions": null,
+  "logoUrl": "https://icons.llamao.fi/icons/protocols/curve.png",
   "description": null,
   "lastUpdated": "2025-02-20",
   "governance_summary": "4/6 · 3d",
@@ -150,19 +151,13 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "lending · dex · leverage",
-      "sourceUrl": "https://app.defisaver.com",
+      "adapterStatus": "pending",
+      "inline": null,
+      "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [
-        {
-          "dim": "surfaces",
-          "value": "lending, dex, leverage",
-          "scale": "DeFi Saver flow"
-        }
-      ],
+      "claims": [],
       "history": [],
       "notable": null,
       "findings": null

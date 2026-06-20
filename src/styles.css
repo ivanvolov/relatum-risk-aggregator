@@ -270,7 +270,17 @@ table.matrix td {
   text-align: left;
   padding: 10px 12px;
   border-bottom: 1px solid var(--line-soft);
+  border-right: 1px solid var(--line-soft);
   white-space: nowrap;
+}
+table.matrix th:last-child,
+table.matrix td:last-child {
+  border-right: 0;
+}
+/* Slightly stronger divider between the proto/meta block and the feed-matrix area. */
+table.matrix th.feeds-col-edge,
+table.matrix td.feeds-col-edge {
+  border-right: 2px solid var(--line);
 }
 table.matrix thead th {
   background: var(--bg-soft);
@@ -317,7 +327,8 @@ table.matrix td.proto a {
   font-size: 13.5px;
 }
 table.matrix td.proto a:hover { color: var(--accent); text-decoration: none; }
-table.matrix td.proto .avatar {
+table.matrix td.proto .avatar,
+table.matrix td.proto .avatar-img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -331,6 +342,8 @@ table.matrix td.proto .avatar {
   font-family: var(--mono);
   letter-spacing: -0.5px;
   flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--line-soft);
 }
 table.matrix td.proto .meta {
   display: block;
@@ -392,6 +405,23 @@ table.matrix td.cell {
   border-color: var(--line);
   border-style: dashed;
 }
+.cell-check {
+  display: inline-block;
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--ok);
+  font-size: 14px;
+  line-height: 1;
+}
+.cell-dash {
+  display: inline-block;
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--ink-faint);
+  font-size: 14px;
+  line-height: 1;
+  cursor: help;
+}
 
 .legend {
   margin-top: 18px;
@@ -414,7 +444,8 @@ table.matrix td.cell {
   gap: 16px;
   margin-bottom: 24px;
 }
-.detail-header .avatar-lg {
+.detail-header .avatar-lg,
+.detail-header .avatar-img.avatar-lg {
   width: 56px;
   height: 56px;
   border-radius: var(--r-md);
@@ -423,6 +454,7 @@ table.matrix td.cell {
   font-size: 18px;
   font-weight: 700;
   display: flex;
+  object-fit: cover;
   align-items: center;
   justify-content: center;
   font-family: var(--mono);
@@ -860,10 +892,90 @@ table.feeds-table td.schema-cell .dim { color: var(--ink-faint); }
   margin: 0 0 16px;
   line-height: 1.55;
 }
-.feed-grid {
+.feed-grid,
+.feed-accordion {
   display: flex;
   flex-direction: column;
   gap: 0;
+}
+.feed-accordion .feed-card {
+  margin-bottom: 8px;
+}
+.feed-accordion .feed-card .head.expandable {
+  width: 100%;
+  cursor: pointer;
+  background: linear-gradient(to right, var(--bg-soft-2), transparent);
+  border: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  transition: background .12s;
+}
+.feed-accordion .feed-card .head.expandable:hover {
+  background: linear-gradient(to right, var(--bg-tint), var(--bg-soft-2));
+}
+.feed-accordion .feed-card .head.static {
+  cursor: default;
+}
+.feed-accordion .feed-card .head .source-btn,
+.feed-card .head .source-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--r-sm);
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  margin-left: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background .12s, color .12s;
+}
+.feed-accordion .feed-card .head .source-btn:hover,
+.feed-card .head .source-btn:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.feed-accordion .feed-card .head .chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--r-sm);
+  background: var(--bg-soft);
+  color: var(--ink-soft);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+.feed-accordion .feed-card.open .head .chevron {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.feed-accordion .feed-card:not(.open) .head {
+  border-bottom-color: transparent;
+}
+.feed-accordion .feed-card.not-covered {
+  background: var(--bg-soft);
+  box-shadow: none;
+}
+.feed-accordion .feed-card.not-covered .head {
+  border-bottom-color: transparent;
+  background: transparent;
+  opacity: 0.78;
+}
+.feed-accordion .feed-card.not-covered .not-covered-line {
+  padding: 0 22px 12px 22px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  font-style: italic;
 }
 
 .observe-date {
@@ -998,6 +1110,11 @@ table.feeds-table td.schema-cell .dim { color: var(--ink-faint); }
   flex-wrap: wrap;
   gap: 6px;
 }
+/* When the chips live to the right of the search box, fill remaining width and wrap. */
+.controls .cat-chips {
+  flex: 1 1 0;
+  min-width: 0;
+}
 .cat-chip {
   font-family: var(--sans);
   font-size: 12px;
@@ -1032,30 +1149,35 @@ table.matrix td.gov-cell {
   letter-spacing: 0.2px;
 }
 
-.family-row .arrow {
-  color: var(--ink-faint);
-  margin-right: 4px;
-  font-weight: 400;
-}
-.family-row .version-count {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink-faint);
-  font-weight: 400;
-  margin-left: 4px;
-}
 
 .inline-rating {
   font-family: var(--mono);
   font-size: 11.5px;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--ink-soft);
   letter-spacing: -0.1px;
 }
 .inline-rating.stage-0 { color: var(--no); }
 .inline-rating.stage-1 { color: var(--partial); }
 .inline-rating.stage-2 { color: var(--ok); }
 .inline-rating.letter-a { color: var(--ok); }
+/* DeFiPunk'd inline like "2/5 green" — the regex turns it into ".2-5-green".
+   Show actual green when at least one principle is green. */
+.inline-rating[class*="-green"] { color: var(--ok); }
+/* DeFiPunk'd-style pie: M equal wedges, first N filled green. Used by Summary.jsx
+   when the inline value matches /^(\d+)\/(\d+) green$/. */
+.pie-grade {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+}
+.pie-grade .pie-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
 
 /* ============ oracle analogy callout (methodology page) ============ */
 .mblock.oracle-analogy {

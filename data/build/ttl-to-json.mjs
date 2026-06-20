@@ -96,6 +96,7 @@ export async function buildProtocolJson(proto, coverageSeed, feedJsons) {
     tvl_usd: prose.tvl_usd ?? proto.tvl_usd,
     family: prose.family || proto.family,
     versions: prose.versions ?? proto.versions ?? null,
+    logoUrl: proto.logoUrl || null,
     description: prose.description || null,
     lastUpdated,
     governance_summary: prose.governance_summary ?? proto.governance_summary ?? null,

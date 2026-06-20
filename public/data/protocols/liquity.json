@@ -8,6 +8,7 @@
     "v1",
     "v2"
   ],
+  "logoUrl": "https://icons.llamao.fi/icons/protocols/liquity-v2.jpg",
   "description": null,
   "lastUpdated": "2024-10-23",
   "governance_summary": "—",
@@ -184,19 +185,13 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "lending · dex · leverage",
-      "sourceUrl": "https://app.defisaver.com",
+      "adapterStatus": "pending",
+      "inline": null,
+      "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [
-        {
-          "dim": "surfaces",
-          "value": "lending, dex, leverage",
-          "scale": "DeFi Saver flow"
-        }
-      ],
+      "claims": [],
       "history": [],
       "notable": null,
       "findings": null
