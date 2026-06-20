@@ -1,7 +1,7 @@
 {
   "feedId": "defisphere",
   "feedName": "DeFi Sphere",
-  "generatedAt": "2026-06-19T22:49:12.260Z",
+  "generatedAt": "2026-06-20T09:06:16.737Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/defisphere/output/2026-06-17.json",
   "protocols": {
@@ -13,7 +13,7 @@
     "aave": {
       "covered": true,
       "inline": "44 markets",
-      "deeplink": "https://defi-sphere.com",
+      "deeplink": "https://app.defi-sphere.com/protocols/aave_v3",
       "observedAt": null,
       "claims": [
         {
@@ -51,7 +51,7 @@
     "spark": {
       "covered": true,
       "inline": "6 markets",
-      "deeplink": "https://defi-sphere.com",
+      "deeplink": "https://app.defi-sphere.com/protocols/sparklend",
       "observedAt": null,
       "claims": [
         {
@@ -99,7 +99,7 @@
     "morpho": {
       "covered": true,
       "inline": "334 markets",
-      "deeplink": "https://defi-sphere.com",
+      "deeplink": "https://app.defi-sphere.com/protocols/morpho",
       "observedAt": null,
       "claims": [
         {
@@ -152,7 +152,7 @@
     "compound": {
       "covered": true,
       "inline": "7 markets",
-      "deeplink": "https://defi-sphere.com",
+      "deeplink": "https://app.defi-sphere.com/protocols/compound_v3",
       "observedAt": null,
       "claims": [
         {
@@ -205,7 +205,7 @@
     "liquity": {
       "covered": true,
       "inline": "6 markets",
-      "deeplink": "https://defi-sphere.com",
+      "deeplink": "https://app.defi-sphere.com/protocols/liquity_v2",
       "observedAt": null,
       "claims": [
         {

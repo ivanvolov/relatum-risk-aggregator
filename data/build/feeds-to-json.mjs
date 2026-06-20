@@ -44,10 +44,14 @@ function defiscanRow(slug, raw) {
     const dim = DEFISCAN_RISK_AXES[i];
     if (dim) claims.push({ dim, value, scale: 'L/M/H' });
   });
+  // DeFiScan migrated from /projects/<slug>/<chain> to /protocol/<slug> where <slug>
+  // is the first defillama_slug (e.g. "aave-v3", "morpho-blue", "sky-lending"). Fall
+  // back to defiscan_slug if defillama_slug is absent.
+  const urlSlug = deployment.defillama_slug?.[0] ?? deployment.defiscan_slug;
   return {
     covered: true,
     inline: hasStage ? `Stage ${chain.stage}` : null,
-    deeplink: `https://defiscan.info/projects/${deployment.defiscan_slug}/${chain.name}`,
+    deeplink: `https://www.defiscan.info/protocol/${urlSlug}`,
     observedAt: chain.publish_date ?? null,
     primaryChain: chain.name,
     deploymentName: deployment.name,
@@ -156,6 +160,17 @@ function pharosRow(slug, raw) {
 }
 
 // DeFi Sphere: lending market analytics. Numeric collateral and liquidity risk per protocol.
+// Their per-protocol page lives at https://app.defi-sphere.com/protocols/<slug> where <slug>
+// is one of: aave_v3, compound_v3, liquity_v2, morpho, sparklend (source: their own
+// /protocols/sidebar/ endpoint at sphere.data.blockanalitica.com). We map our 5 covered
+// registry slugs to those; anything else falls back to the markets index.
+const DEFISPHERE_SLUGS = {
+  aave: 'aave_v3',
+  spark: 'sparklend',
+  morpho: 'morpho',
+  compound: 'compound_v3',
+  liquity: 'liquity_v2',
+};
 function defisphereRow(slug, raw) {
   if (!raw || raw.covered === false) {
     return { covered: false, reason: raw?.reason ?? 'no DeFi Sphere lending market for this protocol', deeplink: null };
@@ -168,10 +183,14 @@ function defisphereRow(slug, raw) {
     { dim: 'avg-liquidity-risk', value: raw.avg_liquidity_risk != null ? raw.avg_liquidity_risk.toFixed(2) : '—', scale: 'DeFi Sphere risk' },
     { dim: 'networks', value: (raw.networks || []).join(', ') || '—', scale: 'chains' },
   ];
+  const sphereSlug = DEFISPHERE_SLUGS[slug];
+  const deeplink = sphereSlug
+    ? `https://app.defi-sphere.com/protocols/${sphereSlug}`
+    : 'https://app.defi-sphere.com/markets';
   return {
     covered: true,
     inline: raw.market_count != null ? `${raw.market_count} markets` : null,
-    deeplink: 'https://defi-sphere.com',
+    deeplink,
     observedAt: null,
     claims,
   };

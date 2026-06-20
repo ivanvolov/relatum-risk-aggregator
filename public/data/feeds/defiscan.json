@@ -1,14 +1,14 @@
 {
   "feedId": "defiscan",
   "feedName": "DeFiScan",
-  "generatedAt": "2026-06-19T22:49:12.255Z",
+  "generatedAt": "2026-06-20T09:06:16.730Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/defiscan/output/2026-06-17.json",
   "protocols": {
     "lido": {
       "covered": true,
       "inline": "Stage 0",
-      "deeplink": "https://defiscan.info/projects/lido-v2/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/lido",
       "observedAt": "2025-06-19",
       "primaryChain": "ethereum",
       "deploymentName": "Lido V2",
@@ -48,7 +48,7 @@
     "aave": {
       "covered": true,
       "inline": "Stage 0",
-      "deeplink": "https://defiscan.info/projects/aave/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/aave-v3",
       "observedAt": "2025-05-07",
       "primaryChain": "ethereum",
       "deploymentName": "Aave v3",
@@ -88,7 +88,7 @@
     "spark": {
       "covered": true,
       "inline": "Stage 0",
-      "deeplink": "https://defiscan.info/projects/spark/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/sparklend",
       "observedAt": "2025-06-05",
       "primaryChain": "ethereum",
       "deploymentName": "Spark",
@@ -128,7 +128,7 @@
     "sky": {
       "covered": true,
       "inline": "Stage 0",
-      "deeplink": "https://defiscan.info/projects/sky/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/sky-lending",
       "observedAt": "2025-05-15",
       "primaryChain": "ethereum",
       "deploymentName": "Sky",
@@ -168,7 +168,7 @@
     "ethena": {
       "covered": true,
       "inline": null,
-      "deeplink": "https://defiscan.info/projects/ethena/usde",
+      "deeplink": "https://www.defiscan.info/protocol/ethena-usde",
       "observedAt": "2025-09-04",
       "primaryChain": "usde",
       "deploymentName": "Ethena",
@@ -203,7 +203,7 @@
     "morpho": {
       "covered": true,
       "inline": "Stage 1",
-      "deeplink": "https://defiscan.info/projects/morpho/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/morpho-blue",
       "observedAt": "2025-05-21",
       "primaryChain": "ethereum",
       "deploymentName": "Morpho",
@@ -248,7 +248,7 @@
     "uniswap": {
       "covered": true,
       "inline": "Stage 2",
-      "deeplink": "https://defiscan.info/projects/uniswap-v3/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/uniswap-v3",
       "observedAt": "2025-01-08",
       "primaryChain": "ethereum",
       "deploymentName": "Uniswap V3",
@@ -288,7 +288,7 @@
     "curve": {
       "covered": true,
       "inline": "Stage 0",
-      "deeplink": "https://defiscan.info/projects/curve-finance/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/curve-dex",
       "observedAt": "1970-01-01",
       "primaryChain": "ethereum",
       "deploymentName": "Curve Finance",
@@ -328,7 +328,7 @@
     "compound": {
       "covered": true,
       "inline": "Stage 0",
-      "deeplink": "https://defiscan.info/projects/compound-v3/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/compound-v3",
       "observedAt": "2025-03-18",
       "primaryChain": "ethereum",
       "deploymentName": "Compound V3",
@@ -373,7 +373,7 @@
     "pendle": {
       "covered": true,
       "inline": "Stage 0",
-      "deeplink": "https://defiscan.info/projects/pendle/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/pendle",
       "observedAt": "1970-01-01",
       "primaryChain": "ethereum",
       "deploymentName": "Pendle V2",
@@ -418,7 +418,7 @@
     "liquity": {
       "covered": true,
       "inline": "Stage 2",
-      "deeplink": "https://defiscan.info/projects/liquity/ethereum",
+      "deeplink": "https://www.defiscan.info/protocol/liquity-v1",
       "observedAt": "2024-10-23",
       "primaryChain": "ethereum",
       "deploymentName": "Liquity",
