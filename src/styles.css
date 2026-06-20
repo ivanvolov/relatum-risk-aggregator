@@ -1110,10 +1110,21 @@ table.feeds-table td.schema-cell .dim { color: var(--ink-faint); }
   flex-wrap: wrap;
   gap: 6px;
 }
-/* When the chips live to the right of the search box, fill remaining width and wrap. */
+/* When the chips live to the right of the search box, they sit on a single row.
+   If the viewport is too narrow to fit them, scroll horizontally instead of
+   wrapping to a second line. */
 .controls .cat-chips {
   flex: 1 1 0;
   min-width: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.controls .cat-chip {
+  font-size: 11px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .cat-chip {
   font-family: var(--sans);
