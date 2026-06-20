@@ -82,6 +82,18 @@ export default function Summary() {
     () => data ? Array.from(new Set(data.protocols.map(p => p.category))).sort() : [],
     [data]
   );
+  const CAT_SHORT = {
+    'CDP / Stablecoin': 'Stablecoin',
+    'DEX / AMM': 'DEX',
+    'Lending': 'Lending',
+    'Lending / CDP': 'CDP',
+    'Liquid Restaking': 'Liquid Restaking',
+    'Liquid Staking': 'Liquid Staking',
+    'Swap Aggregator': 'Swap Swap',
+    'Synthetic Yield': 'Synthetic Yield',
+    'Yield / Vault': 'Vault',
+  };
+  const catShort = (c) => CAT_SHORT[c] ?? c;
 
   const rows = useMemo(() => {
     if (!data) return [];
@@ -161,7 +173,7 @@ export default function Summary() {
         <div className="cat-chips">
           <button className={'cat-chip' + (cat === '' ? ' active' : '')} onClick={() => setCat('')}>All</button>
           {categories.map(c => (
-            <button key={c} className={'cat-chip' + (cat === c ? ' active' : '')} onClick={() => setCat(c)}>{c}</button>
+            <button key={c} className={'cat-chip' + (cat === c ? ' active' : '')} onClick={() => setCat(c)} title={c}>{catShort(c)}</button>
           ))}
         </div>
       </div>
@@ -176,7 +188,11 @@ export default function Summary() {
               <th className="gov-col" title="Multisig threshold · timelock (from Safe API when available)">Gov</th>
               <th data-key="coverage" className="sortable feeds-col-edge" onClick={() => onSort('coverage')} title="Number of feeds covering (full or partial)">Feeds</th>
               {visibleFeeds.map(f => (
-                <th key={f.id} className="feed" title={`${f.name} — ${f.focus}`}>{f.name}</th>
+                <th key={f.id} className="feed" title={`${f.name} — ${f.focus}`}>
+                  {f.name === 'Block Analitica' ? <>Block<br />Analitica</>
+                    : f.name === 'CuratorWatch' ? <>Curator<br />Watch</>
+                    : f.name}
+                </th>
               ))}
             </tr>
           </thead>
@@ -206,7 +222,9 @@ export default function Summary() {
                     const cell = p._cov[f.id] || { status: 'none', adapterStatus: 'pending', inline: null };
                     return (
                       <td key={f.id} className="cell">
-                        <MatrixCell status={cell.status} adapterStatus={cell.adapterStatus} inline={cell.inline} />
+                        <Link to={`/protocol/${p.slug}?feed=${f.id}`} className="cell-link">
+                          <MatrixCell status={cell.status} adapterStatus={cell.adapterStatus} inline={cell.inline} />
+                        </Link>
                       </td>
                     );
                   })}
@@ -218,15 +236,12 @@ export default function Summary() {
       </div>
 
       <div className="legend">
-        <span className="item"><span className="inline-rating stage-2">Stage 2</span>verbatim rating — what the feed published, shown as-is</span>
         <span className="item"><span className="cell-check">✓</span>covered, no rating — feed has a record but didn't publish a value</span>
-        <span className="item"><span className="dot-cell part"></span>partial — covers a related entity (e.g. Pharos on Aave via GHO)</span>
         <span className="item"><span className="cell-dash">—</span>not covered — feed has no published record (hover for reason)</span>
       </div>
 
       <footer className="page-footer">
-        Built from the rfp: vocabulary at data/ontology/vocab.ttl ·
-        Every claim in the graph carries rfp:statedBy + rfp:sourceURL + rfp:observedAt
+        Mockup submitted to the EF App Relations RFP <em>Neutral DeFi Risk Intelligence Aggregator</em> by IVa.
       </footer>
     </main>
   );

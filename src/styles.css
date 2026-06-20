@@ -98,10 +98,15 @@ code, .mono { font-family: var(--mono); font-size: 0.9em; font-feature-settings:
 .brand .mark {
   width: 26px;
   height: 26px;
-  border-radius: 7px;
   background: linear-gradient(135deg, var(--accent) 0%, #4a78d8 100%);
   position: relative;
   box-shadow: var(--shadow-sm);
+  clip-path: polygon(
+    6px 0, calc(100% - 6px) 0,
+    100% 6px, 100% calc(100% - 6px),
+    calc(100% - 6px) 100%, 6px 100%,
+    0 calc(100% - 6px), 0 6px
+  );
 }
 .brand .mark::before,
 .brand .mark::after {
@@ -161,7 +166,7 @@ code, .mono { font-family: var(--mono); font-size: 0.9em; font-feature-settings:
 .page {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 36px 32px 96px;
+  padding: 14px 32px 96px;
   animation: fadeIn 0.3s ease-out;
 }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
@@ -296,18 +301,20 @@ table.matrix thead th {
   user-select: none;
   border-bottom: 1px solid var(--line);
   transition: background .12s;
+  vertical-align: middle;
 }
 table.matrix thead th:hover { background: var(--bg-soft-2); }
 table.matrix thead th.feed {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   text-orientation: mixed;
-  height: 140px;
-  text-align: left;
-  padding: 12px 6px;
+  height: 90px;
+  text-align: center;
+  padding: 8px 6px;
   font-size: 10.5px;
   letter-spacing: 0.3px;
   white-space: nowrap;
+  vertical-align: middle;
 }
 table.matrix tbody tr {
   transition: background .08s;
@@ -363,7 +370,21 @@ table.matrix td.tvl {
 }
 table.matrix td.cell {
   text-align: center;
+  padding: 0;
+}
+table.matrix td.cell .cell-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   padding: 6px 4px;
+  color: inherit;
+  text-decoration: none;
+}
+table.matrix td.cell .cell-link:hover {
+  background: var(--accent-soft);
+  text-decoration: none;
 }
 
 /* ============ coverage badges ============ */
@@ -1121,8 +1142,6 @@ table.feeds-table td.schema-cell .dim { color: var(--ink-faint); }
   scrollbar-width: thin;
 }
 .controls .cat-chip {
-  font-size: 11px;
-  padding: 5px 10px;
   white-space: nowrap;
   flex-shrink: 0;
 }

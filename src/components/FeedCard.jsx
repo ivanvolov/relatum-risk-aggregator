@@ -32,7 +32,7 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
   // Not-yet-covered cards: compact one-liner, no expand affordance.
   if (!isCovered) {
     return (
-      <div className="feed-card not-covered" data-type={feedMeta.type}>
+      <div className="feed-card not-covered" data-type={feedMeta.type} id={`feed-${entry.feedId}`}>
         <div className="head static" aria-disabled="true">
           <span className="name">{feedMeta.name}</span>
           <span className="type-chip">{feedMeta.type}</span>
@@ -48,7 +48,7 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
   }
 
   return (
-    <div className={'feed-card' + (isOpen ? ' open' : '')} data-type={feedMeta.type}>
+    <div className={'feed-card' + (isOpen ? ' open' : '')} data-type={feedMeta.type} id={`feed-${entry.feedId}`}>
       <button type="button" className="head expandable" onClick={onToggle} aria-expanded={isOpen}>
         <span className="name">{feedMeta.name}</span>
         <span className="type-chip">{feedMeta.type}</span>

@@ -128,7 +128,7 @@ export default function Methodology() {
       </div>
 
       <footer className="page-footer">
-        AGPL-3.0 · Charter: no composite scoring · Schema vocabulary: rfp: · Open data layer: {data ? `${data.feeds.length} feeds, ${data.protocols.length} protocols` : 'feed registry + canonical protocol list'}
+        Mockup submitted to the EF App Relations RFP <em>Neutral DeFi Risk Intelligence Aggregator</em> by IVa.
       </footer>
     </main>
   );

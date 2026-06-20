@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { loadIndex, loadProtocol } from '../lib/data.js';
 import { fmtUsd } from '../lib/format.js';
 import FeedCard from '../components/FeedCard.jsx';
@@ -10,20 +10,33 @@ import Avatar from '../components/Avatar.jsx';
 
 export default function ProtocolDetail() {
   const { slug } = useParams();
+  const [searchParams] = useSearchParams();
+  const focusFeed = searchParams.get('feed');
   const [index, setIndex] = useState(null);
   const [detail, setDetail] = useState(undefined); // undefined = loading, null = not found
   const [openFeeds, setOpenFeeds] = useState(null); // Set of expanded feedIds; null = use defaults
 
   useEffect(() => {
     let cancel = false;
-    setOpenFeeds(null); // reset on slug change so the new protocol opens its first covered feed
+    // If we arrived from a cell click, seed the open set with that feed so it's
+    // expanded when the page renders. Otherwise null → first-covered default.
+    setOpenFeeds(focusFeed ? new Set([focusFeed]) : null);
     Promise.all([loadIndex(), loadProtocol(slug)]).then(([i, d]) => {
       if (cancel) return;
       setIndex(i);
       setDetail(d);
     });
     return () => { cancel = true; };
-  }, [slug]);
+  }, [slug, focusFeed]);
+
+  useEffect(() => {
+    if (!detail || !focusFeed) return;
+    const id = `feed-${focusFeed}`;
+    requestAnimationFrame(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }, [detail, focusFeed]);
 
   if (!index || detail === undefined) return <main className="page"><p>Loading…</p></main>;
   if (!detail) {
@@ -89,9 +102,9 @@ export default function ProtocolDetail() {
 
       <div className="detail-grid">
         <div>
-          {D.sidecards.length ? D.sidecards.map((sc, i) => (
+          {D.sidecards.map((sc, i) => (
             <Sidecard key={i} sc={sc} degradeNote={D.governance_degrade_note} />
-          )) : <div className="sidecard"><h3>Identity</h3><div className="kv"><span className="k">Slug</span><span className="v">{D.slug}</span></div></div>}
+          ))}
         </div>
 
         <div>
