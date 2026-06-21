@@ -1,6 +1,6 @@
 # Manual inspection queue
 
-Cells where the gap-closing pass couldn't recover coverage through public sources, but the seed (`data/seeds/coverage-seed.yaml`) or other signals suggest coverage might exist. Each entry lists what was tried and where to look manually. After confirming/refuting, either supply a working source URL (we'll extend the adapter) or confirm the gap and we'll tighten the `reason`.
+Cells where the gap-closing pass couldn't recover coverage through public sources, but the seed (`ontology/seeds/coverage-seed.yaml`) or other signals suggest coverage might exist. Each entry lists what was tried and where to look manually. After confirming/refuting, either supply a working source URL (we'll extend the adapter) or confirm the gap and we'll tighten the `reason`.
 
 ---
 

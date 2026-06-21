@@ -167,10 +167,6 @@ export default function ProtocolDetail() {
             <h2>Risk Intelligence Feeds</h2>
             <span className="feed-counter"><strong>{coveredFeeds.length}</strong> risk feeds available</span>
           </div>
-          <p className="feeds-section-sub">
-            Each card is one provider's view of this protocol. Methodology shown before findings.
-            Ratings shown verbatim where they exist.
-          </p>
           <div className="feed-accordion">
             {sortedFeeds.map(entry => {
               const meta = index.feedById(entry.feedId);

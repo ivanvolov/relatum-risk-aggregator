@@ -1,7 +1,7 @@
 {
   "feedId": "defiscan",
   "feedName": "DeFiScan",
-  "generatedAt": "2026-06-21T17:16:22.582Z",
+  "generatedAt": "2026-06-21T17:25:47.181Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/defiscan/output/2026-06-17.json",
   "protocols": {
