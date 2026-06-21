@@ -2,17 +2,46 @@
   "slug": "pendle",
   "name": "Pendle",
   "category": "Yield / Vault",
-  "tvl_usd": 800000000,
+  "tvl_usd": 1258862000.6978002,
   "family": "Pendle",
   "versions": null,
   "logoUrl": "https://icons.llamao.fi/icons/protocols/pendle.jpg",
-  "description": null,
+  "description": "Pendle Finance is a protocol that enables the trading of tokenized future yield on an AMM system.",
+  "homepage": "https://pendle.finance/",
+  "twitter": "pendle_fi",
+  "github": [
+    "pendle-finance"
+  ],
+  "chains": [
+    "Ethereum",
+    "Avalanche",
+    "Sonic",
+    "Berachain",
+    "Optimism",
+    "Plasma",
+    "Hyperliquid L1",
+    "Mantle",
+    "Arbitrum",
+    "Base",
+    "Monad",
+    "Binance"
+  ],
+  "parent_protocol": null,
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "1970-01-01",
-  "governance_summary": "—",
+  "governance_summary": null,
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "github",
+      "date": null,
+      "report_url": "https://github.com/pendle-finance/pendle-core-v2-public/tree/main/audits"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -90,14 +119,60 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "2/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/pendle",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source + multiple top-firm audits",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "3-of-5 multisig controls upgrades, no timelock",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Boros oracle/bot risk; V2 per-market isolated",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Permissionless contracts, no KYC, multi-path access",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -133,12 +208,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a DeFi Saver execution surface",
       "claims": [],
       "history": [],
       "notable": null,
@@ -166,7 +241,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -293,7 +368,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

@@ -2,17 +2,38 @@
   "slug": "1inch",
   "name": "1inch",
   "category": "Swap Aggregator",
-  "tvl_usd": null,
+  "tvl_usd": 2486396.61921,
   "family": "1inch",
   "versions": null,
   "logoUrl": "https://icons.llamao.fi/icons/protocols/1inch.jpg",
-  "description": null,
+  "description": "1inch is the DeFi ecosystem building financial freedom for everyone",
+  "homepage": "https://1inch.com",
+  "twitter": "1inch",
+  "github": [
+    "1inch"
+  ],
+  "chains": [
+    "Ethereum",
+    "Binance"
+  ],
+  "parent_protocol": null,
+  "governance_id": [
+    "snapshot:1inch.eth"
+  ],
+  "methodology_url": null,
   "lastUpdated": null,
-  "governance_summary": "—",
+  "governance_summary": "Snapshot · 1inch.eth",
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "help",
+      "date": null,
+      "report_url": "https://help.1inch.com/en/articles/4585088-how-secure-is-1inch"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -102,12 +123,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "no keyword pattern",
       "claims": [],
       "history": [],
       "notable": null,
@@ -135,7 +156,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -205,7 +226,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

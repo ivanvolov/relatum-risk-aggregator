@@ -1,0 +1,219 @@
+{
+  "fetched_at": "2026-06-20T16:13:02.858Z",
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 4,
+      "markets": [
+        "aave/smart-wallet/v2/default/manage",
+        "aave/smart-wallet/v3/default/manage",
+        "aave/smart-wallet/v3/etherfi/manage",
+        "aave/smart-wallet/v3/lido/manage"
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 2,
+      "markets": [
+        "spark/smart-wallet/v1/default/manage",
+        "spark/v1/manage"
+      ]
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 1,
+      "markets": [
+        "makerdao/manage"
+      ]
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 1,
+      "markets": [
+        "morpho/manage"
+      ]
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 0,
+      "markets": []
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 7,
+      "markets": [
+        "compound/smart-wallet/v2/manage",
+        "compound/v2/manage",
+        "compound/v3/eth/manage",
+        "compound/v3/usdc/manage",
+        "compound/v3/usds/manage",
+        "compound/v3/usdt/manage",
+        "compound/v3/wsteth/manage"
+      ]
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 0,
+      "markets": []
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 2,
+      "markets": [
+        "liquity/manage",
+        "liquity/smart-wallet/manage"
+      ]
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": true,
+      "surfaces": [
+        "lending",
+        "dex",
+        "leverage"
+      ],
+      "market_count": 0,
+      "markets": []
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "surfaces": [],
+      "market_count": 0,
+      "markets": []
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "reason": "no keyword pattern"
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "reason": "no keyword pattern"
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "reason": "no keyword pattern"
+    }
+  }
+}

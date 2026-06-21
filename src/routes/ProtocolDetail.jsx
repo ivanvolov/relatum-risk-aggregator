@@ -110,8 +110,10 @@ export default function ProtocolDetail() {
               {[
                 { k: 'Category', v: D.category },
                 { k: 'Family', v: D.family },
-                { k: 'ETH TVL', v: D.tvl_usd ? fmtUsd(D.tvl_usd) : null },
+                { k: 'TVL', v: D.tvl_usd ? fmtUsd(D.tvl_usd) : null },
                 { k: 'Volume (24h)', v: D.volume_usd_24h ? fmtUsd(D.volume_usd_24h) : null },
+                { k: 'Chains', v: D.chains && D.chains.length ? `${D.chains.length} (${D.chains.slice(0, 3).join(', ')}${D.chains.length > 3 ? '…' : ''})` : null },
+                { k: 'Audits', v: D.audit_count != null ? `${D.audit_count}${D.audit_history?.length ? ` (${D.audit_history.length} on file)` : ''}` : null },
                 { k: 'Governance', v: D.governance_summary },
                 { k: 'Last updated', v: D.lastUpdated },
               ].map((r, i) => (
@@ -122,6 +124,42 @@ export default function ProtocolDetail() {
               ))}
             </div>
           )}
+          {(D.homepage || D.twitter || (D.github && D.github.length) || D.parent_protocol) ? (
+            <div className="sidecard">
+              <h3>Links</h3>
+              {D.homepage ? (
+                <div className="kv"><span className="k">Website</span>
+                  <span className="v"><a href={D.homepage} target="_blank" rel="noreferrer">{D.homepage.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a></span>
+                </div>
+              ) : null}
+              {D.twitter ? (
+                <div className="kv"><span className="k">Twitter</span>
+                  <span className="v"><a href={`https://twitter.com/${D.twitter}`} target="_blank" rel="noreferrer">@{D.twitter}</a></span>
+                </div>
+              ) : null}
+              {D.github && D.github.length ? (
+                <div className="kv"><span className="k">GitHub</span>
+                  <span className="v">
+                    {D.github.map((g, i) => {
+                      const url = g.startsWith('http') ? g : `https://github.com/${g}`;
+                      const label = g.startsWith('http') ? g.replace(/^https?:\/\/github\.com\//, '') : g;
+                      return <span key={i}>{i > 0 ? ', ' : ''}<a href={url} target="_blank" rel="noreferrer">{label}</a></span>;
+                    })}
+                  </span>
+                </div>
+              ) : null}
+              {D.parent_protocol ? (
+                <div className="kv"><span className="k">Parent</span>
+                  <span className="v">{D.parent_protocol.replace(/^parent#/, '')}</span>
+                </div>
+              ) : null}
+              {D.methodology_url ? (
+                <div className="kv"><span className="k">Methodology</span>
+                  <span className="v"><a href={D.methodology_url} target="_blank" rel="noreferrer">View →</a></span>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
         </div>
 
         <div>
@@ -156,13 +194,13 @@ export default function ProtocolDetail() {
         <section className="full-block audit-block">
           <h2>Audit History <span className="prov self">self-reported</span></h2>
           <table className="audit-table">
-            <thead><tr><th>Firm</th><th>Date</th><th>Report</th></tr></thead>
+            <thead><tr><th>Firm / Source</th><th>Date</th><th>Report</th></tr></thead>
             <tbody>
               {D.audit_history.map((a, i) => (
                 <tr key={i}>
-                  <td className="firm">{a.firm}</td>
-                  <td className="date">{a.date}</td>
-                  <td className="report">{a.report_url ? <a href={a.report_url} target="_blank" rel="noreferrer">View →</a> : '—'}</td>
+                  <td className={'firm' + (a.firm ? '' : ' dim')}>{a.firm || '—'}</td>
+                  <td className={'date' + (a.date ? '' : ' dim')}>{a.date || '—'}</td>
+                  <td className="report">{a.report_url ? <a href={a.report_url} target="_blank" rel="noreferrer">{a.report_url.replace(/^https?:\/\//, '').slice(0, 60)}{a.report_url.length > 60 ? '…' : ''} →</a> : '—'}</td>
                 </tr>
               ))}
             </tbody>

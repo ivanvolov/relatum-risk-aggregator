@@ -196,21 +196,30 @@ function defisphereRow(slug, raw) {
   };
 }
 
-// DeFi Saver: per-protocol surfaces (lending / dex / leverage) on the dashboard.
-// The data is binary per-surface — we surface the chip set verbatim.
+// DeFi Saver: per-protocol surfaces (lending / dex / leverage) from feature pages
+// + per-protocol market count from the public app bundle (distinct /manage routes).
+// Matrix inline = "N markets" when count > 0; covered protocols without bundle
+// routes (curve/fluid/euler — different routing convention) just show ✓.
 function defisaverRow(slug, raw) {
   if (!raw || raw.covered === false) {
     return { covered: false, reason: raw?.reason ?? 'not a DeFi Saver execution surface', deeplink: null };
   }
   const surfaces = raw.surfaces || [];
+  const markets = raw.markets || [];
+  const claims = [];
+  if (markets.length) {
+    claims.push({ dim: 'markets', value: String(markets.length), scale: 'distinct /manage routes in app bundle' });
+  }
+  claims.push({ dim: 'surfaces', value: surfaces.join(', '), scale: 'DeFi Saver flow' });
+  for (const m of markets.slice(0, 8)) {
+    claims.push({ dim: 'market', value: m, scale: 'app route' });
+  }
   return {
     covered: true,
-    inline: surfaces.join(' · '),
+    inline: markets.length ? `${markets.length} markets` : 'supported',
     deeplink: 'https://app.defisaver.com',
     observedAt: null,
-    claims: [
-      { dim: 'surfaces', value: surfaces.join(', ') || '—', scale: 'DeFi Saver flow' },
-    ],
+    claims,
   };
 }
 
@@ -265,12 +274,22 @@ function blockanaliticaRow(slug, raw) {
 }
 
 // DeFiPunk'd: 5-principle consensus grades (verifiability, control, ability-to-exit, autonomy, open-access).
-// The fresh adapter output (2026-06-16-api.json) is keyed by defipunkd's own slugs — we map them here.
+// Snapshot is keyed by defipunkd's own slugs — we map them here. When multiple defipunkd slugs
+// fit one of ours (e.g. curve-dex / curve-llamalend / crvusd), pick the one with the most filled slices.
 const DEFIPUNKD_SLUG_MAP = {
-  'sky':    'sky-lending',
-  'spark':  'sparklend',
-  'morpho': 'morpho-blue',
-  'ethena': 'ethena-usde',
+  'sky':        'sky-lending',
+  'spark':      'sparklend',
+  'morpho':     'morpho-blue',
+  'ethena':     'ethena-usde',
+  'aave':       'aave-v3',
+  'lido':       'lido',
+  'liquity':    'liquity-v1',
+  'rocketpool': 'rocket-pool',
+  'uniswap':    'uniswap-v4',
+  'curve':      'curve-dex',
+  'etherfi':    'ether.fi-stake',
+  'pendle':     'pendle',
+  'balancer':   'balancer-v3',
 };
 const DEFIPUNKD_PRINCIPLES = ['verifiability', 'control', 'ability-to-exit', 'autonomy', 'open-access'];
 
@@ -397,28 +416,29 @@ function zyfaiRow(slug, raw) {
   };
 }
 
-// Philidor / RiskLayer share the same shape today: stub output, everything covered:false.
-// One normalizer reused; reason text passes through from the underlying row.
+// Philidor / RiskLayer share the same shape today: stub output, mostly covered:false.
+// One normalizer reused; reason / inline / deeplink pass through from the underlying row.
 function passthroughCoverageOnly(slug, raw) {
   if (!raw || raw.covered === false) {
     return { covered: false, reason: raw?.reason ?? 'adapter not yet scraped', deeplink: null };
   }
-  // covered:true path — placeholder; real data shape lands when these scrapers run.
-  return { covered: true, inline: 'tracked', deeplink: null, observedAt: null, claims: [] };
+  return {
+    covered: true,
+    inline: raw.inline ?? 'tracked',
+    deeplink: raw.deeplink ?? null,
+    observedAt: raw.observedAt ?? null,
+    claims: raw.claims ?? [],
+  };
 }
 
 // Per-feed normalizers. Register one when a feed's adapter output should drive the UI.
-// DeFi Saver intentionally NOT registered — its source is a position-management UI,
-// not a risk feed; revisit once we decide whether its per-asset market table adds
-// signal beyond what BlockAnalitica already publishes. Without a registration here,
-// adapterStatus stays "pending" and the matrix renders hatched cells.
 const NORMALIZERS = {
   defiscan: defiscanRow,
   xerberus: xerberusRow,
   curatorwatch: curatorwatchRow,
   pharos: pharosRow,
   defisphere: defisphereRow,
-  // defisaver: defisaverRow,   // disabled — see note above
+  defisaver: defisaverRow,
   stablewatch: stablewatchRow,
   blockanalitica: blockanaliticaRow,
   defipunkd: defipunkdRow,

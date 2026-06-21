@@ -1,0 +1,29 @@
+{
+  "fetched_at": "2026-06-20T00:00:00.000Z",
+  "_note": "RiskLayer pivoted from DeFi Risk Oracle AVS to insurance-carrier vendor mapping (see adapter.mjs:1-17). No DeFi data exists to scrape. Every cell is covered:false with the pivoted-product reason.",
+  "protocols": {
+    "lido":          { "slug": "lido",          "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "aave":          { "slug": "aave",          "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "spark":         { "slug": "spark",         "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "sky":           { "slug": "sky",           "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "ethena":        { "slug": "ethena",        "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "morpho":        { "slug": "morpho",        "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "etherfi":       { "slug": "etherfi",       "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "uniswap":       { "slug": "uniswap",       "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "curve":         { "slug": "curve",         "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "compound":      { "slug": "compound",      "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "rocketpool":    { "slug": "rocketpool",    "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "pendle":        { "slug": "pendle",        "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "fluid":         { "slug": "fluid",         "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "liquity":       { "slug": "liquity",       "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "yearn":         { "slug": "yearn",         "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "euler":         { "slug": "euler",         "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "mellow":        { "slug": "mellow",        "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "balancer":      { "slug": "balancer",      "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "gearbox":       { "slug": "gearbox",       "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "cowswap":       { "slug": "cowswap",       "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "morpho-vaults": { "slug": "morpho-vaults", "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "1inch":         { "slug": "1inch",         "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" },
+    "0x":            { "slug": "0x",            "covered": false, "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)" }
+  }
+}

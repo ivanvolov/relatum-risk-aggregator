@@ -1,123 +1,129 @@
 {
   "feedId": "philidor",
   "feedName": "Philidor",
-  "generatedAt": "2026-06-20T09:06:16.743Z",
-  "snapshotDate": "2026-06-17",
-  "sourceFile": "data/adapters/philidor/output/2026-06-17.json",
+  "generatedAt": "2026-06-21T17:16:22.596Z",
+  "snapshotDate": "2026-06-20",
+  "sourceFile": "data/adapters/philidor/output/2026-06-20.json",
   "protocols": {
     "lido": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "aave": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "listed on landing page but no Philidor vault scoring",
       "deeplink": null
     },
     "spark": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "listed on landing page but no Philidor vault scoring",
       "deeplink": null
     },
     "sky": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "ethena": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "morpho": {
-      "covered": false,
-      "reason": "adapter not yet scraped",
-      "deeplink": null
+      "covered": true,
+      "inline": "vault scoring",
+      "deeplink": "https://analytics.philidor.io",
+      "observedAt": null,
+      "claims": []
     },
     "etherfi": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "uniswap": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "listed on landing page but no Philidor vault scoring",
       "deeplink": null
     },
     "curve": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "compound": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "listed on landing page but no Philidor vault scoring",
       "deeplink": null
     },
     "rocketpool": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "pendle": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "fluid": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "liquity": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "yearn": {
-      "covered": false,
-      "reason": "adapter not yet scraped",
-      "deeplink": null
+      "covered": true,
+      "inline": "vault scoring",
+      "deeplink": "https://analytics.philidor.io",
+      "observedAt": null,
+      "claims": []
     },
     "euler": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "mellow": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "morpho-vaults": {
-      "covered": false,
-      "reason": "adapter not yet scraped",
-      "deeplink": null
+      "covered": true,
+      "inline": "vault scoring",
+      "deeplink": "https://analytics.philidor.io",
+      "observedAt": null,
+      "claims": []
     },
     "balancer": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "gearbox": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "cowswap": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "1inch": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     },
     "0x": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "not on Philidor landing page",
       "deeplink": null
     }
   }

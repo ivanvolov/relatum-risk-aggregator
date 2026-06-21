@@ -1,0 +1,29 @@
+{
+  "fetched_at": "2026-06-20T00:00:00.000Z",
+  "_note": "Philidor has no public API (see adapter.mjs:1-26). The only public signal is the protocol-icon list on analytics.philidor.io. The intersection with our roster that the user has confirmed as canonical Philidor coverage (per coverage-seed.yaml) is {morpho, yearn} — Philidor publishes vault scoring for these. Other landing-page icons (aave, spark, compound, uniswap) are listed but not scored by Philidor.",
+  "protocols": {
+    "lido":          { "slug": "lido",          "covered": false, "reason": "not on Philidor landing page" },
+    "aave":          { "slug": "aave",          "covered": false, "reason": "listed on landing page but no Philidor vault scoring" },
+    "spark":         { "slug": "spark",         "covered": false, "reason": "listed on landing page but no Philidor vault scoring" },
+    "sky":           { "slug": "sky",           "covered": false, "reason": "not on Philidor landing page" },
+    "ethena":        { "slug": "ethena",        "covered": false, "reason": "not on Philidor landing page" },
+    "morpho":        { "slug": "morpho",        "covered": true,  "inline": "vault scoring", "deeplink": "https://analytics.philidor.io" },
+    "etherfi":       { "slug": "etherfi",       "covered": false, "reason": "not on Philidor landing page" },
+    "uniswap":       { "slug": "uniswap",       "covered": false, "reason": "listed on landing page but no Philidor vault scoring" },
+    "curve":         { "slug": "curve",         "covered": false, "reason": "not on Philidor landing page" },
+    "compound":      { "slug": "compound",      "covered": false, "reason": "listed on landing page but no Philidor vault scoring" },
+    "rocketpool":    { "slug": "rocketpool",    "covered": false, "reason": "not on Philidor landing page" },
+    "pendle":        { "slug": "pendle",        "covered": false, "reason": "not on Philidor landing page" },
+    "fluid":         { "slug": "fluid",         "covered": false, "reason": "not on Philidor landing page" },
+    "liquity":       { "slug": "liquity",       "covered": false, "reason": "not on Philidor landing page" },
+    "yearn":         { "slug": "yearn",         "covered": true,  "inline": "vault scoring", "deeplink": "https://analytics.philidor.io" },
+    "euler":         { "slug": "euler",         "covered": false, "reason": "not on Philidor landing page" },
+    "mellow":        { "slug": "mellow",        "covered": false, "reason": "not on Philidor landing page" },
+    "balancer":      { "slug": "balancer",      "covered": false, "reason": "not on Philidor landing page" },
+    "gearbox":       { "slug": "gearbox",       "covered": false, "reason": "not on Philidor landing page" },
+    "cowswap":       { "slug": "cowswap",       "covered": false, "reason": "not on Philidor landing page" },
+    "morpho-vaults": { "slug": "morpho-vaults", "covered": true,  "inline": "vault scoring", "deeplink": "https://analytics.philidor.io" },
+    "1inch":         { "slug": "1inch",         "covered": false, "reason": "not on Philidor landing page" },
+    "0x":            { "slug": "0x",            "covered": false, "reason": "not on Philidor landing page" }
+  }
+}

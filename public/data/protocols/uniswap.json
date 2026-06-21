@@ -2,7 +2,7 @@
   "slug": "uniswap",
   "name": "Uniswap",
   "category": "DEX / AMM",
-  "tvl_usd": 1910000000,
+  "tvl_usd": 1453144663.6134796,
   "family": "Uniswap",
   "versions": [
     "v3",
@@ -10,13 +10,81 @@
     "UniswapX"
   ],
   "logoUrl": "https://icons.llamao.fi/icons/protocols/uniswap-v3.png",
-  "description": null,
+  "description": "A fully decentralized protocol for automated liquidity provision on Ethereum. V2",
+  "homepage": "https://app.uniswap.org/",
+  "twitter": "Uniswap",
+  "github": [],
+  "chains": [
+    "Saga",
+    "Hemi",
+    "0G",
+    "Polygon zkEVM",
+    "Moonbeam",
+    "Tempo",
+    "Taiko",
+    "XDC",
+    "Sonic",
+    "Lisk",
+    "Manta",
+    "Telos",
+    "X Layer",
+    "Corn",
+    "Scroll",
+    "Etherlink",
+    "Goat",
+    "Linea",
+    "Boba",
+    "Nibiru",
+    "BOB",
+    "Sei",
+    "Lens",
+    "xDai",
+    "RSK",
+    "Filecoin",
+    "Optimism",
+    "zkSync Era",
+    "Celo",
+    "LightLink",
+    "Mantle",
+    "Plasma",
+    "Ethereum",
+    "Blast",
+    "Polygon",
+    "World Chain",
+    "Monad",
+    "Binance",
+    "Redbelly",
+    "Arbitrum",
+    "Unichain",
+    "Avalanche",
+    "Base"
+  ],
+  "parent_protocol": "parent#uniswap",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2025-01-08",
   "governance_summary": "2d",
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "github",
+      "date": null,
+      "report_url": "https://github.com/Uniswap/uniswap-v3-core/tree/main/audits"
+    },
+    {
+      "firm": "github",
+      "date": null,
+      "report_url": "https://github.com/Uniswap/uniswap-v3-periphery/tree/main/audits"
+    },
+    {
+      "firm": "github",
+      "date": null,
+      "report_url": "https://github.com/ConsenSys/Uniswap-audit-report-2018-12"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -94,14 +162,65 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "5/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/uniswap-v4",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified & heavily audited",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Bounded fee governance",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "No pause, fully permissionless exit",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "No external dependencies in core",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Permissionless contracts, multiple access paths",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -137,12 +256,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a DeFi Saver execution surface",
       "claims": [],
       "history": [],
       "notable": null,
@@ -170,7 +289,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -240,7 +359,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "listed on landing page but no Philidor vault scoring",
       "claims": [],
       "history": [],
       "notable": null,

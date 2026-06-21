@@ -1,23 +1,26 @@
 #!/usr/bin/env node
-// DeFi Saver adapter — defisaver.com marketing pages (no public data API).
+// DeFi Saver adapter — public assets from defisaver.com + app.defisaver.com.
 //
-// DeFi Saver is a position-management UI, not a per-protocol risk feed. The
-// only public surface that enumerates supported protocols is the marketing
-// site. As of 2026-06-17, the canonical list is on the "Lending and
-// Borrowing" feature page, in the FAQ block under "Which protocols are
-// supported":
+// DeFi Saver is a position-management UI. No public data API exists for the
+// rated/scored shape other risk feeds use. Two public signals we extract:
 //
-//   Aave (V3 / V4), Compound, Maker, Spark, Morpho, Fluid, Sky, Liquity,
-//   CurveUSD, LlamaLend, Euler v2.
+//   1. Feature-page surface coverage (which of lending / dex / leverage the
+//      protocol appears on) from defisaver.com/features/*. Binary per surface.
 //
-// No app API is exposed without a wallet session; the protocol list is the
-// only structured signal we can extract publicly.
+//   2. Per-protocol market COUNT — distinct `/protocol/<version>/<market>/manage`
+//      routes in the public app bundle at app.defisaver.com. Each route
+//      represents a distinct position-management target inside DeFi Saver
+//      (e.g. aave-v3-core, aave-v3-etherfi, compound-v3-usdc, etc.). This
+//      mirrors how DeFi Sphere counts markets — it's the most-honest number
+//      we can derive from DeFi Saver's own public surface.
 
 const FEATURE_URLS = {
   lending: 'https://defisaver.com/features/lending-and-borrowing',
   dex: 'https://defisaver.com/features/decentralised-exchange',
   leverage: 'https://defisaver.com/features/leverage-management',
 };
+
+const APP_SHELL = 'https://app.defisaver.com';
 
 const SLUG_KEYWORDS = {
   aave:       /\baave\b/i,
@@ -65,6 +68,50 @@ async function getFeatureTexts() {
   return _featureTexts;
 }
 
+// Per-protocol prefixes for matching `/<prefix>/.../manage` routes in the bundle.
+// Multiple prefixes map to one slug (e.g. sky and maker both → 'sky').
+const SLUG_ROUTE_PREFIXES = {
+  aave:     ['aave'],
+  spark:    ['spark'],
+  morpho:   ['morpho'],
+  fluid:    ['fluid'],
+  compound: ['compound'],
+  liquity:  ['liquity'],
+  sky:      ['sky', 'makerdao', 'maker'],
+  curve:    ['curve', 'crvusd', 'llamalend'],
+  euler:    ['euler'],
+};
+
+let _appBundleText;
+async function getAppBundleText() {
+  if (_appBundleText !== undefined) return _appBundleText;
+  try {
+    const shell = await fetchText(APP_SHELL);
+    const m = shell.match(/src="(\/[^"]+\.js)"/);
+    if (!m) { _appBundleText = null; return null; }
+    _appBundleText = await fetchText(APP_SHELL + m[1]);
+    return _appBundleText;
+  } catch {
+    _appBundleText = null;
+    return null;
+  }
+}
+
+// Extract distinct manage-routes per protocol slug from the public app bundle.
+// Returns { <ourSlug>: ['/aave/smart-wallet/v3/etherfi/manage', ...] }
+async function getMarketRoutes() {
+  const text = await getAppBundleText();
+  if (!text) return {};
+  // Match any quoted path that ends in /manage and starts with a known prefix.
+  const all = new Set([...text.matchAll(/"\/?([a-z][a-z0-9_/-]+\/manage)"/g)].map((m) => m[1]));
+  const out = {};
+  for (const [slug, prefixes] of Object.entries(SLUG_ROUTE_PREFIXES)) {
+    const matches = [...all].filter((r) => prefixes.some((p) => r === `${p}/manage` || r.startsWith(`${p}/`)));
+    if (matches.length) out[slug] = matches.sort();
+  }
+  return out;
+}
+
 export async function getProtocol(slug) {
   const re = SLUG_KEYWORDS[slug];
   if (!re) return { slug, covered: false, reason: 'no keyword pattern' };
@@ -73,7 +120,14 @@ export async function getProtocol(slug) {
   for (const [feature, text] of Object.entries(texts)) {
     if (re.test(text)) seenOn.push(feature);
   }
-  return { slug, covered: seenOn.length > 0, surfaces: seenOn };
+  const routes = (await getMarketRoutes())[slug] || [];
+  return {
+    slug,
+    covered: seenOn.length > 0,
+    surfaces: seenOn,
+    market_count: routes.length,
+    markets: routes,
+  };
 }
 
 import { fileURLToPath } from 'node:url';

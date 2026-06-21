@@ -1,123 +1,123 @@
 {
   "feedId": "risklayer",
   "feedName": "RiskLayer",
-  "generatedAt": "2026-06-20T09:06:16.739Z",
-  "snapshotDate": "2026-06-17",
-  "sourceFile": "data/adapters/risklayer/output/2026-06-17.json",
+  "generatedAt": "2026-06-21T17:16:22.591Z",
+  "snapshotDate": "2026-06-20",
+  "sourceFile": "data/adapters/risklayer/output/2026-06-20.json",
   "protocols": {
     "lido": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "aave": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "spark": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "sky": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "ethena": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "morpho": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "etherfi": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "uniswap": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "curve": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "compound": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "rocketpool": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "pendle": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "fluid": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "liquity": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "yearn": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "euler": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "mellow": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "morpho-vaults": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "balancer": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "gearbox": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "cowswap": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "1inch": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     },
     "0x": {
       "covered": false,
-      "reason": "adapter not yet scraped",
+      "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "deeplink": null
     }
   }

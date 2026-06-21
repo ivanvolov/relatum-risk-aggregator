@@ -2,17 +2,33 @@
   "slug": "sky",
   "name": "Sky (MakerDAO)",
   "category": "CDP / Stablecoin",
-  "tvl_usd": 6042932584,
+  "tvl_usd": 6933639123.316549,
   "family": "Sky",
   "versions": null,
   "logoUrl": "https://icons.llamao.fi/icons/protocols/sky-lending.jpg",
-  "description": null,
+  "description": "The USDS stablecoin powers the open Sky ecosystem. It is the upgraded version of DAI, providing new ways for you to have more rewarding crypto experiences.",
+  "homepage": "https://app.sky.money/",
+  "twitter": "SkyEcosystem",
+  "github": [],
+  "chains": [
+    "Ethereum"
+  ],
+  "parent_protocol": "parent#maker",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2025-05-15",
   "governance_summary": "2d",
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "security",
+      "date": null,
+      "report_url": "https://security.makerdao.com/"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -257,13 +273,29 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "1 markets",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "1",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "makerdao/manage",
+          "scale": "app route"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -290,7 +322,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -409,7 +441,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

@@ -2,7 +2,7 @@
   "slug": "balancer",
   "name": "Balancer",
   "category": "DEX / AMM",
-  "tvl_usd": 90000000,
+  "tvl_usd": 108946537.07999001,
   "family": "Balancer",
   "versions": [
     "v2",
@@ -10,12 +10,30 @@
     "CoW AMM"
   ],
   "logoUrl": "https://icons.llamao.fi/icons/protocols/balancer-v3.jpg",
-  "description": null,
+  "description": "Balancer V3 is a decentralized AMM protocol featuring a flexible vault architecture and customizable pools with dynamic swap fees and hooks for tailored liquidity management.",
+  "homepage": "https://balancer.fi/",
+  "twitter": "Balancer",
+  "github": [],
+  "chains": [
+    "Optimism",
+    "Plasma",
+    "Hyperliquid L1",
+    "Monad",
+    "Arbitrum",
+    "Ethereum",
+    "xDai",
+    "Base",
+    "Avalanche"
+  ],
+  "parent_protocol": "parent#balancer",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2026-06-17",
-  "governance_summary": "—",
+  "governance_summary": null,
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
+  "audit_count": 0,
   "audit_history": [],
   "incidents": [],
   "feeds": [
@@ -63,14 +81,50 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "0/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/balancer-v3",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Audits exist but audit-to-deploy drift unresolved",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Exits pausable; recovery mode admin-gated",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -106,12 +160,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a DeFi Saver execution surface",
       "claims": [],
       "history": [],
       "notable": null,
@@ -139,7 +193,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -209,7 +263,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

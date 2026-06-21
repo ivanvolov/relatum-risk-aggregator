@@ -2,16 +2,34 @@
   "slug": "etherfi",
   "name": "ether.fi",
   "category": "Liquid Restaking",
-  "tvl_usd": 2970000000,
+  "tvl_usd": 3211940872.58494,
   "family": "ether.fi",
   "versions": null,
   "logoUrl": "https://icons.llamao.fi/icons/protocols/ether.fi.jpg",
-  "description": null,
+  "description": "Decentralized and non-custodial Ethereum staking protocol",
+  "homepage": "https://www.ether.fi/refer/04bb2542",
+  "twitter": "ether_fi",
+  "github": [
+    "etherfi-protocol"
+  ],
+  "chains": [
+    "Arbitrum",
+    "Ethereum",
+    "Base",
+    "Scroll",
+    "OP Mainnet"
+  ],
+  "parent_protocol": null,
+  "governance_id": [
+    "snapshot:etherfi-dao.eth"
+  ],
+  "methodology_url": null,
   "lastUpdated": "2026-06-17",
-  "governance_summary": "—",
+  "governance_summary": "Snapshot · etherfi-dao.eth",
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
+  "audit_count": null,
   "audit_history": [],
   "incidents": [],
   "feeds": [
@@ -59,14 +77,65 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "1/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/ether.fi-stake",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source; audit coverage stale",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "10-day timelock; multisig proposer unconfirmed",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Redemption queued; oracle-gated claims; pause uncapped",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Permissioned operators and AVS slashing risk principal",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Fully permissionless contracts, no on-chain whitelist",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -102,12 +171,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a DeFi Saver execution surface",
       "claims": [],
       "history": [],
       "notable": null,
@@ -135,7 +204,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -231,7 +300,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

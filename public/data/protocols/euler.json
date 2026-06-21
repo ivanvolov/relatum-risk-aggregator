@@ -2,20 +2,51 @@
   "slug": "euler",
   "name": "Euler",
   "category": "Lending",
-  "tvl_usd": 140000000,
+  "tvl_usd": 1623596271.03076,
   "family": "Euler",
   "versions": [
     "v1",
     "v2"
   ],
   "logoUrl": "https://icons.llamao.fi/icons/protocols/euler-v2.png",
-  "description": null,
+  "description": "Euler revolutionizes DeFi by letting any asset become collateral for a lending market. Lenders and borrowers get market leading risk-adjusted rates. Builders can create and manage markets exactly how they want them, with institutional-grade security.",
+  "homepage": "https://www.euler.finance",
+  "twitter": "eulerfinance",
+  "github": [],
+  "chains": [
+    "Mantle",
+    "TAC",
+    "Unichain",
+    "Swellchain",
+    "Berachain",
+    "Base",
+    "Sonic",
+    "Linea",
+    "Arbitrum",
+    "Ethereum",
+    "Plasma",
+    "Hyperliquid L1",
+    "BOB",
+    "Avalanche",
+    "Monad",
+    "Binance"
+  ],
+  "parent_protocol": "parent#euler",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2026-06-17",
-  "governance_summary": "—",
+  "governance_summary": null,
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "euler",
+      "date": null,
+      "report_url": "https://www.euler.finance/#security"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -126,13 +157,19 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "supported",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -159,7 +196,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -334,7 +371,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

@@ -2,20 +2,36 @@
   "slug": "liquity",
   "name": "Liquity",
   "category": "Lending / CDP",
-  "tvl_usd": 200000000,
+  "tvl_usd": 74431388.24564,
   "family": "Liquity",
   "versions": [
     "v1",
     "v2"
   ],
   "logoUrl": "https://icons.llamao.fi/icons/protocols/liquity-v2.jpg",
-  "description": null,
+  "description": "Liquity V2 is a decentralized and immutable borrowing protocol that allows you to set your own interest rate and draw loans against ETH, wstETH and rETH.",
+  "homepage": "https://www.liquity.org/",
+  "twitter": "LiquityProtocol",
+  "github": [],
+  "chains": [
+    "Ethereum"
+  ],
+  "parent_protocol": "parent#liquity",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2024-10-23",
-  "governance_summary": "—",
+  "governance_summary": null,
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "docs",
+      "date": null,
+      "report_url": "https://docs.liquity.org/v2-documentation/technical-resources"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -93,14 +109,65 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "5/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/liquity-v1",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source, immutable, multiple top audits",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Fully immutable, no admin keys or upgrades",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Immutable contracts, no admin pause possible",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Immutable, dual-oracle fallback, zero admin keys",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Permissionless immutable contracts, no operator gates",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -185,13 +252,34 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "2 markets",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "2",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "liquity/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "liquity/smart-wallet/manage",
+          "scale": "app route"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -218,7 +306,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -341,7 +429,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

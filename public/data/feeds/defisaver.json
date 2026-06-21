@@ -1,0 +1,311 @@
+{
+  "feedId": "defisaver",
+  "feedName": "DeFi Saver",
+  "generatedAt": "2026-06-21T17:16:22.590Z",
+  "snapshotDate": "2026-06-20",
+  "sourceFile": "data/adapters/defisaver/output/2026-06-20.json",
+  "protocols": {
+    "lido": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "aave": {
+      "covered": true,
+      "inline": "4 markets",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "4",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "aave/smart-wallet/v2/default/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "aave/smart-wallet/v3/default/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "aave/smart-wallet/v3/etherfi/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "aave/smart-wallet/v3/lido/manage",
+          "scale": "app route"
+        }
+      ]
+    },
+    "spark": {
+      "covered": true,
+      "inline": "2 markets",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "2",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "spark/smart-wallet/v1/default/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "spark/v1/manage",
+          "scale": "app route"
+        }
+      ]
+    },
+    "sky": {
+      "covered": true,
+      "inline": "1 markets",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "1",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "makerdao/manage",
+          "scale": "app route"
+        }
+      ]
+    },
+    "ethena": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "morpho": {
+      "covered": true,
+      "inline": "1 markets",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "1",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "morpho/manage",
+          "scale": "app route"
+        }
+      ]
+    },
+    "etherfi": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "uniswap": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "curve": {
+      "covered": true,
+      "inline": "supported",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "compound": {
+      "covered": true,
+      "inline": "7 markets",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "7",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "compound/smart-wallet/v2/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v2/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/eth/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/usdc/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/usds/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/usdt/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/wsteth/manage",
+          "scale": "app route"
+        }
+      ]
+    },
+    "rocketpool": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "pendle": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "fluid": {
+      "covered": true,
+      "inline": "supported",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "liquity": {
+      "covered": true,
+      "inline": "2 markets",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "2",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "liquity/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "liquity/smart-wallet/manage",
+          "scale": "app route"
+        }
+      ]
+    },
+    "yearn": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "euler": {
+      "covered": true,
+      "inline": "supported",
+      "deeplink": "https://app.defisaver.com",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ]
+    },
+    "mellow": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "morpho-vaults": {
+      "covered": false,
+      "reason": "no keyword pattern",
+      "deeplink": null
+    },
+    "balancer": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "gearbox": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "cowswap": {
+      "covered": false,
+      "reason": "not a DeFi Saver execution surface",
+      "deeplink": null
+    },
+    "1inch": {
+      "covered": false,
+      "reason": "no keyword pattern",
+      "deeplink": null
+    },
+    "0x": {
+      "covered": false,
+      "reason": "no keyword pattern",
+      "deeplink": null
+    }
+  }
+}

@@ -10,6 +10,35 @@
   ],
   "logoUrl": "https://icons.llamao.fi/icons/protocols/aave-v3.png",
   "description": "Open-source, non-custodial lending protocol. Users supply ERC-20 assets and borrow against them with variable rates; Aave also issues GHO, its native overcollateralized stablecoin.",
+  "homepage": "https://aave.com",
+  "twitter": "aave",
+  "github": [],
+  "chains": [
+    "Base",
+    "Avalanche",
+    "xDai",
+    "Binance",
+    "Arbitrum",
+    "Fantom",
+    "Optimism",
+    "Celo",
+    "Linea",
+    "Soneium",
+    "Mantle",
+    "Sonic",
+    "Polygon",
+    "Plasma",
+    "Harmony",
+    "Ethereum",
+    "Scroll",
+    "MegaETH",
+    "X Layer",
+    "zkSync Era",
+    "Metis"
+  ],
+  "parent_protocol": "parent#aave",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2026-06-14",
   "governance_summary": "5/9 · 2d",
   "governance_degrade_note": "Safe API fetch failed — showing static data",
@@ -105,6 +134,7 @@
       ]
     }
   ],
+  "audit_count": 2,
   "audit_history": [
     {
       "firm": "Trail of Bits",
@@ -283,14 +313,65 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "1/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/aave-v3",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
+      "coverageReason": "Aave is not currently in DeFi Punk'd's covered set. Coverage candidate flagged.",
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source + 5 auditors pre-deployment",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "T1 upgrades reachable via ~5-day fast path",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "red (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Exits pausable indefinitely by 5-of-9 multisig",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Oracle dependency with governance fast-paths",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Contracts open; official UI screens wallets",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -387,32 +468,42 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": "https://app.defisaver.com/aave",
+      "adapterStatus": "implemented",
+      "inline": "4 markets",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": "2026-06-14",
       "methodology": "Execution-first: no protocol-level risk score. Surfaces protocol parameter mirror plus per-position health metrics and automated repay / boost / close strategies.",
       "coverageReason": "DeFi Saver supports Aave v2/v3 position management and automation but does not publish protocol-level or market-level risk scores. Surfaced data is a parameter mirror plus per-position health metrics.",
       "claims": [
         {
-          "dim": "action",
-          "value": "Collateral swap (1 tx)",
-          "scale": "action"
+          "dim": "markets",
+          "value": "4",
+          "scale": "distinct /manage routes in app bundle"
         },
         {
-          "dim": "exposed-metric",
-          "value": "Health Factor (per-position)",
-          "scale": "exposed-metric"
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
         },
         {
-          "dim": "support-status",
-          "value": "Supported on Mainnet, Arbitrum, Optimism, Base, Polygon, Avalanche",
-          "scale": "support-status"
+          "dim": "market",
+          "value": "aave/smart-wallet/v2/default/manage",
+          "scale": "app route"
         },
         {
-          "dim": "automation-strategy",
-          "value": "Boost: trigger 'ratio > threshold' → leverage up",
-          "scale": "automation-strategy"
+          "dim": "market",
+          "value": "aave/smart-wallet/v3/default/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "aave/smart-wallet/v3/etherfi/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "aave/smart-wallet/v3/lido/manage",
+          "scale": "app route"
         }
       ],
       "history": [],
@@ -472,7 +563,7 @@
       "sourceUrl": "https://risklayer.online",
       "observedAt": null,
       "methodology": "6-stage AI pipeline (discovery → contract → governance → audit → scoring) feeding a Monte Carlo engine. Validator-attested via EigenLayer.",
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -638,7 +729,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "listed on landing page but no Philidor vault scoring",
       "claims": [],
       "history": [],
       "notable": null,

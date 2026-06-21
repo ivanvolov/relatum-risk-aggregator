@@ -2,17 +2,52 @@
   "slug": "rocketpool",
   "name": "Rocket Pool",
   "category": "Liquid Staking",
-  "tvl_usd": 900000000,
+  "tvl_usd": 949943414.91739,
   "family": "Rocket Pool",
   "versions": null,
   "logoUrl": "https://icons.llamao.fi/icons/protocols/rocket-pool.jpg",
-  "description": null,
+  "description": "Rocket Pool is the first truly decentralised Ethereum staking pool. Liquid Staking, Audited SC, and Minimised Penalty Risk. Unlike solo stakers, who are required to put 32 ETH up for deposit to create a new validator, Rocket Pool nodes only need to deposit 16 ETH per validator. This will be coupled with 16 ETH from the staking pool (which stakers deposited in exchange for rETH) to create a new ETH2 validator.",
+  "homepage": "https://rocketpool.net",
+  "twitter": "Rocket_Pool",
+  "github": [
+    "rocket-pool"
+  ],
+  "chains": [
+    "Ethereum"
+  ],
+  "parent_protocol": null,
+  "governance_id": [
+    "snapshot:rocketpool-dao.eth"
+  ],
+  "methodology_url": null,
   "lastUpdated": "2026-06-17",
-  "governance_summary": "—",
+  "governance_summary": "Snapshot · rocketpool-dao.eth",
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "rocketpool",
+      "date": null,
+      "report_url": "https://rocketpool.net/files/sigma-prime-audit.pdf"
+    },
+    {
+      "firm": "consensys",
+      "date": null,
+      "report_url": "https://consensys.net/diligence/audits/2021/04/rocketpool"
+    },
+    {
+      "firm": "github",
+      "date": null,
+      "report_url": "https://github.com/trailofbits/publications/blob/master/reviews/RocketPool.pdf"
+    },
+    {
+      "firm": "immunefi",
+      "date": null,
+      "report_url": "https://immunefi.com/bounty/rocketpool"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -59,14 +94,60 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "3/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/rocket-pool",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source, audited by multiple top firms",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "oDAO controls T1 upgrades, timelock unverified",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Permissionless rETH burn limited by collateral depth",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Permissionless contracts, multiple independent paths",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -102,12 +183,12 @@
     {
       "feedId": "defisaver",
       "status": "none",
-      "adapterStatus": "pending",
+      "adapterStatus": "implemented",
       "inline": null,
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": null,
+      "coverageReason": "not a DeFi Saver execution surface",
       "claims": [],
       "history": [],
       "notable": null,
@@ -135,7 +216,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -205,7 +286,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

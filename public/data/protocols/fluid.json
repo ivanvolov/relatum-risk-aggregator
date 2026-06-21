@@ -2,17 +2,37 @@
   "slug": "fluid",
   "name": "Fluid",
   "category": "Lending",
-  "tvl_usd": 580000000,
+  "tvl_usd": 1914985472.05017,
   "family": "Fluid (Instadapp)",
   "versions": null,
   "logoUrl": "https://icons.llamao.fi/icons/protocols/fluid-lending.png",
-  "description": null,
+  "description": "An ever-evolving DeFi protocol and financial system of the future by Instadapp",
+  "homepage": "https://fluid.io/lending/1",
+  "twitter": "0xfluid",
+  "github": [],
+  "chains": [
+    "Base",
+    "Ethereum",
+    "Arbitrum",
+    "Plasma",
+    "Polygon"
+  ],
+  "parent_protocol": "parent#fluid",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2026-06-17",
-  "governance_summary": "—",
+  "governance_summary": null,
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "docs",
+      "date": null,
+      "report_url": "https://docs.fluid.instadapp.io/audits-and-security.html"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -114,13 +134,19 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "supported",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -147,7 +173,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -311,7 +337,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

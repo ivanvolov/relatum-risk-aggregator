@@ -2,17 +2,62 @@
   "slug": "curve",
   "name": "Curve",
   "category": "DEX / AMM",
-  "tvl_usd": 1430000000,
+  "tvl_usd": 1802553733.59408,
   "family": "Curve",
   "versions": null,
   "logoUrl": "https://icons.llamao.fi/icons/protocols/curve.png",
-  "description": null,
+  "description": "Curve is a decentralized exchange liquidity pool on Ethereum designed for extremely efficient stablecoin trading",
+  "homepage": "https://curve.finance",
+  "twitter": "CurveFinance",
+  "github": [],
+  "chains": [
+    "Harmony",
+    "Ethereum",
+    "Stable",
+    "Ink",
+    "Aurora",
+    "Plasma",
+    "Mantle",
+    "TAC",
+    "Taiko",
+    "Unichain",
+    "Moonbeam",
+    "Etherlink",
+    "Corn",
+    "X Layer",
+    "Celo",
+    "XDC",
+    "Plume Mainnet",
+    "Monad",
+    "Fraxtal",
+    "Base",
+    "Hyperliquid L1",
+    "Sonic",
+    "Kava",
+    "Fantom",
+    "Binance",
+    "Optimism",
+    "Arbitrum",
+    "Avalanche",
+    "Polygon",
+    "xDai"
+  ],
+  "parent_protocol": "parent#curve-finance",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2025-02-20",
   "governance_summary": "4/6 · 3d",
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "docs",
+      "date": null,
+      "report_url": "https://docs.curve.finance/references/audits/"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -90,14 +135,65 @@
     },
     {
       "feedId": "defipunkd",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "5/5 green",
+      "sourceUrl": "https://defipunkd.com/protocol/curve-dex",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in DeFiPunk'd assessment set",
-      "claims": [],
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified Vyper bytecode, multi-firm audits",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Immutable pools, DAO-gated via 7-day vote",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Permissionless exits, no admin pause possible",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Immutable core pools minimal external dependencies",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "No on-chain gate, multiple execution paths",
+          "scale": "headline"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -151,13 +247,19 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "supported",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -184,7 +286,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -488,7 +590,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "not on Philidor landing page",
       "claims": [],
       "history": [],
       "notable": null,

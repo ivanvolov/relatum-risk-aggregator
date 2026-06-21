@@ -86,11 +86,9 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
                 <div className="text">{entry.findings.text}</div>
               </div>
             ) : null}
-            {(entry.sourceUrl || entry.observedAt) ? (
+            {entry.observedAt ? (
               <div className="observe-date">
-                {entry.sourceUrl ? <a href={entry.sourceUrl} target="_blank" rel="noreferrer">View assessment →</a> : null}
-                {' '}<span className="prov feed">[feed]</span>
-                {entry.observedAt ? <> <span className="date">{entry.observedAt}</span></> : null}
+                <span className="date">{entry.observedAt}</span>
               </div>
             ) : null}
           </div>
@@ -109,11 +107,9 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
                 <div className="text">{entry.notable.text}</div>
               </div>
             ) : null}
-            {(entry.sourceUrl || entry.observedAt) ? (
+            {entry.observedAt ? (
               <div className="observe-date">
-                {entry.sourceUrl ? <a href={entry.sourceUrl} target="_blank" rel="noreferrer">View assessment →</a> : null}
-                {' '}<span className="prov feed">[feed]</span>
-                {entry.observedAt ? <> <span className="date">{entry.observedAt}</span></> : null}
+                <span className="date">{entry.observedAt}</span>
               </div>
             ) : null}
           </div>

@@ -2,20 +2,44 @@
   "slug": "compound",
   "name": "Compound",
   "category": "Lending",
-  "tvl_usd": 1050000000,
+  "tvl_usd": 2210749641.31192,
   "family": "Compound",
   "versions": [
     "v2",
     "v3"
   ],
   "logoUrl": "https://icons.llamao.fi/icons/protocols/compound-v3.png",
-  "description": null,
+  "description": "Compound is an algorithmic, autonomous interest rate protocol built for developers, to unlock a universe of open financial applications.",
+  "homepage": "https://v3-app.compound.finance/",
+  "twitter": "Compound_xyz",
+  "github": [],
+  "chains": [
+    "Scroll",
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Mantle",
+    "Polygon",
+    "Unichain",
+    "Optimism",
+    "Ronin"
+  ],
+  "parent_protocol": "parent#compound-finance",
+  "governance_id": null,
+  "methodology_url": null,
   "lastUpdated": "2025-03-18",
   "governance_summary": "2d",
   "governance_degrade_note": null,
   "inlineRating": {},
   "sidecards": [],
-  "audit_history": [],
+  "audit_count": 2,
+  "audit_history": [
+    {
+      "firm": "compound",
+      "date": null,
+      "report_url": "https://compound.finance/docs/security"
+    }
+  ],
   "incidents": [],
   "feeds": [
     {
@@ -183,13 +207,59 @@
     {
       "feedId": "defisaver",
       "status": "cov",
-      "adapterStatus": "pending",
-      "inline": null,
-      "sourceUrl": null,
+      "adapterStatus": "implemented",
+      "inline": "7 markets",
+      "sourceUrl": "https://app.defisaver.com",
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "7",
+          "scale": "distinct /manage routes in app bundle"
+        },
+        {
+          "dim": "surfaces",
+          "value": "lending, dex, leverage",
+          "scale": "DeFi Saver flow"
+        },
+        {
+          "dim": "market",
+          "value": "compound/smart-wallet/v2/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v2/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/eth/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/usdc/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/usds/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/usdt/manage",
+          "scale": "app route"
+        },
+        {
+          "dim": "market",
+          "value": "compound/v3/wsteth/manage",
+          "scale": "app route"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -216,7 +286,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "claims": [],
       "history": [],
       "notable": null,
@@ -362,7 +432,7 @@
       "sourceUrl": null,
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "adapter not yet scraped",
+      "coverageReason": "listed on landing page but no Philidor vault scoring",
       "claims": [],
       "history": [],
       "notable": null,

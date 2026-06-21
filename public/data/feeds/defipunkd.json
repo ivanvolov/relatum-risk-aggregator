@@ -1,19 +1,125 @@
 {
   "feedId": "defipunkd",
   "feedName": "DeFiPunk'd",
-  "generatedAt": "2026-06-20T09:06:16.735Z",
-  "snapshotDate": "2026-06-16-api",
-  "sourceFile": "data/adapters/defipunkd/output/2026-06-16-api.json",
+  "generatedAt": "2026-06-21T17:16:22.587Z",
+  "snapshotDate": "2026-06-20",
+  "sourceFile": "data/adapters/defipunkd/output/2026-06-20.json",
   "protocols": {
     "lido": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "2/5 green",
+      "deeplink": "https://defipunkd.com/protocol/lido",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source + multiple recent audits",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Short timelock with insider emergency override",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Finalized claims safe; new requests pausable indefinitely by governance",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Oracle committee governs rebase reports",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "No user allowlists or geofences",
+          "scale": "headline"
+        }
+      ]
     },
     "aave": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "1/5 green",
+      "deeplink": "https://defipunkd.com/protocol/aave-v3",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source + 5 auditors pre-deployment",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "T1 upgrades reachable via ~5-day fast path",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "red (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Exits pausable indefinitely by 5-of-9 multisig",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Oracle dependency with governance fast-paths",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Contracts open; official UI screens wallets",
+          "scale": "headline"
+        }
+      ]
     },
     "spark": {
       "covered": true,
@@ -228,19 +334,178 @@
       ]
     },
     "etherfi": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "1/5 green",
+      "deeplink": "https://defipunkd.com/protocol/ether.fi-stake",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source; audit coverage stale",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "10-day timelock; multisig proposer unconfirmed",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Redemption queued; oracle-gated claims; pause uncapped",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Permissioned operators and AVS slashing risk principal",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Fully permissionless contracts, no on-chain whitelist",
+          "scale": "headline"
+        }
+      ]
     },
     "uniswap": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "5/5 green",
+      "deeplink": "https://defipunkd.com/protocol/uniswap-v4",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified & heavily audited",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Bounded fee governance",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "No pause, fully permissionless exit",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "No external dependencies in core",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Permissionless contracts, multiple access paths",
+          "scale": "headline"
+        }
+      ]
     },
     "curve": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "5/5 green",
+      "deeplink": "https://defipunkd.com/protocol/curve-dex",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified Vyper bytecode, multi-firm audits",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Immutable pools, DAO-gated via 7-day vote",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Permissionless exits, no admin pause possible",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Immutable core pools minimal external dependencies",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "No on-chain gate, multiple execution paths",
+          "scale": "headline"
+        }
+      ]
     },
     "compound": {
       "covered": false,
@@ -248,14 +513,110 @@
       "deeplink": null
     },
     "rocketpool": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "3/5 green",
+      "deeplink": "https://defipunkd.com/protocol/rocket-pool",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source, audited by multiple top firms",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "oDAO controls T1 upgrades, timelock unverified",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Permissionless rETH burn limited by collateral depth",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Permissionless contracts, multiple independent paths",
+          "scale": "headline"
+        }
+      ]
     },
     "pendle": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "2/5 green",
+      "deeplink": "https://defipunkd.com/protocol/pendle",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source + multiple top-firm audits",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "3-of-5 multisig controls upgrades, no timelock",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy",
+          "value": "orange (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Boros oracle/bot risk; V2 per-market isolated",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Permissionless contracts, no KYC, multi-path access",
+          "scale": "headline"
+        }
+      ]
     },
     "fluid": {
       "covered": false,
@@ -263,9 +624,62 @@
       "deeplink": null
     },
     "liquity": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "5/5 green",
+      "deeplink": "https://defipunkd.com/protocol/liquity-v1",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Verified source, immutable, multiple top audits",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "control-headline",
+          "value": "Fully immutable, no admin keys or upgrades",
+          "scale": "headline"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Immutable contracts, no admin pause possible",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "green (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "autonomy-headline",
+          "value": "Immutable, dual-oracle fallback, zero admin keys",
+          "scale": "headline"
+        },
+        {
+          "dim": "open-access",
+          "value": "green (strong)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access-headline",
+          "value": "Permissionless immutable contracts, no operator gates",
+          "scale": "headline"
+        }
+      ]
     },
     "yearn": {
       "covered": false,
@@ -288,9 +702,47 @@
       "deeplink": null
     },
     "balancer": {
-      "covered": false,
-      "reason": "not in DeFiPunk'd assessment set",
-      "deeplink": null
+      "covered": true,
+      "inline": "0/5 green",
+      "deeplink": "https://defipunkd.com/protocol/balancer-v3",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "verifiability",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "verifiability-headline",
+          "value": "Audits exist but audit-to-deploy drift unresolved",
+          "scale": "headline"
+        },
+        {
+          "dim": "control",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit",
+          "value": "orange (weak)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "ability-to-exit-headline",
+          "value": "Exits pausable; recovery mode admin-gated",
+          "scale": "headline"
+        },
+        {
+          "dim": "autonomy",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        },
+        {
+          "dim": "open-access",
+          "value": "— (—)",
+          "scale": "DeFiPunk'd grade"
+        }
+      ]
     },
     "gearbox": {
       "covered": false,
