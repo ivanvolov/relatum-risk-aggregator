@@ -1,29 +1,70 @@
 # Manual inspection queue
 
-Cells where the gap-closing pass couldn't recover coverage through public sources, but the seed (`ontology/seeds/coverage-seed.yaml`) or other signals suggest coverage might exist. Each entry lists what was tried and where to look manually. After confirming/refuting, either supply a working source URL (we'll extend the adapter) or confirm the gap and we'll tighten the `reason`.
+100 / 345 cells covered. Of the 245 uncovered, **228 are structurally final** (the source has been enumerated and the protocol genuinely isn't there) and **17 are worth a human eyeball** because the seed (`ontology/seeds/coverage-seed.yaml`) suggests data should exist or it lives behind a login we can't access.
+
+This file is just the 17 cells worth checking.
 
 ---
 
-## Credora
+## Structural state (no action required)
 
-The public XML index at `https://reports.credora.io/index.xml` only enumerates 4 protocols (spark, listadao, lotus, steth). The seed promises additional coverage that likely lives behind `app.credora.io` (login required) or in the methodology pages — not in the public reports archive.
+The reasons below are all verified against the live source on 2026-06-21. The numbers do not change without a product change from the source.
 
-- **sky** (seed: `part`) — Sky/MakerDAO has had Credora attention historically. Check `app.credora.io` for a sky/usds rating page, or search Credora's blog/methodology for Sky. If a public artifact exists, paste the URL here.
-- **ethena** (seed: `cov`) — Ethena USDe. Check Credora's app or any published rating PDF. The XML index has 0 hits for ethena/usde.
-- **etherfi** (seed: `part`) — ether.fi/eETH. Same — check the app or published research.
-- **morpho** (seed: `cov`) — Morpho Blue/markets. The app may carry vault-level Credora ratings.
+| Feed | Covered | Why the rest is structurally absent |
+|---|---:|---|
+| DeFiScan | 11/23 | GitHub registry has exactly 29 protocols; 12 of ours aren't in it. |
+| DeFiPunk'd | 13/23 | API probed all 10 remaining slugs → 0/5 slices each. |
+| Xerberus | 11/23 | Dendrogram registry enumerates 42 protocols; 12 of ours aren't there. |
+| pigi.finance | 10/23 | 43 strategies listed; the 13 not covered (mostly dexes/swap aggregators) don't have pigi strategies. |
+| Zyfai | 7/23 | API returns 7 protocols across 3 chains; rest aren't in their pool index. |
+| Block Analitica | 4/23 | Each dashboard is its own subdomain; the 19 not covered have no `<protocol>-api.blockanalitica.com`. |
+| CuratorWatch | 5/23 | Probed `curatorwatch.com/<slug>` for the 18 misses; all 404. |
+| DeFi Sphere | 5/23 | Sidebar API enumerates 5 protocols; that's the whole universe. |
+| Stablewatch | 5/23 | Live API has 94 assets across ~60 issuers; only 5 of our 23 issue YB-stables they index. |
+| Pharos | **8/23** | Sitemap scanned — 8 of our protocols issue stables they classify. Yearn just recovered. |
+| DeFi Saver | 9/23 | Marketing-page scrape + app bundle scan; the 14 not covered aren't on either surface. |
+| Philidor | 3/23 | No public API; landing page lists 9 protocols, 3 of ours are canonical Philidor coverage. |
+| RiskLayer | 0/23 | Product pivoted away from DeFi. Confirmed via site copy. |
+
+That leaves Credora + LlamaRisk below as the only feeds with addressable gaps we can't reach automatically.
 
 ---
 
-## LlamaRisk
+## ⚠ Worth checking manually — 17 cells
 
-Adapter scans `llamarisk.substack.com` (87 posts as of 2026-06-17). Fresh re-fetch on 2026-06-20 confirms no new posts. LlamaRisk also publishes on governance forums (Aave, Compound, Lido, Spark) which the adapter explicitly notes it can't see (`data/adapters/llamarisk/adapter.mjs:16-19`). Seed-promised cells below are likely sourced from forum posts, not Substack.
+### Credora — 4 cells
 
-- **compound** (seed: `cov`) — Substack has 0 hits for `\bcompound\b|\bcUSDC\b`. Likely on https://governance.compound.finance/ or similar. If you have a canonical LlamaRisk-on-Compound deliverable URL, paste it.
-- **lido** (seed: `cov`) — Substack has 0 hits for `\blido\b|\bstETH\b|\bwstETH\b`. Likely on https://research.lido.fi/. LlamaRisk has a long history here.
-- **spark** (seed: `cov`) — Substack has 0 hits for `\bspark\b|\bsDAI\b`. Likely on https://forum.sky.money/ or via Sky's risk vendor selection process.
-- **pendle** (seed: `cov`) — Substack has 0 hits. Maybe on https://research.pendle.finance/.
-- **yearn** (seed: `cov`) — Substack has 0 hits for `\byearn\b|\byv[A-Z]+\b/`. Yearn has its own gov forum.
-- **balancer, etherfi, fluid, gearbox, rocketpool, uniswap** (seed: `part`) — Substack has 0 hits. Same caveat — likely scattered governance-forum work. Confirm or skip if too minor.
+Public XML index at `https://reports.credora.io/index.xml` only enumerates 4 protocols (spark, listadao, lotus, steth). The seed promises more — likely behind `app.credora.io` (login required).
 
-Action option: if you confirm forum URLs are the right source, we can extend the adapter to also scrape a list of governance forum permalinks (or simply curate a `MANUAL_LLAMARISK_LINKS` map in the adapter and mark them covered with the canonical deliverable URL).
+| Protocol | Seed | What to check |
+|---|---|---|
+| `sky` | part | Open `app.credora.io` while logged in; search for "Sky" / "USDS" / "MakerDAO". Paste any rating-page URL back here. |
+| `ethena` | cov | Same — check for "Ethena" / "USDe". |
+| `etherfi` | part | Same — check for "ether.fi" / "eETH" / "weETH". |
+| `morpho` | cov | Same — check for "Morpho" markets/vaults. |
+
+### LlamaRisk — 5 high-confidence cells
+
+Adapter scans `llamarisk.substack.com` (87 posts; 0 hits for these protocols). LlamaRisk also publishes on governance forums — `data/adapters/llamarisk/adapter.mjs:16-19` flags this. The seed marked these as `cov`, so a deliverable likely exists somewhere.
+
+| Protocol | Where to look |
+|---|---|
+| `compound` | https://www.comp.xyz/ — search "LlamaRisk" in tags or author. |
+| `lido` | https://research.lido.fi/ — LlamaRisk has a long history of Lido posts. |
+| `spark` | https://forum.sky.money/ (Spark is Sky's lending arm) — search "LlamaRisk". |
+| `pendle` | https://research.pendle.finance/ or their Discord — look for risk-vendor commentary. |
+| `yearn` | https://gov.yearn.fi/ — search "LlamaRisk". |
+
+### LlamaRisk — 8 lower-confidence cells
+
+Seed marked these as `part`. If you find a single canonical post per protocol, paste the URL; otherwise we keep the gap.
+
+`balancer` · `etherfi` · `euler` · `fluid` · `gearbox` · `rocketpool` · `uniswap`
+
+Sources to grep: each protocol's governance forum, plus `https://research.llamarisk.com` (dashboard, gated).
+
+---
+
+## How to resolve
+
+For each cell you confirm: paste the canonical URL here under the protocol line and ping me. I'll either extend the corresponding adapter (preferred — the URL becomes auto-detected next snapshot) or add a one-off override in the adapter's manual-links table.

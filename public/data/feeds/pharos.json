@@ -1,9 +1,9 @@
 {
   "feedId": "pharos",
   "feedName": "Pharos",
-  "generatedAt": "2026-06-21T17:25:47.189Z",
-  "snapshotDate": "2026-06-17",
-  "sourceFile": "data/adapters/pharos/output/2026-06-17.json",
+  "generatedAt": "2026-06-21T19:46:35.509Z",
+  "snapshotDate": "2026-06-21",
+  "sourceFile": "data/adapters/pharos/output/2026-06-21.json",
   "protocols": {
     "lido": {
       "covered": false,
@@ -240,9 +240,29 @@
       ]
     },
     "yearn": {
-      "covered": false,
-      "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "covered": true,
+      "inline": "2 stables",
+      "deeplink": "https://pharos.watch/stablecoin/yvusdc-yearn/",
+      "observedAt": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "yvusdc-yearn",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/yvusdc-yearn/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "ybold-yearn",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/ybold-yearn/"
+        }
+      ]
     },
     "euler": {
       "covered": false,

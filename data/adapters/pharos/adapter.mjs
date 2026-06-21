@@ -49,6 +49,7 @@ const ISSUER_TO_PROTOCOL = {
   curve: 'curve',
   fluid: 'fluid',
   spark: 'spark',
+  yearn: 'yearn',
   makerdao: 'sky', // legacy MakerDAO branding rolled into Sky
 };
 

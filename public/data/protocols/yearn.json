@@ -95,14 +95,32 @@
     },
     {
       "feedId": "pharos",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "2 stables",
+      "sourceUrl": "https://pharos.watch/stablecoin/yvusdc-yearn/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "no Pharos-tracked stablecoins for this protocol",
-      "claims": [],
+      "coverageReason": null,
+      "claims": [
+        {
+          "dim": "stablecoin-count",
+          "value": "2",
+          "scale": "count"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "yvusdc-yearn",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/yvusdc-yearn/"
+        },
+        {
+          "dim": "stablecoin",
+          "value": "ybold-yearn",
+          "scale": "pharos page",
+          "url": "https://pharos.watch/stablecoin/ybold-yearn/"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

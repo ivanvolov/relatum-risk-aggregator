@@ -1,0 +1,231 @@
+{
+  "fetched_at": "2026-06-21T19:45:03.627Z",
+  "protocols": {
+    "lido": {
+      "slug": "lido",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "aave": {
+      "slug": "aave",
+      "covered": true,
+      "stablecoin_count": 3,
+      "stablecoins": [
+        {
+          "slug": "gho-aave",
+          "page": "https://pharos.watch/stablecoin/gho-aave/"
+        },
+        {
+          "slug": "sgho-aave",
+          "page": "https://pharos.watch/stablecoin/sgho-aave/"
+        },
+        {
+          "slug": "stkgho-umbrella-aave",
+          "page": "https://pharos.watch/stablecoin/stkgho-umbrella-aave/"
+        }
+      ]
+    },
+    "spark": {
+      "slug": "spark",
+      "covered": true,
+      "stablecoin_count": 2,
+      "stablecoins": [
+        {
+          "slug": "susdt-spark",
+          "page": "https://pharos.watch/stablecoin/susdt-spark/"
+        },
+        {
+          "slug": "susdc-spark",
+          "page": "https://pharos.watch/stablecoin/susdc-spark/"
+        }
+      ]
+    },
+    "sky": {
+      "slug": "sky",
+      "covered": true,
+      "stablecoin_count": 5,
+      "stablecoins": [
+        {
+          "slug": "usds-sky",
+          "page": "https://pharos.watch/stablecoin/usds-sky/"
+        },
+        {
+          "slug": "susds-sky",
+          "page": "https://pharos.watch/stablecoin/susds-sky/"
+        },
+        {
+          "slug": "stusds-sky",
+          "page": "https://pharos.watch/stablecoin/stusds-sky/"
+        },
+        {
+          "slug": "dai-makerdao",
+          "page": "https://pharos.watch/stablecoin/dai-makerdao/"
+        },
+        {
+          "slug": "sdai-sky",
+          "page": "https://pharos.watch/stablecoin/sdai-sky/"
+        }
+      ]
+    },
+    "ethena": {
+      "slug": "ethena",
+      "covered": true,
+      "stablecoin_count": 3,
+      "stablecoins": [
+        {
+          "slug": "usde-ethena",
+          "page": "https://pharos.watch/stablecoin/usde-ethena/"
+        },
+        {
+          "slug": "susde-ethena",
+          "page": "https://pharos.watch/stablecoin/susde-ethena/"
+        },
+        {
+          "slug": "usdtb-ethena",
+          "page": "https://pharos.watch/stablecoin/usdtb-ethena/"
+        }
+      ]
+    },
+    "morpho": {
+      "slug": "morpho",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "etherfi": {
+      "slug": "etherfi",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "uniswap": {
+      "slug": "uniswap",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "curve": {
+      "slug": "curve",
+      "covered": true,
+      "stablecoin_count": 2,
+      "stablecoins": [
+        {
+          "slug": "crvusd-curve",
+          "page": "https://pharos.watch/stablecoin/crvusd-curve/"
+        },
+        {
+          "slug": "scrvusd-curve",
+          "page": "https://pharos.watch/stablecoin/scrvusd-curve/"
+        }
+      ]
+    },
+    "compound": {
+      "slug": "compound",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "rocketpool": {
+      "slug": "rocketpool",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "pendle": {
+      "slug": "pendle",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "fluid": {
+      "slug": "fluid",
+      "covered": true,
+      "stablecoin_count": 1,
+      "stablecoins": [
+        {
+          "slug": "dusd-fluid",
+          "page": "https://pharos.watch/stablecoin/dusd-fluid/"
+        }
+      ]
+    },
+    "liquity": {
+      "slug": "liquity",
+      "covered": true,
+      "stablecoin_count": 2,
+      "stablecoins": [
+        {
+          "slug": "bold-liquity",
+          "page": "https://pharos.watch/stablecoin/bold-liquity/"
+        },
+        {
+          "slug": "lusd-liquity",
+          "page": "https://pharos.watch/stablecoin/lusd-liquity/"
+        }
+      ]
+    },
+    "yearn": {
+      "slug": "yearn",
+      "covered": true,
+      "stablecoin_count": 2,
+      "stablecoins": [
+        {
+          "slug": "yvusdc-yearn",
+          "page": "https://pharos.watch/stablecoin/yvusdc-yearn/"
+        },
+        {
+          "slug": "ybold-yearn",
+          "page": "https://pharos.watch/stablecoin/ybold-yearn/"
+        }
+      ]
+    },
+    "euler": {
+      "slug": "euler",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "mellow": {
+      "slug": "mellow",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "balancer": {
+      "slug": "balancer",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "gearbox": {
+      "slug": "gearbox",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "cowswap": {
+      "slug": "cowswap",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "morpho-vaults": {
+      "slug": "morpho-vaults",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "1inch": {
+      "slug": "1inch",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    },
+    "0x": {
+      "slug": "0x",
+      "covered": false,
+      "stablecoin_count": 0,
+      "stablecoins": []
+    }
+  }
+}
