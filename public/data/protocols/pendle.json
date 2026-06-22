@@ -92,33 +92,38 @@
       "findings": null
     },
     {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "curatorwatch",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "5 vaults hold PT tokens",
+      "sourceUrl": "https://curatorwatch.com/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not a lending rail curated on CuratorWatch",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Pendle PT tokens (PT-thBILL, PT-sUSDai, PT-USDai, PT-cUSD) appear as deposit assets in 5 CuratorWatch-tracked K3 Capital vaults.",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "vault-count",
+          "value": "5",
+          "scale": "vaults with Pendle PT tokens"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital Theo Market",
+          "scale": "asset PT-thBILL-18JUN2026"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital USDai Cluster",
+          "scale": "asset PT-sUSDai-18JUN2026 / 15OCT2026 / PT-USDai-15OCT2026"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital Yield Market",
+          "scale": "asset PT-cUSD-23JUL2026"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -195,23 +200,12 @@
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Pendle PT tokens aren't classified as stables by Pharos"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -227,7 +221,12 @@
       "methodology": null,
       "coverageReason": "not a DeFi Saver execution surface",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Pendle isn't on the DS feature pages or bundle routes"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -243,7 +242,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Pendle PT in app.credora.network portal"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -259,7 +263,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -364,7 +373,12 @@
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Pendle"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -380,7 +394,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely on Pendle's research/Discord — not in Substack scan"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -396,7 +415,12 @@
       "methodology": null,
       "coverageReason": "not on Philidor landing page",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -418,6 +442,49 @@
         "url": null,
         "note": null
       },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "9 BA-tracked markets hold PT tokens",
+      "sourceUrl": "https://morpho.blockanalitica.com",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "Pendle PT tokens appear as collateral in 9 BA-tracked morpho markets.",
+      "verified": null,
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "9",
+          "scale": "BA-tracked morpho markets with PT-* tokens"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "9 markets"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "PT tokens as collateral",
+      "sourceUrl": "https://app.defi-sphere.com/markets/ethereum/morpho/0x0a15460ad263c2186fe0b5df20a8cf71d55f3cfa06de15edcf6138f6b8edd8bf",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "Pendle PT tokens (PT-USDe, PT-sUSDe, etc.) are collateral in DS-tracked Morpho markets.",
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,

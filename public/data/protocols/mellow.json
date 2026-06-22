@@ -46,23 +46,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiScan registry",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no mellow directory in registry"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -78,7 +67,12 @@
       "methodology": null,
       "coverageReason": "not a lending rail curated on CuratorWatch",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Mellow has its own vault system, not on CuratorWatch"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -94,7 +88,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiPunk'd assessment set",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "probed 'mellow' — 0/5 slices"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -110,23 +109,12 @@
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator, no stablecoin issuance"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -142,7 +130,12 @@
       "methodology": null,
       "coverageReason": "not a DeFi Saver execution surface",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Mellow isn't on the DS feature pages or bundle routes"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -158,7 +151,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator, no Credora rating"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -174,7 +172,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -190,7 +193,12 @@
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no mellow strategy in pigi's index"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -206,7 +214,12 @@
       "methodology": null,
       "coverageReason": "not in Xerberus dendrogram",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Mellow entry in any Xerberus subgraph"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -222,7 +235,12 @@
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Mellow"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -238,7 +256,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator, not in LlamaRisk's research scope"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -254,7 +277,12 @@
       "methodology": null,
       "coverageReason": "not on Philidor landing page",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -275,6 +303,48 @@
         "by": "IVa",
         "url": null,
         "note": null
+      },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator with no BA dashboard"
+      },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator, not a lending market"
       },
       "claims": [],
       "history": [],

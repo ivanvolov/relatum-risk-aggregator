@@ -43,23 +43,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiScan registry",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no etherfi/ directory in deficollective/defiscan registry (etherfi appears only as a chain inside aave's deployment, not as its own protocol)"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -67,16 +56,52 @@
     },
     {
       "feedId": "curatorwatch",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "6 vaults hold weETH",
+      "sourceUrl": "https://curatorwatch.com/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not a lending rail curated on CuratorWatch",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "weETH appears as the deposit asset in 6 CuratorWatch-tracked vaults (SparkLend weETH, AlphaGrowth Unichain/Base, Re7 Labs WETH Cluster, K3 Capital Prime, Katana weETH).",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "vault-count",
+          "value": "6",
+          "scale": "vaults with weETH"
+        },
+        {
+          "dim": "vault",
+          "value": "SparkLend weETH",
+          "scale": "curator: Spark Protocol"
+        },
+        {
+          "dim": "vault",
+          "value": "AlphaGrowth Unichain Market",
+          "scale": "curator: AlphaGrowth"
+        },
+        {
+          "dim": "vault",
+          "value": "AlphaGrowth Base",
+          "scale": "curator: AlphaGrowth"
+        },
+        {
+          "dim": "vault",
+          "value": "Re7 Labs WETH Cluster",
+          "scale": "curator: Re7 Labs"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital Prime Market",
+          "scale": "curator: K3 Capital"
+        },
+        {
+          "dim": "vault",
+          "value": "Katana weETH",
+          "scale": "curator: Katana"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -158,23 +183,12 @@
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "ether.fi doesn't issue a Pharos-tracked stablecoin"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -190,7 +204,12 @@
       "methodology": null,
       "coverageReason": "not a DeFi Saver execution surface",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "ether.fi isn't on the DS feature pages or bundle routes"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -206,7 +225,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no weETH/eETH/eBTC asset in app.credora.network portal"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -222,7 +246,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -272,16 +301,27 @@
     },
     {
       "feedId": "xerberus",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "2 ether.fi assets scored",
+      "sourceUrl": "https://app.xerberus.io/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in Xerberus dendrogram",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "ether.fi assets (Wrapped eETH = weETH, ether.fi BTC = eBTC) are scored in Xerberus's asset subgraph.",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "asset",
+          "value": "Wrapped eETH (weETH)",
+          "scale": "Xerberus composite 0.62"
+        },
+        {
+          "dim": "asset",
+          "value": "ether.fi BTC (eBTC)",
+          "scale": "Xerberus composite 0.68"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -296,7 +336,12 @@
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for ether.fi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -312,7 +357,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://gov.ether.fi/ — not in Substack scan"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -328,7 +378,12 @@
       "methodology": null,
       "coverageReason": "not on Philidor landing page",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -350,6 +405,59 @@
         "url": null,
         "note": null
       },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "12 BA-tracked markets hold weETH",
+      "sourceUrl": "https://morpho.blockanalitica.com",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "weETH appears as collateral in BA-tracked markets — 1 spark, 5 compound, 6 morpho.",
+      "verified": null,
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "12",
+          "scale": "BA-tracked markets with weETH"
+        },
+        {
+          "dim": "dashboard",
+          "value": "spark",
+          "scale": "1 market"
+        },
+        {
+          "dim": "dashboard",
+          "value": "compound",
+          "scale": "5 markets"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "6 markets"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "collateral in DS markets",
+      "sourceUrl": "https://app.defi-sphere.com/markets/ethereum/morpho/0x34377fc4f617c51818e92c79df31ff270c6a91bc94ad32e367fdf59b9f4ac5dd",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "weETH / eETH is collateral in DS-tracked Morpho/Aave markets.",
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,

@@ -1,0 +1,31 @@
+# DeFi Saver overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Universe: DS's public surfaces are 3 marketing feature pages (lending/dex/leverage)
+# + the app.defisaver.com bundle's /manage routes. The adapter catches all 9
+# protocols DS lists as execution surfaces. The 14 here are protocols DS doesn't
+# list anywhere in either surface — they aren't DS-supported execution targets.
+#
+# DS as an execution UI uses underlying tokens (stETH, weETH, sUSDe, PT-*) as
+# COLLATERAL in its leverage/automation flows, but doesn't track them as separate
+# coverage targets. So no partial layer here.
+
+partial: []
+
+verified_absent:
+  - { protocol: lido,          date: 2026-06-22, by: IVa, note: "Lido isn't a DS execution surface (stETH used as collateral in Aave/Spark leverage but not a target itself)" }
+  - { protocol: ethena,        date: 2026-06-22, by: IVa, note: "Ethena isn't on the DS feature pages or bundle routes" }
+  - { protocol: etherfi,       date: 2026-06-22, by: IVa, note: "ether.fi isn't on the DS feature pages or bundle routes" }
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "Uniswap is used as a DEX router under the hood but isn't listed as a DS execution surface" }
+  - { protocol: rocketpool,    date: 2026-06-22, by: IVa, note: "Rocket Pool isn't on the DS feature pages or bundle routes" }
+  - { protocol: pendle,        date: 2026-06-22, by: IVa, note: "Pendle isn't on the DS feature pages or bundle routes" }
+  - { protocol: yearn,         date: 2026-06-22, by: IVa, note: "Yearn isn't on the DS feature pages or bundle routes" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "Mellow isn't on the DS feature pages or bundle routes" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "rolled up into Morpho coverage" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "Balancer isn't on the DS feature pages or bundle routes" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "Gearbox isn't a DS execution surface" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "swap aggregator; not a DS execution target" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "swap aggregator; not a DS execution target" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "swap aggregator; not a DS execution target" }
+
+covered_override: []

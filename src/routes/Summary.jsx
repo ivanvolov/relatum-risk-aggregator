@@ -173,7 +173,9 @@ export default function Summary() {
         <div className="stat"><div className="k">Covered</div><div className="v" style={{color:'var(--ok)'}}>{stats.cov}</div></div>
         <div className="stat"><div className="k">Partial</div><div className="v" style={{color:'var(--partial)'}}>{stats.part}</div></div>
         <div className="stat" title="Adapter says not-covered AND a human confirmed the source genuinely doesn't carry this protocol"><div className="k">Verified absent</div><div className="v" style={{color:'var(--dim)'}}>{stats.verified}</div></div>
-        <div className="stat" title="Adapter says not-covered; no human has eyeballed the source yet"><div className="k">Unverified gaps</div><div className="v" style={{color:'var(--no)'}}>{stats.unverified}</div></div>
+        {stats.unverified > 0 ? (
+          <div className="stat" title="Adapter says not-covered; no human has eyeballed the source yet"><div className="k">Unverified gaps</div><div className="v" style={{color:'var(--no)'}}>{stats.unverified}</div></div>
+        ) : null}
       </div>
 
       <div className="controls">

@@ -1,0 +1,95 @@
+# Block Analitica overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Universe: BA hosts per-protocol dashboards for morpho, spark, compound, sky
+# (`aave.blockanalitica.com` was retired — NXDOMAIN as of 2026-06-17 per the adapter
+# source comment). The 4 covered protocols match this universe exactly.
+#
+# Partial rows below are protocols whose ASSETS appear as market collateral inside
+# the BA-tracked dashboards (morpho-api/markets, spark-api/markets, compound-api/v3/markets).
+# Counts pulled from each API's market endpoint on 2026-06-22.
+
+partial:
+  - protocol: lido
+    why: wstETH / stETH appears as collateral in BA-tracked markets — 1 spark market, 5 compound markets, 11 morpho markets.
+    url: https://morpho.blockanalitica.com
+    inline: "17 BA-tracked markets hold wstETH/stETH"
+    claims:
+      - { dim: market-count, value: "17",      scale: "BA-tracked markets with wstETH/stETH" }
+      - { dim: dashboard,    value: "spark",    scale: "1 market" }
+      - { dim: dashboard,    value: "compound", scale: "5 markets" }
+      - { dim: dashboard,    value: "morpho",   scale: "11 markets" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: etherfi
+    why: weETH appears as collateral in BA-tracked markets — 1 spark, 5 compound, 6 morpho.
+    url: https://morpho.blockanalitica.com
+    inline: "12 BA-tracked markets hold weETH"
+    claims:
+      - { dim: market-count, value: "12",      scale: "BA-tracked markets with weETH" }
+      - { dim: dashboard,    value: "spark",    scale: "1 market" }
+      - { dim: dashboard,    value: "compound", scale: "5 markets" }
+      - { dim: dashboard,    value: "morpho",   scale: "6 markets" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: ethena
+    why: USDe / sUSDe appears as collateral in BA-tracked markets — 3 compound, 9 morpho (USDe×6 + sUSDe×3).
+    url: https://morpho.blockanalitica.com
+    inline: "12 BA-tracked markets hold USDe family"
+    claims:
+      - { dim: market-count, value: "12",      scale: "BA-tracked markets with USDe/sUSDe" }
+      - { dim: dashboard,    value: "compound", scale: "3 markets" }
+      - { dim: dashboard,    value: "morpho",   scale: "9 markets" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: pendle
+    why: Pendle PT tokens appear as collateral in 9 BA-tracked morpho markets.
+    url: https://morpho.blockanalitica.com
+    inline: "9 BA-tracked markets hold PT tokens"
+    claims:
+      - { dim: market-count, value: "9",       scale: "BA-tracked morpho markets with PT-* tokens" }
+      - { dim: dashboard,    value: "morpho",   scale: "9 markets" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: rocketpool
+    why: rETH appears as collateral in BA-tracked markets — 1 spark, 1 compound, 2 morpho.
+    url: https://morpho.blockanalitica.com
+    inline: "4 BA-tracked markets hold rETH"
+    claims:
+      - { dim: market-count, value: "4",       scale: "BA-tracked markets with rETH" }
+      - { dim: dashboard,    value: "spark",    scale: "1 market" }
+      - { dim: dashboard,    value: "compound", scale: "1 market" }
+      - { dim: dashboard,    value: "morpho",   scale: "2 markets" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: curve
+    why: crvUSD appears as collateral in 1 BA-tracked morpho market.
+    url: https://morpho.blockanalitica.com
+    inline: "1 BA-tracked market holds crvUSD"
+    claims:
+      - { dim: market-count, value: "1",       scale: "BA-tracked morpho markets with crvUSD" }
+      - { dim: dashboard,    value: "morpho",   scale: "1 market" }
+    date: 2026-06-22
+    by: IVa
+
+verified_absent:
+  - { protocol: aave,          date: 2026-06-22, by: IVa, note: "BA retired aave.blockanalitica.com (NXDOMAIN); BA's marketing copy currently names Sky/Spark/Morpho/Summer.fi, no Aave" }
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "DEX, no BA dashboard" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "DEX, no BA dashboard" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: fluid,         date: 2026-06-22, by: IVa, note: "lending protocol with no BA dashboard" }
+  - { protocol: liquity,       date: 2026-06-22, by: IVa, note: "BOLD doesn't appear as collateral in BA-tracked markets" }
+  - { protocol: euler,         date: 2026-06-22, by: IVa, note: "lending protocol with no BA dashboard" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "leverage protocol with no BA dashboard" }
+  - { protocol: yearn,         date: 2026-06-22, by: IVa, note: "vault aggregator with no BA dashboard" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "vault aggregator with no BA dashboard" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "rolled up into Morpho coverage" }
+
+covered_override: []

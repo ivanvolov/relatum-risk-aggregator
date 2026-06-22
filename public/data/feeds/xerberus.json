@@ -1,10 +1,10 @@
 {
   "feedId": "xerberus",
   "feedName": "Xerberus",
-  "generatedAt": "2026-06-22T13:05:43.879Z",
+  "generatedAt": "2026-06-22T22:41:03.765Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/xerberus/output/2026-06-17.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/xerberus.yaml",
   "protocols": {
     "lido": {
       "covered": true,
@@ -125,8 +125,30 @@
     },
     "sky": {
       "covered": false,
-      "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://app.xerberus.io/",
+      "partial": true,
+      "inline": "3 Sky assets scored",
+      "claims": [
+        {
+          "dim": "asset",
+          "value": "DAI",
+          "scale": "Xerberus composite 0.72"
+        },
+        {
+          "dim": "asset",
+          "value": "USDS Stablecoin",
+          "scale": "Xerberus composite 0.66"
+        },
+        {
+          "dim": "asset",
+          "value": "Savings USDS (sUSDS)",
+          "scale": "Xerberus composite 0.73"
+        }
+      ],
+      "partialNote": "Sky-issued stables (DAI, USDS, sUSDS) are individually scored in Xerberus's asset subgraph even though Sky isn't a Protocol-level entry.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "ethena": {
       "covered": true,
@@ -208,13 +230,36 @@
     },
     "etherfi": {
       "covered": false,
-      "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://app.xerberus.io/",
+      "partial": true,
+      "inline": "2 ether.fi assets scored",
+      "claims": [
+        {
+          "dim": "asset",
+          "value": "Wrapped eETH (weETH)",
+          "scale": "Xerberus composite 0.62"
+        },
+        {
+          "dim": "asset",
+          "value": "ether.fi BTC (eBTC)",
+          "scale": "Xerberus composite 0.68"
+        }
+      ],
+      "partialNote": "ether.fi assets (Wrapped eETH = weETH, ether.fi BTC = eBTC) are scored in Xerberus's asset subgraph.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "uniswap": {
       "covered": false,
       "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Uniswap entry in any Xerberus subgraph (protocols/assets/pools/orgs scanned)"
+      }
     },
     "curve": {
       "covered": true,
@@ -296,8 +341,20 @@
     },
     "rocketpool": {
       "covered": false,
-      "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://app.xerberus.io/",
+      "partial": true,
+      "inline": "1 RP asset scored",
+      "claims": [
+        {
+          "dim": "asset",
+          "value": "Rocket Pool ETH (rETH)",
+          "scale": "Xerberus composite 0.72"
+        }
+      ],
+      "partialNote": "Rocket Pool ETH (rETH) is scored in Xerberus's asset subgraph even though Rocket Pool isn't a Protocol-level entry.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "pendle": {
       "covered": true,
@@ -380,12 +437,24 @@
     "liquity": {
       "covered": false,
       "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Liquity/BOLD/LUSD in Xerberus's protocol or asset subgraphs (RLUSD is Ripple's, not Liquity)"
+      }
     },
     "yearn": {
       "covered": false,
       "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Yearn / yv-token in any Xerberus subgraph"
+      }
     },
     "euler": {
       "covered": true,
@@ -429,17 +498,66 @@
     "mellow": {
       "covered": false,
       "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Mellow entry in any Xerberus subgraph"
+      }
     },
     "morpho-vaults": {
       "covered": false,
-      "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://app.xerberus.io/",
+      "partial": true,
+      "inline": "4+ vault assets scored",
+      "claims": [
+        {
+          "dim": "asset",
+          "value": "steakUSDC",
+          "scale": "Xerberus composite 0.80"
+        },
+        {
+          "dim": "asset",
+          "value": "steakUSDT",
+          "scale": "Xerberus composite 0.69"
+        },
+        {
+          "dim": "asset",
+          "value": "gtusdtf",
+          "scale": "Xerberus composite 0.74"
+        },
+        {
+          "dim": "asset",
+          "value": "gtwethp",
+          "scale": "Xerberus composite 0.79"
+        },
+        {
+          "dim": "pool",
+          "value": "Gauntlet USDC Prime",
+          "scale": "Xerberus pool composite 0.83"
+        },
+        {
+          "dim": "pool",
+          "value": "Steakhouse Prime ETH",
+          "scale": "Xerberus pool composite 0.85"
+        }
+      ],
+      "partialNote": "Specific Morpho vault assets (steakUSDC, steakUSDT, gtusdtf, gtwethp) and pools (Gauntlet USDC Prime, Steakhouse Prime ETH, etc.) are scored individually in Xerberus's asset/pool subgraphs.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "balancer": {
       "covered": false,
       "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Balancer entry (the BAL token isn't in the asset subgraph; earlier regex matches to PAX Gold etc. were false positives)"
+      }
     },
     "gearbox": {
       "covered": true,
@@ -483,17 +601,35 @@
     "cowswap": {
       "covered": false,
       "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator — no Xerberus entry"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator — no Xerberus entry"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "not in Xerberus dendrogram",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator — no Xerberus entry (mETH match was false positive against the slug pattern)"
+      }
     }
   }
 }

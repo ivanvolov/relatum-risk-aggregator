@@ -1,0 +1,35 @@
+# RiskLayer overlay — product pivoted away from DeFi.
+# See data/overlays/README.md for format.
+#
+# risklayer.io now operates as an insurance-carrier vendor-mapping tool. No DeFi data
+# is published; the single-page SPA contains no protocol references. Every cell is
+# verified-absent because the product no longer exists in this domain.
+
+partial: []
+
+verified_absent:
+  - { protocol: lido,          date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi (now insurance-vendor mapping)" }
+  - { protocol: aave,          date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: spark,         date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: sky,           date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: ethena,        date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: morpho,        date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: etherfi,       date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: curve,         date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: compound,      date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: rocketpool,    date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: pendle,        date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: fluid,         date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: liquity,       date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: yearn,         date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: euler,         date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "RiskLayer pivoted away from DeFi" }
+
+covered_override: []

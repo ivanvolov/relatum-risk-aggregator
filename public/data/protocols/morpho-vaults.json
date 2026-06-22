@@ -78,23 +78,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiScan registry",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage; no separate vaults entry"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -110,7 +99,12 @@
       "methodology": null,
       "coverageReason": "tracked as part of Morpho protocol coverage",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -126,7 +120,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiPunk'd assessment set",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho assessment (morpho-blue)"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -142,23 +141,12 @@
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -174,7 +162,12 @@
       "methodology": null,
       "coverageReason": "no keyword pattern",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -190,7 +183,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage (and not separately rated in portal)"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -206,7 +204,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -222,7 +225,12 @@
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Morpho vault strategies are credited to Morpho, not morpho-vaults"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -230,16 +238,47 @@
     },
     {
       "feedId": "xerberus",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "4+ vault assets scored",
+      "sourceUrl": "https://app.xerberus.io/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in Xerberus dendrogram",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Specific Morpho vault assets (steakUSDC, steakUSDT, gtusdtf, gtwethp) and pools (Gauntlet USDC Prime, Steakhouse Prime ETH, etc.) are scored individually in Xerberus's asset/pool subgraphs.",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "asset",
+          "value": "steakUSDC",
+          "scale": "Xerberus composite 0.80"
+        },
+        {
+          "dim": "asset",
+          "value": "steakUSDT",
+          "scale": "Xerberus composite 0.69"
+        },
+        {
+          "dim": "asset",
+          "value": "gtusdtf",
+          "scale": "Xerberus composite 0.74"
+        },
+        {
+          "dim": "asset",
+          "value": "gtwethp",
+          "scale": "Xerberus composite 0.79"
+        },
+        {
+          "dim": "pool",
+          "value": "Gauntlet USDC Prime",
+          "scale": "Xerberus pool composite 0.83"
+        },
+        {
+          "dim": "pool",
+          "value": "Steakhouse Prime ETH",
+          "scale": "Xerberus pool composite 0.85"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -254,7 +293,12 @@
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -270,7 +314,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -307,6 +356,48 @@
         "by": "IVa",
         "url": null,
         "note": null
+      },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault layer rolled up into Morpho coverage"
       },
       "claims": [],
       "history": [],

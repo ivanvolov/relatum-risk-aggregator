@@ -1,15 +1,21 @@
 {
   "feedId": "llamarisk",
   "feedName": "LlamaRisk",
-  "generatedAt": "2026-06-22T13:05:43.883Z",
+  "generatedAt": "2026-06-22T22:41:03.770Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/llamarisk/output/2026-06-17.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/llamarisk.yaml",
   "protocols": {
     "lido": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely lives at https://research.lido.fi/ — not in Substack scan"
+      }
     },
     "aave": {
       "covered": true,
@@ -38,7 +44,13 @@
     "spark": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely lives at https://forum.sky.money/ (Spark is Sky's lending arm) — not in Substack scan"
+      }
     },
     "sky": {
       "covered": true,
@@ -127,12 +139,24 @@
     "etherfi": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://gov.ether.fi/ — not in Substack scan"
+      }
     },
     "uniswap": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://gov.uniswap.org/ — not in Substack scan"
+      }
     },
     "curve": {
       "covered": true,
@@ -347,22 +371,46 @@
     "compound": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely lives at https://www.comp.xyz/ — not in Substack scan, no public URL captured"
+      }
     },
     "rocketpool": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://dao.rocketpool.net/ — not in Substack scan"
+      }
     },
     "pendle": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely on Pendle's research/Discord — not in Substack scan"
+      }
     },
     "fluid": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://gov.fluid.io/ — not in Substack scan"
+      }
     },
     "liquity": {
       "covered": true,
@@ -391,7 +439,13 @@
     "yearn": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely at https://gov.yearn.fi/ — not in Substack scan"
+      }
     },
     "euler": {
       "covered": true,
@@ -420,37 +474,79 @@
     "mellow": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator, not in LlamaRisk's research scope"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://forum.balancer.fi/ — not in Substack scan"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://gov.gearbox.fi/ — not in Substack scan"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator, not in LlamaRisk's research scope"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator, not in LlamaRisk's research scope"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "no LlamaRisk research posts for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator, not in LlamaRisk's research scope"
+      }
     }
   }
 }

@@ -1,0 +1,27 @@
+# pigi.finance overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Universe: pigi.finance/api/strategies returns 43 strategies (probed 2026-06-17).
+# The adapter regex catches every strategy whose name matches one of our 23
+# protocols — 10 protocols matched. The 13 here are protocols with zero matching
+# strategies in pigi's index. pigi tracks STRATEGIES (named yield positions),
+# not assets, so no partial layer.
+
+partial: []
+
+verified_absent:
+  - { protocol: aave,          date: 2026-06-22, by: IVa, note: "no pigi strategy with 'aave' in the name (regex-checked against all 43 strategies)" }
+  - { protocol: spark,         date: 2026-06-22, by: IVa, note: "'Sky Spark - Savings Account' credits Sky as the rate provider, not Spark" }
+  - { protocol: compound,      date: 2026-06-22, by: IVa, note: "no compound strategy in pigi's index" }
+  - { protocol: euler,         date: 2026-06-22, by: IVa, note: "no euler strategy in pigi's index" }
+  - { protocol: rocketpool,    date: 2026-06-22, by: IVa, note: "no rocket-pool strategy in pigi's index" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "no mellow strategy in pigi's index" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "Morpho vault strategies are credited to Morpho, not morpho-vaults" }
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "DEX, not a strategy issuer" }
+  - { protocol: curve,         date: 2026-06-22, by: IVa, note: "no curve-native strategy in pigi's index (LlamaLend appears but is credited differently)" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "DEX, not a strategy issuer" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "swap aggregator, not a strategy issuer" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "swap aggregator" }
+
+covered_override: []

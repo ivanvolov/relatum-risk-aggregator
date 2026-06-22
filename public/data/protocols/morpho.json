@@ -119,38 +119,6 @@
       "findings": null
     },
     {
-      "feedId": "blockanalitica",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "—",
-      "sourceUrl": "https://morpho-api.blockanalitica.com/?days_ago=1",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
-      "partialNote": null,
-      "verified": null,
-      "claims": [
-        {
-          "dim": "supply",
-          "value": "—",
-          "scale": "USD"
-        },
-        {
-          "dim": "borrow",
-          "value": "—",
-          "scale": "USD"
-        },
-        {
-          "dim": "tvl",
-          "value": "—",
-          "scale": "USD"
-        }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "curatorwatch",
       "status": "cov",
       "adapterStatus": "implemented",
@@ -254,55 +222,13 @@
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Morpho is lending rails, not a stablecoin issuer"
+      },
       "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "334 markets",
-      "sourceUrl": "https://app.defi-sphere.com/protocols/morpho",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
-      "partialNote": null,
-      "verified": null,
-      "claims": [
-        {
-          "dim": "markets",
-          "value": "334",
-          "scale": "count"
-        },
-        {
-          "dim": "total-supply",
-          "value": "$6.66B",
-          "scale": "USD"
-        },
-        {
-          "dim": "total-borrow",
-          "value": "$2.89B",
-          "scale": "USD"
-        },
-        {
-          "dim": "avg-collateral-risk",
-          "value": "2.66",
-          "scale": "DeFi Sphere risk"
-        },
-        {
-          "dim": "avg-liquidity-risk",
-          "value": "18.06",
-          "scale": "DeFi Sphere risk"
-        },
-        {
-          "dim": "networks",
-          "value": "base, ethereum, arbitrum",
-          "scale": "chains"
-        }
-      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -349,7 +275,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Morpho vault entry in app.credora.network portal"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -365,7 +296,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -624,6 +560,85 @@
         "note": "Morpho is lending rails, not a stablecoin issuer"
       },
       "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "—",
+      "sourceUrl": "https://morpho-api.blockanalitica.com/?days_ago=1",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "334 markets",
+      "sourceUrl": "https://app.defi-sphere.com/protocols/morpho",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "334",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$6.66B",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$2.89B",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "2.66",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "18.06",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "base, ethereum, arbitrum",
+          "scale": "chains"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

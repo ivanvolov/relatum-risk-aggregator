@@ -1,15 +1,21 @@
 {
   "feedId": "pharos",
   "feedName": "Pharos",
-  "generatedAt": "2026-06-22T13:05:43.871Z",
+  "generatedAt": "2026-06-22T22:41:03.749Z",
   "snapshotDate": "2026-06-21",
   "sourceFile": "data/adapters/pharos/output/2026-06-21.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/pharos.yaml",
   "protocols": {
     "lido": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Lido issues stETH (rebasing), not a stablecoin Pharos indexes"
+      }
     },
     "aave": {
       "covered": true,
@@ -144,17 +150,35 @@
     "morpho": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Morpho is lending rails, not a stablecoin issuer"
+      }
     },
     "etherfi": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "ether.fi doesn't issue a Pharos-tracked stablecoin"
+      }
     },
     "uniswap": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, not a stablecoin issuer"
+      }
     },
     "curve": {
       "covered": true,
@@ -184,17 +208,35 @@
     "compound": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Compound-issued stablecoin in Pharos sitemap"
+      }
     },
     "rocketpool": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Rocket Pool issues rETH (LST), not a stablecoin"
+      }
     },
     "pendle": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Pendle PT tokens aren't classified as stables by Pharos"
+      }
     },
     "fluid": {
       "covered": true,
@@ -268,42 +310,90 @@
     "euler": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Euler-issued stablecoin in Pharos sitemap"
+      }
     },
     "mellow": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator, no stablecoin issuance"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no stablecoin issuance"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "leverage protocol, no stablecoin issuance"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "no Pharos-tracked stablecoins for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     }
   }
 }

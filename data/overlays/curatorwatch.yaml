@@ -1,0 +1,80 @@
+# CuratorWatch overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Universe (from /api/vaults, 355 vaults): vault.protocol field maps to morpho(142),
+# unknown(134, Turtle vaults), spark(12), euler(6), sky(5), lido(5), plus curator-native
+# strategies. Of our 23, the adapter covers 5 lending-rail underlyings (morpho, spark,
+# sky, lido, euler).
+#
+# Partial rows below are protocols whose ASSET shows up in CuratorWatch-tracked vaults
+# even though the protocol itself isn't on the rail list. Counts pulled from
+# /api/vaults asset.symbol scan on 2026-06-22.
+
+partial:
+  - protocol: etherfi
+    why: weETH appears as the deposit asset in 6 CuratorWatch-tracked vaults (SparkLend weETH, AlphaGrowth Unichain/Base, Re7 Labs WETH Cluster, K3 Capital Prime, Katana weETH).
+    url: https://curatorwatch.com/
+    inline: "6 vaults hold weETH"
+    claims:
+      - { dim: vault-count,  value: "6",       scale: "vaults with weETH" }
+      - { dim: vault,        value: "SparkLend weETH",          scale: "curator: Spark Protocol" }
+      - { dim: vault,        value: "AlphaGrowth Unichain Market", scale: "curator: AlphaGrowth" }
+      - { dim: vault,        value: "AlphaGrowth Base",         scale: "curator: AlphaGrowth" }
+      - { dim: vault,        value: "Re7 Labs WETH Cluster",    scale: "curator: Re7 Labs" }
+      - { dim: vault,        value: "K3 Capital Prime Market",  scale: "curator: K3 Capital" }
+      - { dim: vault,        value: "Katana weETH",             scale: "curator: Katana" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: ethena
+    why: USDe / sUSDe appears as the deposit asset in 2 CuratorWatch-tracked vaults (K3 Capital Yield Market, Sentora RLUSD).
+    url: https://curatorwatch.com/
+    inline: "2 vaults hold USDe/sUSDe"
+    claims:
+      - { dim: vault-count,  value: "2",       scale: "vaults with USDe family" }
+      - { dim: vault,        value: "K3 Capital Yield Market",  scale: "asset USDe · curator K3 Capital" }
+      - { dim: vault,        value: "Sentora RLUSD",            scale: "asset sUSDe · curator Sentora" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: pendle
+    why: Pendle PT tokens (PT-thBILL, PT-sUSDai, PT-USDai, PT-cUSD) appear as deposit assets in 5 CuratorWatch-tracked K3 Capital vaults.
+    url: https://curatorwatch.com/
+    inline: "5 vaults hold PT tokens"
+    claims:
+      - { dim: vault-count,  value: "5",       scale: "vaults with Pendle PT tokens" }
+      - { dim: vault,        value: "K3 Capital Theo Market",   scale: "asset PT-thBILL-18JUN2026" }
+      - { dim: vault,        value: "K3 Capital USDai Cluster", scale: "asset PT-sUSDai-18JUN2026 / 15OCT2026 / PT-USDai-15OCT2026" }
+      - { dim: vault,        value: "K3 Capital Yield Market",  scale: "asset PT-cUSD-23JUL2026" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: rocketpool
+    why: rETH appears as the deposit asset in 1 CuratorWatch-tracked vault (SparkLend rETH).
+    url: https://curatorwatch.com/
+    inline: "1 vault holds rETH"
+    claims:
+      - { dim: vault-count,  value: "1",       scale: "vaults with rETH" }
+      - { dim: vault,        value: "SparkLend rETH",           scale: "curator: Spark Protocol" }
+    date: 2026-06-22
+    by: IVa
+
+verified_absent:
+  # No asset matching these protocols appears in any of CuratorWatch's 355 vaults
+  # (asset.symbol scan via /api/vaults on 2026-06-22).
+  - { protocol: aave,          date: 2026-06-22, by: IVa, note: "Morpho vaults are credited to morpho, not aave; no aave-specific CuratorWatch coverage" }
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "DEX, no vault asset" }
+  - { protocol: curve,         date: 2026-06-22, by: IVa, note: "DEX, no vault asset" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "DEX, no vault asset" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: compound,      date: 2026-06-22, by: IVa, note: "not a lending rail tracked by CuratorWatch" }
+  - { protocol: fluid,         date: 2026-06-22, by: IVa, note: "not a lending rail tracked by CuratorWatch" }
+  - { protocol: liquity,       date: 2026-06-22, by: IVa, note: "BOLD doesn't appear in any vault" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "leverage protocol, not a curated vault rail" }
+  - { protocol: yearn,         date: 2026-06-22, by: IVa, note: "Yearn has its own vault system, not on CuratorWatch" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "Mellow has its own vault system, not on CuratorWatch" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "rolled up into Morpho coverage" }
+
+covered_override: []

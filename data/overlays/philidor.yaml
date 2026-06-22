@@ -1,0 +1,67 @@
+# Philidor overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Philidor has no public API (vault scoring is computed client-side from Morpho
+# GraphQL). The only public signal is the protocol-icon list on the analytics.philidor.io
+# landing page: {morpho, aave, spark, nest, compound, uniswap, maker, yearn, beefy}.
+#
+# - morpho, yearn, morpho-vaults are credited as canonical Philidor coverage (already covered).
+# - aave, spark, compound, uniswap, sky (via maker) appear as landing-page icons but
+#   without Philidor vault scoring. Marked partial — Philidor "touches" them by
+#   listing them as protocols they cover the vaults of, but doesn't publish scoring.
+# - The remaining 15 don't appear on the landing page at all → verified absent.
+
+partial:
+  - protocol: aave
+    why: Aave appears on the analytics.philidor.io landing-page icon list but Philidor doesn't publish vault scoring for Aave markets directly.
+    url: https://analytics.philidor.io
+    inline: "icon on landing"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: spark
+    why: Spark appears on the analytics.philidor.io landing-page icon list (no published vault scoring).
+    url: https://analytics.philidor.io
+    inline: "icon on landing"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: compound
+    why: Compound appears on the analytics.philidor.io landing-page icon list (no published vault scoring).
+    url: https://analytics.philidor.io
+    inline: "icon on landing"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: uniswap
+    why: Uniswap appears on the analytics.philidor.io landing-page icon list (no published vault scoring).
+    url: https://analytics.philidor.io
+    inline: "icon on landing"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: sky
+    why: Sky (as "Maker") appears on the analytics.philidor.io landing-page icon list (no published vault scoring).
+    url: https://analytics.philidor.io
+    inline: "icon on landing (as Maker)"
+    date: 2026-06-22
+    by: IVa
+
+verified_absent:
+  - { protocol: lido,          date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: ethena,        date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: etherfi,       date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: curve,         date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: rocketpool,    date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: pendle,        date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: fluid,         date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: liquity,       date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: euler,         date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "not on Philidor landing icon list" }
+
+covered_override: []

@@ -1,0 +1,26 @@
+# DeFiPunk'd overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Universe: DeFiPunk'd publishes per-protocol assessments (5-slice consensus grades:
+# verifiability, control, ability-to-exit, autonomy, open-access). The adapter already
+# covers 13 of our 23 by probing the API.
+#
+# I probed each of the 10 remaining slugs against the assessment API on 2026-06-22 —
+# all returned 0/5 slices, confirming they're not in the DeFiPunk'd assessment set.
+# DeFiPunk'd scores PROTOCOLS, not assets or pools, so there's no partial layer.
+
+partial: []
+
+verified_absent:
+  - { protocol: compound,      date: 2026-06-22, by: IVa, note: "probed 'compound' and 'compound-v3' slugs — 0/5 slices each" }
+  - { protocol: fluid,         date: 2026-06-22, by: IVa, note: "probed 'fluid' and 'fluid-lending' — 0/5 slices each" }
+  - { protocol: yearn,         date: 2026-06-22, by: IVa, note: "probed 'yearn' and 'yearn-finance' — 0/5 slices each" }
+  - { protocol: euler,         date: 2026-06-22, by: IVa, note: "probed 'euler' and 'euler-v2' — 0/5 slices each" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "probed 'mellow' — 0/5 slices" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "rolled up into Morpho assessment (morpho-blue)" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "probed 'gearbox' — 0/5 slices" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "probed 'cowswap', 'cow-protocol' — 0/5 slices each" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "probed '1inch' — 0/5 slices" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "probed '0x-protocol' — 0/5 slices" }
+
+covered_override: []

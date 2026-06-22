@@ -79,38 +79,6 @@
       "findings": null
     },
     {
-      "feedId": "blockanalitica",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "—",
-      "sourceUrl": "https://info-sky.blockanalitica.com/overall/?days_ago=1",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
-      "partialNote": null,
-      "verified": null,
-      "claims": [
-        {
-          "dim": "supply",
-          "value": "—",
-          "scale": "USD"
-        },
-        {
-          "dim": "borrow",
-          "value": "—",
-          "scale": "USD"
-        },
-        {
-          "dim": "tvl",
-          "value": "—",
-          "scale": "USD"
-        }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "curatorwatch",
       "status": "cov",
       "adapterStatus": "implemented",
@@ -267,22 +235,6 @@
       "findings": null
     },
     {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "defisaver",
       "status": "cov",
       "adapterStatus": "implemented",
@@ -316,16 +268,62 @@
     },
     {
       "feedId": "credora",
-      "status": "none",
+      "status": "cov",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "A- · USDS rating",
+      "sourceUrl": "https://app.credora.network/assets",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in public reports index",
+      "coverageReason": null,
       "partialNote": null,
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "rating",
+          "value": "A-",
+          "scale": "Credora letter grade"
+        },
+        {
+          "dim": "probability-of-default",
+          "value": "0.51%",
+          "scale": "PD (1-year)"
+        },
+        {
+          "dim": "asset",
+          "value": "USDS",
+          "scale": "Stablecoin - Alternative Assets · 0xdc03…384f on Ethereum"
+        },
+        {
+          "dim": "asset-quality",
+          "value": "4.0 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "protocol-security",
+          "value": "4.3 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "governance",
+          "value": "4.6 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "peg-track-record",
+          "value": "4.8 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "reserves-management",
+          "value": "4.2 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "regulatory-profile",
+          "value": "2.3 / 5",
+          "scale": "Credora risk anchor"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -340,7 +338,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -390,16 +393,32 @@
     },
     {
       "feedId": "xerberus",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "3 Sky assets scored",
+      "sourceUrl": "https://app.xerberus.io/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in Xerberus dendrogram",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Sky-issued stables (DAI, USDS, sUSDS) are individually scored in Xerberus's asset subgraph even though Sky isn't a Protocol-level entry.",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "asset",
+          "value": "DAI",
+          "scale": "Xerberus composite 0.72"
+        },
+        {
+          "dim": "asset",
+          "value": "USDS Stablecoin",
+          "scale": "Xerberus composite 0.66"
+        },
+        {
+          "dim": "asset",
+          "value": "Savings USDS (sUSDS)",
+          "scale": "Xerberus composite 0.73"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -414,7 +433,12 @@
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Sky"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -461,14 +485,14 @@
     },
     {
       "feedId": "philidor",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "icon on landing (as Maker)",
+      "sourceUrl": "https://analytics.philidor.io",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not on Philidor landing page",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Sky (as \"Maker\") appears on the analytics.philidor.io landing-page icon list (no published vault scoring).",
       "verified": null,
       "claims": [],
       "history": [],
@@ -510,6 +534,54 @@
           "url": "https://etherscan.io/address/0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
         }
       ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "—",
+      "sourceUrl": "https://info-sky.blockanalitica.com/overall/?days_ago=1",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "collateral in DS markets",
+      "sourceUrl": "https://app.defi-sphere.com/markets/ethereum/morpho/0xe7e9694b754c4d4f7e21faf7223f6fa71abaeb10296a4c43a54a7977149687d2",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "USDS / sUSDS appears in DS-tracked Aave/Spark markets.",
+      "verified": null,
+      "claims": [],
       "history": [],
       "notable": null,
       "findings": null

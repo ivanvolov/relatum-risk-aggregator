@@ -1,0 +1,31 @@
+# Zyfai Risk overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Universe: defiapi.zyf.ai/api/v2/opportunities/degen returns 7 distinct protocols
+# across 3 chains (Ethereum/Base/Arbitrum) as of 2026-06-22 probe:
+#   Aave V3, Compound V3, Euler, Fluid, Morpho, Spark, Yearn.
+# The adapter regex catches all 7 — the 16 here are protocols absent from Zyfai's
+# pool list. Zyfai indexes POOLS (per-asset risk scores), not assets, so no partial
+# layer.
+
+partial: []
+
+verified_absent:
+  - { protocol: lido,          date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for Lido (Lido isn't a lending pool)" }
+  - { protocol: sky,           date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for Sky" }
+  - { protocol: ethena,        date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for Ethena" }
+  - { protocol: etherfi,       date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for ether.fi" }
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "DEX, no Zyfai pool" }
+  - { protocol: curve,         date: 2026-06-22, by: IVa, note: "DEX, no Zyfai pool" }
+  - { protocol: rocketpool,    date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for Rocket Pool" }
+  - { protocol: pendle,        date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for Pendle" }
+  - { protocol: liquity,       date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for Liquity" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for Mellow" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "rolled up into Morpho coverage" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "DEX, no Zyfai pool" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "no Zyfai-tracked pool for Gearbox" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "swap aggregator" }
+
+covered_override: []

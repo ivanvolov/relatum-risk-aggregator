@@ -7,6 +7,7 @@ import PendingAdapterCard from '../components/PendingAdapterCard.jsx';
 import HistorySection from '../components/HistorySection.jsx';
 import Sidecard from '../components/Sidecard.jsx';
 import Avatar from '../components/Avatar.jsx';
+import ChainStrip from '../components/ChainStrip.jsx';
 
 export default function ProtocolDetail() {
   const { slug } = useParams();
@@ -112,7 +113,6 @@ export default function ProtocolDetail() {
                 { k: 'Family', v: D.family },
                 { k: 'TVL', v: D.tvl_usd ? fmtUsd(D.tvl_usd) : null },
                 { k: 'Volume (24h)', v: D.volume_usd_24h ? fmtUsd(D.volume_usd_24h) : null },
-                { k: 'Chains', v: D.chains && D.chains.length ? `${D.chains.length} (${D.chains.slice(0, 3).join(', ')}${D.chains.length > 3 ? '…' : ''})` : null },
                 { k: 'Audits', v: D.audit_count != null ? `${D.audit_count}${D.audit_history?.length ? ` (${D.audit_history.length} on file)` : ''}` : null },
                 { k: 'Governance', v: D.governance_summary },
                 { k: 'Last updated', v: D.lastUpdated },
@@ -122,6 +122,12 @@ export default function ProtocolDetail() {
                   <span className={'v' + (r.v ? '' : ' dim')}>{r.v || '—'}</span>
                 </div>
               ))}
+              {D.chains && D.chains.length ? (
+                <div className="kv">
+                  <span className="k">Chains</span>
+                  <span className="v"><ChainStrip chains={D.chains} /></span>
+                </div>
+              ) : null}
             </div>
           )}
           {(D.homepage || D.twitter || (D.github && D.github.length) || D.parent_protocol) ? (

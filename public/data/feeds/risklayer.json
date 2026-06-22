@@ -1,125 +1,263 @@
 {
   "feedId": "risklayer",
   "feedName": "RiskLayer",
-  "generatedAt": "2026-06-22T13:05:43.876Z",
+  "generatedAt": "2026-06-22T22:41:03.759Z",
   "snapshotDate": "2026-06-20",
   "sourceFile": "data/adapters/risklayer/output/2026-06-20.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/risklayer.yaml",
   "protocols": {
     "lido": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi (now insurance-vendor mapping)"
+      }
     },
     "aave": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "spark": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "sky": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "ethena": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "morpho": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "etherfi": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "uniswap": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "curve": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "compound": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "rocketpool": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "pendle": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "fluid": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "liquity": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "yearn": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "euler": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "mellow": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      }
     }
   }
 }

@@ -1,10 +1,10 @@
 {
   "feedId": "credora",
   "feedName": "Credora",
-  "generatedAt": "2026-06-22T13:05:43.874Z",
+  "generatedAt": "2026-06-22T22:41:03.756Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/credora/output/2026-06-17.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/credora.yaml",
   "protocols": {
     "lido": {
       "covered": true,
@@ -33,7 +33,13 @@
     "aave": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no GHO/Aave asset in app.credora.network portal (verified by IVa)"
+      }
     },
     "spark": {
       "covered": true,
@@ -156,104 +162,269 @@
       ]
     },
     "sky": {
-      "covered": false,
-      "reason": "not in public reports index",
-      "deeplink": null
+      "covered": true,
+      "reason": null,
+      "deeplink": "https://app.credora.network/assets",
+      "partial": false,
+      "inline": "A- · USDS rating",
+      "claims": [
+        {
+          "dim": "rating",
+          "value": "A-",
+          "scale": "Credora letter grade"
+        },
+        {
+          "dim": "probability-of-default",
+          "value": "0.51%",
+          "scale": "PD (1-year)"
+        },
+        {
+          "dim": "asset",
+          "value": "USDS",
+          "scale": "Stablecoin - Alternative Assets · 0xdc03…384f on Ethereum"
+        },
+        {
+          "dim": "asset-quality",
+          "value": "4.0 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "protocol-security",
+          "value": "4.3 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "governance",
+          "value": "4.6 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "peg-track-record",
+          "value": "4.8 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "reserves-management",
+          "value": "4.2 / 5",
+          "scale": "Credora risk anchor"
+        },
+        {
+          "dim": "regulatory-profile",
+          "value": "2.3 / 5",
+          "scale": "Credora risk anchor"
+        }
+      ],
+      "overrideDate": "2026-06-22",
+      "overrideBy": "IVa"
     },
     "ethena": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no USDe/sUSDe/Ethena asset in app.credora.network portal"
+      }
     },
     "morpho": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Morpho vault entry in app.credora.network portal"
+      }
     },
     "etherfi": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no weETH/eETH/eBTC asset in app.credora.network portal"
+      }
     },
     "uniswap": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no Credora rating"
+      }
     },
     "curve": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no Credora rating"
+      }
     },
     "compound": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Compound asset in app.credora.network portal"
+      }
     },
     "rocketpool": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no rETH/Rocket Pool asset in app.credora.network portal"
+      }
     },
     "pendle": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Pendle PT in app.credora.network portal"
+      }
     },
     "fluid": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Fluid asset in app.credora.network portal"
+      }
     },
     "liquity": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no BOLD/LUSD asset in app.credora.network portal"
+      }
     },
     "yearn": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no yv-token in app.credora.network portal"
+      }
     },
     "euler": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Euler asset in app.credora.network portal"
+      }
     },
     "mellow": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator, no Credora rating"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage (and not separately rated in portal)"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no Credora rating"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "leverage protocol, no Credora rating"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "not in public reports index",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     }
   }
 }

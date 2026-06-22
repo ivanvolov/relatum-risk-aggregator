@@ -60,23 +60,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiScan registry",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no rocketpool directory in registry; binance-staked-eth covers a different LST"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -84,16 +73,27 @@
     },
     {
       "feedId": "curatorwatch",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "1 vault holds rETH",
+      "sourceUrl": "https://curatorwatch.com/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not a lending rail curated on CuratorWatch",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "rETH appears as the deposit asset in 1 CuratorWatch-tracked vault (SparkLend rETH).",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "vault-count",
+          "value": "1",
+          "scale": "vaults with rETH"
+        },
+        {
+          "dim": "vault",
+          "value": "SparkLend rETH",
+          "scale": "curator: Spark Protocol"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -170,23 +170,12 @@
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Rocket Pool issues rETH (LST), not a stablecoin"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -202,7 +191,12 @@
       "methodology": null,
       "coverageReason": "not a DeFi Saver execution surface",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Rocket Pool isn't on the DS feature pages or bundle routes"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -218,7 +212,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no rETH/Rocket Pool asset in app.credora.network portal"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -234,7 +233,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -250,7 +254,12 @@
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no rocket-pool strategy in pigi's index"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -258,16 +267,22 @@
     },
     {
       "feedId": "xerberus",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "1 RP asset scored",
+      "sourceUrl": "https://app.xerberus.io/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not in Xerberus dendrogram",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Rocket Pool ETH (rETH) is scored in Xerberus's asset subgraph even though Rocket Pool isn't a Protocol-level entry.",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "asset",
+          "value": "Rocket Pool ETH (rETH)",
+          "scale": "Xerberus composite 0.72"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -282,7 +297,12 @@
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Rocket Pool"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -298,7 +318,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://dao.rocketpool.net/ — not in Substack scan"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -314,7 +339,12 @@
       "methodology": null,
       "coverageReason": "not on Philidor landing page",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -336,6 +366,59 @@
         "url": null,
         "note": null
       },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "4 BA-tracked markets hold rETH",
+      "sourceUrl": "https://morpho.blockanalitica.com",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "rETH appears as collateral in BA-tracked markets — 1 spark, 1 compound, 2 morpho.",
+      "verified": null,
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "4",
+          "scale": "BA-tracked markets with rETH"
+        },
+        {
+          "dim": "dashboard",
+          "value": "spark",
+          "scale": "1 market"
+        },
+        {
+          "dim": "dashboard",
+          "value": "compound",
+          "scale": "1 market"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "2 markets"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "collateral in DS markets",
+      "sourceUrl": "https://app.defi-sphere.com/markets/ethereum/morpho/0x0a15460ad263c2186fe0b5df20a8cf71d55f3cfa06de15edcf6138f6b8edd8bf",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "rETH is collateral in DS-tracked lending markets.",
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,

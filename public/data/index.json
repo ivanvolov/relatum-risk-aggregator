@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T13:05:43.947Z",
+  "generatedAt": "2026-06-22T22:41:03.795Z",
   "feeds": [
     {
       "id": "defiscan",
@@ -8,15 +8,6 @@
       "focus": "Decentralization maturity (Stage 0/1/2) + permission scanner",
       "methodology": "Reviews each protocol against a fixed Stage 0/1/2 framework + 5-axis L/M/H risk on chain, upgradeability, autonomy, exit window, accessibility.",
       "schemaDoc": "data/adapters/defiscan/schema.yaml",
-      "adapterStatus": "implemented"
-    },
-    {
-      "id": "blockanalitica",
-      "name": "Block Analitica",
-      "type": "Dashboard",
-      "focus": "Quantitative on-chain risk dashboards for lending markets",
-      "methodology": "Per-protocol live dashboards. Surfaces TVL, utilization, LTV, liquidation thresholds, borrower concentration, bad debt. No composite score.",
-      "schemaDoc": "data/adapters/blockanalitica/schema.yaml",
       "adapterStatus": "implemented"
     },
     {
@@ -44,15 +35,6 @@
       "focus": "Stablecoin classification + safety grading + depeg early warning",
       "methodology": "5-dim A+..F grade (peg-stability, liquidity, resilience, decentralization, dependency) plus PSI / DEWS / Mint Authority numeric scores.",
       "schemaDoc": "data/adapters/pharos/schema.yaml",
-      "adapterStatus": "implemented"
-    },
-    {
-      "id": "defisphere",
-      "name": "DeFi Sphere",
-      "type": "Rating",
-      "focus": "Cross-protocol lending market analytics",
-      "methodology": "Market-risk and liquidity-risk scores per (protocol, market). Built on Block Analitica infrastructure. Oracle and settlement risk on roadmap.",
-      "schemaDoc": "data/adapters/defisphere/schema.yaml",
       "adapterStatus": "implemented"
     },
     {
@@ -134,6 +116,24 @@
       "focus": "Yield-bearing stablecoin landscape (60+ assets)",
       "methodology": "Real-time APY, TVL, yield paid out. Category framework (blue-chip vs hidden-gem) with qualitative per-category risk vectors.",
       "schemaDoc": "data/adapters/stablewatch/schema.yaml",
+      "adapterStatus": "implemented"
+    },
+    {
+      "id": "blockanalitica",
+      "name": "Block Analitica",
+      "type": "Dashboard",
+      "focus": "Quantitative on-chain risk dashboards for lending markets",
+      "methodology": "Per-protocol live dashboards. Surfaces TVL, utilization, LTV, liquidation thresholds, borrower concentration, bad debt. No composite score.",
+      "schemaDoc": "data/adapters/blockanalitica/schema.yaml",
+      "adapterStatus": "implemented"
+    },
+    {
+      "id": "defisphere",
+      "name": "DeFi Sphere",
+      "type": "Rating",
+      "focus": "Cross-protocol lending market analytics",
+      "methodology": "Market-risk and liquidity-risk scores per (protocol, market). Built on Block Analitica infrastructure. Oracle and settlement risk on roadmap.",
+      "schemaDoc": "data/adapters/defisphere/schema.yaml",
       "adapterStatus": "implemented"
     }
   ],
@@ -410,13 +410,6 @@
         "verified": null,
         "partialNote": null
       },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "curatorwatch": {
         "status": "cov",
         "adapterStatus": "implemented",
@@ -435,21 +428,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Lido issues stETH (rebasing), not a stablecoin Pharos indexes"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Lido isn't a DS execution surface (stETH used as collateral in Aave/Spark leverage but not a target itself)"
+        },
         "partialNote": null
       },
       "credora": {
@@ -463,7 +459,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi (now insurance-vendor mapping)"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -484,21 +485,36 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for Lido (Lido isn't a lending pool)"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: cov · likely lives at https://research.lido.fi/ — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -512,6 +528,20 @@
           "note": "Lido issues stETH (rebasing), not a YB-stable Stablewatch indexes"
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "17 BA-tracked markets hold wstETH/stETH",
+        "verified": null,
+        "partialNote": "wstETH / stETH appears as collateral in BA-tracked markets — 1 spark market, 5 compound markets, 11 morpho markets."
+      },
+      "defisphere": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "collateral in DS markets",
+        "verified": null,
+        "partialNote": "stETH / wstETH is collateral in DS-tracked Aave/Morpho/Spark markets."
       }
     },
     "aave": {
@@ -522,18 +552,16 @@
         "verified": null,
         "partialNote": null
       },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Morpho vaults are credited to morpho, not aave; no aave-specific CuratorWatch coverage"
+        },
         "partialNote": null
       },
       "defipunkd": {
@@ -550,13 +578,6 @@
         "verified": null,
         "partialNote": null
       },
-      "defisphere": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "44 markets",
-        "verified": null,
-        "partialNote": null
-      },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
@@ -568,21 +589,36 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no GHO/Aave asset in app.credora.network portal (verified by IVa)"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no pigi strategy with 'aave' in the name (regex-checked against all 43 strategies)"
+        },
         "partialNote": null
       },
       "xerberus": {
@@ -607,16 +643,35 @@
         "partialNote": null
       },
       "philidor": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "icon on landing",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Aave appears on the analytics.philidor.io landing-page icon list but Philidor doesn't publish vault scoring for Aave markets directly."
       },
       "stablewatch": {
         "status": "cov",
         "adapterStatus": "implemented",
         "inline": "2 stables · $141.7M",
+        "verified": null,
+        "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "BA retired aave.blockanalitica.com (NXDOMAIN); BA's marketing copy currently names Sky/Spark/Morpho/Summer.fi, no Aave"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "44 markets",
         "verified": null,
         "partialNote": null
       }
@@ -626,13 +681,6 @@
         "status": "cov",
         "adapterStatus": "implemented",
         "inline": "Stage 0",
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "$3.49B",
         "verified": null,
         "partialNote": null
       },
@@ -657,13 +705,6 @@
         "verified": null,
         "partialNote": null
       },
-      "defisphere": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "6 markets",
-        "verified": null,
-        "partialNote": null
-      },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
@@ -682,14 +723,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "'Sky Spark - Savings Account' credits Sky as the rate provider, not Spark"
+        },
         "partialNote": null
       },
       "xerberus": {
@@ -710,15 +761,20 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: cov · likely lives at https://forum.sky.money/ (Spark is Sky's lending arm) — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "icon on landing",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Spark appears on the analytics.philidor.io landing-page icon list (no published vault scoring)."
       },
       "stablewatch": {
         "status": "part",
@@ -726,6 +782,20 @@
         "inline": "1 stable (via Sky)",
         "verified": null,
         "partialNote": "sUSDS surfaced via Spark UI; Stablewatch attributes issuer-of-record to Sky."
+      },
+      "blockanalitica": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "$3.49B",
+        "verified": null,
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "6 markets",
+        "verified": null,
+        "partialNote": null
       }
     },
     "sky": {
@@ -733,13 +803,6 @@
         "status": "cov",
         "adapterStatus": "implemented",
         "inline": "Stage 0",
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "—",
         "verified": null,
         "partialNote": null
       },
@@ -764,13 +827,6 @@
         "verified": null,
         "partialNote": null
       },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
@@ -779,9 +835,9 @@
         "partialNote": null
       },
       "credora": {
-        "status": "none",
+        "status": "cov",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "A- · USDS rating",
         "verified": null,
         "partialNote": null
       },
@@ -789,7 +845,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -800,17 +861,22 @@
         "partialNote": null
       },
       "xerberus": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "3 Sky assets scored",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Sky-issued stables (DAI, USDS, sUSDS) are individually scored in Xerberus's asset subgraph even though Sky isn't a Protocol-level entry."
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for Sky"
+        },
         "partialNote": null
       },
       "llamarisk": {
@@ -821,11 +887,11 @@
         "partialNote": null
       },
       "philidor": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "icon on landing (as Maker)",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Sky (as \"Maker\") appears on the analytics.philidor.io landing-page icon list (no published vault scoring)."
       },
       "stablewatch": {
         "status": "cov",
@@ -833,6 +899,20 @@
         "inline": "2 stables · $6.35B",
         "verified": null,
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "—",
+        "verified": null,
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "collateral in DS markets",
+        "verified": null,
+        "partialNote": "USDS / sUSDS appears in DS-tracked Aave/Spark markets."
       }
     },
     "ethena": {
@@ -843,19 +923,12 @@
         "verified": null,
         "partialNote": null
       },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "curatorwatch": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "2 vaults hold USDe/sUSDe",
         "verified": null,
-        "partialNote": null
+        "partialNote": "USDe / sUSDe appears as the deposit asset in 2 CuratorWatch-tracked vaults (K3 Capital Yield Market, Sentora RLUSD)."
       },
       "defipunkd": {
         "status": "cov",
@@ -871,32 +944,40 @@
         "verified": null,
         "partialNote": null
       },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Ethena isn't on the DS feature pages or bundle routes"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no USDe/sUSDe/Ethena asset in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -917,7 +998,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for Ethena"
+        },
         "partialNote": null
       },
       "llamarisk": {
@@ -931,7 +1017,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -940,6 +1031,20 @@
         "inline": "1 stables · $1.73B",
         "verified": null,
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "12 BA-tracked markets hold USDe family",
+        "verified": null,
+        "partialNote": "USDe / sUSDe appears as collateral in BA-tracked markets — 3 compound, 9 morpho (USDe×6 + sUSDe×3)."
+      },
+      "defisphere": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "collateral in DS markets",
+        "verified": null,
+        "partialNote": "USDe / sUSDe is collateral in DS-tracked Morpho/Aave markets."
       }
     },
     "morpho": {
@@ -947,13 +1052,6 @@
         "status": "cov",
         "adapterStatus": "implemented",
         "inline": "Stage 1",
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "—",
         "verified": null,
         "partialNote": null
       },
@@ -975,14 +1073,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "334 markets",
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Morpho is lending rails, not a stablecoin issuer"
+        },
         "partialNote": null
       },
       "defisaver": {
@@ -996,14 +1092,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Morpho vault entry in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -1052,6 +1158,20 @@
           "note": "Morpho is lending rails, not a stablecoin issuer"
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "—",
+        "verified": null,
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "334 markets",
+        "verified": null,
+        "partialNote": null
       }
     },
     "etherfi": {
@@ -1059,22 +1179,20 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no etherfi/ directory in deficollective/defiscan registry (etherfi appears only as a chain inside aave's deployment, not as its own protocol)"
+        },
         "partialNote": null
       },
       "curatorwatch": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "6 vaults hold weETH",
         "verified": null,
-        "partialNote": null
+        "partialNote": "weETH appears as the deposit asset in 6 CuratorWatch-tracked vaults (SparkLend weETH, AlphaGrowth Unichain/Base, Re7 Labs WETH Cluster, K3 Capital Prime, Katana weETH)."
       },
       "defipunkd": {
         "status": "cov",
@@ -1087,35 +1205,48 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "ether.fi doesn't issue a Pharos-tracked stablecoin"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "ether.fi isn't on the DS feature pages or bundle routes"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no weETH/eETH/eBTC asset in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -1126,31 +1257,46 @@
         "partialNote": null
       },
       "xerberus": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "2 ether.fi assets scored",
         "verified": null,
-        "partialNote": null
+        "partialNote": "ether.fi assets (Wrapped eETH = weETH, ether.fi BTC = eBTC) are scored in Xerberus's asset subgraph."
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for ether.fi"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: part · maybe scattered comments at https://gov.ether.fi/ — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -1164,6 +1310,20 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "12 BA-tracked markets hold weETH",
+        "verified": null,
+        "partialNote": "weETH appears as collateral in BA-tracked markets — 1 spark, 5 compound, 6 morpho."
+      },
+      "defisphere": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "collateral in DS markets",
+        "verified": null,
+        "partialNote": "weETH / eETH is collateral in DS-tracked Morpho/Aave markets."
       }
     },
     "uniswap": {
@@ -1174,18 +1334,16 @@
         "verified": null,
         "partialNote": null
       },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no vault asset"
+        },
         "partialNote": null
       },
       "defipunkd": {
@@ -1199,71 +1357,104 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, not a stablecoin issuer"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Uniswap is used as a DEX router under the hood but isn't listed as a DS execution surface"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no Credora rating"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, not a strategy issuer"
+        },
         "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Uniswap entry in any Xerberus subgraph (protocols/assets/pools/orgs scanned)"
+        },
         "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no Zyfai pool"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: part · maybe scattered comments at https://gov.uniswap.org/ — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "icon on landing",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Uniswap appears on the analytics.philidor.io landing-page icon list (no published vault scoring)."
       },
       "stablewatch": {
         "status": "none",
@@ -1276,6 +1467,30 @@
           "note": "DEX, no stablecoin issuance"
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no BA dashboard"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, not a lending market"
+        },
+        "partialNote": null
       }
     },
     "curve": {
@@ -1286,18 +1501,16 @@
         "verified": null,
         "partialNote": null
       },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no vault asset"
+        },
         "partialNote": null
       },
       "defipunkd": {
@@ -1314,13 +1527,6 @@
         "verified": null,
         "partialNote": null
       },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
@@ -1332,21 +1538,36 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no Credora rating"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no curve-native strategy in pigi's index (LlamaLend appears but is credited differently)"
+        },
         "partialNote": null
       },
       "xerberus": {
@@ -1360,7 +1581,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no Zyfai pool"
+        },
         "partialNote": null
       },
       "llamarisk": {
@@ -1374,7 +1600,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -1382,6 +1613,25 @@
         "adapterStatus": "implemented",
         "inline": "1 stables · $20.6M",
         "verified": null,
+        "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "1 BA-tracked market holds crvUSD",
+        "verified": null,
+        "partialNote": "crvUSD appears as collateral in 1 BA-tracked morpho market."
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, not a lending market"
+        },
         "partialNote": null
       }
     },
@@ -1393,39 +1643,40 @@
         "verified": null,
         "partialNote": null
       },
-      "blockanalitica": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "—",
-        "verified": null,
-        "partialNote": null
-      },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not a lending rail tracked by CuratorWatch"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed 'compound' and 'compound-v3' slugs — 0/5 slices each"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "7 markets",
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Compound-issued stablecoin in Pharos sitemap"
+        },
         "partialNote": null
       },
       "defisaver": {
@@ -1439,21 +1690,36 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Compound asset in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no compound strategy in pigi's index"
+        },
         "partialNote": null
       },
       "xerberus": {
@@ -1474,15 +1740,20 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: cov · likely lives at https://www.comp.xyz/ — not in Substack scan, no public URL captured"
+        },
         "partialNote": null
       },
       "philidor": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "icon on landing",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Compound appears on the analytics.philidor.io landing-page icon list (no published vault scoring)."
       },
       "stablewatch": {
         "status": "none",
@@ -1495,6 +1766,20 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "—",
+        "verified": null,
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "7 markets",
+        "verified": null,
+        "partialNote": null
       }
     },
     "rocketpool": {
@@ -1502,22 +1787,20 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no rocketpool directory in registry; binance-staked-eth covers a different LST"
+        },
         "partialNote": null
       },
       "curatorwatch": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "1 vault holds rETH",
         "verified": null,
-        "partialNote": null
+        "partialNote": "rETH appears as the deposit asset in 1 CuratorWatch-tracked vault (SparkLend rETH)."
       },
       "defipunkd": {
         "status": "cov",
@@ -1530,70 +1813,103 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Rocket Pool issues rETH (LST), not a stablecoin"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Rocket Pool isn't on the DS feature pages or bundle routes"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no rETH/Rocket Pool asset in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no rocket-pool strategy in pigi's index"
+        },
         "partialNote": null
       },
       "xerberus": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "1 RP asset scored",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Rocket Pool ETH (rETH) is scored in Xerberus's asset subgraph even though Rocket Pool isn't a Protocol-level entry."
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for Rocket Pool"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: part · maybe scattered comments at https://dao.rocketpool.net/ — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -1607,6 +1923,20 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "4 BA-tracked markets hold rETH",
+        "verified": null,
+        "partialNote": "rETH appears as collateral in BA-tracked markets — 1 spark, 1 compound, 2 morpho."
+      },
+      "defisphere": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "collateral in DS markets",
+        "verified": null,
+        "partialNote": "rETH is collateral in DS-tracked lending markets."
       }
     },
     "pendle": {
@@ -1617,19 +1947,12 @@
         "verified": null,
         "partialNote": null
       },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "curatorwatch": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "5 vaults hold PT tokens",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Pendle PT tokens (PT-thBILL, PT-sUSDai, PT-USDai, PT-cUSD) appear as deposit assets in 5 CuratorWatch-tracked K3 Capital vaults."
       },
       "defipunkd": {
         "status": "cov",
@@ -1642,35 +1965,48 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Pendle PT tokens aren't classified as stables by Pharos"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Pendle isn't on the DS feature pages or bundle routes"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Pendle PT in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -1691,21 +2027,36 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for Pendle"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: cov · likely on Pendle's research/Discord — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -1719,6 +2070,20 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "9 BA-tracked markets hold PT tokens",
+        "verified": null,
+        "partialNote": "Pendle PT tokens appear as collateral in 9 BA-tracked morpho markets."
+      },
+      "defisphere": {
+        "status": "part",
+        "adapterStatus": "implemented",
+        "inline": "PT tokens as collateral",
+        "verified": null,
+        "partialNote": "Pendle PT tokens (PT-USDe, PT-sUSDe, etc.) are collateral in DS-tracked Morpho markets."
       }
     },
     "fluid": {
@@ -1726,41 +2091,42 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no fluid directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not a lending rail tracked by CuratorWatch"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed 'fluid' and 'fluid-lending' — 0/5 slices each"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
         "inline": "1 stables",
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
         "verified": null,
         "partialNote": null
       },
@@ -1775,14 +2141,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Fluid asset in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -1810,14 +2186,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: part · maybe scattered comments at https://gov.fluid.io/ — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -1831,6 +2217,30 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "lending protocol with no BA dashboard"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "lending protocol not in DS sidebar (5-protocol universe)"
+        },
+        "partialNote": null
       }
     },
     "liquity": {
@@ -1841,18 +2251,16 @@
         "verified": null,
         "partialNote": null
       },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "BOLD doesn't appear in any vault"
+        },
         "partialNote": null
       },
       "defipunkd": {
@@ -1869,13 +2277,6 @@
         "verified": null,
         "partialNote": null
       },
-      "defisphere": {
-        "status": "cov",
-        "adapterStatus": "implemented",
-        "inline": "6 markets",
-        "verified": null,
-        "partialNote": null
-      },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
@@ -1887,14 +2288,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no BOLD/LUSD asset in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -1908,14 +2319,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Liquity/BOLD/LUSD in Xerberus's protocol or asset subgraphs (RLUSD is Ripple's, not Liquity)"
+        },
         "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for Liquity"
+        },
         "partialNote": null
       },
       "llamarisk": {
@@ -1929,13 +2350,37 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
         "status": "cov",
         "adapterStatus": "implemented",
         "inline": "2 stables · $13.0M",
+        "verified": null,
+        "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "BOLD doesn't appear as collateral in BA-tracked markets"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "cov",
+        "adapterStatus": "implemented",
+        "inline": "6 markets",
         "verified": null,
         "partialNote": null
       }
@@ -1945,28 +2390,36 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no yearn directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Yearn has its own vault system, not on CuratorWatch"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed 'yearn' and 'yearn-finance' — 0/5 slices each"
+        },
         "partialNote": null
       },
       "pharos": {
@@ -1976,32 +2429,40 @@
         "verified": null,
         "partialNote": null
       },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Yearn isn't on the DS feature pages or bundle routes"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no yv-token in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -2015,7 +2476,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Yearn / yv-token in any Xerberus subgraph"
+        },
         "partialNote": null
       },
       "zyfai": {
@@ -2029,7 +2495,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: cov · likely at https://gov.yearn.fi/ — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
@@ -2045,6 +2516,30 @@
         "inline": "1 stable (via Liquity)",
         "verified": null,
         "partialNote": "yBOLD is Yearn-wrapped Liquity BOLD; Stablewatch attributes issuer-of-record to Liquity."
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "vault aggregator with no BA dashboard"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "vault aggregator, not a lending market"
+        },
+        "partialNote": null
       }
     },
     "euler": {
@@ -2052,14 +2547,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no euler directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
@@ -2073,21 +2566,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed 'euler' and 'euler-v2' — 0/5 slices each"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Euler-issued stablecoin in Pharos sitemap"
+        },
         "partialNote": null
       },
       "defisaver": {
@@ -2101,21 +2597,36 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Euler asset in app.credora.network portal"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no euler strategy in pigi's index"
+        },
         "partialNote": null
       },
       "xerberus": {
@@ -2143,7 +2654,12 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -2155,6 +2671,30 @@
           "by": "IVa",
           "url": null,
           "note": null
+        },
+        "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "lending protocol with no BA dashboard"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "lending protocol not in DS sidebar (5-protocol universe)"
         },
         "partialNote": null
       }
@@ -2164,98 +2704,144 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no mellow directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Mellow has its own vault system, not on CuratorWatch"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed 'mellow' — 0/5 slices"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "vault aggregator, no stablecoin issuance"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Mellow isn't on the DS feature pages or bundle routes"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "vault aggregator, no Credora rating"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no mellow strategy in pigi's index"
+        },
         "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Mellow entry in any Xerberus subgraph"
+        },
         "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for Mellow"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "vault aggregator, not in LlamaRisk's research scope"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -2269,6 +2855,30 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "vault aggregator with no BA dashboard"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "vault aggregator, not a lending market"
+        },
+        "partialNote": null
       }
     },
     "morpho-vaults": {
@@ -2276,91 +2886,127 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho coverage; no separate vaults entry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho coverage"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho assessment (morpho-blue)"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho coverage"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho coverage"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho coverage (and not separately rated in portal)"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Morpho vault strategies are credited to Morpho, not morpho-vaults"
+        },
         "partialNote": null
       },
       "xerberus": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null,
+        "inline": "4+ vault assets scored",
         "verified": null,
-        "partialNote": null
+        "partialNote": "Specific Morpho vault assets (steakUSDC, steakUSDT, gtusdtf, gtwethp) and pools (Gauntlet USDC Prime, Steakhouse Prime ETH, etc.) are scored individually in Xerberus's asset/pool subgraphs."
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho coverage"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho coverage"
+        },
         "partialNote": null
       },
       "philidor": {
@@ -2381,6 +3027,30 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "rolled up into Morpho coverage"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "vault layer rolled up into Morpho coverage"
+        },
+        "partialNote": null
       }
     },
     "balancer": {
@@ -2388,21 +3058,24 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no balancer directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no vault asset"
+        },
         "partialNote": null
       },
       "defipunkd": {
@@ -2416,70 +3089,108 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no stablecoin issuance"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Balancer isn't on the DS feature pages or bundle routes"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no Credora rating"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, not a strategy issuer"
+        },
         "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Balancer entry (the BAL token isn't in the asset subgraph; earlier regex matches to PAX Gold etc. were false positives)"
+        },
         "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no Zyfai pool"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: part · maybe scattered comments at https://forum.balancer.fi/ — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -2493,6 +3204,30 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no BA dashboard"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, not a lending market"
+        },
+        "partialNote": null
       }
     },
     "gearbox": {
@@ -2500,63 +3235,84 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no gearbox directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "leverage protocol, not a curated vault rail"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed 'gearbox' — 0/5 slices"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "leverage protocol, no stablecoin issuance"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Gearbox isn't a DS execution surface"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "leverage protocol, no Credora rating"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
@@ -2577,21 +3333,36 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no Zyfai-tracked pool for Gearbox"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-23",
+          "by": "IVa",
+          "url": null,
+          "note": "seed: part · maybe scattered comments at https://gov.gearbox.fi/ — not in Substack scan"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -2603,6 +3374,30 @@
           "by": "IVa",
           "url": null,
           "note": null
+        },
+        "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "leverage protocol with no BA dashboard"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "lending protocol not in DS sidebar (5-protocol universe)"
         },
         "partialNote": null
       }
@@ -2612,98 +3407,144 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no cowswap/cow-protocol directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed 'cowswap', 'cow-protocol' — 0/5 slices each"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator; not a DS execution target"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator, not a strategy issuer"
+        },
         "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator — no Xerberus entry"
+        },
         "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator, not in LlamaRisk's research scope"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -2715,6 +3556,30 @@
           "by": "IVa",
           "url": null,
           "note": null
+        },
+        "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
         },
         "partialNote": null
       }
@@ -2724,98 +3589,144 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no 1inch directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed '1inch' — 0/5 slices"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator; not a DS execution target"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator — no Xerberus entry"
+        },
         "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator, not in LlamaRisk's research scope"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -2829,6 +3740,30 @@
           "note": null
         },
         "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
+        "partialNote": null
       }
     },
     "0x": {
@@ -2836,98 +3771,144 @@
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "blockanalitica": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "no 0x/matcha directory in registry"
+        },
         "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "probed '0x-protocol' — 0/5 slices"
+        },
         "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
-        "partialNote": null
-      },
-      "defisphere": {
-        "status": "none",
-        "adapterStatus": "implemented",
-        "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator; not a DS execution target"
+        },
         "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "RiskLayer pivoted away from DeFi"
+        },
         "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator — no Xerberus entry (mETH match was false positive against the slug pattern)"
+        },
         "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
         "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator, not in LlamaRisk's research scope"
+        },
         "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
         "inline": null,
-        "verified": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "not on Philidor landing icon list"
+        },
         "partialNote": null
       },
       "stablewatch": {
@@ -2939,6 +3920,30 @@
           "by": "IVa",
           "url": null,
           "note": null
+        },
+        "partialNote": null
+      },
+      "blockanalitica": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
+        },
+        "partialNote": null
+      },
+      "defisphere": {
+        "status": "none",
+        "adapterStatus": "implemented",
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "swap aggregator"
         },
         "partialNote": null
       }

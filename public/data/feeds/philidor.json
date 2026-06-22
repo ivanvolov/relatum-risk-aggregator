@@ -1,35 +1,62 @@
 {
   "feedId": "philidor",
   "feedName": "Philidor",
-  "generatedAt": "2026-06-22T13:05:43.885Z",
+  "generatedAt": "2026-06-22T22:41:03.773Z",
   "snapshotDate": "2026-06-20",
   "sourceFile": "data/adapters/philidor/output/2026-06-20.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/philidor.yaml",
   "protocols": {
     "lido": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "aave": {
       "covered": false,
-      "reason": "listed on landing page but no Philidor vault scoring",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://analytics.philidor.io",
+      "partial": true,
+      "inline": "icon on landing",
+      "partialNote": "Aave appears on the analytics.philidor.io landing-page icon list but Philidor doesn't publish vault scoring for Aave markets directly.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "spark": {
       "covered": false,
-      "reason": "listed on landing page but no Philidor vault scoring",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://analytics.philidor.io",
+      "partial": true,
+      "inline": "icon on landing",
+      "partialNote": "Spark appears on the analytics.philidor.io landing-page icon list (no published vault scoring).",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "sky": {
       "covered": false,
-      "reason": "not on Philidor landing page",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://analytics.philidor.io",
+      "partial": true,
+      "inline": "icon on landing (as Maker)",
+      "partialNote": "Sky (as \"Maker\") appears on the analytics.philidor.io landing-page icon list (no published vault scoring).",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "ethena": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "morpho": {
       "covered": true,
@@ -41,42 +68,88 @@
     "etherfi": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "uniswap": {
       "covered": false,
-      "reason": "listed on landing page but no Philidor vault scoring",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://analytics.philidor.io",
+      "partial": true,
+      "inline": "icon on landing",
+      "partialNote": "Uniswap appears on the analytics.philidor.io landing-page icon list (no published vault scoring).",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "curve": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "compound": {
       "covered": false,
-      "reason": "listed on landing page but no Philidor vault scoring",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://analytics.philidor.io",
+      "partial": true,
+      "inline": "icon on landing",
+      "partialNote": "Compound appears on the analytics.philidor.io landing-page icon list (no published vault scoring).",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "rocketpool": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "pendle": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "fluid": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "liquity": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "yearn": {
       "covered": true,
@@ -88,12 +161,24 @@
     "euler": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "mellow": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "morpho-vaults": {
       "covered": true,
@@ -105,27 +190,57 @@
     "balancer": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "not on Philidor landing page",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      }
     }
   }
 }

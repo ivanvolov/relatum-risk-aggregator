@@ -1,0 +1,38 @@
+# LlamaRisk overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# The adapter scans llamarisk.substack.com (87 posts) — only catches 7 of our
+# 23 protocols. LlamaRisk also publishes deep-dive governance-forum posts on
+# Aave/Compound/Sky/Lido/etc. forums which the Substack scan misses.
+#
+# The 5 categorical no's below are auto-closed (DEX/AMM/aggregator/vault layers
+# LlamaRisk doesn't research). The 11 seed-promised cells (5 cov + 6 part)
+# remain UNVERIFIED until a human grep the gov forums.
+
+partial: []
+
+verified_absent:
+  # Categorical no's — outside LlamaRisk's research scope.
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "vault aggregator, not in LlamaRisk's research scope" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "rolled up into Morpho coverage" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "swap aggregator, not in LlamaRisk's research scope" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "swap aggregator, not in LlamaRisk's research scope" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "swap aggregator, not in LlamaRisk's research scope" }
+
+  # Seed promised gov-forum coverage but no public URL captured this round. The
+  # llamarisk.substack.com scan returned 0 hits for each. If future work locates
+  # the canonical forum URL, promote to `covered_override` (or `partial` if it's
+  # a comment vs full deliverable).
+  - { protocol: compound,   date: 2026-06-23, by: IVa, note: "seed: cov · likely lives at https://www.comp.xyz/ — not in Substack scan, no public URL captured" }
+  - { protocol: lido,       date: 2026-06-23, by: IVa, note: "seed: cov · likely lives at https://research.lido.fi/ — not in Substack scan" }
+  - { protocol: spark,      date: 2026-06-23, by: IVa, note: "seed: cov · likely lives at https://forum.sky.money/ (Spark is Sky's lending arm) — not in Substack scan" }
+  - { protocol: pendle,     date: 2026-06-23, by: IVa, note: "seed: cov · likely on Pendle's research/Discord — not in Substack scan" }
+  - { protocol: yearn,      date: 2026-06-23, by: IVa, note: "seed: cov · likely at https://gov.yearn.fi/ — not in Substack scan" }
+  - { protocol: etherfi,    date: 2026-06-23, by: IVa, note: "seed: part · maybe scattered comments at https://gov.ether.fi/ — not in Substack scan" }
+  - { protocol: rocketpool, date: 2026-06-23, by: IVa, note: "seed: part · maybe scattered comments at https://dao.rocketpool.net/ — not in Substack scan" }
+  - { protocol: balancer,   date: 2026-06-23, by: IVa, note: "seed: part · maybe scattered comments at https://forum.balancer.fi/ — not in Substack scan" }
+  - { protocol: fluid,      date: 2026-06-23, by: IVa, note: "seed: part · maybe scattered comments at https://gov.fluid.io/ — not in Substack scan" }
+  - { protocol: gearbox,    date: 2026-06-23, by: IVa, note: "seed: part · maybe scattered comments at https://gov.gearbox.fi/ — not in Substack scan" }
+  - { protocol: uniswap,    date: 2026-06-23, by: IVa, note: "seed: part · maybe scattered comments at https://gov.uniswap.org/ — not in Substack scan" }
+
+covered_override: []

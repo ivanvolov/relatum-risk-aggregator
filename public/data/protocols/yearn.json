@@ -47,23 +47,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiScan registry",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no yearn directory in registry"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -79,7 +68,12 @@
       "methodology": null,
       "coverageReason": "not a lending rail curated on CuratorWatch",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Yearn has its own vault system, not on CuratorWatch"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -95,7 +89,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiPunk'd assessment set",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "probed 'yearn' and 'yearn-finance' — 0/5 slices each"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -136,22 +135,6 @@
       "findings": null
     },
     {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "defisaver",
       "status": "none",
       "adapterStatus": "implemented",
@@ -161,7 +144,12 @@
       "methodology": null,
       "coverageReason": "not a DeFi Saver execution surface",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Yearn isn't on the DS feature pages or bundle routes"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -177,7 +165,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no yv-token in app.credora.network portal"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -193,7 +186,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -251,7 +249,12 @@
       "methodology": null,
       "coverageReason": "not in Xerberus dendrogram",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Yearn / yv-token in any Xerberus subgraph"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -316,7 +319,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely at https://gov.yearn.fi/ — not in Substack scan"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -349,6 +357,65 @@
       "coverageReason": null,
       "partialNote": "yBOLD is Yearn-wrapped Liquity BOLD; Stablewatch attributes issuer-of-record to Liquity.",
       "verified": null,
+      "claims": [
+        {
+          "dim": "asset-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$4.9M",
+          "scale": "USD"
+        },
+        {
+          "dim": "asset",
+          "value": "yBOLD",
+          "scale": "TVL $4.9M · issuer Liquity",
+          "url": "https://etherscan.io/address/0x9F4330700a36B29952869fac9b33f45EEdd8A3d8"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator with no BA dashboard"
+      },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator, not a lending market"
+      },
       "claims": [],
       "history": [],
       "notable": null,

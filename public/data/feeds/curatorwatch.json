@@ -1,10 +1,10 @@
 {
   "feedId": "curatorwatch",
   "feedName": "CuratorWatch",
-  "generatedAt": "2026-06-22T13:05:43.866Z",
+  "generatedAt": "2026-06-22T22:41:03.743Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/curatorwatch/output/2026-06-17.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/curatorwatch.yaml",
   "protocols": {
     "lido": {
       "covered": true,
@@ -37,7 +37,13 @@
     "aave": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Morpho vaults are credited to morpho, not aave; no aave-specific CuratorWatch coverage"
+      }
     },
     "spark": {
       "covered": true,
@@ -97,8 +103,30 @@
     },
     "ethena": {
       "covered": false,
-      "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://curatorwatch.com/",
+      "partial": true,
+      "inline": "2 vaults hold USDe/sUSDe",
+      "claims": [
+        {
+          "dim": "vault-count",
+          "value": "2",
+          "scale": "vaults with USDe family"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital Yield Market",
+          "scale": "asset USDe · curator K3 Capital"
+        },
+        {
+          "dim": "vault",
+          "value": "Sentora RLUSD",
+          "scale": "asset sUSDe · curator Sentora"
+        }
+      ],
+      "partialNote": "USDe / sUSDe appears as the deposit asset in 2 CuratorWatch-tracked vaults (K3 Capital Yield Market, Sentora RLUSD).",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "morpho": {
       "covered": true,
@@ -130,48 +158,170 @@
     },
     "etherfi": {
       "covered": false,
-      "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://curatorwatch.com/",
+      "partial": true,
+      "inline": "6 vaults hold weETH",
+      "claims": [
+        {
+          "dim": "vault-count",
+          "value": "6",
+          "scale": "vaults with weETH"
+        },
+        {
+          "dim": "vault",
+          "value": "SparkLend weETH",
+          "scale": "curator: Spark Protocol"
+        },
+        {
+          "dim": "vault",
+          "value": "AlphaGrowth Unichain Market",
+          "scale": "curator: AlphaGrowth"
+        },
+        {
+          "dim": "vault",
+          "value": "AlphaGrowth Base",
+          "scale": "curator: AlphaGrowth"
+        },
+        {
+          "dim": "vault",
+          "value": "Re7 Labs WETH Cluster",
+          "scale": "curator: Re7 Labs"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital Prime Market",
+          "scale": "curator: K3 Capital"
+        },
+        {
+          "dim": "vault",
+          "value": "Katana weETH",
+          "scale": "curator: Katana"
+        }
+      ],
+      "partialNote": "weETH appears as the deposit asset in 6 CuratorWatch-tracked vaults (SparkLend weETH, AlphaGrowth Unichain/Base, Re7 Labs WETH Cluster, K3 Capital Prime, Katana weETH).",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "uniswap": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no vault asset"
+      }
     },
     "curve": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no vault asset"
+      }
     },
     "compound": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not a lending rail tracked by CuratorWatch"
+      }
     },
     "rocketpool": {
       "covered": false,
-      "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://curatorwatch.com/",
+      "partial": true,
+      "inline": "1 vault holds rETH",
+      "claims": [
+        {
+          "dim": "vault-count",
+          "value": "1",
+          "scale": "vaults with rETH"
+        },
+        {
+          "dim": "vault",
+          "value": "SparkLend rETH",
+          "scale": "curator: Spark Protocol"
+        }
+      ],
+      "partialNote": "rETH appears as the deposit asset in 1 CuratorWatch-tracked vault (SparkLend rETH).",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "pendle": {
       "covered": false,
-      "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://curatorwatch.com/",
+      "partial": true,
+      "inline": "5 vaults hold PT tokens",
+      "claims": [
+        {
+          "dim": "vault-count",
+          "value": "5",
+          "scale": "vaults with Pendle PT tokens"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital Theo Market",
+          "scale": "asset PT-thBILL-18JUN2026"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital USDai Cluster",
+          "scale": "asset PT-sUSDai-18JUN2026 / 15OCT2026 / PT-USDai-15OCT2026"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital Yield Market",
+          "scale": "asset PT-cUSD-23JUL2026"
+        }
+      ],
+      "partialNote": "Pendle PT tokens (PT-thBILL, PT-sUSDai, PT-USDai, PT-cUSD) appear as deposit assets in 5 CuratorWatch-tracked K3 Capital vaults.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "fluid": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not a lending rail tracked by CuratorWatch"
+      }
     },
     "liquity": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "BOLD doesn't appear in any vault"
+      }
     },
     "yearn": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Yearn has its own vault system, not on CuratorWatch"
+      }
     },
     "euler": {
       "covered": true,
@@ -204,37 +354,79 @@
     "mellow": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Mellow has its own vault system, not on CuratorWatch"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "tracked as part of Morpho protocol coverage",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no vault asset"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "leverage protocol, not a curated vault rail"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "not a lending rail curated on CuratorWatch",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     }
   }
 }

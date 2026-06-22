@@ -1,0 +1,28 @@
+# DeFiScan overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Universe: deficollective/defiscan GitHub registry has 29 protocols total.
+# The 11 covered match exactly; the 12 uncovered are genuinely absent from the
+# registry (enumerated via the public GitHub listing on 2026-06-22).
+#
+# DeFiScan grades the decentralization of specific PROTOCOLS — there's no asset
+# or pool layer that would create partial coverage. Every uncovered cell here is
+# a clean verified-absent.
+
+partial: []
+
+verified_absent:
+  - { protocol: etherfi,       date: 2026-06-22, by: IVa, note: "no etherfi/ directory in deficollective/defiscan registry (etherfi appears only as a chain inside aave's deployment, not as its own protocol)" }
+  - { protocol: rocketpool,    date: 2026-06-22, by: IVa, note: "no rocketpool directory in registry; binance-staked-eth covers a different LST" }
+  - { protocol: fluid,         date: 2026-06-22, by: IVa, note: "no fluid directory in registry" }
+  - { protocol: yearn,         date: 2026-06-22, by: IVa, note: "no yearn directory in registry" }
+  - { protocol: euler,         date: 2026-06-22, by: IVa, note: "no euler directory in registry" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "no mellow directory in registry" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "rolled up into Morpho coverage; no separate vaults entry" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "no balancer directory in registry" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "no gearbox directory in registry" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "no cowswap/cow-protocol directory in registry" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "no 1inch directory in registry" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "no 0x/matcha directory in registry" }
+
+covered_override: []

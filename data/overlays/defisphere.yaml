@@ -1,0 +1,67 @@
+# DeFi Sphere overlay — human curation layer on top of the adapter's snapshot.
+# See data/overlays/README.md for format.
+#
+# Universe: DS tracks 5 lending protocols (aave / sparklend / morpho / compound_v3 / liquity_v2).
+# The "partial" rows below are protocols whose ASSET shows up as collateral in DS-tracked
+# markets (e.g. weETH inside a Morpho market). IVa verified all 6 by pasting market URLs.
+
+partial:
+  - protocol: lido
+    why: stETH / wstETH is collateral in DS-tracked Aave/Morpho/Spark markets.
+    url: https://app.defi-sphere.com/markets/ethereum/aave_v3_core/0x4f5923fc5fd4a93352581b38b7cd26943012decf
+    inline: "collateral in DS markets"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: sky
+    why: USDS / sUSDS appears in DS-tracked Aave/Spark markets.
+    url: https://app.defi-sphere.com/markets/ethereum/morpho/0xe7e9694b754c4d4f7e21faf7223f6fa71abaeb10296a4c43a54a7977149687d2
+    inline: "collateral in DS markets"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: ethena
+    why: USDe / sUSDe is collateral in DS-tracked Morpho/Aave markets.
+    url: https://app.defi-sphere.com/markets/ethereum/morpho/0x3274643db77a064abd3bc851de77556a4ad2e2f502f4f0c80845fa8f909ecf0b
+    inline: "collateral in DS markets"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: etherfi
+    why: weETH / eETH is collateral in DS-tracked Morpho/Aave markets.
+    url: https://app.defi-sphere.com/markets/ethereum/morpho/0x34377fc4f617c51818e92c79df31ff270c6a91bc94ad32e367fdf59b9f4ac5dd
+    inline: "collateral in DS markets"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: rocketpool
+    why: rETH is collateral in DS-tracked lending markets.
+    url: https://app.defi-sphere.com/markets/ethereum/morpho/0x0a15460ad263c2186fe0b5df20a8cf71d55f3cfa06de15edcf6138f6b8edd8bf
+    inline: "collateral in DS markets"
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: pendle
+    why: Pendle PT tokens (PT-USDe, PT-sUSDe, etc.) are collateral in DS-tracked Morpho markets.
+    url: https://app.defi-sphere.com/markets/ethereum/morpho/0x0a15460ad263c2186fe0b5df20a8cf71d55f3cfa06de15edcf6138f6b8edd8bf
+    inline: "PT tokens as collateral"
+    date: 2026-06-22
+    by: IVa
+
+verified_absent:
+  # Categorical no's — DEX/AMM, swap aggregators, non-DS-tracked lending, vault aggregators.
+  # Not DS-tracked lending markets AND no asset appears as collateral in DS markets.
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "DEX, not a lending market" }
+  - { protocol: curve,         date: 2026-06-22, by: IVa, note: "DEX, not a lending market" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "DEX, not a lending market" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "swap aggregator" }
+  - { protocol: fluid,         date: 2026-06-22, by: IVa, note: "lending protocol not in DS sidebar (5-protocol universe)" }
+  - { protocol: euler,         date: 2026-06-22, by: IVa, note: "lending protocol not in DS sidebar (5-protocol universe)" }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa, note: "lending protocol not in DS sidebar (5-protocol universe)" }
+  - { protocol: yearn,         date: 2026-06-22, by: IVa, note: "vault aggregator, not a lending market" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "vault aggregator, not a lending market" }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa, note: "vault layer rolled up into Morpho coverage" }
+
+covered_override: []

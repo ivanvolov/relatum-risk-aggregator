@@ -90,38 +90,6 @@
       "findings": null
     },
     {
-      "feedId": "blockanalitica",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "—",
-      "sourceUrl": "https://compound-api.blockanalitica.com/v3/",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
-      "partialNote": null,
-      "verified": null,
-      "claims": [
-        {
-          "dim": "supply",
-          "value": "—",
-          "scale": "USD"
-        },
-        {
-          "dim": "borrow",
-          "value": "—",
-          "scale": "USD"
-        },
-        {
-          "dim": "tvl",
-          "value": "—",
-          "scale": "USD"
-        }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "curatorwatch",
       "status": "none",
       "adapterStatus": "implemented",
@@ -131,7 +99,12 @@
       "methodology": null,
       "coverageReason": "not a lending rail curated on CuratorWatch",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not a lending rail tracked by CuratorWatch"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -147,7 +120,12 @@
       "methodology": null,
       "coverageReason": "not in DeFiPunk'd assessment set",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "probed 'compound' and 'compound-v3' slugs — 0/5 slices each"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -163,55 +141,13 @@
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Compound-issued stablecoin in Pharos sitemap"
+      },
       "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "7 markets",
-      "sourceUrl": "https://app.defi-sphere.com/protocols/compound_v3",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
-      "partialNote": null,
-      "verified": null,
-      "claims": [
-        {
-          "dim": "markets",
-          "value": "7",
-          "scale": "count"
-        },
-        {
-          "dim": "total-supply",
-          "value": "$565.3M",
-          "scale": "USD"
-        },
-        {
-          "dim": "total-borrow",
-          "value": "$460.2M",
-          "scale": "USD"
-        },
-        {
-          "dim": "avg-collateral-risk",
-          "value": "21.05",
-          "scale": "DeFi Sphere risk"
-        },
-        {
-          "dim": "avg-liquidity-risk",
-          "value": "16.99",
-          "scale": "DeFi Sphere risk"
-        },
-        {
-          "dim": "networks",
-          "value": "ethereum, arbitrum, base",
-          "scale": "chains"
-        }
-      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -288,7 +224,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Compound asset in app.credora.network portal"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -304,7 +245,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -320,7 +266,12 @@
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no compound strategy in pigi's index"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -444,7 +395,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely lives at https://www.comp.xyz/ — not in Substack scan, no public URL captured"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -452,14 +408,14 @@
     },
     {
       "feedId": "philidor",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "icon on landing",
+      "sourceUrl": "https://analytics.philidor.io",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "listed on landing page but no Philidor vault scoring",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Compound appears on the analytics.philidor.io landing-page icon list (no published vault scoring).",
       "verified": null,
       "claims": [],
       "history": [],
@@ -483,6 +439,85 @@
         "note": null
       },
       "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "—",
+      "sourceUrl": "https://compound-api.blockanalitica.com/v3/",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "—",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "—",
+          "scale": "USD"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "7 markets",
+      "sourceUrl": "https://app.defi-sphere.com/protocols/compound_v3",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "7",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$565.3M",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$460.2M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "21.05",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "16.99",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum, arbitrum, base",
+          "scale": "chains"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

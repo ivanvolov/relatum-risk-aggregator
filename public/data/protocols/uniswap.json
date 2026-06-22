@@ -135,22 +135,6 @@
       "findings": null
     },
     {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "curatorwatch",
       "status": "none",
       "adapterStatus": "implemented",
@@ -160,7 +144,12 @@
       "methodology": null,
       "coverageReason": "not a lending rail curated on CuratorWatch",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no vault asset"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -243,23 +232,12 @@
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
       "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, not a stablecoin issuer"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -275,7 +253,12 @@
       "methodology": null,
       "coverageReason": "not a DeFi Saver execution surface",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Uniswap is used as a DEX router under the hood but isn't listed as a DS execution surface"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -291,7 +274,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no Credora rating"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -307,7 +295,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -323,7 +316,12 @@
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, not a strategy issuer"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -339,7 +337,12 @@
       "methodology": null,
       "coverageReason": "not in Xerberus dendrogram",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Uniswap entry in any Xerberus subgraph (protocols/assets/pools/orgs scanned)"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -355,7 +358,12 @@
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no Zyfai pool"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -371,7 +379,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: part · maybe scattered comments at https://gov.uniswap.org/ — not in Substack scan"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -379,14 +392,14 @@
     },
     {
       "feedId": "philidor",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "icon on landing",
+      "sourceUrl": "https://analytics.philidor.io",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "listed on landing page but no Philidor vault scoring",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Uniswap appears on the analytics.philidor.io landing-page icon list (no published vault scoring).",
       "verified": null,
       "claims": [],
       "history": [],
@@ -408,6 +421,48 @@
         "by": "IVa",
         "url": null,
         "note": "DEX, no stablecoin issuance"
+      },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no BA dashboard"
+      },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no DeFi Sphere lending market for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, not a lending market"
       },
       "claims": [],
       "history": [],

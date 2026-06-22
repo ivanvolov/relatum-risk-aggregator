@@ -1,15 +1,21 @@
 {
   "feedId": "defisaver",
   "feedName": "DeFi Saver",
-  "generatedAt": "2026-06-22T13:05:43.873Z",
+  "generatedAt": "2026-06-22T22:41:03.752Z",
   "snapshotDate": "2026-06-20",
   "sourceFile": "data/adapters/defisaver/output/2026-06-20.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/defisaver.yaml",
   "protocols": {
     "lido": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Lido isn't a DS execution surface (stETH used as collateral in Aave/Spark leverage but not a target itself)"
+      }
     },
     "aave": {
       "covered": true,
@@ -103,7 +109,13 @@
     "ethena": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Ethena isn't on the DS feature pages or bundle routes"
+      }
     },
     "morpho": {
       "covered": true,
@@ -131,12 +143,24 @@
     "etherfi": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "ether.fi isn't on the DS feature pages or bundle routes"
+      }
     },
     "uniswap": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Uniswap is used as a DEX router under the hood but isn't listed as a DS execution surface"
+      }
     },
     "curve": {
       "covered": true,
@@ -207,12 +231,24 @@
     "rocketpool": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Rocket Pool isn't on the DS feature pages or bundle routes"
+      }
     },
     "pendle": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Pendle isn't on the DS feature pages or bundle routes"
+      }
     },
     "fluid": {
       "covered": true,
@@ -258,7 +294,13 @@
     "yearn": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Yearn isn't on the DS feature pages or bundle routes"
+      }
     },
     "euler": {
       "covered": true,
@@ -276,37 +318,79 @@
     "mellow": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Mellow isn't on the DS feature pages or bundle routes"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "no keyword pattern",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Balancer isn't on the DS feature pages or bundle routes"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Gearbox isn't a DS execution surface"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "not a DeFi Saver execution surface",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator; not a DS execution target"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "no keyword pattern",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator; not a DS execution target"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "no keyword pattern",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator; not a DS execution target"
+      }
     }
   }
 }

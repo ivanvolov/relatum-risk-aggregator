@@ -7,16 +7,12 @@
 export const FEED_REGISTRY = [
   { id: 'defiscan',       name: 'DeFiScan',        type: 'Rating',     focus: 'Decentralization maturity (Stage 0/1/2) + permission scanner',
     methodology: 'Reviews each protocol against a fixed Stage 0/1/2 framework + 5-axis L/M/H risk on chain, upgradeability, autonomy, exit window, accessibility.' },
-  { id: 'blockanalitica', name: 'Block Analitica', type: 'Dashboard',  focus: 'Quantitative on-chain risk dashboards for lending markets',
-    methodology: 'Per-protocol live dashboards. Surfaces TVL, utilization, LTV, liquidation thresholds, borrower concentration, bad debt. No composite score.' },
   { id: 'curatorwatch',   name: 'CuratorWatch',    type: 'Dashboard',  focus: 'Vault curator allocations and risk on Morpho/Aave/Euler/Compound/Spark',
     methodology: 'Tracks curators (not protocols). Vault Grade A+..NR, jurisdiction disclosed, AUM, vaults managed, recent liquidations.' },
   { id: 'defipunkd',      name: "DeFiPunk'd",      type: 'Rating',     focus: 'Multi-dimension via distributed LLM consensus',
     methodology: 'Control, Exit, Autonomy, Open Access, Verifiability scores produced by distributed LLM consensus across many model providers.' },
   { id: 'pharos',         name: 'Pharos',          type: 'Monitoring', focus: 'Stablecoin classification + safety grading + depeg early warning',
     methodology: '5-dim A+..F grade (peg-stability, liquidity, resilience, decentralization, dependency) plus PSI / DEWS / Mint Authority numeric scores.' },
-  { id: 'defisphere',     name: 'DeFi Sphere',     type: 'Rating',     focus: 'Cross-protocol lending market analytics',
-    methodology: 'Market-risk and liquidity-risk scores per (protocol, market). Built on Block Analitica infrastructure. Oracle and settlement risk on roadmap.' },
   { id: 'defisaver',      name: 'DeFi Saver',      type: 'Dashboard',  focus: 'Per-position health and liquidation statistics',
     methodology: 'Execution-first. Surfaces health factor, safety ratio, liquidation price per user position. No protocol-level risk score.' },
   { id: 'credora',        name: 'Credora',         type: 'Rating',     focus: 'Institutional-grade credit ratings, A+..D scale',
@@ -35,6 +31,12 @@ export const FEED_REGISTRY = [
     methodology: 'Three-vector framework — asset quality, platform code maturity, governance controls. Open methodology.' },
   { id: 'stablewatch',    name: 'Stablewatch',     type: 'Dashboard',  focus: 'Yield-bearing stablecoin landscape (60+ assets)',
     methodology: 'Real-time APY, TVL, yield paid out. Category framework (blue-chip vs hidden-gem) with qualitative per-category risk vectors.' },
+  // Block Analitica + DeFi Sphere parked at the end — both are lending-market dashboards
+  // with deep cross-feed overlap, so they read better as the trailing columns.
+  { id: 'blockanalitica', name: 'Block Analitica', type: 'Dashboard',  focus: 'Quantitative on-chain risk dashboards for lending markets',
+    methodology: 'Per-protocol live dashboards. Surfaces TVL, utilization, LTV, liquidation thresholds, borrower concentration, bad debt. No composite score.' },
+  { id: 'defisphere',     name: 'DeFi Sphere',     type: 'Rating',     focus: 'Cross-protocol lending market analytics',
+    methodology: 'Market-risk and liquidity-risk scores per (protocol, market). Built on Block Analitica infrastructure. Oracle and settlement risk on roadmap.' },
 ];
 
 // Canonical protocol list: RFP §3 seed-20 plus three top-TVL incumbents (sky, ethena, etherfi)

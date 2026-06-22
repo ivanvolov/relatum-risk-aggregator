@@ -1,10 +1,10 @@
 {
   "feedId": "defiscan",
   "feedName": "DeFiScan",
-  "generatedAt": "2026-06-22T13:05:43.862Z",
+  "generatedAt": "2026-06-22T22:41:03.736Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/defiscan/output/2026-06-17.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/defiscan.yaml",
   "protocols": {
     "lido": {
       "covered": true,
@@ -244,7 +244,13 @@
     "etherfi": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no etherfi/ directory in deficollective/defiscan registry (etherfi appears only as a chain inside aave's deployment, not as its own protocol)"
+      }
     },
     "uniswap": {
       "covered": true,
@@ -369,7 +375,13 @@
     "rocketpool": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no rocketpool directory in registry; binance-staked-eth covers a different LST"
+      }
     },
     "pendle": {
       "covered": true,
@@ -414,7 +426,13 @@
     "fluid": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no fluid directory in registry"
+      }
     },
     "liquity": {
       "covered": true,
@@ -459,47 +477,101 @@
     "yearn": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no yearn directory in registry"
+      }
     },
     "euler": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no euler directory in registry"
+      }
     },
     "mellow": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no mellow directory in registry"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage; no separate vaults entry"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no balancer directory in registry"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no gearbox directory in registry"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no cowswap/cow-protocol directory in registry"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no 1inch directory in registry"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "not in DeFiScan registry",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no 0x/matcha directory in registry"
+      }
     }
   }
 }

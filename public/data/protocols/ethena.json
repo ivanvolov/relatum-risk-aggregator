@@ -74,33 +74,33 @@
       "findings": null
     },
     {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "curatorwatch",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "2 vaults hold USDe/sUSDe",
+      "sourceUrl": "https://curatorwatch.com/",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "not a lending rail curated on CuratorWatch",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "USDe / sUSDe appears as the deposit asset in 2 CuratorWatch-tracked vaults (K3 Capital Yield Market, Sentora RLUSD).",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "vault-count",
+          "value": "2",
+          "scale": "vaults with USDe family"
+        },
+        {
+          "dim": "vault",
+          "value": "K3 Capital Yield Market",
+          "scale": "asset USDe · curator K3 Capital"
+        },
+        {
+          "dim": "vault",
+          "value": "Sentora RLUSD",
+          "scale": "asset sUSDe · curator Sentora"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null
@@ -213,22 +213,6 @@
       "findings": null
     },
     {
-      "feedId": "defisphere",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no DeFi Sphere lending market for this protocol",
-      "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "defisaver",
       "status": "none",
       "adapterStatus": "implemented",
@@ -238,7 +222,12 @@
       "methodology": null,
       "coverageReason": "not a DeFi Saver execution surface",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Ethena isn't on the DS feature pages or bundle routes"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -254,7 +243,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no USDe/sUSDe/Ethena asset in app.credora.network portal"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -270,7 +264,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -375,7 +374,12 @@
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Ethena"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -430,7 +434,12 @@
       "methodology": null,
       "coverageReason": "not on Philidor landing page",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "not on Philidor landing icon list"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -465,6 +474,54 @@
           "url": "https://etherscan.io/address/66985a81-9c51-46ca-9977-42b4fe7bc6df"
         }
       ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "12 BA-tracked markets hold USDe family",
+      "sourceUrl": "https://morpho.blockanalitica.com",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "USDe / sUSDe appears as collateral in BA-tracked markets — 3 compound, 9 morpho (USDe×6 + sUSDe×3).",
+      "verified": null,
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "12",
+          "scale": "BA-tracked markets with USDe/sUSDe"
+        },
+        {
+          "dim": "dashboard",
+          "value": "compound",
+          "scale": "3 markets"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "9 markets"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "part",
+      "adapterStatus": "implemented",
+      "inline": "collateral in DS markets",
+      "sourceUrl": "https://app.defi-sphere.com/markets/ethereum/morpho/0x3274643db77a064abd3bc851de77556a4ad2e2f502f4f0c80845fa8f909ecf0b",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": "USDe / sUSDe is collateral in DS-tracked Morpho/Aave markets.",
+      "verified": null,
+      "claims": [],
       "history": [],
       "notable": null,
       "findings": null

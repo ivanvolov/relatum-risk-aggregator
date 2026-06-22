@@ -1,3 +1,20 @@
+import ChainStrip, { resolveChainName } from './ChainStrip.jsx';
+
+// Claim dims that carry a comma-separated list of chains (names or numeric IDs).
+// When matched, FeedCard renders the value as a ChainStrip instead of plain text.
+const CHAIN_LIST_DIMS = new Set(['networks', 'chains']);
+
+function maybeChainList(claim) {
+  if (!CHAIN_LIST_DIMS.has(claim.dim)) return null;
+  const tokens = String(claim.value || '')
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(resolveChainName)
+    .filter(Boolean);
+  return tokens.length ? tokens : null;
+}
+
 function badge(status) {
   if (status === 'cov')  return <span className="badge cov">covered</span>;
   if (status === 'part') return <span className="badge part">partial</span>;
@@ -75,15 +92,22 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
               </div>
             ) : null}
             <div className="claims">
-              {entry.claims.map((c, i) => (
-                <div key={i} className={'claim ' + (c.level || '')}>
-                  <div className="dim">{c.dim}</div>
-                  <div className="val">
-                    {c.url ? <a href={c.url} target="_blank" rel="noreferrer">{c.value}</a> : c.value}
+              {entry.claims.map((c, i) => {
+                const chainList = maybeChainList(c);
+                return (
+                  <div key={i} className={'claim ' + (c.level || '')}>
+                    <div className="dim">{c.dim}</div>
+                    <div className="val">
+                      {chainList ? (
+                        <ChainStrip chains={chainList} max={20} />
+                      ) : c.url ? (
+                        <a href={c.url} target="_blank" rel="noreferrer">{c.value}</a>
+                      ) : c.value}
+                    </div>
+                    <div className="scale">{c.scale || ''}</div>
                   </div>
-                  <div className="scale">{c.scale || ''}</div>
-                </div>
-              ))}
+                );
+              })}
             </div>
             {entry.notable ? (
               <div className="notable">

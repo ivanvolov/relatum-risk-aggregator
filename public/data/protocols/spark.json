@@ -80,43 +80,6 @@
       "findings": null
     },
     {
-      "feedId": "blockanalitica",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "$3.49B",
-      "sourceUrl": "https://spark-api.blockanalitica.com/v1/ethereum/markets/stats/?days_ago=1",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
-      "partialNote": null,
-      "verified": null,
-      "claims": [
-        {
-          "dim": "supply",
-          "value": "$5.09B",
-          "scale": "USD"
-        },
-        {
-          "dim": "borrow",
-          "value": "$1.61B",
-          "scale": "USD"
-        },
-        {
-          "dim": "tvl",
-          "value": "$3.49B",
-          "scale": "USD"
-        },
-        {
-          "dim": "utilization",
-          "value": "31.6%",
-          "scale": "%"
-        }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "curatorwatch",
       "status": "cov",
       "adapterStatus": "implemented",
@@ -238,53 +201,6 @@
           "value": "susdc-spark",
           "scale": "pharos page",
           "url": "https://pharos.watch/stablecoin/susdc-spark/"
-        }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
-      "feedId": "defisphere",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "6 markets",
-      "sourceUrl": "https://app.defi-sphere.com/protocols/sparklend",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
-      "partialNote": null,
-      "verified": null,
-      "claims": [
-        {
-          "dim": "markets",
-          "value": "6",
-          "scale": "count"
-        },
-        {
-          "dim": "total-supply",
-          "value": "$1.42B",
-          "scale": "USD"
-        },
-        {
-          "dim": "total-borrow",
-          "value": "$935.6M",
-          "scale": "USD"
-        },
-        {
-          "dim": "avg-collateral-risk",
-          "value": "26.42",
-          "scale": "DeFi Sphere risk"
-        },
-        {
-          "dim": "avg-liquidity-risk",
-          "value": "13.37",
-          "scale": "DeFi Sphere risk"
-        },
-        {
-          "dim": "networks",
-          "value": "ethereum",
-          "scale": "chains"
         }
       ],
       "history": [],
@@ -467,7 +383,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -483,7 +404,12 @@
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "'Sky Spark - Savings Account' credits Sky as the rate provider, not Spark"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -607,7 +533,12 @@
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-23",
+        "by": "IVa",
+        "url": null,
+        "note": "seed: cov · likely lives at https://forum.sky.money/ (Spark is Sky's lending arm) — not in Substack scan"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -615,14 +546,14 @@
     },
     {
       "feedId": "philidor",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "icon on landing",
+      "sourceUrl": "https://analytics.philidor.io",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "listed on landing page but no Philidor vault scoring",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Spark appears on the analytics.philidor.io landing-page icon list (no published vault scoring).",
       "verified": null,
       "claims": [],
       "history": [],
@@ -640,7 +571,108 @@
       "coverageReason": null,
       "partialNote": "sUSDS surfaced via Spark UI; Stablewatch attributes issuer-of-record to Sky.",
       "verified": null,
-      "claims": [],
+      "claims": [
+        {
+          "dim": "asset-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$6.17B",
+          "scale": "USD"
+        },
+        {
+          "dim": "asset",
+          "value": "sUSDS",
+          "scale": "TVL $6.17B · issuer Sky",
+          "url": "https://etherscan.io/address/0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "$3.49B",
+      "sourceUrl": "https://spark-api.blockanalitica.com/v1/ethereum/markets/stats/?days_ago=1",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
+      "claims": [
+        {
+          "dim": "supply",
+          "value": "$5.09B",
+          "scale": "USD"
+        },
+        {
+          "dim": "borrow",
+          "value": "$1.61B",
+          "scale": "USD"
+        },
+        {
+          "dim": "tvl",
+          "value": "$3.49B",
+          "scale": "USD"
+        },
+        {
+          "dim": "utilization",
+          "value": "31.6%",
+          "scale": "%"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "6 markets",
+      "sourceUrl": "https://app.defi-sphere.com/protocols/sparklend",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "6",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$1.42B",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$935.6M",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "26.42",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "13.37",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum",
+          "scale": "chains"
+        }
+      ],
       "history": [],
       "notable": null,
       "findings": null

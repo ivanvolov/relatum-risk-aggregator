@@ -66,8 +66,10 @@ function applyOverlay(protocols, overlay) {
     if (!r) continue;
     r.covered = true;
     r.partial = false;
+    r.reason = null;  // adapter's not-covered reason no longer applies
     r.inline = e.inline ?? r.inline ?? 'manual';
     r.deeplink = e.url ?? r.deeplink;
+    if (e.claims) r.claims = e.claims;
     r.overrideDate = e.date || null;
     r.overrideBy = e.by || null;
   }

@@ -1,15 +1,21 @@
 {
   "feedId": "zyfai",
   "feedName": "Zyfai Risk",
-  "generatedAt": "2026-06-22T13:05:43.880Z",
+  "generatedAt": "2026-06-22T22:41:03.768Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/zyfai/output/2026-06-17.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/zyfai.yaml",
   "protocols": {
     "lido": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Lido (Lido isn't a lending pool)"
+      }
     },
     "aave": {
       "covered": true,
@@ -118,12 +124,24 @@
     "sky": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Sky"
+      }
     },
     "ethena": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Ethena"
+      }
     },
     "morpho": {
       "covered": true,
@@ -192,17 +210,35 @@
     "etherfi": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for ether.fi"
+      }
     },
     "uniswap": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no Zyfai pool"
+      }
     },
     "curve": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no Zyfai pool"
+      }
     },
     "compound": {
       "covered": true,
@@ -259,12 +295,24 @@
     "rocketpool": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Rocket Pool"
+      }
     },
     "pendle": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Pendle"
+      }
     },
     "fluid": {
       "covered": true,
@@ -303,7 +351,13 @@
     "liquity": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Liquity"
+      }
     },
     "yearn": {
       "covered": true,
@@ -412,37 +466,79 @@
     "mellow": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Mellow"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no Zyfai pool"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no Zyfai-tracked pool for Gearbox"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "no Zyfai-tracked pools for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     }
   }
 }

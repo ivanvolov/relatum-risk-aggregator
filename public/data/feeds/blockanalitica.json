@@ -1,20 +1,53 @@
 {
   "feedId": "blockanalitica",
   "feedName": "Block Analitica",
-  "generatedAt": "2026-06-22T13:05:43.865Z",
+  "generatedAt": "2026-06-22T22:41:03.779Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/blockanalitica/output/2026-06-17.json",
-  "overlayFile": null,
+  "overlayFile": "data/overlays/blockanalitica.yaml",
   "protocols": {
     "lido": {
       "covered": false,
-      "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://morpho.blockanalitica.com",
+      "partial": true,
+      "inline": "17 BA-tracked markets hold wstETH/stETH",
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "17",
+          "scale": "BA-tracked markets with wstETH/stETH"
+        },
+        {
+          "dim": "dashboard",
+          "value": "spark",
+          "scale": "1 market"
+        },
+        {
+          "dim": "dashboard",
+          "value": "compound",
+          "scale": "5 markets"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "11 markets"
+        }
+      ],
+      "partialNote": "wstETH / stETH appears as collateral in BA-tracked markets — 1 spark market, 5 compound markets, 11 morpho markets.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "aave": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "BA retired aave.blockanalitica.com (NXDOMAIN); BA's marketing copy currently names Sky/Spark/Morpho/Summer.fi, no Aave"
+      }
     },
     "spark": {
       "covered": true,
@@ -69,8 +102,30 @@
     },
     "ethena": {
       "covered": false,
-      "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://morpho.blockanalitica.com",
+      "partial": true,
+      "inline": "12 BA-tracked markets hold USDe family",
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "12",
+          "scale": "BA-tracked markets with USDe/sUSDe"
+        },
+        {
+          "dim": "dashboard",
+          "value": "compound",
+          "scale": "3 markets"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "9 markets"
+        }
+      ],
+      "partialNote": "USDe / sUSDe appears as collateral in BA-tracked markets — 3 compound, 9 morpho (USDe×6 + sUSDe×3).",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "morpho": {
       "covered": true,
@@ -97,18 +152,68 @@
     },
     "etherfi": {
       "covered": false,
-      "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://morpho.blockanalitica.com",
+      "partial": true,
+      "inline": "12 BA-tracked markets hold weETH",
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "12",
+          "scale": "BA-tracked markets with weETH"
+        },
+        {
+          "dim": "dashboard",
+          "value": "spark",
+          "scale": "1 market"
+        },
+        {
+          "dim": "dashboard",
+          "value": "compound",
+          "scale": "5 markets"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "6 markets"
+        }
+      ],
+      "partialNote": "weETH appears as collateral in BA-tracked markets — 1 spark, 5 compound, 6 morpho.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "uniswap": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no BA dashboard"
+      }
     },
     "curve": {
       "covered": false,
-      "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://morpho.blockanalitica.com",
+      "partial": true,
+      "inline": "1 BA-tracked market holds crvUSD",
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "1",
+          "scale": "BA-tracked morpho markets with crvUSD"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "1 market"
+        }
+      ],
+      "partialNote": "crvUSD appears as collateral in 1 BA-tracked morpho market.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "compound": {
       "covered": true,
@@ -135,68 +240,178 @@
     },
     "rocketpool": {
       "covered": false,
-      "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://morpho.blockanalitica.com",
+      "partial": true,
+      "inline": "4 BA-tracked markets hold rETH",
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "4",
+          "scale": "BA-tracked markets with rETH"
+        },
+        {
+          "dim": "dashboard",
+          "value": "spark",
+          "scale": "1 market"
+        },
+        {
+          "dim": "dashboard",
+          "value": "compound",
+          "scale": "1 market"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "2 markets"
+        }
+      ],
+      "partialNote": "rETH appears as collateral in BA-tracked markets — 1 spark, 1 compound, 2 morpho.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "pendle": {
       "covered": false,
-      "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://morpho.blockanalitica.com",
+      "partial": true,
+      "inline": "9 BA-tracked markets hold PT tokens",
+      "claims": [
+        {
+          "dim": "market-count",
+          "value": "9",
+          "scale": "BA-tracked morpho markets with PT-* tokens"
+        },
+        {
+          "dim": "dashboard",
+          "value": "morpho",
+          "scale": "9 markets"
+        }
+      ],
+      "partialNote": "Pendle PT tokens appear as collateral in 9 BA-tracked morpho markets.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "fluid": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "lending protocol with no BA dashboard"
+      }
     },
     "liquity": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "BOLD doesn't appear as collateral in BA-tracked markets"
+      }
     },
     "yearn": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator with no BA dashboard"
+      }
     },
     "euler": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "lending protocol with no BA dashboard"
+      }
     },
     "mellow": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "vault aggregator with no BA dashboard"
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "rolled up into Morpho coverage"
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no BA dashboard"
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "leverage protocol with no BA dashboard"
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     },
     "0x": {
       "covered": false,
       "reason": "no Block Analitica dashboard for this protocol",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "swap aggregator"
+      }
     }
   }
 }

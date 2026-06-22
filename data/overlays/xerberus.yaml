@@ -1,0 +1,67 @@
+# Xerberus overlay — human curation layer.
+# See data/overlays/README.md for format.
+#
+# Universe: Xerberus dendrogram has 42 protocols plus separate asset/pool/organisation
+# subgraphs. The adapter covers 11 protocols whose Protocol-level entry matches one of
+# our 23.
+#
+# Partial rows below are protocols whose ASSETS show up scored in Xerberus's asset
+# subgraph (composite_score visible) even though the protocol itself isn't in the
+# Protocol-level dendrogram. Confirmed via app.xerberus.io/api/dendrogram on 2026-06-22.
+
+partial:
+  - protocol: sky
+    why: Sky-issued stables (DAI, USDS, sUSDS) are individually scored in Xerberus's asset subgraph even though Sky isn't a Protocol-level entry.
+    url: https://app.xerberus.io/
+    inline: "3 Sky assets scored"
+    claims:
+      - { dim: asset, value: "DAI",              scale: "Xerberus composite 0.72" }
+      - { dim: asset, value: "USDS Stablecoin",  scale: "Xerberus composite 0.66" }
+      - { dim: asset, value: "Savings USDS (sUSDS)", scale: "Xerberus composite 0.73" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: etherfi
+    why: ether.fi assets (Wrapped eETH = weETH, ether.fi BTC = eBTC) are scored in Xerberus's asset subgraph.
+    url: https://app.xerberus.io/
+    inline: "2 ether.fi assets scored"
+    claims:
+      - { dim: asset, value: "Wrapped eETH (weETH)", scale: "Xerberus composite 0.62" }
+      - { dim: asset, value: "ether.fi BTC (eBTC)",  scale: "Xerberus composite 0.68" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: rocketpool
+    why: Rocket Pool ETH (rETH) is scored in Xerberus's asset subgraph even though Rocket Pool isn't a Protocol-level entry.
+    url: https://app.xerberus.io/
+    inline: "1 RP asset scored"
+    claims:
+      - { dim: asset, value: "Rocket Pool ETH (rETH)", scale: "Xerberus composite 0.72" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: morpho-vaults
+    why: Specific Morpho vault assets (steakUSDC, steakUSDT, gtusdtf, gtwethp) and pools (Gauntlet USDC Prime, Steakhouse Prime ETH, etc.) are scored individually in Xerberus's asset/pool subgraphs.
+    url: https://app.xerberus.io/
+    inline: "4+ vault assets scored"
+    claims:
+      - { dim: asset, value: "steakUSDC",            scale: "Xerberus composite 0.80" }
+      - { dim: asset, value: "steakUSDT",            scale: "Xerberus composite 0.69" }
+      - { dim: asset, value: "gtusdtf",              scale: "Xerberus composite 0.74" }
+      - { dim: asset, value: "gtwethp",              scale: "Xerberus composite 0.79" }
+      - { dim: pool,  value: "Gauntlet USDC Prime",  scale: "Xerberus pool composite 0.83" }
+      - { dim: pool,  value: "Steakhouse Prime ETH", scale: "Xerberus pool composite 0.85" }
+    date: 2026-06-22
+    by: IVa
+
+verified_absent:
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "no Uniswap entry in any Xerberus subgraph (protocols/assets/pools/orgs scanned)" }
+  - { protocol: liquity,       date: 2026-06-22, by: IVa, note: "no Liquity/BOLD/LUSD in Xerberus's protocol or asset subgraphs (RLUSD is Ripple's, not Liquity)" }
+  - { protocol: yearn,         date: 2026-06-22, by: IVa, note: "no Yearn / yv-token in any Xerberus subgraph" }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa, note: "no Mellow entry in any Xerberus subgraph" }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa, note: "no Balancer entry (the BAL token isn't in the asset subgraph; earlier regex matches to PAX Gold etc. were false positives)" }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa, note: "swap aggregator — no Xerberus entry" }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa, note: "swap aggregator — no Xerberus entry" }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa, note: "swap aggregator — no Xerberus entry (mETH match was false positive against the slug pattern)" }
+
+covered_override: []

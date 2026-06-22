@@ -1,7 +1,7 @@
 {
   "feedId": "stablewatch",
   "feedName": "Stablewatch",
-  "generatedAt": "2026-06-22T13:05:43.906Z",
+  "generatedAt": "2026-06-22T22:41:03.776Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/stablewatch/output/2026-06-17.json",
   "overlayFile": "data/overlays/stablewatch.yaml",
@@ -53,6 +53,24 @@
       "deeplink": "https://www.stablewatch.io/analytics/assets/sUSDS-Sky",
       "partial": true,
       "inline": "1 stable (via Sky)",
+      "claims": [
+        {
+          "dim": "asset-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$6.17B",
+          "scale": "USD"
+        },
+        {
+          "dim": "asset",
+          "value": "sUSDS",
+          "scale": "TVL $6.17B · issuer Sky",
+          "url": "https://etherscan.io/address/0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
+        }
+      ],
       "partialNote": "sUSDS surfaced via Spark UI; Stablewatch attributes issuer-of-record to Sky.",
       "overlayDate": "2026-06-22",
       "overlayBy": "IVa"
@@ -248,6 +266,24 @@
       "deeplink": "https://www.stablewatch.io/analytics/assets/yBOLD-Liquity",
       "partial": true,
       "inline": "1 stable (via Liquity)",
+      "claims": [
+        {
+          "dim": "asset-count",
+          "value": "1",
+          "scale": "count"
+        },
+        {
+          "dim": "total-tvl",
+          "value": "$4.9M",
+          "scale": "USD"
+        },
+        {
+          "dim": "asset",
+          "value": "yBOLD",
+          "scale": "TVL $4.9M · issuer Liquity",
+          "url": "https://etherscan.io/address/0x9F4330700a36B29952869fac9b33f45EEdd8A3d8"
+        }
+      ],
       "partialNote": "yBOLD is Yearn-wrapped Liquity BOLD; Stablewatch attributes issuer-of-record to Liquity.",
       "overlayDate": "2026-06-22",
       "overlayBy": "IVa"

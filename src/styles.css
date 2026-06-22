@@ -1780,3 +1780,39 @@ footer.page-footer {
 .history-block .history-table th,
 .history-block .history-table td { padding: 4px 8px; border-bottom: 1px solid var(--bg-faint, #eee); text-align: left; }
 .history-block .history-table .date { font-family: var(--mono, ui-monospace, monospace); color: var(--ink-faint, #9aa0a6); }
+
+/* Chain icons strip in the Overview sidecard. Icons are 16×16 from icons.llamao.fi. */
+.chain-strip {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  vertical-align: middle;
+}
+.chain-strip.dim { color: var(--ink-faint, #9aa0a6); }
+.chain-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-faint, #eee);
+  object-fit: cover;
+}
+.chain-chip {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 6px;
+  background: var(--bg-faint, #eee);
+  color: var(--ink-faint, #555);
+  font-family: var(--mono, ui-monospace, monospace);
+}
+.chain-more {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: var(--bg-faint, #eee);
+  color: var(--ink, #333);
+  font-family: var(--mono, ui-monospace, monospace);
+  border: 0;
+  cursor: pointer;
+}
+.chain-more:hover { background: #ddd; }

@@ -102,22 +102,6 @@
       "findings": null
     },
     {
-      "feedId": "blockanalitica",
-      "status": "none",
-      "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": "no Block Analitica dashboard for this protocol",
-      "partialNote": null,
-      "verified": null,
-      "claims": [],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "curatorwatch",
       "status": "none",
       "adapterStatus": "implemented",
@@ -127,7 +111,12 @@
       "methodology": null,
       "coverageReason": "not a lending rail curated on CuratorWatch",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Morpho vaults are credited to morpho, not aave; no aave-specific CuratorWatch coverage"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -241,53 +230,6 @@
       "findings": null
     },
     {
-      "feedId": "defisphere",
-      "status": "cov",
-      "adapterStatus": "implemented",
-      "inline": "44 markets",
-      "sourceUrl": "https://app.defi-sphere.com/protocols/aave_v3",
-      "observedAt": null,
-      "methodology": null,
-      "coverageReason": null,
-      "partialNote": null,
-      "verified": null,
-      "claims": [
-        {
-          "dim": "markets",
-          "value": "44",
-          "scale": "count"
-        },
-        {
-          "dim": "total-supply",
-          "value": "$8.39B",
-          "scale": "USD"
-        },
-        {
-          "dim": "total-borrow",
-          "value": "$5.92B",
-          "scale": "USD"
-        },
-        {
-          "dim": "avg-collateral-risk",
-          "value": "18.08",
-          "scale": "DeFi Sphere risk"
-        },
-        {
-          "dim": "avg-liquidity-risk",
-          "value": "11.93",
-          "scale": "DeFi Sphere risk"
-        },
-        {
-          "dim": "networks",
-          "value": "ethereum, plasma, arbitrum, base, avalanche",
-          "scale": "chains"
-        }
-      ],
-      "history": [],
-      "notable": null,
-      "findings": null
-    },
-    {
       "feedId": "defisaver",
       "status": "cov",
       "adapterStatus": "implemented",
@@ -344,7 +286,12 @@
       "methodology": null,
       "coverageReason": "not in public reports index",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no GHO/Aave asset in app.credora.network portal (verified by IVa)"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -360,7 +307,12 @@
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "RiskLayer pivoted away from DeFi"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -376,7 +328,12 @@
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
       "partialNote": null,
-      "verified": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "no pigi strategy with 'aave' in the name (regex-checked against all 43 strategies)"
+      },
       "claims": [],
       "history": [],
       "notable": null,
@@ -525,14 +482,14 @@
     },
     {
       "feedId": "philidor",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "icon on landing",
+      "sourceUrl": "https://analytics.philidor.io",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "listed on landing page but no Philidor vault scoring",
-      "partialNote": null,
+      "coverageReason": null,
+      "partialNote": "Aave appears on the analytics.philidor.io landing-page icon list but Philidor doesn't publish vault scoring for Aave markets directly.",
       "verified": null,
       "claims": [],
       "history": [],
@@ -572,6 +529,74 @@
           "value": "sGHO (Umbrella)",
           "scale": "TVL $14.7M",
           "url": "https://etherscan.io/address/0x4f827a63755855cdf3e8f3bcd20265c833f15033"
+        }
+      ],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "blockanalitica",
+      "status": "none",
+      "adapterStatus": "implemented",
+      "inline": null,
+      "sourceUrl": null,
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": "no Block Analitica dashboard for this protocol",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "BA retired aave.blockanalitica.com (NXDOMAIN); BA's marketing copy currently names Sky/Spark/Morpho/Summer.fi, no Aave"
+      },
+      "claims": [],
+      "history": [],
+      "notable": null,
+      "findings": null
+    },
+    {
+      "feedId": "defisphere",
+      "status": "cov",
+      "adapterStatus": "implemented",
+      "inline": "44 markets",
+      "sourceUrl": "https://app.defi-sphere.com/protocols/aave_v3",
+      "observedAt": null,
+      "methodology": null,
+      "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
+      "claims": [
+        {
+          "dim": "markets",
+          "value": "44",
+          "scale": "count"
+        },
+        {
+          "dim": "total-supply",
+          "value": "$8.39B",
+          "scale": "USD"
+        },
+        {
+          "dim": "total-borrow",
+          "value": "$5.92B",
+          "scale": "USD"
+        },
+        {
+          "dim": "avg-collateral-risk",
+          "value": "18.08",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "avg-liquidity-risk",
+          "value": "11.93",
+          "scale": "DeFi Sphere risk"
+        },
+        {
+          "dim": "networks",
+          "value": "ethereum, plasma, arbitrum, base, avalanche",
+          "scale": "chains"
         }
       ],
       "history": [],
