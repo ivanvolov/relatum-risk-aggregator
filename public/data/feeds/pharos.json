@@ -1,9 +1,10 @@
 {
   "feedId": "pharos",
   "feedName": "Pharos",
-  "generatedAt": "2026-06-21T19:46:35.509Z",
+  "generatedAt": "2026-06-22T13:05:43.871Z",
   "snapshotDate": "2026-06-21",
   "sourceFile": "data/adapters/pharos/output/2026-06-21.json",
+  "overlayFile": null,
   "protocols": {
     "lido": {
       "covered": false,

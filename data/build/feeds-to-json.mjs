@@ -1,17 +1,78 @@
-// Per-feed normalization: scrape JSON → public/data/feeds/<feedId>.json.
+// Per-feed normalization: scrape JSON + human overlay → public/data/feeds/<feedId>.json.
 // Each feed has a normalizer that turns its raw adapter output into a uniform
 // per-protocol record: { covered, inline?, claims?, observedAt?, deeplink?, reason? }.
-// The presence of public/data/feeds/<feedId>.json is what flips adapterStatus to "implemented"
-// (replacing the existsSync(to-ttl.mjs) check from the TTL pipeline).
+// After normalization, data/overlays/<feedId>.yaml is applied (partial / verified_absent
+// / covered_override) — see data/overlays/README.md.
 
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
+import YAML from 'yaml';
 import { FEED_REGISTRY, PROTOCOLS } from './lib/registry.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..', '..');
 const ADAPTERS = path.join(ROOT, 'data', 'adapters');
+const OVERLAYS = path.join(ROOT, 'data', 'overlays');
 const FEEDS_OUT = path.join(ROOT, 'public', 'data', 'feeds');
+
+async function loadOverlay(feedId) {
+  const p = path.join(OVERLAYS, `${feedId}.yaml`);
+  if (!existsSync(p)) return { partial: [], verified_absent: [], covered_override: [] };
+  const doc = YAML.parse(await readFile(p, 'utf8')) || {};
+  return {
+    partial:          doc.partial          || [],
+    verified_absent:  doc.verified_absent  || [],
+    covered_override: doc.covered_override || [],
+  };
+}
+
+// Apply a feed's overlay on top of the adapter-normalized protocol rows.
+// Rules:
+//   - partial entry: row.covered=false, row.partial=true, row.inline/url/why from overlay
+//   - verified_absent entry: row.verified={date, by, url, note}; row.covered stays false
+//   - covered_override entry: row.covered=true, row.inline/deeplink from overlay
+function applyOverlay(protocols, overlay) {
+  for (const e of overlay.partial) {
+    const r = protocols[e.protocol];
+    if (!r) continue;
+    r.covered = false;
+    r.partial = true;
+    // Clear the adapter's not-covered reason — it's no longer accurate once a
+    // human has reclassified the row as partial. The `partialNote` (the human's
+    // explanation) takes its place in the UI.
+    r.reason = null;
+    if (e.inline) r.inline = e.inline;
+    if (e.url) r.deeplink = e.url;
+    if (e.claims) r.claims = e.claims;        // overlay-provided claim rows so the
+                                              // partial card mirrors the covered card's shape
+    r.partialNote = e.why || null;
+    r.overlayDate = e.date || null;
+    r.overlayBy = e.by || null;
+  }
+  for (const e of overlay.verified_absent) {
+    const r = protocols[e.protocol];
+    if (!r) continue;
+    // Verified_absent only meaningful on rows still marked not-covered.
+    if (r.covered || r.partial) continue;
+    r.verified = {
+      date: e.date || null,
+      by: e.by || null,
+      url: e.url || null,
+      note: e.note || null,
+    };
+  }
+  for (const e of overlay.covered_override) {
+    const r = protocols[e.protocol];
+    if (!r) continue;
+    r.covered = true;
+    r.partial = false;
+    r.inline = e.inline ?? r.inline ?? 'manual';
+    r.deeplink = e.url ?? r.deeplink;
+    r.overrideDate = e.date || null;
+    r.overrideBy = e.by || null;
+  }
+  return protocols;
+}
 
 // DeFiScan's 5-axis risk array order (defiscan.info/framework).
 const DEFISCAN_RISK_AXES = ['chain', 'upgradeability', 'autonomy', 'exit-window', 'accessibility'];
@@ -469,18 +530,23 @@ async function normalizeFeed(feed) {
   if (!sourceFile) return null;
   const raw = JSON.parse(await readFile(sourceFile, 'utf8'));
   const snapshotDate = path.basename(sourceFile, '.json');
-  const protocols = {};
+  let protocols = {};
   for (const proto of PROTOCOLS) {
     // Third arg gives normalizers that need cross-protocol lookup (e.g. defipunkd's slug map)
     // access to the raw file. Other normalizers just take the resolved row.
     protocols[proto.slug] = normalize(proto.slug, rowForSlug(raw, proto.slug), raw);
   }
+  // Apply the human overlay on top of the adapter-normalized rows.
+  const overlay = await loadOverlay(feed.id);
+  protocols = applyOverlay(protocols, overlay);
+
   return {
     feedId: feed.id,
     feedName: feed.name,
     generatedAt: new Date().toISOString(),
     snapshotDate,
     sourceFile: `data/adapters/${feed.id}/output/${path.basename(sourceFile)}`,
+    overlayFile: existsSync(path.join(OVERLAYS, `${feed.id}.yaml`)) ? `data/overlays/${feed.id}.yaml` : null,
     protocols,
   };
 }
@@ -496,8 +562,11 @@ export async function run() {
     }
     const outPath = path.join(FEEDS_OUT, `${feed.id}.json`);
     await writeFile(outPath, JSON.stringify(norm, null, 2));
-    const covered = Object.values(norm.protocols).filter(p => p.covered).length;
-    console.log(`  wrote feeds/${feed.id}.json  (covered ${covered}/${PROTOCOLS.length})`);
+    const rows = Object.values(norm.protocols);
+    const cov = rows.filter(p => p.covered).length;
+    const part = rows.filter(p => p.partial).length;
+    const ver = rows.filter(p => p.verified && !p.covered && !p.partial).length;
+    console.log(`  wrote feeds/${feed.id}.json  (cov ${cov} · part ${part} · verified-absent ${ver} / ${PROTOCOLS.length})`);
     written++;
   }
   return written;

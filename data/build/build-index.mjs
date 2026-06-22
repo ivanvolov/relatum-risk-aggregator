@@ -20,7 +20,13 @@ async function coverageFromJson(slug) {
   const proto = JSON.parse(await readFile(jsonPath, 'utf8'));
   const row = {};
   for (const f of proto.feeds || []) {
-    row[f.feedId] = { status: f.status, adapterStatus: f.adapterStatus, inline: f.inline ?? null };
+    row[f.feedId] = {
+      status: f.status,
+      adapterStatus: f.adapterStatus,
+      inline: f.inline ?? null,
+      verified: f.verified ?? null,           // {date, by, url, note} when human confirmed absent
+      partialNote: f.partialNote ?? null,     // why this cell is partial
+    };
   }
   return row;
 }

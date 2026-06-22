@@ -1,9 +1,10 @@
 {
   "feedId": "defipunkd",
   "feedName": "DeFiPunk'd",
-  "generatedAt": "2026-06-21T19:46:35.508Z",
+  "generatedAt": "2026-06-22T13:05:43.870Z",
   "snapshotDate": "2026-06-20",
   "sourceFile": "data/adapters/defipunkd/output/2026-06-20.json",
+  "overlayFile": null,
   "protocols": {
     "lido": {
       "covered": true,

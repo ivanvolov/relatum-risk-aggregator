@@ -1,14 +1,21 @@
 {
   "feedId": "stablewatch",
   "feedName": "Stablewatch",
-  "generatedAt": "2026-06-21T19:46:35.517Z",
+  "generatedAt": "2026-06-22T13:05:43.906Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/stablewatch/output/2026-06-17.json",
+  "overlayFile": "data/overlays/stablewatch.yaml",
   "protocols": {
     "lido": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Lido issues stETH (rebasing), not a YB-stable Stablewatch indexes"
+      }
     },
     "aave": {
       "covered": true,
@@ -42,8 +49,13 @@
     },
     "spark": {
       "covered": false,
-      "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://www.stablewatch.io/analytics/assets/sUSDS-Sky",
+      "partial": true,
+      "inline": "1 stable (via Sky)",
+      "partialNote": "sUSDS surfaced via Spark UI; Stablewatch attributes issuer-of-record to Sky.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "sky": {
       "covered": true,
@@ -102,17 +114,35 @@
     "morpho": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "Morpho is lending rails, not a stablecoin issuer"
+      }
     },
     "etherfi": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "uniswap": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": "DEX, no stablecoin issuance"
+      }
     },
     "curve": {
       "covered": true,
@@ -141,22 +171,46 @@
     "compound": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "rocketpool": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "pendle": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "fluid": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "liquity": {
       "covered": true,
@@ -190,48 +244,101 @@
     },
     "yearn": {
       "covered": false,
-      "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "reason": null,
+      "deeplink": "https://www.stablewatch.io/analytics/assets/yBOLD-Liquity",
+      "partial": true,
+      "inline": "1 stable (via Liquity)",
+      "partialNote": "yBOLD is Yearn-wrapped Liquity BOLD; Stablewatch attributes issuer-of-record to Liquity.",
+      "overlayDate": "2026-06-22",
+      "overlayBy": "IVa"
     },
     "euler": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "mellow": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "morpho-vaults": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "balancer": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "gearbox": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "cowswap": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "1inch": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     },
     "0x": {
       "covered": false,
       "reason": "no Stablewatch-tracked yield-bearing assets",
-      "deeplink": null
+      "deeplink": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      }
     }
   }
 }

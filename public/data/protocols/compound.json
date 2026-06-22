@@ -51,6 +51,8 @@
       "observedAt": "2025-03-18",
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "stage",
@@ -96,6 +98,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "supply",
@@ -126,6 +130,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not a lending rail curated on CuratorWatch",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -140,6 +146,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not in DeFiPunk'd assessment set",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -154,6 +162,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no Pharos-tracked stablecoins for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -168,6 +178,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "markets",
@@ -213,6 +225,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "markets",
@@ -273,6 +287,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not in public reports index",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -287,6 +303,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -301,6 +319,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -315,6 +335,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "composite",
@@ -360,6 +382,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "opportunity-count",
@@ -419,6 +443,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -433,6 +459,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "listed on landing page but no Philidor vault scoring",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -447,6 +475,13 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no Stablewatch-tracked yield-bearing assets",
+      "partialNote": null,
+      "verified": {
+        "date": "2026-06-22",
+        "by": "IVa",
+        "url": null,
+        "note": null
+      },
       "claims": [],
       "history": [],
       "notable": null,

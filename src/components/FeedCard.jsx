@@ -31,6 +31,10 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
 
   // Not-yet-covered cards: compact one-liner, no expand affordance.
   if (!isCovered) {
+    const v = entry.verified;
+    const verifiedLine = v
+      ? `✓ Verified absent ${v.date}${v.by ? ' by ' + v.by : ''}${v.note ? ' — ' + v.note : ''}`
+      : null;
     return (
       <div className="feed-card not-covered" data-type={feedMeta.type} id={`feed-${entry.feedId}`}>
         <div className="head static" aria-disabled="true">
@@ -43,6 +47,7 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
         <div className="not-covered-line">
           {entry.coverageReason || `Not in ${feedMeta.name}'s covered set.`}
         </div>
+        {verifiedLine ? <div className="not-covered-line" style={{opacity: 0.7, fontSize: '0.85em'}}>{verifiedLine}</div> : null}
       </div>
     );
   }
@@ -63,6 +68,12 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
         entry.claims && entry.claims.length ? (
           <div className="body">
             {entry.methodology ? <div className="methodology">{entry.methodology}</div> : null}
+            {entry.partialNote ? (
+              <div className="notable">
+                <div className="lbl">Partial coverage</div>
+                <div className="text">{entry.partialNote}</div>
+              </div>
+            ) : null}
             <div className="claims">
               {entry.claims.map((c, i) => (
                 <div key={i} className={'claim ' + (c.level || '')}>
@@ -95,7 +106,12 @@ export default function FeedCard({ feedMeta, entry, isOpen, onToggle }) {
         ) : (
           <div className="body">
             {entry.methodology ? <div className="methodology">{entry.methodology}</div> : null}
-            {entry.coverageReason ? (
+            {entry.partialNote ? (
+              <div className="notable">
+                <div className="lbl">Partial coverage</div>
+                <div className="text">{entry.partialNote}</div>
+              </div>
+            ) : entry.coverageReason ? (
               <div className="notable">
                 <div className="lbl">Coverage</div>
                 <div className="text">{entry.coverageReason}</div>

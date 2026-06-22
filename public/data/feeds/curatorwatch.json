@@ -1,9 +1,10 @@
 {
   "feedId": "curatorwatch",
   "feedName": "CuratorWatch",
-  "generatedAt": "2026-06-21T19:46:35.505Z",
+  "generatedAt": "2026-06-22T13:05:43.866Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/curatorwatch/output/2026-06-17.json",
+  "overlayFile": null,
   "protocols": {
     "lido": {
       "covered": true,

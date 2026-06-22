@@ -40,6 +40,8 @@
       "observedAt": "2025-09-04",
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "chain",
@@ -80,6 +82,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no Block Analitica dashboard for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -94,6 +98,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not a lending rail curated on CuratorWatch",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -108,6 +114,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "verifiability",
@@ -173,6 +181,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "stablecoin-count",
@@ -211,6 +221,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no DeFi Sphere lending market for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -225,6 +237,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not a DeFi Saver execution surface",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -239,6 +253,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not in public reports index",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -253,6 +269,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -267,6 +285,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "strategy-count",
@@ -307,6 +327,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "composite",
@@ -352,6 +374,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no Zyfai-tracked pools for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -366,6 +390,8 @@
       "observedAt": "2024-12-18",
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "post-count",
@@ -403,6 +429,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not on Philidor landing page",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -417,6 +445,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "asset-count",

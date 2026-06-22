@@ -1,0 +1,47 @@
+# Stablewatch overlay — human curation layer on top of the adapter's snapshot.
+# See data/overlays/README.md for format and workflow.
+
+partial:
+  - protocol: spark
+    why: sUSDS surfaced via Spark UI; Stablewatch attributes issuer-of-record to Sky.
+    url: https://www.stablewatch.io/analytics/assets/sUSDS-Sky
+    inline: "1 stable (via Sky)"
+    claims:
+      - { dim: asset-count, value: "1",       scale: "count" }
+      - { dim: total-tvl,   value: "$6.17B",  scale: "USD" }
+      - { dim: asset,       value: "sUSDS",   scale: "TVL $6.17B · issuer Sky",  url: "https://etherscan.io/address/0xa3931d71877c0e7a3148cb7eb4463524fec27fbd" }
+    date: 2026-06-22
+    by: IVa
+
+  - protocol: yearn
+    why: yBOLD is Yearn-wrapped Liquity BOLD; Stablewatch attributes issuer-of-record to Liquity.
+    url: https://www.stablewatch.io/analytics/assets/yBOLD-Liquity
+    inline: "1 stable (via Liquity)"
+    claims:
+      - { dim: asset-count, value: "1",      scale: "count" }
+      - { dim: total-tvl,   value: "$4.9M",  scale: "USD" }
+      - { dim: asset,       value: "yBOLD",  scale: "TVL $4.9M · issuer Liquity", url: "https://etherscan.io/address/0x9F4330700a36B29952869fac9b33f45EEdd8A3d8" }
+    date: 2026-06-22
+    by: IVa
+
+verified_absent:
+  # Marked by user as genuinely absent from Stablewatch on 2026-06-22.
+  # User confirmed by browsing stablewatch.io and the live ypotablelist API.
+  - { protocol: lido,          date: 2026-06-22, by: IVa, note: "Lido issues stETH (rebasing), not a YB-stable Stablewatch indexes" }
+  - { protocol: morpho,        date: 2026-06-22, by: IVa, note: "Morpho is lending rails, not a stablecoin issuer" }
+  - { protocol: etherfi,       date: 2026-06-22, by: IVa }
+  - { protocol: uniswap,       date: 2026-06-22, by: IVa, note: "DEX, no stablecoin issuance" }
+  - { protocol: compound,      date: 2026-06-22, by: IVa }
+  - { protocol: rocketpool,    date: 2026-06-22, by: IVa }
+  - { protocol: pendle,        date: 2026-06-22, by: IVa }
+  - { protocol: fluid,         date: 2026-06-22, by: IVa }
+  - { protocol: euler,         date: 2026-06-22, by: IVa }
+  - { protocol: mellow,        date: 2026-06-22, by: IVa }
+  - { protocol: morpho-vaults, date: 2026-06-22, by: IVa }
+  - { protocol: balancer,      date: 2026-06-22, by: IVa }
+  - { protocol: gearbox,       date: 2026-06-22, by: IVa }
+  - { protocol: cowswap,       date: 2026-06-22, by: IVa }
+  - { protocol: 1inch,         date: 2026-06-22, by: IVa }
+  - { protocol: 0x,            date: 2026-06-22, by: IVa }
+
+covered_override: []

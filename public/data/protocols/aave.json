@@ -63,6 +63,8 @@
       "observedAt": "2025-05-07",
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "stage",
@@ -108,6 +110,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no Block Analitica dashboard for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -122,6 +126,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not a lending rail curated on CuratorWatch",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -136,6 +142,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "verifiability",
@@ -201,6 +209,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "stablecoin-count",
@@ -239,6 +249,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "markets",
@@ -284,6 +296,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "markets",
@@ -329,6 +343,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "not in public reports index",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -343,6 +359,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -357,6 +375,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -371,6 +391,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "composite",
@@ -416,6 +438,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "opportunity-count",
@@ -475,6 +499,8 @@
       "observedAt": "2024-06-20",
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "post-count",
@@ -506,6 +532,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "listed on landing page but no Philidor vault scoring",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -520,6 +548,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "asset-count",

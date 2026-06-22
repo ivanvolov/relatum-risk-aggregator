@@ -91,7 +91,10 @@ export async function buildProtocolJson(proto, feedJsons, llamaByProto) {
     const adapterStatus = adapterImplemented(feedId) ? 'implemented' : 'pending';
     const feedDoc = feedJsons.get(feedId);
     const feedRow = feedDoc?.protocols?.[proto.slug];
-    const status = feedRow ? (feedRow.covered ? 'cov' : 'none') : 'none';
+    // Status priority: partial > covered > none. `verified` is metadata, not a status.
+    let status = 'none';
+    if (feedRow?.partial) status = 'part';
+    else if (feedRow?.covered) status = 'cov';
 
     return {
       feedId,
@@ -102,6 +105,8 @@ export async function buildProtocolJson(proto, feedJsons, llamaByProto) {
       observedAt: feedRow?.observedAt ?? null,
       methodology: null,
       coverageReason: feedRow?.reason ?? null,
+      partialNote: feedRow?.partialNote ?? null,
+      verified: feedRow?.verified ?? null,
       claims: feedRow?.claims ?? [],
       history: [],
       notable: null,

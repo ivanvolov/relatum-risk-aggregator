@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T19:46:35.531Z",
+  "generatedAt": "2026-06-22T13:05:43.947Z",
   "feeds": [
     {
       "id": "defiscan",
@@ -406,1771 +406,2541 @@
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 0"
+        "inline": "Stage 0",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "5 vaults"
+        "inline": "5 vaults",
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2/5 green"
+        "inline": "2/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 reports"
+        "inline": "1 reports",
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 0.20"
+        "inline": "Risk 0.20",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.84"
+        "inline": "0.84",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Lido issues stETH (rebasing), not a YB-stable Stablewatch indexes"
+        },
+        "partialNote": null
       }
     },
     "aave": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 0"
+        "inline": "Stage 0",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1/5 green"
+        "inline": "1/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "3 stables"
+        "inline": "3 stables",
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "44 markets"
+        "inline": "44 markets",
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "4 markets"
+        "inline": "4 markets",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.82"
+        "inline": "0.82",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "4 pools"
+        "inline": "4 pools",
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 posts"
+        "inline": "1 posts",
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 stables · $141.7M"
+        "inline": "2 stables · $141.7M",
+        "verified": null,
+        "partialNote": null
       }
     },
     "spark": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 0"
+        "inline": "Stage 0",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "$3.49B"
+        "inline": "$3.49B",
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "7 vaults"
+        "inline": "7 vaults",
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1/5 green"
+        "inline": "1/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 stables"
+        "inline": "2 stables",
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "6 markets"
+        "inline": "6 markets",
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 markets"
+        "inline": "2 markets",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "17 reports"
+        "inline": "17 reports",
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.63"
+        "inline": "0.63",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "4 pools"
+        "inline": "4 pools",
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": "1 stable (via Sky)",
+        "verified": null,
+        "partialNote": "sUSDS surfaced via Spark UI; Stablewatch attributes issuer-of-record to Sky."
       }
     },
     "sky": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 0"
+        "inline": "Stage 0",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "—"
+        "inline": "—",
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "4 vaults"
+        "inline": "4 vaults",
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2/5 green"
+        "inline": "2/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "5 stables"
+        "inline": "5 stables",
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 markets"
+        "inline": "1 markets",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 0.52"
+        "inline": "Risk 0.52",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 posts"
+        "inline": "2 posts",
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 stables · $6.35B"
+        "inline": "2 stables · $6.35B",
+        "verified": null,
+        "partialNote": null
       }
     },
     "ethena": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1/5 green"
+        "inline": "1/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "3 stables"
+        "inline": "3 stables",
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 0.90"
+        "inline": "Risk 0.90",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.55"
+        "inline": "0.55",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 posts"
+        "inline": "2 posts",
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 stables · $1.73B"
+        "inline": "1 stables · $1.73B",
+        "verified": null,
+        "partialNote": null
       }
     },
     "morpho": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 1"
+        "inline": "Stage 1",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "—"
+        "inline": "—",
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "138 vaults"
+        "inline": "138 vaults",
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2/5 green"
+        "inline": "2/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "334 markets"
+        "inline": "334 markets",
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 markets"
+        "inline": "1 markets",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 1.42"
+        "inline": "Risk 1.42",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.66"
+        "inline": "0.66",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "26 pools"
+        "inline": "26 pools",
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 posts"
+        "inline": "1 posts",
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "vault scoring"
+        "inline": "vault scoring",
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "Morpho is lending rails, not a stablecoin issuer"
+        },
+        "partialNote": null
       }
     },
     "etherfi": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1/5 green"
+        "inline": "1/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 2.21"
+        "inline": "Risk 2.21",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "uniswap": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 2"
+        "inline": "Stage 2",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "5/5 green"
+        "inline": "5/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": "DEX, no stablecoin issuance"
+        },
+        "partialNote": null
       }
     },
     "curve": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 0"
+        "inline": "Stage 0",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "5/5 green"
+        "inline": "5/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 stables"
+        "inline": "2 stables",
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "supported"
+        "inline": "supported",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.61"
+        "inline": "0.61",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "32 posts"
+        "inline": "32 posts",
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 stables · $20.6M"
+        "inline": "1 stables · $20.6M",
+        "verified": null,
+        "partialNote": null
       }
     },
     "compound": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 0"
+        "inline": "Stage 0",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "—"
+        "inline": "—",
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "7 markets"
+        "inline": "7 markets",
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "7 markets"
+        "inline": "7 markets",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.73"
+        "inline": "0.73",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "4 pools"
+        "inline": "4 pools",
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "rocketpool": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "3/5 green"
+        "inline": "3/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "pendle": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 0"
+        "inline": "Stage 0",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2/5 green"
+        "inline": "2/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 3.59"
+        "inline": "Risk 3.59",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.60"
+        "inline": "0.60",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "fluid": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 stables"
+        "inline": "1 stables",
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "supported"
+        "inline": "supported",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 0.96"
+        "inline": "Risk 0.96",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.68"
+        "inline": "0.68",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 pools"
+        "inline": "1 pools",
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "liquity": {
       "defiscan": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Stage 2"
+        "inline": "Stage 2",
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "5/5 green"
+        "inline": "5/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 stables"
+        "inline": "2 stables",
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "6 markets"
+        "inline": "6 markets",
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 markets"
+        "inline": "2 markets",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 2.89"
+        "inline": "Risk 2.89",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 posts"
+        "inline": "1 posts",
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 stables · $13.0M"
+        "inline": "2 stables · $13.0M",
+        "verified": null,
+        "partialNote": null
       }
     },
     "yearn": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 stables"
+        "inline": "2 stables",
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 3.13"
+        "inline": "Risk 3.13",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "2 pools"
+        "inline": "2 pools",
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "vault scoring"
+        "inline": "vault scoring",
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
-        "status": "none",
+        "status": "part",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": "1 stable (via Liquity)",
+        "verified": null,
+        "partialNote": "yBOLD is Yearn-wrapped Liquity BOLD; Stablewatch attributes issuer-of-record to Liquity."
       }
     },
     "euler": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "6 vaults"
+        "inline": "6 vaults",
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "supported"
+        "inline": "supported",
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.77"
+        "inline": "0.77",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "8 pools"
+        "inline": "8 pools",
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "1 posts"
+        "inline": "1 posts",
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "mellow": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "morpho-vaults": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "vault scoring"
+        "inline": "vault scoring",
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "balancer": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0/5 green"
+        "inline": "0/5 green",
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "gearbox": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "Risk 1.00"
+        "inline": "Risk 1.00",
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "cov",
         "adapterStatus": "implemented",
-        "inline": "0.76"
+        "inline": "0.76",
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "cowswap": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "1inch": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     },
     "0x": {
       "defiscan": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "blockanalitica": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "curatorwatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defipunkd": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pharos": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisphere": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "defisaver": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "credora": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "risklayer": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "pigi": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "xerberus": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "zyfai": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "llamarisk": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "philidor": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": null,
+        "partialNote": null
       },
       "stablewatch": {
         "status": "none",
         "adapterStatus": "implemented",
-        "inline": null
+        "inline": null,
+        "verified": {
+          "date": "2026-06-22",
+          "by": "IVa",
+          "url": null,
+          "note": null
+        },
+        "partialNote": null
       }
     }
   }

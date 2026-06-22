@@ -1,9 +1,10 @@
 {
   "feedId": "defiscan",
   "feedName": "DeFiScan",
-  "generatedAt": "2026-06-21T19:46:35.501Z",
+  "generatedAt": "2026-06-22T13:05:43.862Z",
   "snapshotDate": "2026-06-17",
   "sourceFile": "data/adapters/defiscan/output/2026-06-17.json",
+  "overlayFile": null,
   "protocols": {
     "lido": {
       "covered": true,

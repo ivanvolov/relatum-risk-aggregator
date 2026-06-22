@@ -1,9 +1,10 @@
 {
   "feedId": "risklayer",
   "feedName": "RiskLayer",
-  "generatedAt": "2026-06-21T19:46:35.513Z",
+  "generatedAt": "2026-06-22T13:05:43.876Z",
   "snapshotDate": "2026-06-20",
   "sourceFile": "data/adapters/risklayer/output/2026-06-20.json",
+  "overlayFile": null,
   "protocols": {
     "lido": {
       "covered": false,

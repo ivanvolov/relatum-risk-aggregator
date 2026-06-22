@@ -1,9 +1,10 @@
 {
   "feedId": "defisaver",
   "feedName": "DeFi Saver",
-  "generatedAt": "2026-06-21T19:46:35.511Z",
+  "generatedAt": "2026-06-22T13:05:43.873Z",
   "snapshotDate": "2026-06-20",
   "sourceFile": "data/adapters/defisaver/output/2026-06-20.json",
+  "overlayFile": null,
   "protocols": {
     "lido": {
       "covered": false,

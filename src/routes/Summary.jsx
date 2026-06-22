@@ -40,7 +40,7 @@ function PieGrade({ on, total }) {
 // collapse to the same em-dash on the landing — distinction is only meaningful internally,
 // and reviewers on the landing care about "is there a feed signal here" not "did we wire
 // the adapter yet". The detail page still distinguishes via PendingAdapterCard.
-function MatrixCell({ status, adapterStatus, inline }) {
+function MatrixCell({ status, adapterStatus, inline, verified }) {
   const isPending = adapterStatus === 'pending';
   if (!isPending && inline && (status === 'cov' || status === 'part')) {
     const grade = /^(\d+)\/(\d+) green$/.exec(inline);
@@ -56,7 +56,12 @@ function MatrixCell({ status, adapterStatus, inline }) {
   if (!isPending && status === 'part') {
     return <span className="dot-cell part" title="Partial coverage — see protocol page" />;
   }
-  return <span className="cell-dash" title="Not covered">—</span>;
+  // status === 'none' → em-dash (RFP em-dash). If a human has verified the absence,
+  // surface the stamp on hover but keep the cell visually identical (RFP-pure).
+  const title = verified
+    ? `Verified absent ${verified.date}${verified.by ? ' by ' + verified.by : ''}${verified.note ? ' — ' + verified.note : ''}`
+    : 'Not covered';
+  return <span className="cell-dash" title={title}>—</span>;
 }
 
 export default function Summary() {
@@ -131,18 +136,20 @@ export default function Summary() {
   }, [data, search, cat, sortKey, sortDir, visibleFeeds]);
 
   const stats = useMemo(() => {
-    if (!data) return { cov: 0, part: 0, none: 0, total: 0 };
-    let cov = 0, part = 0, none = 0;
+    if (!data) return { cov: 0, part: 0, verified: 0, unverified: 0, total: 0 };
+    let cov = 0, part = 0, verified = 0, unverified = 0;
     for (const p of data.protocols) {
       const row = data.coverage[p.slug] || {};
       for (const f of visibleFeeds) {
-        const s = row[f.id]?.status;
+        const cell = row[f.id];
+        const s = cell?.status;
         if (s === 'cov') cov++;
         else if (s === 'part') part++;
-        else none++;
+        else if (cell?.verified) verified++;
+        else unverified++;
       }
     }
-    return { cov, part, none, total: data.protocols.length * visibleFeeds.length };
+    return { cov, part, verified, unverified, total: data.protocols.length * visibleFeeds.length };
   }, [data, visibleFeeds]);
 
   if (!data) return <main className="page"><p>Loading…</p></main>;
@@ -165,7 +172,8 @@ export default function Summary() {
         <div className="stat"><div className="k">Matrix cells</div><div className="v">{stats.total}</div></div>
         <div className="stat"><div className="k">Covered</div><div className="v" style={{color:'var(--ok)'}}>{stats.cov}</div></div>
         <div className="stat"><div className="k">Partial</div><div className="v" style={{color:'var(--partial)'}}>{stats.part}</div></div>
-        <div className="stat"><div className="k">Not covered</div><div className="v" style={{color:'var(--no)'}}>{stats.none}</div></div>
+        <div className="stat" title="Adapter says not-covered AND a human confirmed the source genuinely doesn't carry this protocol"><div className="k">Verified absent</div><div className="v" style={{color:'var(--dim)'}}>{stats.verified}</div></div>
+        <div className="stat" title="Adapter says not-covered; no human has eyeballed the source yet"><div className="k">Unverified gaps</div><div className="v" style={{color:'var(--no)'}}>{stats.unverified}</div></div>
       </div>
 
       <div className="controls">
@@ -219,11 +227,11 @@ export default function Summary() {
                   <td className="gov-cell">{p.governance_summary || '—'}</td>
                   <td className="tvl feeds-col-edge">{p._coveredFeeds} feeds</td>
                   {visibleFeeds.map(f => {
-                    const cell = p._cov[f.id] || { status: 'none', adapterStatus: 'pending', inline: null };
+                    const cell = p._cov[f.id] || { status: 'none', adapterStatus: 'pending', inline: null, verified: null };
                     return (
                       <td key={f.id} className="cell">
                         <Link to={`/protocol/${p.slug}?feed=${f.id}`} className="cell-link">
-                          <MatrixCell status={cell.status} adapterStatus={cell.adapterStatus} inline={cell.inline} />
+                          <MatrixCell status={cell.status} adapterStatus={cell.adapterStatus} inline={cell.inline} verified={cell.verified} />
                         </Link>
                       </td>
                     );

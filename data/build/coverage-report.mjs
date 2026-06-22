@@ -1,8 +1,7 @@
-// Emit COVERAGE.md at repo root — per-feed table of covered / not-covered protocols
-// with the verbatim inline value or reason. Lets the operator spot-check every
-// (protocol, feed) cell against the live source without opening the SPA.
+// Emit COVERAGE.md at repo root — per-feed table of covered / partial / not-covered.
+// Reads from public/data/feeds/<feedId>.json (already overlay-applied by feeds-to-json).
 
-import { readFile, writeFile, readdir } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { FEED_REGISTRY, PROTOCOLS } from './lib/registry.mjs';
@@ -30,7 +29,10 @@ function feedSection(feed, doc) {
     ].join('\n');
   }
   const covered = [];
+  const partial = [];
   const notCovered = [];
+  let verifiedCount = 0;
+  let unverifiedCount = 0;
   for (const slug of PROTO_ORDER) {
     const row = doc.protocols[slug];
     if (!row) continue;
@@ -39,16 +41,33 @@ function feedSection(feed, doc) {
       const detail = row.inline || (row.claims?.[0] ? `${row.claims[0].dim}: ${row.claims[0].value}` : '—');
       const link = row.deeplink ? ` · [source](${row.deeplink})` : '';
       covered.push(`| ${name} \`${slug}\` | ${detail}${link} |`);
+    } else if (row.partial) {
+      const detail = row.inline || 'partial';
+      const link = row.deeplink ? ` · [source](${row.deeplink})` : '';
+      const note = row.partialNote ? ` — ${row.partialNote}` : '';
+      partial.push(`| ${name} \`${slug}\` | ${detail}${note}${link} |`);
     } else {
-      notCovered.push(`| ${name} \`${slug}\` | ${row.reason || '—'} |`);
+      const v = row.verified;
+      let status;
+      if (v) {
+        verifiedCount++;
+        const checked = v.url ? ` · [checked](${v.url})` : '';
+        const by = v.by ? ` by ${v.by}` : '';
+        status = `✓ verified absent ${v.date}${by}${checked}`;
+      } else {
+        unverifiedCount++;
+        status = '? unverified';
+      }
+      notCovered.push(`| ${name} \`${slug}\` | ${row.reason || '—'} | ${status} |`);
     }
   }
   const total = PROTO_ORDER.length;
   const cov = covered.length;
+  const part = partial.length;
   const lines = [
     `## ${feed.name}`,
     '',
-    `**${cov} / ${total} covered.** Source snapshot: \`${doc.sourceFile}\` (${doc.snapshotDate}).`,
+    `**${cov} covered · ${part} partial · ${verifiedCount} verified absent · ${unverifiedCount} unverified** (${total} total). Snapshot: \`${doc.sourceFile}\` (${doc.snapshotDate}).` + (doc.overlayFile ? ` Overlay: \`${doc.overlayFile}\`.` : ''),
     '',
     feed.focus ? `*${feed.focus}.*` : null,
     '',
@@ -63,12 +82,24 @@ function feedSection(feed, doc) {
       '',
     );
   }
+  if (partial.length) {
+    lines.push(
+      '### Partial',
+      '',
+      '| Protocol | Detail |',
+      '|---|---|',
+      ...partial,
+      '',
+    );
+  }
   if (notCovered.length) {
     lines.push(
       '### Not covered',
       '',
-      '| Protocol | Reason |',
-      '|---|---|',
+      `_To mark a cell verified, add it to \`data/overlays/${feed.id}.yaml\` (see \`data/overlays/README.md\`)._`,
+      '',
+      '| Protocol | Adapter reason | Verification |',
+      '|---|---|---|',
       ...notCovered,
       '',
     );
@@ -80,10 +111,9 @@ export async function run() {
   const docs = {};
   for (const f of FEED_REGISTRY) docs[f.id] = await loadFeed(f.id);
 
-  // Top-level summary
+  // Top-level summary across all (protocol, feed) cells.
   const total = PROTO_ORDER.length * FEED_REGISTRY.length;
-  let cov = 0;
-  let nope = 0;
+  let cov = 0, part = 0, verifiedAbsent = 0, unverified = 0;
   for (const f of FEED_REGISTRY) {
     const doc = docs[f.id];
     if (!doc) continue;
@@ -91,7 +121,9 @@ export async function run() {
       const row = doc.protocols[slug];
       if (!row) continue;
       if (row.covered) cov++;
-      else nope++;
+      else if (row.partial) part++;
+      else if (row.verified) verifiedAbsent++;
+      else unverified++;
     }
   }
 
@@ -102,10 +134,12 @@ export async function run() {
     '',
     `Snapshot: ${new Date().toISOString().slice(0, 10)} · ${PROTO_ORDER.length} protocols · ${FEED_REGISTRY.length} feeds · **${total} cells** total.`,
     '',
-    `- **${cov}** covered (feed publishes a verbatim claim about this protocol).`,
-    `- **${nope}** not covered (feed has emitted an explicit absence with reason).`,
+    `- **${cov}** covered (adapter found a verbatim claim from the source).`,
+    `- **${part}** partial (human flagged indirect coverage via overlay).`,
+    `- **${verifiedAbsent}** verified absent (human confirmed source genuinely doesn't carry the protocol).`,
+    `- **${unverified}** unverified (no human has eyeballed the source for this cell yet).`,
     '',
-    'Each section below is one feed. Click the `source` link on a covered row to verify the value at the feed\'s own UI.',
+    'Each section below is one feed. Click the `source` link on a covered row to verify the value at the feed\'s own UI. To convert an `? unverified` cell into `✓ verified`, or to mark a row `partial`, edit `data/overlays/<feedId>.yaml` (see `data/overlays/README.md`).',
     '',
     '---',
     '',
@@ -114,7 +148,7 @@ export async function run() {
   const body = FEED_REGISTRY.map(f => feedSection(f, docs[f.id])).join('\n---\n\n');
 
   await writeFile(OUT_PATH, header + body);
-  console.log(`  wrote ${path.relative(ROOT, OUT_PATH)}  (${cov} covered, ${nope} not covered, ${total} cells)`);
+  console.log(`  wrote ${path.relative(ROOT, OUT_PATH)}  (cov ${cov} · part ${part} · verified ${verifiedAbsent} · unverified ${unverified} · ${total} cells)`);
 }
 
 import { fileURLToPath } from 'node:url';

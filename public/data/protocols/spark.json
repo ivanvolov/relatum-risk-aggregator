@@ -41,6 +41,8 @@
       "observedAt": "2025-06-05",
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "stage",
@@ -86,6 +88,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "supply",
@@ -121,6 +125,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "vaults",
@@ -156,6 +162,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "verifiability",
@@ -211,6 +219,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "stablecoin-count",
@@ -243,6 +253,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "markets",
@@ -288,6 +300,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "markets",
@@ -323,6 +337,8 @@
       "observedAt": "2026-06-08",
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "report-count",
@@ -450,6 +466,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "risklayer.io pivoted away from DeFi (now insurance-vendor mapping)",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -464,6 +482,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no pigi.finance strategy tracking for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -478,6 +498,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "composite",
@@ -523,6 +545,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": null,
+      "partialNote": null,
+      "verified": null,
       "claims": [
         {
           "dim": "opportunity-count",
@@ -582,6 +606,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "no LlamaRisk research posts for this protocol",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -596,6 +622,8 @@
       "observedAt": null,
       "methodology": null,
       "coverageReason": "listed on landing page but no Philidor vault scoring",
+      "partialNote": null,
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
@@ -603,13 +631,15 @@
     },
     {
       "feedId": "stablewatch",
-      "status": "none",
+      "status": "part",
       "adapterStatus": "implemented",
-      "inline": null,
-      "sourceUrl": null,
+      "inline": "1 stable (via Sky)",
+      "sourceUrl": "https://www.stablewatch.io/analytics/assets/sUSDS-Sky",
       "observedAt": null,
       "methodology": null,
-      "coverageReason": "no Stablewatch-tracked yield-bearing assets",
+      "coverageReason": null,
+      "partialNote": "sUSDS surfaced via Spark UI; Stablewatch attributes issuer-of-record to Sky.",
+      "verified": null,
       "claims": [],
       "history": [],
       "notable": null,
